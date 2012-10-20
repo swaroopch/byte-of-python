@@ -37,6 +37,11 @@ MARKDOWN_FILES = [
         'slug': "python_en-first_steps",
         'title': "Python : First Steps",
     },
+    {
+        'file': '06-basics.md',
+        'slug': "python_en-basics",
+        'title': "Python : Basics",
+    },
 ]
 
 
