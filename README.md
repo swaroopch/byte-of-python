@@ -1,8 +1,12 @@
 
 ## Installation
 
+Ensure Python (&gt;= 2.7) is installed.
+
 Install Pandoc from <http://johnmacfarlane.net/pandoc/installing.html>
 
+Install `pdflatex` from <http://www.tug.org/texlive/>.
+Note that Mac users can install `MacTex.pkg` from <http://www.tug.org/mactex/2012/>.
 
 Install `pip` if not present already:
     
