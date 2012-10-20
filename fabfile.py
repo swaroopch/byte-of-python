@@ -10,15 +10,17 @@ except ImportError:
 
 import boto
 
-from fabric.api import local
+from fabric.api import task, local
 
 
-assert os.environ.get('AWS_ACCESS_KEY_ID') is not None, "Set AWS_ACCESS_KEY_ID environment variable"
-assert len(os.environ['AWS_ACCESS_KEY_ID']) > 0, "Set AWS_ACCESS_KEY_ID environment variable"
-
-assert os.environ.get('AWS_SECRET_ACCESS_KEY') is not None, "Set AWS_SECRET_ACCESS_KEY environment variable"
-
-assert len(os.environ['AWS_SECRET_ACCESS_KEY']) > 0, "Set AWS_SECRET_ACCESS_KEY environment variable"
+if os.environ.get('AWS_ACCESS_KEY_ID') is not None \
+        and len(os.environ['AWS_ACCESS_KEY_ID']) > 0 \
+        and os.environ.get('AWS_SECRET_ACCESS_KEY') is not None \
+        and len(os.environ['AWS_SECRET_ACCESS_KEY']) > 0:
+    AWS_ENABLED = True
+else:
+    AWS_ENABLED = False
+    print("NOTE: S3 uploading is disabled because of missing AWS key environment variables.")
 
 
 
@@ -48,6 +50,7 @@ def _markdown_to_html(source_text):
     return output
 
 
+@task
 def wp():
     for m in MARKDOWN_FILES.keys():
         converted_text = _markdown_to_html(open(m).read())
@@ -59,6 +62,7 @@ def wp():
         local("open {}".format(output_file_name))
 
 
+@task
 def epub():
     from_format = 'markdown'
     to_format = 'epub'
@@ -70,3 +74,7 @@ def epub():
             '-o', output_file_name,
             '-S'] + MARKDOWN_FILES.keys()
     local(' '.join(args))
+
+
+# TODO Add pdf()
+# TODO Make epub and pdf upload to S3 directly if AWS_ENABLED
