@@ -17,11 +17,6 @@ MARKDOWN_FILES = [
         'slug': "python",
         'title': "Python",
     },
-    {
-        'file': '02-table-of-contents.md',
-        'slug': "python_en-table_of_contents",
-        'title': "Table of Contents of A Byte of Python",
-    },
 ]
 
 
@@ -221,6 +216,7 @@ def wp():
         for chapter in MARKDOWN_FILES:
             html = markdown_to_html(open(chapter['file']).read(),
                                     upload_assets_to_s3=True)
+            # TODO Add previous and next links at end of html
 
             if chapter['slug'] in existing_page_slugs:
                 page_id = page_slug_to_id(chapter['slug'])
@@ -251,7 +247,8 @@ def html():
             '-t', 'html5',
             '-o', '{}.html'.format(FULL_PROJECT_NAME),
             '-S',
-            '-s'] + [i['file'] for i in MARKDOWN_FILES]
+            '-s',
+            '--toc'] + [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     local('open {}.html'.format(FULL_PROJECT_NAME))
 
@@ -264,6 +261,9 @@ def epub():
             '-t', 'epub',
             '-o', '{}.epub'.format(FULL_PROJECT_NAME),
             '-S'] + [i['file'] for i in MARKDOWN_FILES]
+    # TODO --epub-cover-image
+    # TODO --epub-metadata
+    # TODO --epub-stylesheet
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.epub'.format(FULL_PROJECT_NAME))

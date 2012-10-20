@@ -1,5 +1,125 @@
 # Python
 
-Choose your Python version:
+## Introduction
 
-blah blah
+'A Byte of Python' is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.
+
+(Note that this book is primarily for the still-in-common-use Python 2.x but teaches you to write in a way that is upgradable to Python 3.x. If you don't know what that means, please ignore the previous sentence ;-))
+
+### Who Reads A Byte of Python?
+
+Here are what people are saying about the book:
+
+**Feedback From Readers**
+
+> The best thing i found was "A byte of Python", which is simply a brilliant book for a beginner. It's well written, the concepts are well explained with self evident examples.
+>
+> -- [_Syed Talal_ (19 years old)](http://littlepancakes.wordpress.com/2010/01/30/python)
+
+> This is the best beginner's tutorial I've ever seen! Thank you for your effort.
+>
+> -- _Walt Michalik_ (wmich50-at-theramp-dot-net)
+
+> You've made the best Python tutorial I've found on the Net. Great work. Thanks!
+>
+> -- _Joshua Robin_ (joshrob-at-poczta-dot-onet-dot-pl)
+
+> Hi, I'm from Dominican Republic. My name is Pavel, recently I read your book 'A Byte of Python' and I consider it excellent!!  :). I learnt much from all the examples. Your book is of great help for newbies like me...
+>
+> -- _Pavel Simo_ (pavel-dot-simo-at-gmail-dot-com)
+
+> I recently finished reading Byte of Python, and I thought I really ought to thank you. I was very sad to reach the final pages as I now have to go back to dull, tedious oreilly or etc.  manuals for learning about python. Anyway, I really appreciate your book.
+>
+> --  _Samuel Young_ (sy-one-three-seven-at-gmail-dot-com)
+
+> Dear Swaroop, I am taking a class from an instructor that has no interest in teaching. We are using Learning Python, second edition, by O'Reilly. It is not a text for beginner without any programming knowledge, and an instructor that should be working in another field.  Thank you very much for your book, without it I would be cluless about Python and programming. Thanks a million, you are able to 'break the message down' to a level that beginners can understand and not everyone can.
+>
+> -- _Joseph Duarte_ (jduarte1-at-cfl-dot-rr-dot-com)
+
+> I love your book! It is the greatest Python tutorial ever, and a very useful reference. Brilliant, a true masterpiece! Keep up the good work!
+>
+> -- _Chris-André Sommerseth_
+
+> I'm just e-mailing you to thank you for writing Byte of Python online.  I had been attempting Python for a few months prior to stumbling across your book, and although I made limited success with pyGame, I never completed a program.
+>
+> Thanks to your simplification of the categories, Python actually seems a reachable goal. It seems like I have finally learned the foundations and I can continue into my real goal, game development.
+>
+> ...
+>
+> Once again, thanks VERY much for placing such a structured and helpful guide to basic programming on the web.  It shoved me into and out of OOP with an understanding where two text books had failed.
+>
+> -- _Matt Gallivan_ (m-underscore-gallivan12-at-hotmail-dot-com)
+
+> I would like to thank you for your book 'A byte of python' which i myself find the best way to learn python. I am a 15 year old i live in egypt my name is Ahmed. Python was my second programming language i learn visual basic 6 at school but didn't enjoy it, however i really enjoyed learning python. I made the addressbook program and i was sucessful. i will try to start make more programs and read python programs (if you could tell me source that would be helpful). I will also start on learning java and if you can tell me where to find a tutorial as good as yours for java that would help me a lot. Thanx.
+>
+> -- _Ahmed Mohammed_ (sedo-underscore-91-at-hotmail-dot-com)
+
+> A wonderful resource for beginners wanting to learn more about Python is the 110-page PDF tutorial A Byte of Python by Swaroop C H. It is well-written, easy to follow, and may be the best introduction to Python programming available.
+>
+> -- _Drew Ames_ in an article on [Scripting Scribus](http://www.linux.com/feature/126522) published on Linux.com
+
+> Yesterday I got through most of Byte of Python on my Nokia N800 and it's the easiest and most concise introduction to Python I have yet encountered. Highly recommended as a starting point for learning Python.
+>
+> -- _Jason Delport_ on his [weblog](http://paxmodept.com/telesto/blogitem.htm?id=627)
+
+> Byte of Vim and Python by @swaroopch is by far the best works in technical writing to me. Excellent reads #FeelGoodFactor
+>
+> -- _Surendran_ says in a [tweet](http://twitter.com/suren/status/12840485454)
+
+> "Byte of python" best one by far man
+>
+> (in response to the question "Can anyone suggest a good, inexpensive resource for learning the basics of Python? ")
+>
+> -- _Justin LoveTrue_ says in a [Facebook community page](http://www.facebook.com/pythonlang/posts/406873916788)
+
+#### Even NASA
+
+The book is even used by NASA! It is being used in their [Jet Propulsion Laboratory](http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/) with their Deep Space Network project.
+
+### Academic Courses
+
+This book is/was being used as instructional material in various educational institutions:
+
+- 'Principles of Programming Languages' course at [Vrije Universiteit, Amsterdam](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html)
+- 'Basic Concepts of Computing' course at [University of California, Davis](http://www.cs.ucdavis.edu/courses/exp_course_desc/10.html)
+- 'Programming With Python' course at [Harvard University](http://www.people.fas.harvard.edu/~preshman/python_winter.html)
+- 'Introduction to Programming' course at [University of Leeds](http://www.comp.leeds.ac.uk/acom1900/)
+- 'Introduction to Application Programming' course at [Boston University](http://www.cs.bu.edu/courses/cs108/materials.html)
+- 'Information Technology Skills for Meteorology' course at [University of Oklahoma](http://gentry.metr.ou.edu/byteofpython/)
+- 'Geoprocessing' course at [Michigan State University](http://www.msu.edu/~ashton/classes/825/index.html)
+- 'Multi Agent Semantic Web Systems' course at the [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/)
+
+### License
+
+This book is licensed under the [Creative Commons Attribution-Share Alike 3.0 Unported](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) license.
+
+This means:
+
+- You are free to Share i.e. to copy, distribute and transmit this book
+- You are free to Remix i.e. to adapt this book
+- You are free to use it for commercial purposes
+
+Please note:
+
+- Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these are not from the original author of this book.
+- Attribution *must* be shown in the introductory description and front page of the document by linking back to <http://www.swaroopch.com/notes/Python> and clearly indicating that the original text can be fetched from this location.
+- All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
+
+### Read Now
+
+You can [read the book online](http://www.swaroopch.com/notes/Python_en-Preface).
+
+### Buy the Book
+
+[A printed hardcopy of the book can be purchased](http://www.swaroopch.com/buybook) for your offline reading pleasure, and to support the continued development and improvement of this book.
+
+### Download
+
+- [PDF](http://files.swaroopch.com/python/byte_of_python.pdf)
+- [Full source](https://github.com/swaroopch/byte_of_python)
+
+**If you wish to support the continued development of this book, please consider [buying a hardcopy](http://www.swaroopch.com/buybook)**.
+
+### Read the book in your native language
+
+If you are interested in reading or contributing translations of this book to other human languages, please see the [Translations page](#translations).
