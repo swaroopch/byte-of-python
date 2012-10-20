@@ -1,10 +1,10 @@
-## Operators and Expressions
+# Operators and Expressions
 
 Most statements (logical lines) that you write will contain *expressions*. A simple example of an expression is `2 + 3`. An expression can be broken down into operators and operands.
 
 *Operators* are functionality that do something and can be represented by symbols such as `+` or by special keywords. Operators require some data to operate on and such data is called *operands*. In this case, `2` and `3` are the operands.
 
-### Operators
+## Operators
 
 We will briefly take a look at the operators and their usage:
 
@@ -161,7 +161,7 @@ Note that you can evaluate the expressions given in the examples using the inter
 
     `x = True; y = False; x or y` returns `True`. Short-circuit evaluation applies here as well.
 
-#### Shortcut for math operation and assignment
+### Shortcut for math operation and assignment
 
 It is common to run a math operation on a variable and then assign the result of the operation back to the variable, hence there is a shortcut for such expressions:
 
@@ -179,7 +179,7 @@ as:
 
 Notice that `var = var operation expression` becomes `var operation= expression`.
 
-### Evaluation Order
+## Evaluation Order
 
 If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Our high school maths tells us that the multiplication should be done first. This means that the multiplication operator has higher precedence than the addition operator.
 
@@ -283,23 +283,23 @@ The operators which we have not already come across will be explained in later c
 
 Operators with the *same precedence* are listed in the same row in the above table. For example, `+` and `-` have the same precedence.
 
-### Changing the Order Of Evaluation
+## Changing the Order Of Evaluation
 
 To make the expressions more readable, we can use parentheses. For example, `2 + (3 * 4)` is definitely easier to understand than `2 + 3 * 4` which requires knowledge of the operator precedences. As with everything else, the parentheses should be used reasonably (do not overdo it) and should not be redundant, as in `(2 + (3 * 4))`.
 
 There is an additional advantage to using parentheses - it helps us to change the order of evaluation. For example, if you want addition to be evaluated before multiplication in an expression, then you can write something like `(2 + 3) * 4`.
 
-### Associativity
+## Associativity
 
 Operators are usually associated from left to right. This means that operators with the same precedence are evaluated in a left to right manner. For example, `2 + 3 + 4` is evaluated as `(2 + 3) + 4`. Some operators like assignment operators have right to left associativity i.e. `a = b = c` is treated as `a = (b = c)`.
 
-### Expressions
+## Expressions
 
 Example:
 
 ~~~python
 #!/usr/bin/python
-# Filename: expression.py
+ Filename: expression.py
 
 length = 5
 breadth = 2
@@ -323,6 +323,6 @@ The length and breadth of the rectangle are stored in variables by the same name
 
 Also, notice how Python 'pretty-prints' the output. Even though we have not specified a space between `'Area is'` and the variable `area`, Python puts it for us so that we get a clean nice output and the program is much more readable this way (since we don't need to worry about spacing in the strings we use for output). This is an example of how Python makes life easy for the programmer.
 
-### Summary
+## Summary
 
 We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using statements.

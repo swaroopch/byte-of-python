@@ -47,6 +47,11 @@ MARKDOWN_FILES = [
         'slug': "python_en-operators_and_expressions",
         'title': "Python : Operators and Expressions",
     },
+    {
+        'file': '08-control-flow.md',
+        'slug': "python_en-control_flow",
+        'title': "Python : Control Flow",
+    },
 ]
 
 
@@ -167,8 +172,7 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
     """Convert from Markdown to HTML; optional: upload images, etc. to S3."""
     args = ['pandoc',
             '-f', 'markdown',
-            '-t', 'html5',
-            '-S']
+            '-t', 'html5']
     p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     output = p.communicate(source_text)[0]
 
@@ -285,7 +289,6 @@ def html():
             '-f', 'markdown',
             '-t', 'html5',
             '-o', '{}.html'.format(FULL_PROJECT_NAME),
-            '-S',
             '-s',
             '--toc'] + [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
@@ -298,8 +301,8 @@ def epub():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'epub',
-            '-o', '{}.epub'.format(FULL_PROJECT_NAME),
-            '-S'] + [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.epub'.format(FULL_PROJECT_NAME)] + \
+        [i['file'] for i in MARKDOWN_FILES]
     # TODO --epub-cover-image
     # TODO --epub-metadata
     # TODO --epub-stylesheet
@@ -315,8 +318,8 @@ def pdf():
             '-f', 'markdown',
             # https://github.com/jgm/pandoc/issues/571
             #'-t', 'pdf',
-            '-o', '{}.pdf'.format(FULL_PROJECT_NAME),
-            '-S'] + [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.pdf'.format(FULL_PROJECT_NAME)] + \
+        + [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.pdf'.format(FULL_PROJECT_NAME))
@@ -328,8 +331,8 @@ def docx():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'docx',
-            '-o', '{}.docx'.format(FULL_PROJECT_NAME),
-            '-S'] + [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.docx'.format(FULL_PROJECT_NAME)] + \
+        [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.docx'.format(FULL_PROJECT_NAME))
@@ -341,8 +344,8 @@ def odt():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'odt',
-            '-o', '{}.odt'.format(FULL_PROJECT_NAME),
-            '-S'] + [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.odt'.format(FULL_PROJECT_NAME)] + \
+        [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.odt'.format(FULL_PROJECT_NAME))

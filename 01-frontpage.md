@@ -1,12 +1,10 @@
-# Python
-
-## Introduction
+# A Byte of Python
 
 'A Byte of Python' is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.
 
 (Note that this book is primarily for the still-in-common-use Python 2.x but teaches you to write in a way that is upgradable to Python 3.x. If you don't know what that means, please ignore the previous sentence ;-))
 
-### Who Reads A Byte of Python?
+## Who Reads A Byte of Python?
 
 Here are what people are saying about the book:
 
@@ -96,11 +94,11 @@ Here are what people are saying about the book:
 >
 > -- _Justin LoveTrue_ says in a [Facebook community page](http://www.facebook.com/pythonlang/posts/406873916788)
 
-#### Even NASA
+### Even NASA
 
 The book is even used by NASA! It is being used in their [Jet Propulsion Laboratory](http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/) with their Deep Space Network project.
 
-### Academic Courses
+## Academic Courses
 
 This book is/was being used as instructional material in various educational institutions:
 
@@ -113,7 +111,7 @@ This book is/was being used as instructional material in various educational ins
 - 'Geoprocessing' course at [Michigan State University](http://www.msu.edu/~ashton/classes/825/index.html)
 - 'Multi Agent Semantic Web Systems' course at the [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/)
 
-### License
+## License
 
 This book is licensed under the [Creative Commons Attribution-Share Alike 3.0 Unported](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) license.
 
@@ -129,21 +127,21 @@ Please note:
 - Attribution *must* be shown in the introductory description and front page of the document by linking back to <http://www.swaroopch.com/notes/Python> and clearly indicating that the original text can be fetched from this location.
 - All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
 
-### Read Now
+## Read Now
 
 You can [read the book online](http://www.swaroopch.com/notes/Python_en-Preface).
 
-### Buy the Book
+## Buy the Book
 
 [A printed hardcopy of the book can be purchased](http://www.swaroopch.com/buybook) for your offline reading pleasure, and to support the continued development and improvement of this book.
 
-### Download
+## Download
 
 - [PDF](http://files.swaroopch.com/python/byte_of_python.pdf)
 - [Full source](https://github.com/swaroopch/byte_of_python)
 
 **If you wish to support the continued development of this book, please consider [buying a hardcopy](http://www.swaroopch.com/buybook)**.
 
-### Read the book in your native language
+## Read the book in your native language
 
 If you are interested in reading or contributing translations of this book to other human languages, please see the [Translations page](#translations).

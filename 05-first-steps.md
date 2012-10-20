@@ -1,10 +1,10 @@
-## First Steps
+# First Steps
 
 We will now see how to run a traditional 'Hello World' program in Python. This will teach you how to write, save and run Python programs.
 
 There are two ways of using Python to run your program - using the interactive interpreter prompt or using a source file. We will now see how to use both of these methods.
 
-### Using The Interpreter Prompt
+## Using The Interpreter Prompt
 
 Start the interpreter on the command line by entering `python` at the shell prompt.
 
@@ -26,7 +26,7 @@ Notice that Python gives you the output of the line immediately! What you just e
 
 *How to Quit the Interpreter Prompt:* If you are using a Linux or Unix shell, you can exit the interpreter prompt by pressing `ctrl-d` or entering `exit()` (note: remember to include the parentheses, '()') followed by the `enter` key. If you are using the Windows command prompt, press `ctrl-z` followed by the `enter` key.
 
-### Choosing An Editor
+## Choosing An Editor
 
 Before we move on to writing Python programs in source files, we need an editor to write the source files. The choice of an editor is crucial indeed. You have to choose an editor as you would choose a car you would buy. A good editor will help you write Python programs easily, making your journey more comfortable and helps you reach your destination (achieve your goal) in a much faster and safer way.
 
@@ -46,7 +46,7 @@ I repeat once again, please choose a proper editor - it can make writing Python 
 
 *For Emacs users:* There is a good introduction on how to [make Emacs a powerful Python IDE by Pedro Kroger](http://pedrokroger.net/2010/07/configuring-emacs-as-a-python-ide-2/).
 
-### Using A Source File
+## Using A Source File
 
 Now let's get back to programming. There is a tradition that whenever you learn a new programming language, the first program that you write and run is the 'Hello World' program - all it does is just say 'Hello World' when you run it. As Simon Cozens (the author of the amazing 'Beginning Perl' book) puts it, it is the 'traditional incantation to the programming gods to help you learn the language better' :) .
 
@@ -56,7 +56,7 @@ If you are using Sublime Text, type the below lines and do `File` --- `Save`, ch
 
 ~~~python
 #!/usr/bin/python
-#Filename: helloworld.py
+Filename: helloworld.py
 
 print 'Hello World'
 ~~~
@@ -89,7 +89,7 @@ The standard for Python is:
 
 `#!/usr/bin/env python`
 
-### How It Works
+## How It Works
 
 Let us consider the first two lines of the program. These are called *comments* - anything to the right of the `#` symbol is a comment and is mainly useful as notes for the reader of the program.
 
@@ -99,7 +99,7 @@ Python does not use comments except for the special case of the first line here.
 
 The comments are followed by a Python *statement*. Here we call the `print` *function* which just prints the text `'Hello World'`. We will learn about functions in a [later chapter](#functions), what you should understand now is that whatever you supply in the parentheses will be printed back to the screen. In this case, we supply `'Hello World'` which is referred to as a string - don't worry, we will explore these terminologies in detail later.
 
-#### Executable Python Programs
+### Executable Python Programs
 
 This applies only to Linux and Unix users but Windows users might be curious as well about the first line of the program. First, we have to give the program executable permission using the `chmod` command then *run* the source program.
 
@@ -137,7 +137,7 @@ This method is very useful if you want to write scripts you can run anytime, any
 
 *Caution:* With regard to Python, a program, script or software all mean the same thing.
 
-### Getting Help
+## Getting Help
 
 If you need quick information about any function or statement in Python, then you can use the built-in `help` functionality. This is very useful especially when using the interpreter prompt. For example, run `help(print)` - this displays the help for the print function which is used to print things to the screen.
 
@@ -147,6 +147,6 @@ Similarly, you can obtain information about almost anything in Python. Use `help
 
 In case you need to get help for operators like `return`, then you need to put those inside quotes such as `help('return')` so that Python doesn't get confused on what we're trying to do.
 
-### Summary
+## Summary
 
 You should now be able to write, save and run Python programs at ease. Now that you are a Python user, let's learn some more Python concepts.

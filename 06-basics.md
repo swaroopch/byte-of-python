@@ -1,12 +1,12 @@
-## Basics
+# Basics
 
 Just printing 'Hello World' is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables.
 
-### Literal Constants
+## Literal Constants
 
 An example of a literal constant is a number like `5`, `1.23`, `9.25e-3` or a string like `'This is a string'`or `"It's a string!"`. It is called a literal because it is *literal* - you use its value literally. The number `2`always represents itself and nothing else - it is a *constant* because its value cannot be changed. Hence, all these are referred to as literal constants.
 
-### Numbers
+## Numbers
 
 Numbers are mainly of two types - integers and floats.
 
@@ -16,21 +16,21 @@ Examples of floating point numbers (or *floats* for short) are `3.23` and `52.3E
 
 *Note for Experienced Programmers:* There is no separate 'long int' type. The default integer type can be a value of any length.
 
-### Strings
+## Strings
 
 A string is a *sequence* of *characters*. Strings are basically just a bunch of words.
 
 You will be using strings in almost every Python program that you write, so pay attention to the following part.
 
-#### Single Quote
+### Single Quote
 
 You can specify strings using single quotes such as `'Quote me on this'`. All white space i.e. spaces and tabs are preserved as-is.
 
-#### Double Quotes
+### Double Quotes
 
 Strings in double quotes work exactly the same way as strings in single quotes. An example is `"What's your name?"`
 
-#### Triple Quote
+### Triple Quote
 
 You can specify multi-line strings using triple quotes - (`"""` or `'''`). You can use single quotes and double quotes freely within the triple quotes. An example is:
 
@@ -42,7 +42,7 @@ He said "Bond, James Bond."
 '''
 ~~~
 
-#### Escape Sequences
+### Escape Sequences
 
 Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `What's your name?`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an *escape sequence*. You specify the single quote as `\'` - notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
 
@@ -59,11 +59,11 @@ This is the second sentence."
 
 is equivalent to `"This is the first sentence. This is the second sentence."`.
 
-#### Raw String
+### Raw String
 
 If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a *raw* string by prefixing `r` or `R` to the string. An example is `r"Newlines are indicated by \n"`.
 
-#### Strings Are Immutable
+### Strings Are Immutable
 
 This means that once you have created a string, you cannot change it. Although this might seem like a bad thing, it really isn't. We will see why this is not a limitation in the various programs that we see later on.
 
@@ -73,13 +73,13 @@ This means that once you have created a string, you cannot change it. Although t
 
 *Note for Regular Expression Users:* Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
 
-#### The format method
+### The format method
 
 Sometimes we may want to construct strings from other information. This is where the `format()` method is useful.
 
 ~~~python
 #!/usr/bin/python
-# Filename: str_format.py
+ Filename: str_format.py
 
 age = 20
 name = 'Swaroop'
@@ -107,20 +107,20 @@ Notice that we could have achieved the same using string concatenation: `name + 
 What Python does in the `format` method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:
 
 ~~~python
-# decimal (.) precision of 3 for float '0.333'
+ decimal (.) precision of 3 for float '0.333'
 >>> '{0:.3}'.format(1/3)
-# fill with underscores (_) with the text centered
-# (^) to 11 width '___hello___'
+ fill with underscores (_) with the text centered
+ (^) to 11 width '___hello___'
 >>> '{0:_^11}'.format('hello')
-# keyword-based 'Swaroop wrote A Byte of Python'
+ keyword-based 'Swaroop wrote A Byte of Python'
 >>> '{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python')
 ~~~
 
-### Variable
+## Variable
 
 Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where *variables* come into the picture. Variables are exactly what the name implies - their value can vary, i.e.,  you can store anything using a variable. Variables are just parts of your computer's memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.
 
-### Identifier Naming
+## Identifier Naming
 
 Variables are examples of identifiers. *Identifiers* are names given to identify *something*. There are some rules you have to follow for naming identifiers:
 
@@ -129,11 +129,11 @@ Variables are examples of identifiers. *Identifiers* are names given to identify
 - Identifier names are case-sensitive. For example, `myname` and `myName` are **not** the same. Note the lowercase `n` in the former and the uppercase `N` in the latter.
 - Examples of *valid* identifier names are `i`, `__my_name`, `name_23`, `>a1b2_c3`. Examples of ''invalid'' identifier names are `2things`, `this is spaced out`, `my-name`, and `"this_is_in_quotes"`.
 
-### Data Types
+## Data Types
 
 Variables can hold values of different types called **data types**. The basic types are numbers and strings, which we have already discussed. In later chapters, we will see how to create our own types using [classes](#object-oriented-programming).
 
-### Object
+## Object
 
 Remember, Python refers to anything used in a program as an *object*.  This is meant in the generic sense. Instead of saying 'the *something*', we say 'the *object*'.
 
@@ -141,7 +141,7 @@ Remember, Python refers to anything used in a program as an *object*.  This is m
 
 We will now see how to use variables along with literal constants. Save the following example and run the program.
 
-### How to write Python programs
+## How to write Python programs
 
 Henceforth, the standard procedure to save and run a Python program is as follows:
 
@@ -150,10 +150,10 @@ Henceforth, the standard procedure to save and run a Python program is as follow
 - Save it as a file with the filename mentioned in the comment. I follow the convention of having all Python programs saved with the extension `.py`.
 - Run the interpreter with the command `python program.py` or use IDLE to run the programs. You can also use the [executable method](#executable-python-programs) as explained earlier.
 
-### Example: Using Variables And Literal Constants
+## Example: Using Variables And Literal Constants
 
 ~~~python
-# Filename : var.py
+ Filename : var.py
 i = 5
 print(i)
 i = i + 1
@@ -184,7 +184,7 @@ Similarly, we assign the literal string to the variable `s` and then print it.
 
 *Note for static language programmers:* Variables are used by just assigning them a value. No declaration or data type definition is needed/used.
 
-#### Logical And Physical Line
+### Logical And Physical Line
 
 A physical line is what you *see* when you write the program. A logical line is what *Python sees* as a single statement. Python implicitly assumes that each *physical line* corresponds to a *logical line*.
 
@@ -247,7 +247,7 @@ print(i)
 
 Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line uses parentheses, square brackets or curly braces. This is called **implicit line joining**.  You can see this in action when we write programs using [lists](#lists) in later chapters.
 
-#### Indentation
+### Indentation
 
 Whitespace is important in Python. Actually, **whitespace at the beginning of the line is important**. This is called **indentation**. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
 
@@ -277,6 +277,6 @@ Choose either of these two indentation styles. More importantly, choose one and 
 
 *Note to static language programmers:* Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
 
-### Summary
+## Summary
 
 Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as control flow statements. Be sure to become comfortable with what you have read in this chapter.

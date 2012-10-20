@@ -1,6 +1,6 @@
-## Installation
+# Installation
 
-### For Linux and BSD users
+## For Linux and BSD users
 
 If you are using a distribution of Linux such as Ubuntu, Fedora, OpenSUSE, Debian, CentOS or {put your choice here}, or a BSD system such as FreeBSD, then it is most likely you already have Python installed on your system.
 
@@ -29,7 +29,7 @@ In this case, you have two ways of installing Python on your system.
 - Install the binary packages using the package management software that comes with your OS, such as `apt-get` in Ubuntu/Debian and other Debian-based distros, `yum` in Fedora, `pkg_add` in FreeBSD, etc. Note that you will need an internet connection to use this method. Alternatively, you can download the binaries from somewhere else and then copy to your computer and install it.
 - You can compile Python from the [source code](http://www.python.org/download/) and install it. The compilation instructions are provided at the website.
 
-### For Windows Users
+## For Windows Users
 
 Visit <http://www.python.org/download/> and download the latest version. The installation is just like any other Windows-based software.
 
@@ -37,7 +37,7 @@ Visit <http://www.python.org/download/> and download the latest version. The ins
 
 An interesting fact is that majority of Python downloads are by Windows users. Of course, this doesn't give the complete picture since almost all Linux users will have Python installed already on their systems by default.
 
-#### DOS Prompt
+### DOS Prompt
 
 If you want to be able to use Python from the Windows command line i.e. the DOS prompt, then you need to set the PATH variable appropriately.
 
@@ -62,11 +62,11 @@ For Windows 7:
 #. If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python27`
 #. Click ok and you are done. No restart is required.
 
-### For Mac OS X Users
+## For Mac OS X Users
 
 Mac OS X Users will find Python already installed on their system. Open the `Terminal.app` and run `python -V` and follow the advice in the above Linux and BSD section.
 
-### Summary
+## Summary
 
 For Linux and BSD systems, you probably already have Python installed on your system.  Otherwise, you can install it using the package management software that comes with your distribution. For a Windows system, installing Python is as easy as downloading the installer and double-clicking on it. From now on, we will assume that you have Python installed on your system.
 
