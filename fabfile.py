@@ -7,6 +7,7 @@ try:
     from xmlrpc.client import ServerProxy
 except ImportError:
     from xmlrpclib import ServerProxy
+from pprint import pprint
 
 import boto
 import boto.s3.bucket
@@ -26,10 +27,18 @@ FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
 # e.g. '01-frontpage.md'
 # The values are the slugs of the WordPress pages
 # e.g. http://www.swaroopch.com/notes/Python_en-Table_of_Contents
-MARKDOWN_FILES = {
-    '01-frontpage.md' : 'Python',
-    '02-table-of-contents.md' : 'Python_en-Table_of_Contents',
-}
+MARKDOWN_FILES = [
+    {
+        'file'   : '01-frontpage.md',
+        'slug'   : "Python",
+        'title'  : "Python",
+    },
+    {
+        'file'   : '02-table-of-contents.md',
+        'slug'   : "Python_en-Table_of_Contents",
+        'title'  : "Table of Contents of A Byte of Python",
+    },
+]
 
 
 ## NOTES
@@ -62,6 +71,29 @@ S3_PUBLIC_URL = os.environ['AWS_S3_BUCKET_NAME']
 #S3_PUBLIC_URL = 's3.amazonaws.com/{}'.format(os.environ['AWS_S3_BUCKET_NAME'])
 
 
+if os.environ.get('WORDPRESS_RPC_URL') is not None \
+        and len(os.environ['WORDPRESS_RPC_URL']) > 0 \
+        and os.environ.get('WORDPRESS_BASE_URL') is not None \
+        and len(os.environ['WORDPRESS_BASE_URL']) > 0 \
+        and os.environ.get('WORDPRESS_BLOG_ID') is not None \
+        and len(os.environ['WORDPRESS_BLOG_ID']) > 0 \
+        and os.environ.get('WORDPRESS_USERNAME') is not None \
+        and len(os.environ['WORDPRESS_USERNAME']) > 0 \
+        and os.environ.get('WORDPRESS_PASSWORD') is not None \
+        and len(os.environ['WORDPRESS_PASSWORD']) > 0 \
+        and os.environ.get('WORDPRESS_PARENT_PAGE_ID') is not None \
+        and len(os.environ['WORDPRESS_PARENT_PAGE_ID']) > 0 \
+        and os.environ.get('WORDPRESS_PARENT_PAGE_SLUG') is not None \
+        and len(os.environ['WORDPRESS_PARENT_PAGE_SLUG']) > 0:
+    WORDPRESS_ENABLED = True
+else:
+    WORDPRESS_ENABLED = False
+    print("NOTE: Wordpress uploading is disabled because of missing environment variables.")
+
+
+##################################################
+
+
 def markdown_to_html(source_text):
     args = ['pandoc',
             '-f', 'markdown',
@@ -75,7 +107,7 @@ def markdown_to_html(source_text):
     return output
 
 
-def __upload_to_s3(filename, key):
+def _upload_to_s3(filename, key):
     conn = boto.connect_s3()
     b = boto.s3.bucket.Bucket(conn, os.environ['AWS_S3_BUCKET_NAME'])
     k = boto.s3.key.Key(b)
@@ -87,31 +119,102 @@ def __upload_to_s3(filename, key):
 
 def upload_output_to_s3(filename):
     key = "{}/{}".format(SHORT_PROJECT_NAME, filename)
-    __upload_to_s3(filename, key)
+    _upload_to_s3(filename, key)
 
 
 def upload_asset_to_s3(filename):
     key = "{}/assets/{}".format(SHORT_PROJECT_NAME, filename)
-    __upload_to_s3(filename, key)
+    _upload_to_s3(filename, key)
+
+
+def _wordpress_get_pages():
+    server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
+    print("(Fetching list of pages from WP)")
+    return server.wp.getPosts(os.environ['WORDPRESS_BLOG_ID'],
+                os.environ['WORDPRESS_USERNAME'],
+                os.environ['WORDPRESS_PASSWORD'],
+                {'post_type' : 'page', 'number' : pow(10, 5)})
+
+
+def wordpress_new_page(slug, title, content):
+    """Create a new Wordpress page.
+
+https://codex.wordpress.org/XML-RPC_WordPress_API/Posts#wp.newPost
+https://codex.wordpress.org/Function_Reference/wp_insert_post
+http://docs.python.org/library/xmlrpclib.html
+"""
+    server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
+    return server.wp.newPost(os.environ['WORDPRESS_BLOG_ID'],
+                os.environ['WORDPRESS_USERNAME'],
+                os.environ['WORDPRESS_PASSWORD'],
+                {
+                    'post_name'       : slug,
+                    'post_content'    : content,
+                    'post_title'      : title,
+                    'post_parent'     : os.environ['WORDPRESS_PARENT_PAGE_ID'],
+                    #'post_category'   : os.environ['WORDPRESS_CATEGORY'], # TODO Take env var for category
+                    'post_type'       : 'page',
+                    'post_status'     : 'publish',
+                    'comment_status'  : 'closed',
+                    'ping_status'     : 'closed',
+                })
+
+
+def wordpress_edit_page(post_id, content):
+    """Edit a Wordpress page.
+
+https://codex.wordpress.org/XML-RPC_WordPress_API/Posts#wp.editPost
+https://codex.wordpress.org/Function_Reference/wp_insert_post
+http://docs.python.org/library/xmlrpclib.html
+"""
+    server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
+    return server.wp.editPost(os.environ['WORDPRESS_BLOG_ID'],
+                os.environ['WORDPRESS_USERNAME'],
+                os.environ['WORDPRESS_PASSWORD'],
+                post_id,
+                {
+                    'post_content' : content,
+                })
 
 
 @task
 def wp():
-    for m in MARKDOWN_FILES.keys():
-        converted_text = markdown_to_html(open(m).read())
-        print converted_text[:50]
-        # TODO Upload to WordPress
-        # https://github.com/rgrp/pywordpress/blob/master/pywordpress.py
-        # file:///Users/swaroop/code/docs/python/library/xmlrpclib.html
+    """https://codex.wordpress.org/XML-RPC_WordPress_API/Posts"""
+    if WORDPRESS_ENABLED:
+        existing_pages = _wordpress_get_pages()
+        existing_page_slugs = [i.get('post_name') for i in existing_pages]
+
+        for chapter in MARKDOWN_FILES:
+            html = markdown_to_html(open(chapter['file']).read())
+
+            if chapter['slug'].lower() in existing_page_slugs:
+                page_id = [i for i in existing_pages \
+                            if i.get('post_name') == chapter['slug'].lower()] \
+                        [0] \
+                        ['post_id']
+                print("Existing page to be updated: {} : {}".format(chapter['slug'], page_id))
+                result = wordpress_edit_page(page_id, html)
+                print("Result: {}".format(result))
+            else:
+                print("New page to be created: {}".format(chapter['slug']))
+                result = wordpress_new_page(chapter['slug'], chapter['title'], html)
+                print("Result: {}".format(result))
+
+            page_url = "{}/{}/{}".format(os.environ['WORDPRESS_BASE_URL'],
+                os.environ['WORDPRESS_PARENT_PAGE_SLUG'],
+                chapter['slug'])
+            print(page_url)
+            print
 
 
 @task
 def epub():
+    """http://johnmacfarlane.net/pandoc/epub.html"""
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'epub',
             '-o', '{}.epub'.format(FULL_PROJECT_NAME),
-            '-S'] + MARKDOWN_FILES.keys()
+            '-S'] + [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.epub'.format(FULL_PROJECT_NAME))
@@ -119,11 +222,12 @@ def epub():
 
 @task
 def pdf():
+    """http://johnmacfarlane.net/pandoc/README.html#creating-a-pdf"""
     args = ['pandoc',
             '-f', 'markdown',
             ##'-t', 'pdf', # Intentionally commented out due to https://github.com/jgm/pandoc/issues/571
             '-o', '{}.pdf'.format(FULL_PROJECT_NAME),
-            '-S'] + MARKDOWN_FILES.keys()
+            '-S'] + [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.pdf'.format(FULL_PROJECT_NAME))
@@ -137,6 +241,7 @@ POSSIBLE_OUTPUTS = (
 
 @task
 def clean():
+    """Remove generated output files"""
     for filename in POSSIBLE_OUTPUTS:
         if os.path.exists(filename):
             os.remove(filename)
