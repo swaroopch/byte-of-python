@@ -16,7 +16,9 @@ from fabric.api import task, local
 if os.environ.get('AWS_ACCESS_KEY_ID') is not None \
         and len(os.environ['AWS_ACCESS_KEY_ID']) > 0 \
         and os.environ.get('AWS_SECRET_ACCESS_KEY') is not None \
-        and len(os.environ['AWS_SECRET_ACCESS_KEY']) > 0:
+        and len(os.environ['AWS_SECRET_ACCESS_KEY']) > 0 \
+        and os.environ.get('AWS_S3_BUCKET_NAME') is not None \
+        and len(os.environ['AWS_S3_BUCKET_NAME']) > 0:
     AWS_ENABLED = True
 else:
     AWS_ENABLED = False
@@ -35,12 +37,9 @@ MARKDOWN_FILES = {
 
 
 def _markdown_to_html(source_text):
-    from_format = 'markdown'
-    to_format = 'html'
-
     args = ['pandoc',
-            '-f', from_format,
-            '-t', to_format,
+            '-f', 'markdown',
+            '-t', 'html',
             '-S']
     p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     output = p.communicate(source_text)[0]
@@ -64,17 +63,37 @@ def wp():
 
 @task
 def epub():
-    from_format = 'markdown'
-    to_format = 'epub'
-    output_file_name = 'byte_of_python.epub'
-
     args = ['pandoc',
-            '-f', from_format,
-            '-t', to_format,
-            '-o', output_file_name,
+            '-f', 'markdown',
+            '-t', 'epub',
+            '-o', 'byte_of_python.epub',
             '-S'] + MARKDOWN_FILES.keys()
     local(' '.join(args))
 
 
-# TODO Add pdf()
+@task
+def pdf():
+    args = ['pandoc',
+            '-f', 'markdown',
+            ##'-t', 'pdf', # Intentionally commented out due to https://github.com/jgm/pandoc/issues/571
+            '-o', 'byte_of_python.pdf',
+            '-S'] + MARKDOWN_FILES.keys()
+    local(' '.join(args))
+
+
+POSSIBLE_OUTPUTS = (
+    'byte_of_python.epub',
+    'byte_of_python.pdf',
+)
+
+
+@task
+def clean():
+    for filename in POSSIBLE_OUTPUTS:
+        if os.path.exists(filename):
+            os.remove(filename)
+            print("Removed {}".format(filename))
+
+
 # TODO Make epub and pdf upload to S3 directly if AWS_ENABLED
+# TODO http://docs.pythonboto.org/en/latest/s3_tut.html
