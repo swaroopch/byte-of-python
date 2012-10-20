@@ -3,7 +3,23 @@
 import os
 import glob
 import subprocess
+try:
+    from xmlrpc.client import ServerProxy
+except ImportError:
+    from xmlrpclib import ServerProxy
+
+import boto
+
 from fabric.api import local
+
+
+assert os.environ.get('AWS_ACCESS_KEY_ID') is not None, "Set AWS_ACCESS_KEY_ID environment variable"
+assert len(os.environ['AWS_ACCESS_KEY_ID']) > 0, "Set AWS_ACCESS_KEY_ID environment variable"
+
+assert os.environ.get('AWS_SECRET_ACCESS_KEY') is not None, "Set AWS_SECRET_ACCESS_KEY environment variable"
+
+assert len(os.environ['AWS_SECRET_ACCESS_KEY']) > 0, "Set AWS_SECRET_ACCESS_KEY environment variable"
+
 
 
 # The keys are the file names of the Pandoc source files.
@@ -32,20 +48,15 @@ def _markdown_to_html(source_text):
     return output
 
 
-def html():
+def wp():
     for m in MARKDOWN_FILES.keys():
         converted_text = _markdown_to_html(open(m).read())
-        output_file_name = MARKDOWN_FILES[m] + ".html"
         with open(output_file_name, 'w') as output:
+            # TODO Replace with uploading to WordPress
+            # https://github.com/rgrp/pywordpress/blob/master/pywordpress.py
+            # file:///Users/swaroop/code/docs/python/library/xmlrpclib.html
             output.write(converted_text)
         local("open {}".format(output_file_name))
-
-
-def cleanup():
-    for m in MARKDOWN_FILES.keys():
-        output_file_name = MARKDOWN_FILES[m] + ".html"
-        if os.path.exists(output_file_name):
-            os.remove(output_file_name)
 
 
 def epub():
