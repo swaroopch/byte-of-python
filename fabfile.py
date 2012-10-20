@@ -106,6 +106,7 @@ else:
 
 
 def _upload_to_s3(filename, key):
+    """http://docs.pythonboto.org/en/latest/s3_tut.html#storing-data"""
     conn = boto.connect_s3()
     b = boto.s3.bucket.Bucket(conn, os.environ['AWS_S3_BUCKET_NAME'])
     k = boto.s3.key.Key(b)
@@ -129,6 +130,7 @@ def upload_asset_to_s3(filename):
 
 
 def replace_images_with_s3_urls(text):
+    """http://www.crummy.com/software/BeautifulSoup/bs4/doc/"""
     soup = BeautifulSoup(text)
     for image in soup.find_all('img'):
         image['src'] = upload_asset_to_s3(image['src'])
@@ -136,10 +138,7 @@ def replace_images_with_s3_urls(text):
 
 
 def markdown_to_html(source_text, upload_assets_to_s3=False):
-    """Convert from Markdown to HTML; upload images to S3.
-
-http://www.crummy.com/software/BeautifulSoup/bs4/doc/
-"""
+    """Convert from Markdown to HTML; optional: upload images, etc. to S3."""
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'html',
