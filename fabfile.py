@@ -20,17 +20,22 @@ MARKDOWN_FILES = [
     {
         'file': '02-preface.md',
         'slug': "python_en-preface",
-        'title': "Preface",
+        'title': "Python : Preface",
     },
     {
         'file': '03-intro.md',
         'slug': "python_en-introduction",
-        'title': "Introduction",
+        'title': "Python : Introduction",
     },
     {
         'file': '04-installation.md',
         'slug': "python_en-installation",
-        'title': "Installation",
+        'title': "Python : Installation",
+    },
+    {
+        'file': '05-first-steps.md',
+        'slug': "python_en-first_steps",
+        'title': "Python : First Steps",
     },
 ]
 
