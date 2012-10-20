@@ -17,6 +17,21 @@ MARKDOWN_FILES = [
         'slug': "python",
         'title': "Python",
     },
+    {
+        'file': '02-preface.md',
+        'slug': "python_en-preface",
+        'title': "Preface",
+    },
+    {
+        'file': '03-intro.md',
+        'slug': "python_en-introduction",
+        'title': "Introduction",
+    },
+    {
+        'file': '04-installation.md',
+        'slug': "python_en-installation",
+        'title': "Installation",
+    },
 ]
 
 
