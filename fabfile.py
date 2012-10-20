@@ -141,7 +141,7 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
     """Convert from Markdown to HTML; optional: upload images, etc. to S3."""
     args = ['pandoc',
             '-f', 'markdown',
-            '-t', 'html',
+            '-t', 'html5',
             '-S']
     p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     output = p.communicate(source_text)[0]
@@ -271,11 +271,39 @@ def pdf():
 
 
 @task
+def docx():
+    """OOXML document format."""
+    args = ['pandoc',
+            '-f', 'markdown',
+            '-t', 'docx',
+            '-o', '{}.docx'.format(FULL_PROJECT_NAME),
+            '-S'] + [i['file'] for i in MARKDOWN_FILES]
+    local(' '.join(args))
+    if AWS_ENABLED:
+        upload_output_to_s3('{}.docx'.format(FULL_PROJECT_NAME))
+
+
+@task
+def odt():
+    """OpenDocument document format."""
+    args = ['pandoc',
+            '-f', 'markdown',
+            '-t', 'odt',
+            '-o', '{}.odt'.format(FULL_PROJECT_NAME),
+            '-S'] + [i['file'] for i in MARKDOWN_FILES]
+    local(' '.join(args))
+    if AWS_ENABLED:
+        upload_output_to_s3('{}.odt'.format(FULL_PROJECT_NAME))
+
+
+@task
 def clean():
     """Remove generated output files"""
     possible_outputs = (
         '{}.epub'.format(FULL_PROJECT_NAME),
         '{}.pdf'.format(FULL_PROJECT_NAME),
+        '{}.docx'.format(FULL_PROJECT_NAME),
+        '{}.odt'.format(FULL_PROJECT_NAME),
     )
 
     for filename in possible_outputs:
