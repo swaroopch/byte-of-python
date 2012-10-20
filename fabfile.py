@@ -23,15 +23,16 @@ SHORT_PROJECT_NAME = 'python'
 FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
 
 
+# NOTE Slugs MUST be lower-case
 MARKDOWN_FILES = [
     {
         'file'   : '01-frontpage.md',
-        'slug'   : "Python",
+        'slug'   : "python",
         'title'  : "Python",
     },
     {
         'file'   : '02-table-of-contents.md',
-        'slug'   : "Python_en-Table_of_Contents",
+        'slug'   : "python_en-table_of_contents",
         'title'  : "Table of Contents of A Byte of Python",
     },
 ]
@@ -47,6 +48,10 @@ MARKDOWN_FILES = [
 
 
 ##################################################
+
+
+for chapter in MARKDOWN_FILES:
+    assert (chapter['slug'].lower() == chapter['slug']), "Slug must be lower case : {}".format(chapter['slug'])
 
 
 if os.environ.get('AWS_ACCESS_KEY_ID') is not None \
@@ -148,7 +153,6 @@ http://docs.python.org/library/xmlrpclib.html
                     'post_content'    : content,
                     'post_title'      : title,
                     'post_parent'     : os.environ['WORDPRESS_PARENT_PAGE_ID'],
-                    #'post_category'   : os.environ['WORDPRESS_CATEGORY'], # TODO Take env var for category
                     'post_type'       : 'page',
                     'post_status'     : 'publish',
                     'comment_status'  : 'closed',
@@ -183,9 +187,9 @@ def wp():
         for chapter in MARKDOWN_FILES:
             html = markdown_to_html(open(chapter['file']).read())
 
-            if chapter['slug'].lower() in existing_page_slugs:
+            if chapter['slug'] in existing_page_slugs:
                 page_id = [i for i in existing_pages \
-                            if i.get('post_name') == chapter['slug'].lower()] \
+                            if i.get('post_name') == chapter['slug']] \
                         [0] \
                         ['post_id']
                 print("Existing page to be updated: {} : {}".format(chapter['slug'], page_id))
