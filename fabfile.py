@@ -42,6 +42,11 @@ MARKDOWN_FILES = [
         'slug': "python_en-basics",
         'title': "Python : Basics",
     },
+    {
+        'file': '07-operators-expressions.md',
+        'slug': "python_en-operators_and_expressions",
+        'title': "Python : Operators and Expressions",
+    },
 ]
 
 
@@ -166,8 +171,13 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
             '-S']
     p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     output = p.communicate(source_text)[0]
+
+    # http://wordpress.org/extend/plugins/raw-html/
+    output = '<!--raw-->\n' + output + '\n<!--/raw-->'
+
     if upload_assets_to_s3:
         output = replace_images_with_s3_urls(output)
+
     return output
 
 
@@ -207,7 +217,7 @@ http://docs.python.org/library/xmlrpclib.html
                              })
 
 
-def wordpress_edit_page(post_id, content):
+def wordpress_edit_page(post_id, title, content):
     """Edit a Wordpress page.
 
 https://codex.wordpress.org/XML-RPC_WordPress_API/Posts#wp.editPost
@@ -221,6 +231,7 @@ http://docs.python.org/library/xmlrpclib.html
                               post_id,
                               {
                                   'post_content': content,
+                                  'post_title': title,
                               })
 
 
@@ -249,7 +260,9 @@ def wp():
                 print("Existing page to be updated: {} : {}".format(
                       chapter['slug'],
                       page_id))
-                result = wordpress_edit_page(page_id, html)
+                result = wordpress_edit_page(page_id,
+                                             chapter['title'],
+                                             html)
                 print("Result: {}".format(result))
             else:
                 print("New page to be created: {}".format(chapter['slug']))

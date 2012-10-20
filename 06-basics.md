@@ -107,9 +107,13 @@ Notice that we could have achieved the same using string concatenation: `name + 
 What Python does in the `format` method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:
 
 ~~~python
->>> '{0:.3}'.format(1/3) # decimal (.) precision of 3 for float '0.333'
->>> '{0:_^11}'.format('hello') # fill with underscores (_) with the text centered (^) to 11 width '___hello___'
->>> '{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python') # keyword-based 'Swaroop wrote A Byte of Python'
+# decimal (.) precision of 3 for float '0.333'
+>>> '{0:.3}'.format(1/3)
+# fill with underscores (_) with the text centered
+# (^) to 11 width '___hello___'
+>>> '{0:_^11}'.format('hello')
+# keyword-based 'Swaroop wrote A Byte of Python'
+>>> '{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python')
 ~~~
 
 ### Variable
@@ -123,7 +127,7 @@ Variables are examples of identifiers. *Identifiers* are names given to identify
 - The first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore ('_').
 - The rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores ('_') or digits (0-9).
 - Identifier names are case-sensitive. For example, `myname` and `myName` are **not** the same. Note the lowercase `n` in the former and the uppercase `N` in the latter.
-- Examples of *valid* identifier names are `i`, `__my_name`, `name_23`, `>a1b2_c3` and `random_utf8_characters_Յժջ٣ㄆㄘㄩڨڪწჭⴠςεζਫשׁມຣߓ߆ପବଭ<`* Examples of ''invalid'' identifier names are `2things`, `this is spaced out`, `my-name`, and `"this_is_in_quotes"`.
+- Examples of *valid* identifier names are `i`, `__my_name`, `name_23`, `>a1b2_c3`. Examples of ''invalid'' identifier names are `2things`, `this is spaced out`, `my-name`, and `"this_is_in_quotes"`.
 
 ### Data Types
 
@@ -266,7 +270,7 @@ When you run this, you get the following error:
 IndentationError: unexpected indent
 ~~~
 
-Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that *you cannot arbitrarily start new blocks of statements* (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the ??[[Python_en:Control Flow|control flow chapter]].
+Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that *you cannot arbitrarily start new blocks of statements* (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the [Control Flow](#control-flow).
 
 *How to indent:* Do **not** use a mixture of tabs and spaces for the indentation as it does not work across different platforms properly. I *strongly recommend* that you use a *single tab* or *four spaces* for each indentation level.
 Choose either of these two indentation styles. More importantly, choose one and use it **consistently**; and be consistent with the style used in existing files you are editing. i.e. When writing new files use that indentation style *only* and if a file you need to edit is using tabs, while editing that file use tabs for indentation.
