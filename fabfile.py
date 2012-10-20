@@ -12,6 +12,7 @@ from pprint import pprint
 import boto
 import boto.s3.bucket
 import boto.s3.key
+from bs4 import BeautifulSoup
 
 from fabric.api import task, local
 
@@ -95,19 +96,6 @@ else:
 ##################################################
 
 
-def markdown_to_html(source_text):
-    args = ['pandoc',
-            '-f', 'markdown',
-            '-t', 'html',
-            '-S']
-    p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    output = p.communicate(source_text)[0]
-
-    # TODO Replace image URLs with uploaded AWS S3 assets public URLs
-
-    return output
-
-
 def _upload_to_s3(filename, key):
     conn = boto.connect_s3()
     b = boto.s3.bucket.Bucket(conn, os.environ['AWS_S3_BUCKET_NAME'])
@@ -115,17 +103,43 @@ def _upload_to_s3(filename, key):
     k.key = key
     k.set_contents_from_filename(filename)
     k.set_acl('public-read')
-    print("Uploaded to S3 : http://{}/{}".format(S3_PUBLIC_URL, key))
+
+    url = 'http://{}/{}'.format(S3_PUBLIC_URL, key)
+    print("Uploaded to S3 : {}".format(url))
+    return url
 
 
 def upload_output_to_s3(filename):
-    key = "{}/{}".format(SHORT_PROJECT_NAME, filename)
-    _upload_to_s3(filename, key)
+    key = "{}/{}".format(SHORT_PROJECT_NAME, filename.split('/')[-1])
+    return _upload_to_s3(filename, key)
 
 
 def upload_asset_to_s3(filename):
-    key = "{}/assets/{}".format(SHORT_PROJECT_NAME, filename)
-    _upload_to_s3(filename, key)
+    key = "{}/assets/{}".format(SHORT_PROJECT_NAME, filename.split('/')[-1])
+    return _upload_to_s3(filename, key)
+
+
+def replace_images_with_s3_urls(text):
+    soup = BeautifulSoup(text)
+    for image in soup.find_all('img'):
+        image['src'] = upload_asset_to_s3(image['src'])
+    return soup.prettify()
+
+
+def markdown_to_html(source_text, upload_assets_to_s3=False):
+    """Convert from Markdown to HTML; upload images to S3.
+
+http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+"""
+    args = ['pandoc',
+            '-f', 'markdown',
+            '-t', 'html',
+            '-S']
+    p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    output = p.communicate(source_text)[0]
+    if upload_assets_to_s3:
+        output = replace_images_with_s3_urls(output)
+    return output
 
 
 def _wordpress_get_pages():
@@ -134,7 +148,10 @@ def _wordpress_get_pages():
     return server.wp.getPosts(os.environ['WORDPRESS_BLOG_ID'],
                 os.environ['WORDPRESS_USERNAME'],
                 os.environ['WORDPRESS_PASSWORD'],
-                {'post_type' : 'page', 'number' : pow(10, 5)})
+                {
+                    'post_type' : 'page',
+                    'number' : pow(10, 5),
+                })
 
 
 def wordpress_new_page(slug, title, content):
@@ -185,7 +202,7 @@ def wp():
         existing_page_slugs = [i.get('post_name') for i in existing_pages]
 
         for chapter in MARKDOWN_FILES:
-            html = markdown_to_html(open(chapter['file']).read())
+            html = markdown_to_html(open(chapter['file']).read(), upload_assets_to_s3=True)
 
             if chapter['slug'] in existing_page_slugs:
                 page_id = [i for i in existing_pages \
