@@ -23,10 +23,6 @@ SHORT_PROJECT_NAME = 'python'
 FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
 
 
-# The keys are the file names of the Pandoc source files.
-# e.g. '01-frontpage.md'
-# The values are the slugs of the WordPress pages
-# e.g. http://www.swaroopch.com/notes/Python_en-Table_of_Contents
 MARKDOWN_FILES = [
     {
         'file'   : '01-frontpage.md',
