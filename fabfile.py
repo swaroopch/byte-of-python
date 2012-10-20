@@ -244,6 +244,19 @@ def wp():
 
 
 @task
+def html():
+    """HTML5 output."""
+    args = ['pandoc',
+            '-f', 'markdown',
+            '-t', 'html5',
+            '-o', '{}.html'.format(FULL_PROJECT_NAME),
+            '-S',
+            '-s'] + [i['file'] for i in MARKDOWN_FILES]
+    local(' '.join(args))
+    local('open {}.html'.format(FULL_PROJECT_NAME))
+
+
+@task
 def epub():
     """http://johnmacfarlane.net/pandoc/epub.html"""
     args = ['pandoc',
@@ -300,6 +313,7 @@ def odt():
 def clean():
     """Remove generated output files"""
     possible_outputs = (
+        '{}.html'.format(FULL_PROJECT_NAME),
         '{}.epub'.format(FULL_PROJECT_NAME),
         '{}.pdf'.format(FULL_PROJECT_NAME),
         '{}.docx'.format(FULL_PROJECT_NAME),
