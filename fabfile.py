@@ -1,5 +1,42 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
+
+
+##### Configuration ##############################
+
+
+SHORT_PROJECT_NAME = 'python'
+FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
+
+
+# NOTE Slugs MUST be lower-case
+MARKDOWN_FILES = [
+    {
+        'file': '01-frontpage.md',
+        'slug': "python",
+        'title': "Python",
+    },
+    {
+        'file': '02-table-of-contents.md',
+        'slug': "python_en-table_of_contents",
+        'title': "Table of Contents of A Byte of Python",
+    },
+]
+
+
+## NOTES
+## 1. This assumes that you have already created the S3 bucket whose name
+##    is stored in AWS_S3_BUCKET_NAME environment variable.
+## 2. Under that S3 bucket, you have created a folder whose name is stored
+##    above as SHORT_PROJECT_NAME.
+## 3. Under that S3 bucket, you have created a folder whose name is stored as
+##    SHORT_PROJECT_NAME/assets.
+
+
+##### Imports ####################################
+
+
 import os
 import glob
 import subprocess
@@ -17,42 +54,12 @@ from bs4 import BeautifulSoup
 from fabric.api import task, local
 
 
-##################################################
-
-
-SHORT_PROJECT_NAME = 'python'
-FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
-
-
-# NOTE Slugs MUST be lower-case
-MARKDOWN_FILES = [
-    {
-        'file'   : '01-frontpage.md',
-        'slug'   : "python",
-        'title'  : "Python",
-    },
-    {
-        'file'   : '02-table-of-contents.md',
-        'slug'   : "python_en-table_of_contents",
-        'title'  : "Table of Contents of A Byte of Python",
-    },
-]
-
-
-## NOTES
-## 1. This assumes that you have already created the S3 bucket whose name is stored in
-##    AWS_S3_BUCKET_NAME environment variable.
-## 2. Under that S3 bucket, you have created a folder whose name is stored above as
-##    SHORT_PROJECT_NAME.
-## 3. Under that S3 bucket, you have created a folder whose name is stored as
-##    SHORT_PROJECT_NAME/assets.
-
-
-##################################################
+##### Start with checks ##########################
 
 
 for chapter in MARKDOWN_FILES:
-    assert (chapter['slug'].lower() == chapter['slug']), "Slug must be lower case : {}".format(chapter['slug'])
+    assert (chapter['slug'].lower() == chapter['slug']), \
+        "Slug must be lower case : {}".format(chapter['slug'])
 
 
 if os.environ.get('AWS_ACCESS_KEY_ID') is not None \
@@ -64,7 +71,8 @@ if os.environ.get('AWS_ACCESS_KEY_ID') is not None \
     AWS_ENABLED = True
 else:
     AWS_ENABLED = False
-    print("NOTE: S3 uploading is disabled because of missing AWS key environment variables.")
+    print("NOTE: S3 uploading is disabled because of missing " +
+          "AWS key environment variables.")
 
 # In my case, they are the same - 'files.swaroopch.com'
 # http://docs.amazonwebservices.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs
@@ -90,10 +98,11 @@ if os.environ.get('WORDPRESS_RPC_URL') is not None \
     WORDPRESS_ENABLED = True
 else:
     WORDPRESS_ENABLED = False
-    print("NOTE: Wordpress uploading is disabled because of missing environment variables.")
+    print("NOTE: Wordpress uploading is disabled because of " +
+          "missing environment variables.")
 
 
-##################################################
+##### Helper methods #############################
 
 
 def _upload_to_s3(filename, key):
@@ -146,12 +155,12 @@ def _wordpress_get_pages():
     server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
     print("(Fetching list of pages from WP)")
     return server.wp.getPosts(os.environ['WORDPRESS_BLOG_ID'],
-                os.environ['WORDPRESS_USERNAME'],
-                os.environ['WORDPRESS_PASSWORD'],
-                {
-                    'post_type' : 'page',
-                    'number' : pow(10, 5),
-                })
+                              os.environ['WORDPRESS_USERNAME'],
+                              os.environ['WORDPRESS_PASSWORD'],
+                              {
+                                  'post_type': 'page',
+                                  'number': pow(10, 5),
+                              })
 
 
 def wordpress_new_page(slug, title, content):
@@ -163,18 +172,19 @@ http://docs.python.org/library/xmlrpclib.html
 """
     server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
     return server.wp.newPost(os.environ['WORDPRESS_BLOG_ID'],
-                os.environ['WORDPRESS_USERNAME'],
-                os.environ['WORDPRESS_PASSWORD'],
-                {
-                    'post_name'       : slug,
-                    'post_content'    : content,
-                    'post_title'      : title,
-                    'post_parent'     : os.environ['WORDPRESS_PARENT_PAGE_ID'],
-                    'post_type'       : 'page',
-                    'post_status'     : 'publish',
-                    'comment_status'  : 'closed',
-                    'ping_status'     : 'closed',
-                })
+                             os.environ['WORDPRESS_USERNAME'],
+                             os.environ['WORDPRESS_PASSWORD'],
+                             {
+                                 'post_name': slug,
+                                 'post_content': content,
+                                 'post_title': title,
+                                 'post_parent':
+                                 os.environ['WORDPRESS_PARENT_PAGE_ID'],
+                                 'post_type': 'page',
+                                 'post_status': 'publish',
+                                 'comment_status': 'closed',
+                                 'ping_status': 'closed',
+                             })
 
 
 def wordpress_edit_page(post_id, content):
@@ -186,12 +196,15 @@ http://docs.python.org/library/xmlrpclib.html
 """
     server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
     return server.wp.editPost(os.environ['WORDPRESS_BLOG_ID'],
-                os.environ['WORDPRESS_USERNAME'],
-                os.environ['WORDPRESS_PASSWORD'],
-                post_id,
-                {
-                    'post_content' : content,
-                })
+                              os.environ['WORDPRESS_USERNAME'],
+                              os.environ['WORDPRESS_PASSWORD'],
+                              post_id,
+                              {
+                                  'post_content': content,
+                              })
+
+
+##### Tasks ######################################
 
 
 @task
@@ -201,27 +214,34 @@ def wp():
         existing_pages = _wordpress_get_pages()
         existing_page_slugs = [i.get('post_name') for i in existing_pages]
 
+        def page_slug_to_id(slug):
+            pages = [i for i in existing_pages if i.get('post_name') == slug]
+            page = pages[0]
+            return page['post_id']
+
         for chapter in MARKDOWN_FILES:
-            html = markdown_to_html(open(chapter['file']).read(), upload_assets_to_s3=True)
+            html = markdown_to_html(open(chapter['file']).read(),
+                                    upload_assets_to_s3=True)
 
             if chapter['slug'] in existing_page_slugs:
-                page_id = [i for i in existing_pages \
-                            if i.get('post_name') == chapter['slug']] \
-                        [0] \
-                        ['post_id']
-                print("Existing page to be updated: {} : {}".format(chapter['slug'], page_id))
+                page_id = page_slug_to_id(chapter['slug'])
+                print("Existing page to be updated: {} : {}".format(
+                      chapter['slug'],
+                      page_id))
                 result = wordpress_edit_page(page_id, html)
                 print("Result: {}".format(result))
             else:
                 print("New page to be created: {}".format(chapter['slug']))
-                result = wordpress_new_page(chapter['slug'], chapter['title'], html)
+                result = wordpress_new_page(chapter['slug'],
+                                            chapter['title'],
+                                            html)
                 print("Result: {}".format(result))
 
             page_url = "{}/{}/{}".format(os.environ['WORDPRESS_BASE_URL'],
-                os.environ['WORDPRESS_PARENT_PAGE_SLUG'],
-                chapter['slug'])
+                       os.environ['WORDPRESS_PARENT_PAGE_SLUG'],
+                       chapter['slug'])
             print(page_url)
-            print
+            print()
 
 
 @task
@@ -242,7 +262,8 @@ def pdf():
     """http://johnmacfarlane.net/pandoc/README.html#creating-a-pdf"""
     args = ['pandoc',
             '-f', 'markdown',
-            ##'-t', 'pdf', # Intentionally commented out due to https://github.com/jgm/pandoc/issues/571
+            # https://github.com/jgm/pandoc/issues/571
+            #'-t', 'pdf',
             '-o', '{}.pdf'.format(FULL_PROJECT_NAME),
             '-S'] + [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
@@ -250,16 +271,15 @@ def pdf():
         upload_output_to_s3('{}.pdf'.format(FULL_PROJECT_NAME))
 
 
-POSSIBLE_OUTPUTS = (
-    '{}.epub'.format(FULL_PROJECT_NAME),
-    '{}.pdf'.format(FULL_PROJECT_NAME),
-)
-
-
 @task
 def clean():
     """Remove generated output files"""
-    for filename in POSSIBLE_OUTPUTS:
+    possible_outputs = (
+        '{}.epub'.format(FULL_PROJECT_NAME),
+        '{}.pdf'.format(FULL_PROJECT_NAME),
+    )
+
+    for filename in possible_outputs:
         if os.path.exists(filename):
             os.remove(filename)
             print("Removed {}".format(filename))
