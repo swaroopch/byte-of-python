@@ -56,8 +56,9 @@ for chapter in MARKDOWN_FILES:
     assert (chapter['slug'].lower() == chapter['slug']), \
         "Slug must be lower case : {}".format(chapter['slug'])
 
-
-if os.environ.get('AWS_ACCESS_KEY_ID') is not None \
+if str(os.environ.get('AWS_ENABLED')).lower() == 'false':
+    AWS_ENABLED = False
+elif os.environ.get('AWS_ACCESS_KEY_ID') is not None \
         and len(os.environ['AWS_ACCESS_KEY_ID']) > 0 \
         and os.environ.get('AWS_SECRET_ACCESS_KEY') is not None \
         and len(os.environ['AWS_SECRET_ACCESS_KEY']) > 0 \
