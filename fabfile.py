@@ -52,6 +52,11 @@ MARKDOWN_FILES = [
         'slug': "python_en-control_flow",
         'title': "Python : Control Flow",
     },
+    {
+        'file': '09-functions.pd',
+        'slug': "python_en-functions",
+        'title': "Python : Functions",
+    },
 ]
 
 

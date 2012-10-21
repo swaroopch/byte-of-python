@@ -24,7 +24,7 @@ Convert the source files into HTML files:
 
 ## Editing
 
-If you're using Vim editor, then installing [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc) plugin is recommended.
+If you're using Vim editor, then you may like the [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc) plugin. There is one downside though - for long chapters, it becomes really slow, so I edit only in plain text mode (`:set ft=`), but when reviewing, I use the `pandoc` (`:set ft=pandoc`) mode.
 
 If you're using [Sublime Text](http://www.sublimetext.com/) editor, you may find the following plugins useful:
 
