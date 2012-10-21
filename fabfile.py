@@ -319,7 +319,7 @@ def pdf():
             # https://github.com/jgm/pandoc/issues/571
             #'-t', 'pdf',
             '-o', '{}.pdf'.format(FULL_PROJECT_NAME)] + \
-        + [i['file'] for i in MARKDOWN_FILES]
+        [i['file'] for i in MARKDOWN_FILES]
     local(' '.join(args))
     if AWS_ENABLED:
         upload_output_to_s3('{}.pdf'.format(FULL_PROJECT_NAME))

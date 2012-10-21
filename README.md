@@ -9,7 +9,7 @@ Install `pdflatex` from <http://www.tug.org/texlive/>.
 Note that Mac users can install `MacTex.pkg` from <http://www.tug.org/mactex/2012/>.
 
 Install `pip` if not present already:
-    
+
     sudo sh -c "curl -k -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py && python get-pip.py && rm get-pip.py"
 
 
@@ -21,3 +21,9 @@ Install Python libraries needed:
 Convert the source files into HTML files:
 
     fab html
+
+## Editing
+
+If you're using Vim editor, then installing [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc) plugin is recommended.
+
+If you're using [Sublime Text](http://www.sublimetext.com/) editor, you may find [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation) and [Pandoc Academic](https://github.com/larlequin/PandocAcademic) plugins useful.
