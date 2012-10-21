@@ -13,42 +13,42 @@ FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
 # NOTE Slugs MUST be lower-case
 MARKDOWN_FILES = [
     {
-        'file': '01-frontpage.md',
+        'file': '01-frontpage.pd',
         'slug': "python",
         'title': "Python",
     },
     {
-        'file': '02-preface.md',
+        'file': '02-preface.pd',
         'slug': "python_en-preface",
         'title': "Python : Preface",
     },
     {
-        'file': '03-intro.md',
+        'file': '03-intro.pd',
         'slug': "python_en-introduction",
         'title': "Python : Introduction",
     },
     {
-        'file': '04-installation.md',
+        'file': '04-installation.pd',
         'slug': "python_en-installation",
         'title': "Python : Installation",
     },
     {
-        'file': '05-first-steps.md',
+        'file': '05-first-steps.pd',
         'slug': "python_en-first_steps",
         'title': "Python : First Steps",
     },
     {
-        'file': '06-basics.md',
+        'file': '06-basics.pd',
         'slug': "python_en-basics",
         'title': "Python : Basics",
     },
     {
-        'file': '07-operators-expressions.md',
+        'file': '07-operators-expressions.pd',
         'slug': "python_en-operators_and_expressions",
         'title': "Python : Operators and Expressions",
     },
     {
-        'file': '08-control-flow.md',
+        'file': '08-control-flow.pd',
         'slug': "python_en-control_flow",
         'title': "Python : Control Flow",
     },
