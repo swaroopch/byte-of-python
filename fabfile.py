@@ -92,6 +92,31 @@ MARKDOWN_FILES = [
         'slug': "python_en-standard_library",
         'title': "Python : Standard Library",
     },
+    {
+        'file': '17-more.pd',
+        'slug': "python_en-more",
+        'title': "Python : More",
+    },
+    {
+        'file': '18-what-next.pd',
+        'slug': "python_en-what_next",
+        'title': "Python : What Next",
+    },
+    {
+        'file': '19-appendix-floss.pd',
+        'slug': "python_en-appendix_floss",
+        'title': "Python : Appendix : FLOSS",
+    },
+    {
+        'file': '20-appendix-about.pd',
+        'slug': "python_en-appendix_about",
+        'title': "Python : Appendix : About",
+    },
+    {
+        'file': '21-revision-history.pd',
+        'slug': "python_en-appendix_revision_history",
+        'title': "Python : Appendix : Revision History",
+    },
 ]
 
 
