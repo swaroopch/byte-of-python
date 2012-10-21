@@ -62,6 +62,11 @@ MARKDOWN_FILES = [
         'slug': "python_en-modules",
         'title': "Python : Modules",
     },
+    {
+        'file': '11-data-structures.pd',
+        'slug': "python_en-data_structures",
+        'title': "Python : Data Structures",
+    },
 ]
 
 
