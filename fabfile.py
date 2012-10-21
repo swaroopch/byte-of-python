@@ -57,6 +57,11 @@ MARKDOWN_FILES = [
         'slug': "python_en-functions",
         'title': "Python : Functions",
     },
+    {
+        'file': '10-modules.pd',
+        'slug': "python_en-modules",
+        'title': "Python : Modules",
+    },
 ]
 
 
