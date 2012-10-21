@@ -67,6 +67,31 @@ MARKDOWN_FILES = [
         'slug': "python_en-data_structures",
         'title': "Python : Data Structures",
     },
+    {
+        'file': '12-problem-solving.pd',
+        'slug': "python_en-problem_solving",
+        'title': "Python : Problem Solving",
+    },
+    {
+        'file': '13-oop.pd',
+        'slug': "python_en-object_oriented_programming",
+        'title': "Python : Object Oriented Programming",
+    },
+    {
+        'file': '14-io.pd',
+        'slug': "python_en-input_output",
+        'title': "Python : Input Output",
+    },
+    {
+        'file': '15-exceptions.pd',
+        'slug': "python_en-exceptions",
+        'title': "Python : Exceptions",
+    },
+    {
+        'file': '16-standard-library.pd',
+        'slug': "python_en-standard_library",
+        'title': "Python : Standard Library",
+    },
 ]
 
 
