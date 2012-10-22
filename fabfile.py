@@ -142,7 +142,7 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
 
 def _wordpress_get_pages():
     server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
-    print("Fetching list of pages from WP")
+    print("Fetching list of pages from WordPress")
     return server.wp.getPosts(os.environ['WORDPRESS_BLOG_ID'],
                               os.environ['WORDPRESS_USERNAME'],
                               os.environ['WORDPRESS_PASSWORD'],
@@ -218,6 +218,32 @@ def fix_links_to_other_chapters(chapter, chapters, all_headers):
     chapter['html'] = unicode(soup)
 
 
+def add_previous_next_links(chapter, i, chapters):
+    previous_link = None
+    if i > 0:
+        previous_link = chapters[i - 1]['link']
+
+    next_link = None
+    if i < len(chapters) - 1:
+        next_link = chapters[i + 1]['link']
+
+    if previous_link is not None or next_link is not None:
+        chapter['html'] += "\n"
+
+    if previous_link is not None:
+        chapter['html'] += """\
+<a href="{}">&lArr; Previous chapter</a>\
+""".format(previous_link)
+
+    if previous_link is not None and next_link is not None:
+        chapter['html'] += '&nbsp;' * 5
+
+    if next_link is not None:
+        chapter['html'] += """\
+<a href="{}">Next chapter &rArr;</a>\
+""".format(next_link)
+
+
 ##### Tasks ######################################
 
 
@@ -249,29 +275,7 @@ def wp():
 
         # Add previous and next links at end of html
         for (i, chapter) in enumerate(chapters):
-            previous_link = None
-            if i > 0:
-                previous_link = chapters[i - 1]['link']
-
-            next_link = None
-            if i < len(chapters) - 1:
-                next_link = chapters[i + 1]['link']
-
-            if previous_link is not None or next_link is not None:
-                chapter['html'] += "\n"
-
-            if previous_link is not None:
-                chapter['html'] += """\
-<a href="{}">&lArr; Previous chapter</a>\
-""".format(previous_link)
-
-            if previous_link is not None and next_link is not None:
-                chapter['html'] += '&nbsp;' * 5
-
-            if next_link is not None:
-                chapter['html'] += """\
-<a href="{}">Next chapter &rArr;</a>\
-""".format(next_link)
+            add_previous_next_links(chapter, i, chapters)
 
         # Fetch list of pages on the server and determine which already exist
         existing_pages = _wordpress_get_pages()
