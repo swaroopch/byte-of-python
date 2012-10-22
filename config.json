@@ -1,0 +1,121 @@
+{
+  "SHORT_PROJECT_NAME": "python",
+  "FULL_PROJECT_NAME": "byte_of_python",
+  "MARKDOWN_FILES": [
+    {
+      "slug": "python",
+      "file": "01-frontpage.pd",
+      "title": "Python"
+    },
+    {
+      "slug": "python_en-preface",
+      "file": "02-preface.pd",
+      "title": "Python : Preface"
+    },
+    {
+      "slug": "python_en-introduction",
+      "file": "03-intro.pd",
+      "title": "Python : Introduction"
+    },
+    {
+      "slug": "python_en-installation",
+      "file": "04-installation.pd",
+      "title": "Python : Installation"
+    },
+    {
+      "slug": "python_en-first_steps",
+      "file": "05-first-steps.pd",
+      "title": "Python : First Steps"
+    },
+    {
+      "slug": "python_en-basics",
+      "file": "06-basics.pd",
+      "title": "Python : Basics"
+    },
+    {
+      "slug": "python_en-operators_and_expressions",
+      "file": "07-operators-expressions.pd",
+      "title": "Python : Operators and Expressions"
+    },
+    {
+      "slug": "python_en-control_flow",
+      "file": "08-control-flow.pd",
+      "title": "Python : Control Flow"
+    },
+    {
+      "slug": "python_en-functions",
+      "file": "09-functions.pd",
+      "title": "Python : Functions"
+    },
+    {
+      "slug": "python_en-modules",
+      "file": "10-modules.pd",
+      "title": "Python : Modules"
+    },
+    {
+      "slug": "python_en-data_structures",
+      "file": "11-data-structures.pd",
+      "title": "Python : Data Structures"
+    },
+    {
+      "slug": "python_en-problem_solving",
+      "file": "12-problem-solving.pd",
+      "title": "Python : Problem Solving"
+    },
+    {
+      "slug": "python_en-object_oriented_programming",
+      "file": "13-oop.pd",
+      "title": "Python : Object Oriented Programming"
+    },
+    {
+      "slug": "python_en-input_output",
+      "file": "14-io.pd",
+      "title": "Python : Input Output"
+    },
+    {
+      "slug": "python_en-exceptions",
+      "file": "15-exceptions.pd",
+      "title": "Python : Exceptions"
+    },
+    {
+      "slug": "python_en-standard_library",
+      "file": "16-standard-library.pd",
+      "title": "Python : Standard Library"
+    },
+    {
+      "slug": "python_en-more",
+      "file": "17-more.pd",
+      "title": "Python : More"
+    },
+    {
+      "slug": "python_en-what_next",
+      "file": "18-what-next.pd",
+      "title": "Python : What Next"
+    },
+    {
+      "slug": "python_en-appendix_floss",
+      "file": "19-appendix-floss.pd",
+      "title": "Python : Appendix : FLOSS"
+    },
+    {
+      "slug": "python_en-appendix_about",
+      "file": "20-appendix-about.pd",
+      "title": "Python : Appendix : About"
+    },
+    {
+      "slug": "python_en-appendix_revision_history",
+      "file": "21-revision-history.pd",
+      "title": "Python : Appendix : Revision History"
+    },
+    {
+      "slug": "python_en-translations",
+      "file": "22-translations.pd",
+      "title": "Python : Appendix : Translations"
+    },
+    {
+      "slug": "python_en-translation_howto",
+      "file": "23-translation-howto.pd",
+      "title": "Python : Appendix : Translation Howto"
+    }
+  ]
+}

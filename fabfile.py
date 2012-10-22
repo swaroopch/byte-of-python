@@ -5,130 +5,9 @@ from __future__ import print_function
 
 ##### Configuration ##############################
 
+import json
 
-SHORT_PROJECT_NAME = 'python'
-FULL_PROJECT_NAME = 'byte_of_{}'.format(SHORT_PROJECT_NAME)
-
-
-# NOTE Slugs MUST be lower-case
-MARKDOWN_FILES = [
-    {
-        'file': '01-frontpage.pd',
-        'slug': "python",
-        'title': "Python",
-    },
-    {
-        'file': '02-preface.pd',
-        'slug': "python_en-preface",
-        'title': "Python : Preface",
-    },
-    {
-        'file': '03-intro.pd',
-        'slug': "python_en-introduction",
-        'title': "Python : Introduction",
-    },
-    {
-        'file': '04-installation.pd',
-        'slug': "python_en-installation",
-        'title': "Python : Installation",
-    },
-    {
-        'file': '05-first-steps.pd',
-        'slug': "python_en-first_steps",
-        'title': "Python : First Steps",
-    },
-    {
-        'file': '06-basics.pd',
-        'slug': "python_en-basics",
-        'title': "Python : Basics",
-    },
-    {
-        'file': '07-operators-expressions.pd',
-        'slug': "python_en-operators_and_expressions",
-        'title': "Python : Operators and Expressions",
-    },
-    {
-        'file': '08-control-flow.pd',
-        'slug': "python_en-control_flow",
-        'title': "Python : Control Flow",
-    },
-    {
-        'file': '09-functions.pd',
-        'slug': "python_en-functions",
-        'title': "Python : Functions",
-    },
-    {
-        'file': '10-modules.pd',
-        'slug': "python_en-modules",
-        'title': "Python : Modules",
-    },
-    {
-        'file': '11-data-structures.pd',
-        'slug': "python_en-data_structures",
-        'title': "Python : Data Structures",
-    },
-    {
-        'file': '12-problem-solving.pd',
-        'slug': "python_en-problem_solving",
-        'title': "Python : Problem Solving",
-    },
-    {
-        'file': '13-oop.pd',
-        'slug': "python_en-object_oriented_programming",
-        'title': "Python : Object Oriented Programming",
-    },
-    {
-        'file': '14-io.pd',
-        'slug': "python_en-input_output",
-        'title': "Python : Input Output",
-    },
-    {
-        'file': '15-exceptions.pd',
-        'slug': "python_en-exceptions",
-        'title': "Python : Exceptions",
-    },
-    {
-        'file': '16-standard-library.pd',
-        'slug': "python_en-standard_library",
-        'title': "Python : Standard Library",
-    },
-    {
-        'file': '17-more.pd',
-        'slug': "python_en-more",
-        'title': "Python : More",
-    },
-    {
-        'file': '18-what-next.pd',
-        'slug': "python_en-what_next",
-        'title': "Python : What Next",
-    },
-    {
-        'file': '19-appendix-floss.pd',
-        'slug': "python_en-appendix_floss",
-        'title': "Python : Appendix : FLOSS",
-    },
-    {
-        'file': '20-appendix-about.pd',
-        'slug': "python_en-appendix_about",
-        'title': "Python : Appendix : About",
-    },
-    {
-        'file': '21-revision-history.pd',
-        'slug': "python_en-appendix_revision_history",
-        'title': "Python : Appendix : Revision History",
-    },
-    {
-        'file': '22-translations.pd',
-        'slug': "python_en-translations",
-        'title': "Python : Appendix : Translations",
-    },
-    {
-        'file': '23-translation-howto.pd',
-        'slug': "python_en-translation_howto",
-        'title': "Python : Appendix : Translation Howto",
-    },
-]
-
+CONFIG = json.load(open('config.json'))
 
 ## NOTES
 ## 1. This assumes that you have already created the S3 bucket whose name
@@ -158,7 +37,7 @@ from fabric.api import task, local
 ##### Start with checks ##########################
 
 
-for chapter in MARKDOWN_FILES:
+for chapter in CONFIG['MARKDOWN_FILES']:
     assert (chapter['slug'].lower() == chapter['slug']), \
         "Slug must be lower case : {}".format(chapter['slug'])
 
@@ -222,12 +101,14 @@ def _upload_to_s3(filename, key):
 
 
 def upload_output_to_s3(filename):
-    key = "{}/{}".format(SHORT_PROJECT_NAME, filename.split('/')[-1])
+    key = "{}/{}".format(CONFIG['SHORT_PROJECT_NAME'],
+                         filename.split('/')[-1])
     return _upload_to_s3(filename, key)
 
 
 def upload_asset_to_s3(filename):
-    key = "{}/assets/{}".format(SHORT_PROJECT_NAME, filename.split('/')[-1])
+    key = "{}/assets/{}".format(CONFIG['SHORT_PROJECT_NAME'],
+                                filename.split('/')[-1])
     return _upload_to_s3(filename, key)
 
 
@@ -346,7 +227,7 @@ def fix_links_to_other_chapters(chapter, chapters, all_headers):
 def wp():
     """https://codex.wordpress.org/XML-RPC_WordPress_API/Posts"""
     if WORDPRESS_ENABLED:
-        chapters = copy.deepcopy(MARKDOWN_FILES)
+        chapters = copy.deepcopy(CONFIG['MARKDOWN_FILES'])
 
         # header anchor id -> index in MARKDOWN_FILES
         all_headers = {}
@@ -428,11 +309,11 @@ def html():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'html5',
-            '-o', '{}.html'.format(FULL_PROJECT_NAME),
+            '-o', '{}.html'.format(CONFIG['FULL_PROJECT_NAME']),
             '-s',
-            '--toc'] + [i['file'] for i in MARKDOWN_FILES]
+            '--toc'] + [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
-    local('open {}.html'.format(FULL_PROJECT_NAME))
+    local('open {}.html'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
@@ -441,14 +322,14 @@ def epub():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'epub',
-            '-o', '{}.epub'.format(FULL_PROJECT_NAME)] + \
-        [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.epub'.format(CONFIG['FULL_PROJECT_NAME'])] + \
+        [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     # TODO --epub-cover-image
     # TODO --epub-metadata
     # TODO --epub-stylesheet
     local(' '.join(args))
     if AWS_ENABLED:
-        upload_output_to_s3('{}.epub'.format(FULL_PROJECT_NAME))
+        upload_output_to_s3('{}.epub'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
@@ -458,11 +339,11 @@ def pdf():
             '-f', 'markdown',
             # https://github.com/jgm/pandoc/issues/571
             #'-t', 'pdf',
-            '-o', '{}.pdf'.format(FULL_PROJECT_NAME)] + \
-        [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.pdf'.format(CONFIG['FULL_PROJECT_NAME'])] + \
+        [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
     if AWS_ENABLED:
-        upload_output_to_s3('{}.pdf'.format(FULL_PROJECT_NAME))
+        upload_output_to_s3('{}.pdf'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
@@ -471,11 +352,11 @@ def docx():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'docx',
-            '-o', '{}.docx'.format(FULL_PROJECT_NAME)] + \
-        [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.docx'.format(CONFIG['FULL_PROJECT_NAME'])] + \
+        [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
     if AWS_ENABLED:
-        upload_output_to_s3('{}.docx'.format(FULL_PROJECT_NAME))
+        upload_output_to_s3('{}.docx'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
@@ -484,22 +365,22 @@ def odt():
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'odt',
-            '-o', '{}.odt'.format(FULL_PROJECT_NAME)] + \
-        [i['file'] for i in MARKDOWN_FILES]
+            '-o', '{}.odt'.format(CONFIG['FULL_PROJECT_NAME'])] + \
+        [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
     if AWS_ENABLED:
-        upload_output_to_s3('{}.odt'.format(FULL_PROJECT_NAME))
+        upload_output_to_s3('{}.odt'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
 def clean():
     """Remove generated output files"""
     possible_outputs = (
-        '{}.html'.format(FULL_PROJECT_NAME),
-        '{}.epub'.format(FULL_PROJECT_NAME),
-        '{}.pdf'.format(FULL_PROJECT_NAME),
-        '{}.docx'.format(FULL_PROJECT_NAME),
-        '{}.odt'.format(FULL_PROJECT_NAME),
+        '{}.html'.format(CONFIG['FULL_PROJECT_NAME']),
+        '{}.epub'.format(CONFIG['FULL_PROJECT_NAME']),
+        '{}.pdf'.format(CONFIG['FULL_PROJECT_NAME']),
+        '{}.docx'.format(CONFIG['FULL_PROJECT_NAME']),
+        '{}.odt'.format(CONFIG['FULL_PROJECT_NAME']),
     )
 
     for filename in possible_outputs:
