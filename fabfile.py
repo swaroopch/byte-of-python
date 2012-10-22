@@ -133,13 +133,9 @@ MARKDOWN_FILES = [
 
 
 import os
-import glob
 import subprocess
-try:
-    from xmlrpc.client import ServerProxy
-except ImportError:
-    from xmlrpclib import ServerProxy
-from pprint import pprint
+import copy
+from xmlrpclib import ServerProxy
 
 import boto
 import boto.s3.bucket
@@ -255,7 +251,7 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
 
 def _wordpress_get_pages():
     server = ServerProxy(os.environ['WORDPRESS_RPC_URL'])
-    print("(Fetching list of pages from WP)")
+    print("Fetching list of pages from WP")
     return server.wp.getPosts(os.environ['WORDPRESS_BLOG_ID'],
                               os.environ['WORDPRESS_USERNAME'],
                               os.environ['WORDPRESS_PASSWORD'],
@@ -314,6 +310,46 @@ http://docs.python.org/library/xmlrpclib.html
 def wp():
     """https://codex.wordpress.org/XML-RPC_WordPress_API/Posts"""
     if WORDPRESS_ENABLED:
+        chapters = copy.deepcopy(MARKDOWN_FILES)
+
+        # Render html
+        print("Rendering html")
+        for chapter in chapters:
+            chapter['html'] = markdown_to_html(open(chapter['file']).read(),
+                                               upload_assets_to_s3=True)
+
+            chapter['link'] = "{}/{}/{}".format(
+                os.environ['WORDPRESS_BASE_URL'],
+                os.environ['WORDPRESS_PARENT_PAGE_SLUG'],
+                chapter['slug'])
+
+        # Add previous and next links at end of html
+        for (i, chapter) in enumerate(chapters):
+            previous_link = None
+            if i > 0:
+                previous_link = chapters[i - 1]['link']
+
+            next_link = None
+            if i < len(chapters) - 1:
+                next_link = chapters[i + 1]['link']
+
+            if previous_link is not None or next_link is not None:
+                chapter['html'] += "\n"
+
+            if previous_link is not None:
+                chapter['html'] += """\
+<a href="{}">&lArr; Previous chapter</a>\
+""".format(previous_link)
+
+            if previous_link is not None and next_link is not None:
+                chapter['html'] += '&nbsp;' * 5
+
+            if next_link is not None:
+                chapter['html'] += """\
+<a href="{}">Next chapter &rArr;</a>\
+""".format(next_link)
+
+        # Fetch list of pages on the server and determine which already exist
         existing_pages = _wordpress_get_pages()
         existing_page_slugs = [i.get('post_name') for i in existing_pages]
 
@@ -322,32 +358,23 @@ def wp():
             page = pages[0]
             return page['post_id']
 
-        for chapter in MARKDOWN_FILES:
-            html = markdown_to_html(open(chapter['file']).read(),
-                                    upload_assets_to_s3=True)
-            # TODO Add previous and next links at end of html
-
+        for chapter in chapters:
             if chapter['slug'] in existing_page_slugs:
-                page_id = page_slug_to_id(chapter['slug'])
-                print("Existing page to be updated: {} : {}".format(
-                      chapter['slug'],
-                      page_id))
-                result = wordpress_edit_page(page_id,
-                                             chapter['title'],
-                                             html)
-                print("Result: {}".format(result))
-            else:
-                print("New page to be created: {}".format(chapter['slug']))
-                result = wordpress_new_page(chapter['slug'],
-                                            chapter['title'],
-                                            html)
-                print("Result: {}".format(result))
+                chapter['page_id'] = page_slug_to_id(chapter['slug'])
 
-            page_url = "{}/{}/{}".format(os.environ['WORDPRESS_BASE_URL'],
-                       os.environ['WORDPRESS_PARENT_PAGE_SLUG'],
-                       chapter['slug'])
-            print(page_url)
-            print()
+        # Send to WP
+        print("Uploading to WordPress")
+        for chapter in chapters:
+            if chapter['slug'] in existing_page_slugs:
+                print("Existing page: {}".format(chapter['link']))
+                assert wordpress_edit_page(chapter['page_id'],
+                                           chapter['title'],
+                                           chapter['html'])
+            else:
+                print("New page: {}".format(chapter['link']))
+                assert wordpress_new_page(chapter['slug'],
+                                          chapter['title'],
+                                          chapter['html'])
 
 
 @task
