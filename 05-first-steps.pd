@@ -32,13 +32,13 @@ Before we move on to writing Python programs in source files, we need an editor 
 
 One of the very basic requirements is *syntax highlighting* where all the different parts of your Python program are colorized so that you can *see* your program and visualize its running.
 
-If you are using Windows, then I suggest that you use IDLE. IDLE does syntax highlighting and a lot more such as allowing you to run your programs within IDLE among other things. A special note: **Do not use Notepad** - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors such as [Sublime Text](http://www.sublimetext.com/) will automatically help you do this.
+If you are using Windows, then I suggest that you use IDLE. IDLE does syntax highlighting and a lot more such as allowing you to run your programs within IDLE among other things. A special note: **Do not use Notepad** - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors such as [Komodo Edit](http://www.activestate.com/komodo-edit) will automatically help you do this.
 
-If you are using Linux, then you have a lot of choices for an editor. If you are just beginning to program, you might want to use [Sublime Text](http://www.sublimetext.com/).
+If you are using Linux, then you have a lot of choices for an editor. If you are just beginning to program, you might want to use [Komodo Edit](http://www.activestate.com/komodo-edit).
 
 If you are an experienced programmer, then you must be already using `Vim` or `Emacs`. Needless to say, these are two of the most powerful editors and you will benefit from using them to write your Python programs. I personally use `Vim` or `Emacs` for most of my programs. In case you are willing to take the time to learn Vim or Emacs, then I highly recommend that you do learn to use either of them as it will be very useful for you in the long run.
 
-In this book, we will use [Sublime Text](http://www.sublimetext.com/) as our editor of choice.
+In this book, we will use [Komodo Edit](http://www.activestate.com/komodo-edit) as our editor of choice.
 
 I repeat once again, please choose a proper editor - it can make writing Python programs more fun and easy.
 
@@ -50,18 +50,26 @@ I repeat once again, please choose a proper editor - it can make writing Python 
 
 Now let's get back to programming. There is a tradition that whenever you learn a new programming language, the first program that you write and run is the 'Hello World' program - all it does is just say 'Hello World' when you run it. As Simon Cozens (the author of the amazing 'Beginning Perl' book) puts it, it is the 'traditional incantation to the programming gods to help you learn the language better' :) .
 
-Start your choice of editor, enter the following program and save it as `helloworld.py`
+Start your choice of editor, enter the following program and save it as `helloworld.py`.
 
-If you are using Sublime Text, type the below lines and do `File` --- `Save`, choose your home directory, give the name `helloworld.py` and click on `Tools` --- `Build` and you should see the output `Hello World` in a window that pops up.
+If you are using Komodo Edit, click on `File` --- `New` --- `New File`, type the lines:
 
 ~~~python
 #!/usr/bin/python
-Filename: helloworld.py
+#Filename: helloworld.py
 
 print 'Hello World'
 ~~~
 
-![Sublime Text screenshot of Hello World program](assets/sublime-text-hello-world.png)
+In Komodo Edit, do `File` --- `Save`, give the name `helloworld.py`.
+
+Important
+
+:   Always ensure that you give it the file extension of `.py`, for example, `foo.py`.
+
+Click on `Tools` --- `Run Command`, type `python helloworld.py` and click on `Run` and you should see the output printed like in the screenshot below.
+
+![Screenshot of Komodo Edit with the Hello World program](assets/komodo-edit-hello-world.png)
 
 You can also run this program by opening a shell (GNU/Linux terminal or DOS prompt) and entering the command `python helloworld.py`. (In Windows, you could also find the folder in which you saved the program, and then drag the actual file into the command line after you've typed `python`. This will automatically add the file path after the `python`.)
 
