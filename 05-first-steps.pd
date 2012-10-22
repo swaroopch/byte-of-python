@@ -42,7 +42,7 @@ In this book, we will use [Komodo Edit](http://www.activestate.com/komodo-edit) 
 
 I repeat once again, please choose a proper editor - it can make writing Python programs more fun and easy.
 
-*For Vim users:* There is a good introduction on how to [make Vim a powerful Python IDE by John M Anderson](http://blog.sontek.net/blog/detail/turning-vim-into-a-modern-python-ide).
+*For Vim users:* There is a good introduction on how to [make Vim a powerful Python IDE by John M Anderson](http://blog.sontek.net/blog/detail/turning-vim-into-a-modern-python-ide). Also recommended is the [jedi-vim plugin](https://github.com/davidhalter/jedi-vim).
 
 *For Emacs users:* There is a good introduction on how to [make Emacs a powerful Python IDE by Pedro Kroger](http://pedrokroger.net/2010/07/configuring-emacs-as-a-python-ide-2/).
 
