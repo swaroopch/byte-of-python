@@ -117,6 +117,16 @@ MARKDOWN_FILES = [
         'slug': "python_en-appendix_revision_history",
         'title': "Python : Appendix : Revision History",
     },
+    {
+        'file': '22-translations.pd',
+        'slug': "python_en-translations",
+        'title': "Python : Appendix : Translations",
+    },
+    {
+        'file': '23-translation-howto.pd',
+        'slug': "python_en-translation_howto",
+        'title': "Python : Appendix : Translation Howto",
+    },
 ]
 
 
@@ -303,6 +313,32 @@ http://docs.python.org/library/xmlrpclib.html
                               })
 
 
+def collect_header_anchors(chapter, i, all_headers):
+    soup = BeautifulSoup(chapter['html'])
+    for header in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
+        if 'id' in header.attrs:
+            all_headers[header['id']] = i
+
+
+def fix_links_to_other_chapters(chapter, chapters, all_headers):
+    """Fix links to other sections with Wordpress page URL."""
+    soup = BeautifulSoup(chapter['html'])
+    for link in soup.find_all('a'):
+        if 'href' in link.attrs:
+            if link['href'].startswith('#'):
+                header_id = link['href'][1:]
+                assert header_id in all_headers, \
+                    "#{} does not exist, referred in {}".format(
+                    header_id, chapter['file'])
+                other_chapter = chapters[all_headers[header_id]]
+                previous = link['href']
+                link['href'] = '{}#{}'.format(
+                    other_chapter['link'],
+                    header_id)
+                print("Replacing {} with {}".format(previous, link['href']))
+    chapter['html'] = unicode(soup)
+
+
 ##### Tasks ######################################
 
 
@@ -312,16 +348,25 @@ def wp():
     if WORDPRESS_ENABLED:
         chapters = copy.deepcopy(MARKDOWN_FILES)
 
+        # header anchor id -> index in MARKDOWN_FILES
+        all_headers = {}
+
         # Render html
         print("Rendering html")
-        for chapter in chapters:
+        for (i, chapter) in enumerate(chapters):
             chapter['html'] = markdown_to_html(open(chapter['file']).read(),
-                                               upload_assets_to_s3=True)
+                                               upload_assets_to_s3=AWS_ENABLED)
+
+            collect_header_anchors(chapter, i, all_headers)
 
             chapter['link'] = "{}/{}/{}".format(
                 os.environ['WORDPRESS_BASE_URL'],
                 os.environ['WORDPRESS_PARENT_PAGE_SLUG'],
                 chapter['slug'])
+
+        # Fix cross-links
+        for chapter in chapters:
+            fix_links_to_other_chapters(chapter, chapters, all_headers)
 
         # Add previous and next links at end of html
         for (i, chapter) in enumerate(chapters):

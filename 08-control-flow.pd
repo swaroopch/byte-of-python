@@ -142,7 +142,7 @@ Note for C/C++ Programmers
 
 ## The for loop 
 
-The `for..in` statement is another looping statement which *iterates* over a sequence of objects i.e. go through each item in a sequence. We will see more about [sequences](#sequences) in detail in later chapters. What you need to know right now is that a sequence is just an ordered collection of items.
+The `for..in` statement is another looping statement which *iterates* over a sequence of objects i.e. go through each item in a sequence. We will see more about [sequences](#sequence) in detail in later chapters. What you need to know right now is that a sequence is just an ordered collection of items.
 
 Example:
 

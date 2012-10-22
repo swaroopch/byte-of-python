@@ -69,7 +69,7 @@ How It Works:
 
 The variable `shoplist` is a shopping list for someone who is going to the market. In `shoplist`, we only store strings of the names of the items to buy but you can add *any kind of object* to a list including numbers and even other lists.
 
-We have also used the `for..in` loop to iterate through the items of the list. By now, you must have realised that a list is also a sequence. The speciality of sequences will be discussed in a [later section](#sequences).
+We have also used the `for..in` loop to iterate through the items of the list. By now, you must have realised that a list is also a sequence. The speciality of sequences will be discussed in a [later section](#sequence).
 
 Notice the use of the `end` keyword argument to the `print` function to indicate that we want to end the output with a space instead of the usual line break.
 
@@ -214,7 +214,7 @@ Keyword Arguments and Dictionaries
 
 :   On a different note, if you have used keyword arguments in your functions, you have already used dictionaries! Just think about it - the key-value pair is specified by you in the parameter list of the function definition and when you access variables within your function, it is just a key access of a dictionary (which is called the *symbol table*in compiler design terminology).
 
-## Sequences 
+## Sequence 
 
 Lists, tuples and strings are examples of sequences, but what are sequences and what is so special about them?
 

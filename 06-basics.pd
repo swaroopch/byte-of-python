@@ -32,7 +32,7 @@ You can specify strings using single quotes such as `'Quote me on this'`. All wh
 
 Strings in double quotes work exactly the same way as strings in single quotes. An example is `"What's your name?"`
 
-### Triple Quote
+### Triple Quotes
 
 You can specify multi-line strings using triple quotes - (`"""` or `'''`). You can use single quotes and double quotes freely within the triple quotes. An example is:
 
@@ -257,7 +257,7 @@ is the same as
 print(i)
 ~~~
 
-Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line uses parentheses, square brackets or curly braces. This is called **implicit line joining**.  You can see this in action when we write programs using [lists](#lists) in later chapters.
+Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line uses parentheses, square brackets or curly braces. This is called **implicit line joining**.  You can see this in action when we write programs using [lists](#list) in later chapters.
 
 ### Indentation
 

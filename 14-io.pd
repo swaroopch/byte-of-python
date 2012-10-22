@@ -43,7 +43,7 @@ Yes, it is a palindrome
 
 How It Works:
 
-We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](#sequences) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the *step* by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
+We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](#sequence) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the *step* by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
 
 The `input()` function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the `input()` function will then return that text the user has entered.
 
