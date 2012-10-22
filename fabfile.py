@@ -230,7 +230,7 @@ def replace_images_with_s3_urls(text):
     soup = BeautifulSoup(text)
     for image in soup.find_all('img'):
         image['src'] = upload_asset_to_s3(image['src'])
-    return soup.prettify()
+    return unicode(soup)
 
 
 def markdown_to_html(source_text, upload_assets_to_s3=False):
@@ -243,6 +243,9 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
 
     # http://wordpress.org/extend/plugins/raw-html/
     output = '<!--raw-->\n' + output + '\n<!--/raw-->'
+
+    # NOTE: Also assumes that you have added the CSS from
+    # `pandoc -S -t html5` to the `style.css` of your active Wordpress theme.
 
     if upload_assets_to_s3:
         output = replace_images_with_s3_urls(output)
