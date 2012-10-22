@@ -212,11 +212,9 @@ def fix_links_to_other_chapters(chapter, chapters, all_headers):
                     "#{} does not exist, referred in {}".format(
                     header_id, chapter['file'])
                 other_chapter = chapters[all_headers[header_id]]
-                previous = link['href']
                 link['href'] = '{}#{}'.format(
                     other_chapter['link'],
                     header_id)
-                print("Replacing {} with {}".format(previous, link['href']))
     chapter['html'] = unicode(soup)
 
 
