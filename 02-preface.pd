@@ -24,7 +24,7 @@ In the true spirit of open source, I have received lots of constructive suggesti
 
 ## Status Of The Book
 
-This book has been reformatted in October 2012 using Pandoc to allow generation of ebooks as requested by several users, and updated to use Python 2 with 3-isms mentioned throughout the book.
+This book has been reformatted in October 2012 using Pandoc to allow generation of ebooks as requested by several users, along with a plethora of errata fixes and updates.
 
 Changes in December 2008 edition from the earlier major revision in March 2005 was updating for the Python 3.0 release.
 

@@ -78,7 +78,7 @@ Example:
 
 ~~~python
 from math import *  
-n = raw_input("Enter range:-  ")
+n = input("Enter range:-  ")
 p = [2, 3]
 count = 2
 a = 5

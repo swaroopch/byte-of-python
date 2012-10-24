@@ -2,7 +2,7 @@
 
 'A Byte of Python' is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.
 
-(Note that this book is primarily for the still-in-common-use Python 2.x but teaches you to write in a way that is upgradable to Python 3.x. If you don't know what that means, please ignore the previous sentence ;-))
+This book is written for the latest Python 3, even though Python 2 is the commonly found version of Python today.
 
 ## Who Reads A Byte of Python?
 

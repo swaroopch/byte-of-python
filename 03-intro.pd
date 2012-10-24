@@ -61,13 +61,11 @@ The Python Standard Library is huge indeed. It can help you do various things in
 
 Python is indeed an exciting and powerful language. It has the right combination of performance and features that make writing programs in Python both fun and easy.
 
-## Python 3
+## Python 2 versus 3
 
 You can ignore this section if you're not interested in the difference between Python 2 and Python 3. But please do be aware of which version you are using.
 
-This book was rewritten in 2008 for Python 3. This had resulted in confusion for readers who would try to use Python 2 with the Python 3 version of the book and vice-versa. And slowly, the world is still migrating to Python 3 but that is still a few years away.
-
-In 2012, I have begun migrating this book back to Python 2 but with an eye on making the reader write in a Python 3-friendly manner.
+This book was rewritten in 2008 for Python 3. This had resulted in confusion for readers who would try to use Python 2 with the Python 3 version of the book and vice-versa. And slowly, the world is still migrating to Python 3. With an eye towards the future, this book is written for Python 3.
 
 For details on how to migrate from Python 2 to Python 3, see the [Python/3 page on the Ubuntu wiki](https://wiki.ubuntu.com/Python/3).
 
