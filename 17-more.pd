@@ -165,22 +165,6 @@ There is a special way of receiving parameters to a function as a tuple or a dic
 
 Because we have a `*` prefix on the `args` variable, all extra arguments passed to the function are stored in `args` as a tuple.  If a ** prefix had been used instead, the extra parameters would be considered to be key/value pairs of a dictionary.
 
-## exec and eval 
-
-The `exec` function is used to execute Python statements which are stored in a string or file, as opposed to written in the program itself. For example, we can generate a string containing Python code at runtime and then execute these statements using the `exec` statement:
-
-~~~
->>> exec('print("Hello World")')
-Hello World
-~~~
-
-Similarly, the `eval` function is used to evaluate valid Python expressions which are stored in a string. A simple example is shown below.
-
-~~~
->>> eval('2*3')
-6
-~~~
-
 ## The assert statement 
 
 The `assert` statement is used to assert that something is true. For example, if you are very sure that you will have at least one element in a list you are using and want to check this, and raise an error if it is not true, then `assert` statement is ideal in this situation. When the assert statement fails, an `AssertionError` is raised.
@@ -216,6 +200,31 @@ True
 ~~~
 
 Basically, the `repr` function is used to obtain a printable representation of the object. You can control what your classes return for the `repr` function by defining the `__repr__` method in your class.
+
+## Escape Sequences
+
+Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `What's your name?`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an *escape sequence*. You specify the single quote as `\'` - notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
+
+Another way of specifying this specific string would be `"What's your name?"` i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence `\\`.
+
+What if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown [previously](#triple-quotes) or you can use an escape sequence for the newline character - `\n` to indicate the start of a new line. An example is `This is the first line\nThis is the second line`. Another useful escape sequence to know is the tab - `\t`. There are many more escape sequences but I have mentioned only the most useful ones here.
+
+One thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:
+
+~~~python
+"This is the first sentence. \
+This is the second sentence."
+~~~
+
+is equivalent to `"This is the first sentence. This is the second sentence."`.
+
+### Raw String
+
+If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a *raw* string by prefixing `r` or `R` to the string. An example is `r"Newlines are indicated by \n"`.
+
+Note for Regular Expression Users
+
+:   Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
 
 ## Summary 
 

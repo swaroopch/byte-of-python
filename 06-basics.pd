@@ -1,18 +1,39 @@
 # Basics
 
-Just printing 'Hello World' is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables.
+Just printing 'Hello World' is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we'll learn some other concepts as well in this chapter.
 
 ## Comments
 
-Let us consider the first two lines of the program. These are called *comments* - anything to the right of the `#` symbol is a comment and is mainly useful as notes for the reader of the program.
+*Comments* are any text to the right of the `#` symbol and is mainly useful as notes for the reader of the program.
 
-Python does not use comments except for the special case of the first line here. It is called the *shebang line* - whenever the first two characters of the source file are `#!` followed by the location of a program, this tells your GNU/Linux and Unix system that this program should be run with this interpreter when you *execute* the program. This is explained in detail in the next section. Note that you can always run the program on any platform by specifying the interpreter directly on the command line such as the command `python hello.py`.
+For example:
 
-*Important:* Use comments sensibly in your program to explain some important details of your program - this is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
+~~~python
+print('Hello World') # Note that print is a function
+~~~
+
+or:
+
+~~~python
+# Note that print is a function
+print('Hello World')
+~~~
+
+Use as many useful comments as you can in your program to:
+
+- explain assumptions
+- explain important decisions
+- explain important details
+- explain problems you're trying to solve
+- explain problems you're trying to overcome in your program, etc.
+
+[*Code tells you how, comments should tell you why.*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html)
+
+This is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
 
 ## Literal Constants
 
-An example of a literal constant is a number like `5`, `1.23`, `9.25e-3` or a string like `'This is a string'`or `"It's a string!"`. It is called a literal because it is *literal* - you use its value literally. The number `2`always represents itself and nothing else - it is a *constant* because its value cannot be changed. Hence, all these are referred to as literal constants.
+An example of a literal constant is a number like `5`, `1.23`, or a string like `'This is a string'`or `"It's a string!"`. It is called a literal because it is *literal* - you use its value literally. The number `2` always represents itself and nothing else - it is a *constant* because its value cannot be changed. Hence, all these are referred to as literal constants.
 
 ## Numbers
 
@@ -24,7 +45,7 @@ Examples of floating point numbers (or *floats* for short) are `3.23` and `52.3E
 
 Note for Experienced Programmers
 
-:   There is no separate 'long int' type. The default integer type can be a value of any length.
+:   There is no separate `long` type. The `int` type can be an integer of any size.
 
 ## Strings
 
@@ -52,27 +73,6 @@ He said "Bond, James Bond."
 '''
 ~~~
 
-### Escape Sequences
-
-Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `What's your name?`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an *escape sequence*. You specify the single quote as `\'` - notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
-
-Another way of specifying this specific string would be `"What's your name?"` i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence `\\`.
-
-What if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown [previously](#triple-quotes) or you can use an escape sequence for the newline character - `\n` to indicate the start of a new line. An example is `This is the first line\nThis is the second line`. Another useful escape sequence to know is the tab - `\t`. There are many more escape sequences but I have mentioned only the most useful ones here.
-
-One thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:
-
-~~~python
-"This is the first sentence. \
-This is the second sentence."
-~~~
-
-is equivalent to `"This is the first sentence. This is the second sentence."`.
-
-### Raw String
-
-If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a *raw* string by prefixing `r` or `R` to the string. An example is `r"Newlines are indicated by \n"`.
-
 ### Strings Are Immutable
 
 This means that once you have created a string, you cannot change it. Although this might seem like a bad thing, it really isn't. We will see why this is not a limitation in the various programs that we see later on.
@@ -85,18 +85,13 @@ Note for Perl/PHP Programmers
 
 :   Remember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.
 
-Note for Regular Expression Users
-
-:   Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
-
 ### The format method
 
 Sometimes we may want to construct strings from other information. This is where the `format()` method is useful.
 
-~~~python
-#!/usr/bin/python
- Filename: str_format.py
+Save the following lines as a file `str_format.py`:
 
+~~~python
 age = 20
 name = 'Swaroop'
 
@@ -107,7 +102,7 @@ print('Why is {0} playing with that python?'.format(name))
 Output:
 
 ~~~
-$ python str_format.py
+$ python3 str_format.py
 Swaroop was 20 years old when he wrote this book
 Why is Swaroop playing with that python?
 ~~~
@@ -116,9 +111,21 @@ How It Works:
 
 A string can use certain specifications and subsequently, the *format* method can be called to substitute those specifications with corresponding arguments to the `format` method.
 
-Observe the first usage where we use `{0}` and this corresponds to the variable `name` which is the first argument to the format method. Similarly, the second specification is `{1}` corresponding to `age` which is the second argument to the format method.
+Observe the first usage where we use `{0}` and this corresponds to the variable `name` which is the first argument to the format method. Similarly, the second specification is `{1}` corresponding to `age` which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.
 
-Notice that we could have achieved the same using string concatenation: `name + ' is ' + str(age) + ' years old'` but notice how much uglier and error-prone this is. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion here. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
+Notice that we could have achieved the same using string concatenation: `name + ' is ' + str(age) + ' years old'` but that is much uglier and error-prone. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion to strings needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
+
+Also note that the numbers are optional, so you could have also written as:
+
+~~~python
+age = 20
+name = 'Swaroop'
+
+print('{} was {} years old when he wrote this book'.format(name, age))
+print('Why is {} playing with that python?'.format(name))
+~~~
+
+which will give the same exact output as the previous program.
 
 What Python does in the `format` method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:
 
@@ -163,10 +170,10 @@ We will now see how to use variables along with literal constants. Save the foll
 
 Henceforth, the standard procedure to save and run a Python program is as follows:
 
-- Open your favorite editor.
-- Enter the program code given in the example.
-- Save it as a file with the filename mentioned in the comment. I follow the convention of having all Python programs saved with the extension `.py`.
-- Run the interpreter with the command `python program.py` or use IDLE to run the programs. You can also use the [executable method](#executable-python-programs) as explained earlier.
+#. Open your editor of choice, such as Komodo Edit.
+#. Type the program code given in the example.
+#. Save it as a file with the filename mentioned.
+#. Run the interpreter with the command `python3 program.py` to run the program.
 
 ## Example: Using Variables And Literal Constants
 
@@ -185,7 +192,7 @@ print(s)
 Output:
 
 ~~~
-$ python var.py
+$ python3 var.py
 5
 6
 This is a multi-line string.
@@ -238,9 +245,9 @@ or even
 i = 5; print(i)
 ~~~
 
-However, I **strongly recommend** that you stick to **writing a maximum of a single logical line on each single physical line**. The idea is to avoid the semicolon as much as possible so that the code will be more readable. In fact, I have *never* used or even seen a semicolon in a Python program.
+However, I **strongly recommend** that you stick to **writing a maximum of a single logical line on each single physical line**. The idea is that you should never use the semicolon. In fact, I have *never* used or even seen a semicolon in a Python program.
 
-It is possible to use more than one physical line for a single logical line, but this should only be used if the logical line is really long. An example of writing a logical line spanning many physical lines follows. This is referred to as **explicit line joining**.
+There is one kind of situation where this concept is really useful : if you have a  long line of code, you can break it into multiple physical lines by using the backslash. This is referred to as **explicit line joining**:
 
 ~~~python
 s = 'This is a string. \
@@ -250,7 +257,9 @@ print(s)
 
 This gives the output:
 
-    This is a string. This continues the string.
+~~~
+This is a string. This continues the string.
+~~~
 
 Similarly,
 
@@ -265,7 +274,7 @@ is the same as
 print(i)
 ~~~
 
-Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line uses parentheses, square brackets or curly braces. This is called **implicit line joining**.  You can see this in action when we write programs using [lists](#list) in later chapters.
+Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called **implicit line joining**. You can see this in action when we write programs using [lists](#list) in later chapters.
 
 ### Indentation
 
@@ -292,10 +301,13 @@ IndentationError: unexpected indent
 
 Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that *you cannot arbitrarily start new blocks of statements* (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the [Control Flow](#control-flow).
 
-*How to indent:* Do **not** use a mixture of tabs and spaces for the indentation as it does not work across different platforms properly. I *strongly recommend* that you use a *single tab* or *four spaces* for each indentation level.
-Choose either of these two indentation styles. More importantly, choose one and use it **consistently**; and be consistent with the style used in existing files you are editing. i.e. When writing new files use that indentation style *only* and if a file you need to edit is using tabs, while editing that file use tabs for indentation.
+How to indent
 
-*Note to static language programmers:* Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
+:   Use only spaces for indentation, with a tab stop of 4 spaces. Good editors like Komodo Edit will automatically do this for you. Make sure you use a consistent number of spaces for indentation, otherwise your program will show errors.
+
+Note to static language programmers
+
+:   Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
 
 ## Summary
 
