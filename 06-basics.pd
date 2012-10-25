@@ -2,6 +2,14 @@
 
 Just printing 'Hello World' is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables.
 
+## Comments
+
+Let us consider the first two lines of the program. These are called *comments* - anything to the right of the `#` symbol is a comment and is mainly useful as notes for the reader of the program.
+
+Python does not use comments except for the special case of the first line here. It is called the *shebang line* - whenever the first two characters of the source file are `#!` followed by the location of a program, this tells your GNU/Linux and Unix system that this program should be run with this interpreter when you *execute* the program. This is explained in detail in the next section. Note that you can always run the program on any platform by specifying the interpreter directly on the command line such as the command `python hello.py`.
+
+*Important:* Use comments sensibly in your program to explain some important details of your program - this is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
+
 ## Literal Constants
 
 An example of a literal constant is a number like `5`, `1.23`, `9.25e-3` or a string like `'This is a string'`or `"It's a string!"`. It is called a literal because it is *literal* - you use its value literally. The number `2`always represents itself and nothing else - it is a *constant* because its value cannot be changed. Hence, all these are referred to as literal constants.

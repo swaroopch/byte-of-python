@@ -4,11 +4,13 @@ Python is one of those rare languages which can claim to be both *simple* and *p
 
 The official introduction to Python is:
 
-> Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms. 
+> Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
 
 I will discuss most of these features in more detail in the next section.
 
-*Note:* Guido van Rossum, the creator of the Python language, named the language after the BBC show "Monty Python's Flying Circus". He doesn't particularly like snakes that kill animals for food by winding their long bodies around them and crushing them.
+Story behind the name
+
+:   Guido van Rossum, the creator of the Python language, named the language after the BBC show "Monty Python's Flying Circus". He doesn't particularly like snakes that kill animals for food by winding their long bodies around them and crushing them.
 
 ## Features of Python
 
@@ -22,17 +24,19 @@ As you will see, Python is extremely easy to get started with. Python has an ext
 
 ### Free and Open Source
 
-Python is an example of a *FLOSS* (Free/Libré and Open Source Software). In simple terms, you can freely distribute copies of this software, read its source code, make changes to it, and use pieces of it in new free programs. FLOSS is based on the concept of a community which shares knowledge. This is one of the reasons why Python is so good - it has been created and is constantly improved by a community who just want to see a better Python.  
+Python is an example of a *FLOSS* (Free/Libré and Open Source Software). In simple terms, you can freely distribute copies of this software, read its source code, make changes to it, and use pieces of it in new free programs. FLOSS is based on the concept of a community which shares knowledge. This is one of the reasons why Python is so good - it has been created and is constantly improved by a community who just want to see a better Python.
 
 ### High-level Language
 
-When you write programs in Python, you never need to bother about the low-level details such as managing the memory used by your program, etc.  
+When you write programs in Python, you never need to bother about the low-level details such as managing the memory used by your program, etc.
 
 ### Portable
 
-Due to its open-source nature, Python has been ported to (i.e. changed to make it work on) many platforms. All your Python programs can work on any of these platforms without requiring any changes at all if you are careful enough to avoid any system-dependent features.  
+Due to its open-source nature, Python has been ported to (i.e. changed to make it work on) many platforms. All your Python programs can work on any of these platforms without requiring any changes at all if you are careful enough to avoid any system-dependent features.
 
-You can use Python on Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE and even PocketPC !
+You can use Python on Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE and even PocketPC!
+
+You can even use a platform like [Kivy](http://kivy.org/) to create games for iOS (iPhone, iPad) and Android.
 
 ### Interpreted
 
@@ -44,11 +48,11 @@ Python, on the other hand, does not need compilation to binary.  You just *run* 
 
 ### Object Oriented
 
-Python supports procedure-oriented programming as well as object-oriented programming. In *procedure-oriented* languages, the program is built around procedures or functions which are nothing but reusable pieces of programs. In *object-oriented* languages, the program is built around objects which combine data and functionality. Python has a very powerful but simplistic way of doing OOP, especially when compared to big languages like C++ or Java.  
+Python supports procedure-oriented programming as well as object-oriented programming. In *procedure-oriented* languages, the program is built around procedures or functions which are nothing but reusable pieces of programs. In *object-oriented* languages, the program is built around objects which combine data and functionality. Python has a very powerful but simplistic way of doing OOP, especially when compared to big languages like C++ or Java.
 
-### Extensible 
+### Extensible
 
-If you need a critical piece of code to run very fast or want to have some piece of algorithm not to be open, you can code that part of your program in C or C++ and then use it from your Python program.  
+If you need a critical piece of code to run very fast or want to have some piece of algorithm not to be open, you can code that part of your program in C or C++ and then use it from your Python program.
 
 ### Embeddable
 
@@ -56,43 +60,30 @@ You can embed Python within your C/C++ programs to give 'scripting' capabilities
 
 ### Extensive Libraries
 
-The Python Standard Library is huge indeed. It can help you do various things involving regular expressions, documentation generation, unit testing, threading, databases, web browsers, CGI, FTP, email, XML, XML-RPC, HTML, WAV files, cryptography, GUI (graphical user interfaces), Tk, and other system-dependent stuff. Remember, all this is always available wherever Python is installed. This is called the 'Batteries Included' philosophy of Python.
-: Besides the standard library, there are various other high-quality libraries such as [wxPython](http://www.wxpython.org) , [Twisted](http://www.twistedmatrix.com/products/twisted), [Python Imaging Library](http://www.pythonware.com/products/pil/index.htm) and many more.
+The Python Standard Library is huge indeed. It can help you do various things involving regular expressions,documentation generation, unit testing, threading, databases, web browsers, CGI, FTP, email, XML, XML-RPC, HTML, WAV files, cryptography, GUI (graphical user interfaces), and other system-dependent stuff. Remember, all this is always available wherever Python is installed. This is called the *Batteries Included* philosophy of Python.
 
-Python is indeed an exciting and powerful language. It has the right combination of performance and features that make writing programs in Python both fun and easy.
+Besides the standard library, there are various other high-quality libraries which you can find at the [Python Package Index](http://pypi.python.org/pypi).
+
+Summary
+
+:   Python is indeed an exciting and powerful language. It has the right combination of performance and features that make writing programs in Python both fun and easy.
 
 ## Python 2 versus 3
 
 You can ignore this section if you're not interested in the difference between Python 2 and Python 3. But please do be aware of which version you are using.
 
-This book was rewritten in 2008 for Python 3. This had resulted in confusion for readers who would try to use Python 2 with the Python 3 version of the book and vice-versa. And slowly, the world is still migrating to Python 3. With an eye towards the future, this book is written for Python 3.
+This book was rewritten in 2008 for Python 3. It was one of the first books to use Python 3. This, unfortunately, resulted in confusion for readers who would try to use Python 2 with the Python 3 version of the book and vice-versa. But slowly, the world is still migrating to Python 3.
 
-For details on how to migrate from Python 2 to Python 3, see the [Python/3 page on the Ubuntu wiki](https://wiki.ubuntu.com/Python/3).
+So, yes, you will be learning to use Python 3 in this book, even if you want to ultimately use Python 2. *Remember that once you have properly understood and learn to use either of them, you can easily learn the changes between the two versions and adapt easily. The hard part is learning programming and understanding the core Python language itself. That is our goal in this book, and once you have achieved that goal, you can easily use Python 2 or Python 3 depending on your situation.*
 
-## Why not Perl?
-
-If you didn't know already, Perl is another extremely popular open source interpreted programming language.
-
-If you have ever tried writing a large program in Perl, you would have answered this question yourself! In other words, Perl programs are easy when they are small and it excels at small hacks and scripts to 'get work done'. However, they quickly become unwieldy once you start writing bigger programs and I am speaking this out of my experience writing large Perl programs at Yahoo!
-
-When compared to Perl, Python programs are definitely simpler, clearer, easier to write and hence more understandable and maintainable. I do admire Perl and I do use it on a daily basis for various things but whenever I write a program, I always start thinking in terms of Python because it has become so natural for me. Perl has undergone so many hacks and changes, that it feels like it is one big (but one hell of a) hack. Sadly, the upcoming Perl 6 does not seem to be making any improvements regarding this.
-
-The only and very significant advantage that I feel Perl has, is its huge [CPAN](http://cpan.perl.org) library - the Comprehensive Perl Archive Network. As the name suggests, this is a humongous collection of Perl modules and it is simply mind-boggling because of its sheer size and depth - you can do virtually anything you can do with a computer using these modules. One of the reasons that Perl has more libraries than Python is that it has been around for a much longer time than Python. However this seems to be changing with the growing [Python Package Index](http://pypi.python.org/pypi).
-
-## Why not Ruby?
-
-If you didn't know already, Ruby is another popular open source interpreted programming language.
-
-If you already like and use Ruby, then I would definitely recommend you to continue using it.
-
-For other people who have not used it and are trying to judge whether to learn Python or to learn Ruby, then I would recommend Python, purely from an ease-of-learning perspective. I personally found it hard to grasp the Ruby language, but for people who understand Ruby, they all praise the beauty of the language. Unfortunately, I am not as lucky to have understood the beauty of Ruby.
+For details on differences between Python 2 to Python 3, see the [Python/3 page on the Ubuntu wiki](https://wiki.ubuntu.com/Python/3).
 
 ## What Programmers Say
 
 You may find it interesting to read what great hackers like ESR have to say about Python:
 
-(@) *Eric S. Raymond* is the author of "The Cathedral and the Bazaar" and is also the person who coined the term *Open Source*. He says that [Python has become his favorite programming language](http://www.linuxjournal.com/article.php?sid=3882). This article was the real inspiration for my first brush with Python.  
+(@) *Eric S. Raymond* is the author of "The Cathedral and the Bazaar" and is also the person who coined the term *Open Source*. He says that [Python has become his favorite programming language](http://www.linuxjournal.com/article.php?sid=3882). This article was the real inspiration for my first brush with Python.
 
 (@) *Bruce Eckel* is the author of the famous *Thinking in Java* and *Thinking in C++* books. He says that no language has made him more productive than Python. He says that Python is perhaps the only language that focuses on making things easier for the programmer. Read the [complete interview](http://www.artima.com/intv/aboutme.html) for more details.
-  
+
 (@) *Peter Norvig* is a well-known Lisp author and Director of Search Quality at Google (thanks to Guido van Rossum for pointing that out). He says that Python has always been an integral part of Google. You can actually verify this statement by looking at the [Google Jobs](http://www.google.com/jobs/index.html) page which lists Python knowledge as a requirement for software engineers.

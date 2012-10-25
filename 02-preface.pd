@@ -12,7 +12,7 @@ If you do have previous programming experience, you will be interested in the di
 
 ## History Lesson
 
-I first started with Python when I needed to write an installer for software I had written called 'Diamond' so that I could make the installation easy. I had to choose between Python and Perl bindings for the Qt library. I did some research on the web and I came across [an article](http://pythonology.org/success&story=esr) by Eric S. Raymond, the famous and respected hacker, where he talked about how Python had become his favorite programming language. I also found out that the PyQt bindings were more mature compared to Perl-Qt. So, I decided that Python was the language for me.
+I first started with Python when I needed to write an installer for software I had written called 'Diamond' so that I could make the installation easy. I had to choose between Python and Perl bindings for the Qt library. I did some research on the web and I came across [an article by Eric S. Raymond](http://pythonology.org/success&story=esr), a famous and respected hacker, where he talked about how Python had become his favorite programming language. I also found out that the PyQt bindings were more mature compared to Perl-Qt. So, I decided that Python was the language for me.
 
 Then, I started searching for a good book on Python. I couldn't find any!  I did find some O'Reilly books but they were either too expensive or were more like a reference manual than a guide. So, I settled for the documentation that came with Python. However, it was too brief and small. It did give a good idea about Python but was not complete. I managed with it since I had previous programming experience, but it was unsuitable for newbies.
 
@@ -24,13 +24,11 @@ In the true spirit of open source, I have received lots of constructive suggesti
 
 ## Status Of The Book
 
-This book has been reformatted in October 2012 using Pandoc to allow generation of ebooks as requested by several users, along with a plethora of errata fixes and updates.
+This book has been reformatted in October 2012 using Pandoc to allow generation of ebooks as requested by several users, along with errata fixes and updates.
 
-Changes in December 2008 edition from the earlier major revision in March 2005 was updating for the Python 3.0 release.
+Changes in December 2008 edition (from the earlier major revision in March 2005) was updating for the Python 3.0 release.
 
 The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author](http://www.swaroopch.com/contact/) or the respective [translators](#translations) with your comments and suggestions.
-
-It's a constant tussle to balance this book between a beginner's needs and the tendency towards 'completeness' of information. It would be helpful if readers also gave feedback on how much depth this book should go into, and not go into.
 
 ## Official Website
 
