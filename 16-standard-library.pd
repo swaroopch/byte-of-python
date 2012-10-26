@@ -110,65 +110,6 @@ We configure the `logging` module to write all the messages in a particular form
 
 Finally, we can put messages that are either meant for debugging, information, warning or even critical messages. Once the program has run, we can check this file and we will know what happened in the program, even though no information was displayed to the user running the program.
 
-## urllib and json modules 
-
-How much fun would it be if we could write our own program that will get search results from the web? Let us explore that now.
-
-This can be achieved using a few modules. First is the `urllib` module that we can use to fetch any webpage from the internet. We will make use of Yahoo! Search to get the search results and luckily they can give us the results in a format called JSON which is easy for us to parse because of the built-in `json` module in the standard library.
-
-TODO
-
-:   Does this yahoo search example work as expected?
-
-Save as `yahoo_search.py`:
-
-~~~python
-import sys
-if sys.version_info.major < 3:
-    sys.exit('This program needs Python 3')
-
-import json
-import urllib, urllib.parse, urllib.request, urllib.response
-
-# Get your own APP ID at http://developer.yahoo.com/wsregapp/
-YAHOO_APP_ID = 'jl22psvV34HELWhdfUJbfDQzlJ2B57KFS_qs4I8D0Wz5U5_yCI1Awv8.lBSfPhwr'
-SEARCH_BASE = 'http://search.yahooapis.com/WebSearchService/V1/webSearch'
-
-class YahooSearchError(Exception):
-    pass
-
-# Taken from http://developer.yahoo.com/python/python-json.html
-def search(query, results=20, start=1, **kwargs):
-    kwargs.update({
-        'appid': YAHOO_APP_ID,
-        'query': query,
-        'results': results,
-        'start': start,
-        'output': 'json'
-    })
-    url = SEARCH_BASE + '?' + urllib.parse.urlencode(kwargs)
-    result = json.load(urllib.request.urlopen(url))
-    if 'Error' in result:
-        raise YahooSearchError(result['Error'])
-    return result['ResultSet']
-
-query = input('What do you want to search for? ')
-for result in search(query)['Result']:
-    print("{0} : {1}".format(result['Title'], result['Url']))
-~~~
-
-Output:
-
-**TODO**
-
-How It Works:
-
-We can get the search results from a particular website by giving the text we are searching for in a particular format. We have to specify many options which we combine using `key1=value1&key2=value2` format which is handled by the `urllib.parse.urlencode()`> function.
-
-So for example, open [this link in your web browser](http://search.yahooapis.com/WebSearchService/V1/webSearch?query=byte+of+python&appid=jl22psvV34HELWhdfUJbfDQzlJ2B57KFS_qs4I8D0Wz5U5_yCI1Awv8.lBSfPhwr&results=20&start=1&output=json) and you will see 20 results, starting from the first result, for the words "byte of python", and we are asking for the output in JSON format.
-
-We make a connection to this URL using the `urllib.request.urlopen()` function and pass that file handle to `json.load()` which will read the content and simultaneously convert it to a Python object. We then loop through these results and display it to the end-user.
-
 ## Module of the Week Series 
 
 There is much more to be explored in the standard library such as [debugging](http://docs.python.org/py3k/library/pdb.html), [handling command line options](http://docs.python.org/py3k/library/argparse.html), [regular expressions](http://docs.python.org/py3k/library/re.html) and so on.
