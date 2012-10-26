@@ -349,6 +349,13 @@ def pdf():
 
 
 @task
+def push():
+    wp()
+    epub()
+    pdf()
+
+
+@task
 def docx():
     """OOXML document format."""
     args = ['pandoc',
