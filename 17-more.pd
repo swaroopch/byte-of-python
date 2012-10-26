@@ -17,9 +17,9 @@ Ever wished you could return two different values from a function? You can. All 
 'second error details'
 ~~~
 
-Notice that the usage of `a, b = &lt;some expression&gt;` interprets the result of the expression as a tuple with two values.
+Notice that the usage of `a, b = <some expression>` interprets the result of the expression as a tuple with two values.
 
-If you want to interpret the results as `(a, &lt;everything else&gt;)`, then you just need to star it just like you would in function parameters:
+If you want to interpret the results as `(a, <everything else>)`, then you just need to star it just like you would in function parameters:
 
 ~~~
 >>> a, *b = [1, 2, 3, 4]
@@ -44,7 +44,7 @@ There are certain methods such as the `__init__` and `__del__` methods which hav
 
 Special methods are used to mimic certain behaviors of built-in types. For example, if you want to use the `x[key]` indexing operation for your class (just like you use it for lists and tuples), then all you have to do is implement the `__getitem__()` method and your job is done. If you think about it, this is what Python does for the `list` class itself!
 
-Some useful special methods are listed in the following table. If you want to know about all the special methods, [see the manual](http://docs.python.org/3.0/reference/datamodel.html#special-method-names).
+Some useful special methods are listed in the following table. If you want to know about all the special methods, [see the manual](http://docs.python.org/py3k/reference/datamodel.html#specialnames).
 
 `__init__(self, ...)`
 
@@ -84,48 +84,33 @@ Notice that the single statement is used in-place and not as a separate block.  
 
 ## Lambda Forms 
 
-A `lambda` statement is used to create new function objects and then return them at runtime.
+A `lambda` statement is used to create new function objects. Essentially, the `lambda` takes a parameter followed by a single expression only which becomes the body of the function and the value of this expression is returned by the new function.
+
+Example (save as `lambda.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: lambda.py
-
-def make_repeater(n):
-    return lambda s: s * n
-
-twice = make_repeater(2)
-
-print(twice('word'))
-print(twice(5))
+points = [ { 'x' : 2, 'y' : 3 }, { 'x' : 4, 'y' : 1 } ]
+points.sort(key=lambda i : i['y'])
+print(points)
 ~~~
 
 Output:
 
 ~~~
-$ python lambda.py
-wordword
-10
+[{'x': 4, 'y': 1}, {'x': 2, 'y': 3}]
 ~~~
 
 How It Works:
 
-Here, we use a function `make_repeater` to create new function objects at runtime and return it. A `lambda` statement is used to create the function object. Essentially, the `lambda` takes a parameter followed by a single expression only which becomes the body of the function and the value of this expression is returned by the new function. Note that even a `print` statement cannot be used inside a lambda form, only expressions.
-
-**TODO** Can we do a `list.sort()` by providing a key function created using `lambda`?
-
-~~~python
-points = [ { 'x' : 2, 'y' : 3 }, { 'x' : 4, 'y' : 1 } ]
-# points.sort(key=lambda a : a['x'])
-~~~
+Notice that the `sort` method of a `list` can take a `key` parameter which determines how the list is sorted (usually we know only about ascending or descending order). In our case, we want to do a custom sort, and for that we need to write a function but instead of writing a separate `def` block for a function that will get used in only this one place, we use a lambda expression to create a new function.
 
 ## List Comprehension 
 
 List comprehensions are used to derive a new list from an existing list. Suppose you have a list of numbers and you want to get a corresponding list with all the numbers multiplied by 2 only when the number itself is greater than 2. List comprehensions are ideal for such situations.
 
-~~~python
-#!/usr/bin/python
-# Filename: list_comprehension.py
+Example (save as `list_comprehension.py`):
 
+~~~python
 listone = [2, 3, 4]
 listtwo = [2*i for i in listone if i > 2]
 print(listtwo)
@@ -134,7 +119,7 @@ print(listtwo)
 Output:
 
 ~~~
-$ python list_comprehension.py
+$ python3 list_comprehension.py
 [6, 8]
 ~~~
 
@@ -184,23 +169,6 @@ AssertionError
 
 The `assert` statement should be used judiciously. Most of the time, it is better to catch exceptions, either handle the problem or display an error message to the user and then quit.
 
-## The repr function 
-
-The `repr` function is used to obtain a canonical string representation of the object. The interesting part is that you will have `eval(repr(object)) == object` most of the time.
-
-~~~
->>> i = []
->>> i.append('item')
->>> repr(i)
-"['item']"
->>> eval(repr(i))
-['item']
->>> eval(repr(i)) == i
-True
-~~~
-
-Basically, the `repr` function is used to obtain a printable representation of the object. You can control what your classes return for the `repr` function by defining the `__repr__` method in your class.
-
 ## Escape Sequences
 
 Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `What's your name?`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an *escape sequence*. You specify the single quote as `\'` - notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
@@ -216,7 +184,11 @@ One thing to note is that in a string, a single backslash at the end of the line
 This is the second sentence."
 ~~~
 
-is equivalent to `"This is the first sentence. This is the second sentence."`.
+is equivalent to 
+
+~~~python
+"This is the first sentence. This is the second sentence."
+~~~
 
 ### Raw String
 

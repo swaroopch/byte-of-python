@@ -2,7 +2,7 @@
 
 - 2.0
     - 20 Oct 2012
-    - Rewriting using [Pandoc](http://johnmacfarlane.net/pandoc/README.html), thanks to my wife!
+    - Rewritten in [Pandoc format](http://johnmacfarlane.net/pandoc/README.html), thanks to my wife who did most of the conversion from the Mediawiki format
     - Simplifying text, removing non-essential sections such as `nonlocal` and metaclasses
 - 1.90 
     - 04 Sep 2008 and still in progress 

@@ -65,7 +65,7 @@ Note that you can evaluate the expressions given in the examples using the inter
 :   Shifts the bits of the number to the left by the number of bits specified. (Each number is represented in memory by bits or binary digits i.e. 0 and 1)
 
     `2 << 2` gives `8`. `2` is represented by `10` in bits.
-    
+
     Left shifting by 2 bits gives `1000` which represents the decimal `8`.
 
 `>>` (right shift)
@@ -73,7 +73,7 @@ Note that you can evaluate the expressions given in the examples using the inter
 :   Shifts the bits of the number to the right by the number of bits specified.
 
     `11 >> 1` gives `5`.
-    
+
     `11` is represented in bits by `1011` which when right shifted by 1 bit
     gives `101`which is the decimal `5`.
 
@@ -167,15 +167,18 @@ It is common to run a math operation on a variable and then assign the result of
 
 You can write:
 
-
-    a = 2; a = a * 3
+~~~python
+a = 2
+a = a * 3
+~~~
 
 
 as:
 
-
-    a = 2; a *= 3
-
+~~~python
+a = 2
+a *= 3
+~~~
 
 Notice that `var = var operation expression` becomes `var operation= expression`.
 
@@ -185,7 +188,7 @@ If you had an expression such as `2 + 3 * 4`, is the addition done first or the 
 
 The following table gives the precedence table for Python, from the lowest precedence (least binding) to the highest precedence (most binding). This means that in a given expression, Python will first evaluate the operators and expressions lower in the table before the ones listed higher in the table.
 
-The following table, taken from the [Python reference manual](http://docs.python.org/3.0/reference/expressions.html#evaluation-order), is provided for the sake of completeness. It is far better to use parentheses to group operators and operands appropriately in order to explicitly specify the precedence. This makes the program more readable. See [Changing the Order of Evaluation](#changing-the-order-of-evaluation) below for details.
+The following table, taken from the [Python reference manual](http://docs.python.org/py3k/reference/expressions.html#summary), is provided for the sake of completeness. It is far better to use parentheses to group operators and operands appropriately in order to explicitly specify the precedence. This makes the program more readable. See [Changing the Order of Evaluation](#changing-the-order-of-evaluation) below for details.
 
 `lambda`
 
@@ -295,12 +298,9 @@ Operators are usually associated from left to right. This means that operators w
 
 ## Expressions
 
-Example:
+Example (save as `expression.py`):
 
 ~~~python
-#!/usr/bin/python
- Filename: expression.py
-
 length = 5
 breadth = 2
 
@@ -312,7 +312,7 @@ print('Perimeter is', 2 * (length + breadth))
 Output:
 
 ~~~
-$ python expression.py
+$ python3 expression.py
 Area is 10
 Perimeter is 14
 ~~~

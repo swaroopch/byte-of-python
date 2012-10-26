@@ -4,16 +4,13 @@ You have seen how you can reuse code in your program by defining functions once.
 
 There are various methods of writing modules, but the simplest way is to create a file with a `.py` extension that contains functions and variables.
 
-Another method is to write the modules in the native language in which the Python interpreter itself was written. For example, you can write modules in the [C programming language](http://docs.python.org/extending/) and when compiled, they can be used from your Python code when using the standard Python interpreter.
+Another method is to write the modules in the native language in which the Python interpreter itself was written. For example, you can write modules in the [C programming language](http://docs.python.org/py3k/extending/index.html) and when compiled, they can be used from your Python code when using the standard Python interpreter.
 
 A module can be *imported* by another program to make use of its functionality. This is how we can use the Python standard library as well. First, we will see how to use the standard library modules.
 
-Example:
+Example (save as `using_sys.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: using_sys.py
-
 import sys
 
 print('The command line arguments are:')
@@ -26,7 +23,7 @@ print('\n\nThe PYTHONPATH is', sys.path, '\n')
 Output:
 
 ~~~
-$ python using_sys.py we are arguments
+$ python3 using_sys.py we are arguments
 The command line arguments are:
 using_sys.py
 we
@@ -71,44 +68,24 @@ Note
 
 ## The from ... import statement 
 
-If you want to directly import the `argv` variable into your program (to avoid typing the `sys.` everytime for it), then you can use the `from sys import argv` statement. If you want to import all the names used in the `sys` module, then you can use the `from sys import *` statement. This works for any module.
+If you want to directly import the `argv` variable into your program (to avoid typing the `sys.` everytime for it), then you can use the `from sys import argv` statement.
 
 In general, you *should avoid* using this statement and use the `import` statement instead since your program will avoid name clashes and will be more readable.
+
 Example:
 
 ~~~python
-from math import *  
-n = input("Enter range:-  ")
-p = [2, 3]
-count = 2
-a = 5
-while(count < n):
-	b = 0
-	for i in range(2, a):
-		if(i <= sqrt(a)):
-			if(a % i == 0):
-				#print a, "is not a prime" 
-				b = 1
-			else:
-				pass
-	if(b != 1):
-		#print a, "is a prime"
-		p = p + [a]
-		count = count + 1
-	a = a + 2
-print p
+from math import sqrt
+print("Square root of 16 is", sqrt(16))
 ~~~
 
 ## A module's __name__ 
 
 Every module has a name and statements in a module can find out the name of their module. This is handy for the particular purpose of figuring out whether the module is being run standalone or being imported. As mentioned previously, when a module is imported for the first time, the code it contains gets executed. We can use this to make the module behave in different ways depending on whether it is being used by itself or being imported from another module. This can be achieved using the `__name__` attribute of the module.
 
-Example:
+Example (save as `using_name.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: using_name.py
-
 if __name__ == '__main__':
     print('This program is being run by itself')
 else:
@@ -118,10 +95,10 @@ else:
 Output:
 
 ~~~
-$ python using_name.py
+$ python3 using_name.py
 This program is being run by itself
 
-$ python
+$ python3
 >>> import using_name
 I am being imported from another module
 >>>
@@ -135,28 +112,22 @@ Every Python module has its `__name__` defined. If this is `'__main__'`, that im
 
 Creating your own modules is easy, you've been doing it all along! This is because every Python program is also a module. You just have to make sure it has a `.py` extension. The following example should make it clear.
 
-Example:
+Example (save as `mymodule.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: mymodule.py
-
 def sayhi():
     print('Hi, this is mymodule speaking.')
 
 __version__ = '0.1'
-
-# End of mymodule.py
 ~~~
 
 The above was a sample *module*. As you can see, there is nothing particularly special about it compared to our usual Python program. We will next see how to use this module in our other Python programs.
 
 Remember that the module should be placed either in the same directory as the program from which we import it, or in one of the directories listed in `sys.path`.
 
-~~~python
-#!/usr/bin/python
-# Filename: mymodule_demo.py
+Another module (save as `mymodule_demo.py`):
 
+~~~python
 import mymodule
 
 mymodule.sayhi()
@@ -166,7 +137,7 @@ print ('Version', mymodule.__version__)
 Output:
 
 ~~~
-$ python mymodule_demo.py
+$ python3 mymodule_demo.py
 Hi, this is mymodule speaking.
 Version 0.1
 ~~~
@@ -175,12 +146,9 @@ How It Works:
 
 Notice that we use the same dotted notation to access members of the module. Python makes good reuse of the same notation to give the distinctive 'Pythonic' feel to it so that we don't have to keep learning new ways to do things.
 
-Here is a version utilising the `from..import` syntax:
+Here is a version utilising the `from..import` syntax (save as `mymodule_demo2.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: mymodule_demo2.py
-
 from mymodule import sayhi, __version__
 
 sayhi()
@@ -201,7 +169,7 @@ This will import all public names such as `sayhi` but would not import `__versio
 
 Zen of Python
 
-:   One of Python's guiding principles is that "Explicit is better than Implicit". Run `import this` to learn more and see [this discussion](http://stackoverflow.com/questions/228181/zen-of-python) which lists examples for each of the principles.
+:   One of Python's guiding principles is that "Explicit is better than Implicit". Run `import this` to learn more and see [this StackOverflow discussion](http://stackoverflow.com/questions/228181/zen-of-python) which lists examples for each of the principles.
 
 ## The dir function 
 
@@ -212,7 +180,7 @@ When you supply a module name to the`dir()` function, it returns the list of the
 Example:
 
 ~~~
-$ python
+$ python3
 
 >>> import sys # get list of attributes, in this case, for the sys module
 

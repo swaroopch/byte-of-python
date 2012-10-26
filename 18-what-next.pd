@@ -8,11 +8,11 @@ I would suggest that you tackle this problem:
 
 This is fairly easy if you think about it in terms of all the various stuff that we have come across till now. If you still want directions on how to proceed, then here's a hint.
 
-Hint (Don't read)
+Hint (Don't read without trying first)
 
 :   Create a class to represent the person's information. Use a dictionary to store person objects with their name as the key. Use the pickle module to store the objects persistently on your hard disk. Use the dictionary built-in methods to add, delete and modify the persons.
 
-Once you are able to do this, you can claim to be a Python programmer. Now, immediately [send me a mail](http://www.swaroopch.com/contact/) thanking me for this great book ;-) . This step is optional but recommended. Also, please consider [buying a printed copy](http://www.swaroopch.com/buybook/) to support the continued development of this book.
+Once you are able to do this, you can claim to be a Python programmer. Now, immediately [send me an email](http://www.swaroopch.com/contact/) thanking me for this great book ;-). This step is optional but recommended. Also, please consider [buying a printed copy](http://www.swaroopch.com/buybook/) to support the continued development of this book.
 
 If you found that program easy, here's another one:
 
@@ -22,56 +22,38 @@ The replace command can be as simple or as sophisticated as you wish, from simpl
 
 After that, below are some ways to continue your journey with Python:
 
-## Exercises 
-
-There is a good discussion over at Stack Overflow on [regarding Python exercises to hone your skills](http://stackoverflow.com/questions/29578/python-exercises-to-hone-your-skills).
-
 ## Example Code 
 
 The best way to learn a programming language is to write a lot of code and read a lot of code:
 
-- [The PLEAC project](http://pleac.sourceforge.net/pleac_python/index.html)
-- [Rosetta code repository](http://www.rosettacode.org/wiki/Category:Python)
-- [Python examples at java2s](http://www.java2s.com/Code/Python/CatalogPython.htm)
 - [Python Cookbook](http://code.activestate.com/recipes/langs/python/) is an extremely valuable collection of recipes or tips on how to solve certain kinds of problems using Python. This is a must-read for every Python user.
+- [Python Module of the Week](http://www.doughellmann.com/PyMOTW/contents.html) is another excellent must-read guide to the [Python Standard Library](#standard-library).
 
 ## Questions and Answers
 
-- [Official Python Dos and Don'ts](http://docs.python.org/dev/howto/doanddont.html)
+- [Official Python Dos and Don'ts](http://docs.python.org/py3k/howto/doanddont.html)
 - [Official Python FAQ](http://www.python.org/doc/faq/general/)
 - [Norvig's list of Infrequently Asked Questions](http://norvig.com/python-iaq.html)
 - [Python Interview Q & A](http://dev.fyicenter.com/Interview-Questions/Python/index.html)
 - [StackOverflow questions tagged with python](http://beta.stackoverflow.com/questions/tagged/python)
 
-## Tips and Tricks 
+## Tutorials
 
-- [Python Tips & Tricks](http://www.siafoo.net/article/52)
-- [Advanced Software Carpentry using Python](http://ivory.idyll.org/articles/advanced-swc/)
-- [Charming Python](http://gnosis.cx/publish/tech_index_cp.html) is an excellent series of Python-related articles by David Mertz.
+- [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
 
-## Books, Papers, Tutorials, Videos 
-
-The logical next step after this book is to read Mark Pilgrim's awesome [Dive Into Python](http://www.diveintopython.org) book which you can read fully online as well. The Dive Into Python book explores topics such as regular expressions, XML processing, web services, unit testing, etc. in detail.
-
-Other useful resources are:
+## Videos 
 
 - [PyVideo](http://www.pyvideo.org/category)
-- [ShowMeDo videos for Python](http://showmedo.com/videos/python)
-- [GoogleTechTalks videos on Python](http://youtube.com/results?search_query=googletechtalks+python)
-- [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
-- [The Effbot's Python Zone](http://effbot.org/zone/ )
-- [Links at the end of every Python-URL! email](http://groups.google.com/group/comp.lang.python.announce/t/37de95ef0326293d)
-- [Python Papers](http://pythonpapers.org)
 
 ## Discussion 
 
-If you are stuck with a Python problem, and don't know whom to ask, then the [comp.lang.python discussion group](http://groups.google.com/group/comp.lang.python/topics) is the best place to ask your question.
+If you are stuck with a Python problem, and don't know whom to ask, then the [python-tutor list](http://mail.python.org/mailman/listinfo/tutor) is the best place to ask your question.
 
 Make sure you do your homework and have tried solving the problem yourself first.
 
 ## News 
 
-If you want to learn what is the latest in the world of Python, then follow the [Official Python Planet](http://planet.python.org) and/or the [Unofficial Python Planet](http://www.planetpython.org).
+If you want to learn what is the latest in the world of Python, then follow the [Official Python Planet](http://planet.python.org).
 
 ## Installing libraries 
 

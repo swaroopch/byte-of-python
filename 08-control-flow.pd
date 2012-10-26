@@ -8,12 +8,9 @@ As you might have guessed, this is achieved using control flow statements. There
 
 The `if` statement is used to check a condition: *if* the condition is true, we run a block of statements (called the *if-block*), *else* we process another block of statements (called the *else-block*). The *else* clause is optional.
 
-Example:
+Example (save as `if.py`):
 
-~~~ python
-#!/usr/bin/python
-# Filename: if.py
-
+~~~python
 number = 23
 guess = int(input('Enter an integer : '))
 
@@ -34,17 +31,17 @@ print('Done')
 Output:
 
 ~~~
-$ python if.py
+$ python3 if.py
 Enter an integer : 50
 No, it is a little lower than that
 Done
 
-$ python if.py
+$ python3 if.py
 Enter an integer : 22
 No, it is a little higher than that
 Done
 
-$ python if.py
+$ python3 if.py
 Enter an integer : 23
 Congratulations, you guessed it.
 (but you do not win any prizes!)
@@ -86,12 +83,9 @@ Note for C/C++ Programmers
 
 The `while` statement allows you to repeatedly execute a block of statements as long as a condition is true. A `while` statement is an example of what is called a *looping* statement. A `while` statement can have an optional `else` clause.
 
-Example:
+Example (save as `while.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: while.py
-
 number = 23
 running = True
 
@@ -115,7 +109,7 @@ print('Done')
 Output:
 
 ~~~
-$ python while.py
+$ python3 while.py
 Enter an integer : 50
 No, it is a little lower than that.
 Enter an integer : 22
@@ -144,12 +138,9 @@ Note for C/C++ Programmers
 
 The `for..in` statement is another looping statement which *iterates* over a sequence of objects i.e. go through each item in a sequence. We will see more about [sequences](#sequence) in detail in later chapters. What you need to know right now is that a sequence is just an ordered collection of items.
 
-Example:
+Example (save as `for.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: for.py
-
 for i in range(1, 5):
     print(i)
 else:
@@ -159,7 +150,7 @@ else:
 Output:
 
 ~~~
-$ python for.py
+$ python3 for.py
 1
 2
 3
@@ -193,12 +184,9 @@ The `break` statement is used to *break* out of a loop statement i.e. stop the e
 
 An important note is that if you *break* out of a `for`or `while` loop, any corresponding loop `else` block is **not** executed.
 
-Example:
+Example (save as `break.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: break.py
-
 while True:
     s = input('Enter something : ')
     if s == 'quit':
@@ -210,7 +198,7 @@ print('Done')
 Output:
 
 ~~~
-$ python break.py
+$ python3 break.py
 Enter something : Programming is fun
 Length of the string is 18
 Enter something : When the work is done
@@ -235,21 +223,20 @@ Remember that the `break` statement can be used with the `for` loop as well.
 
 The input I have used here is a mini poem I have written called *Swaroop's Poetic Python*:
 
-    Programming is fun
-    When the work is done
-    if you wanna make your work also fun:
-        use Python!
+~~~
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+~~~
 
 ## The continue Statement 
 
 The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to *continue* to the next iteration of the loop.
 
-Example:
+Example (save as `continue.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: continue.py
-
 while True:
     s = input('Enter something : ')
     if s == 'quit':
@@ -264,7 +251,7 @@ while True:
 Output:
 
 ~~~
-$ python continue.py
+$ python3 continue.py
 Enter something : a
 Too small
 Enter something : 12

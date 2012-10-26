@@ -6,12 +6,9 @@ The function concept is probably *the* most important building block of any non-
 
 Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. An example will show that this is actually very simple:
 
-Example:
+Example (save as `function1.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: function1.py
-
 def sayHello():
     print('Hello World!') # block belonging to the function
 # End of function
@@ -23,7 +20,7 @@ sayHello() # call the function again
 Output:
 
 ~~~
-$ python function1.py
+$ python3 function1.py
 Hello World!
 Hello World!
 ~~~
@@ -40,12 +37,9 @@ A function can take parameters, which are values you supply to the function so t
 
 Parameters are specified within the pair of parentheses in the function definition, separated by commas. When we call the function, we supply the values in the same way.  Note the terminology used - the names given in the function definition are called *parameters* whereas the values you supply in the function call are called *arguments*.
 
-Example:
+Example (save as `func_param.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_param.py
-
 def printMax(a, b):
     if a > b:
         print(a, 'is maximum')
@@ -65,7 +59,7 @@ printMax(x, y) # give variables as arguments
 Output:
 
 ~~~
-$ python func_param.py
+$ python3 func_param.py
 4 is maximum
 7 is maximum
 ~~~
@@ -80,12 +74,9 @@ The first time we call the function `printMax`, we directly supply the numbers a
 
 When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are *local* to the function. This is called the *scope* of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
 
-Example:
+Example (save as `func_local.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_local.py
-
 x = 50
 
 def func(x):
@@ -100,7 +91,7 @@ print('x is still', x)
 Output:
 
 ~~~
-$ python func_local.py
+$ python3 func_local.py
 x is 50
 Changed local x to 2
 x is still 50
@@ -120,12 +111,9 @@ If you want to assign a value to a name defined at the top level of the program 
 
 You can use the values of such variables defined outside the function (assuming there is no variable with the same name within the function). However, this is not encouraged and should be avoided since it becomes unclear to the reader of the program as to where that variable's definition is. Using the `global` statement makes it amply clear that the variable is defined in an outermost block.
 
-Example:
+Example (save as `func_global.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_global.py
-
 x = 50
 
 def func():
@@ -142,7 +130,7 @@ print('Value of x is', x)
 Output:
 
 ~~~
-$ python func_global.py
+$ python3 func_global.py
 x is 50
 Changed global x to 2
 Value of x is 2
@@ -160,12 +148,9 @@ For some functions, you may want to make some parameters *optional* and use defa
 
 Note that the default argument value should be a constant. More precisely, the default argument value should be immutable - this is explained in detail in later chapters. For now, just remember this.
 
-Example:
+Example (save as `func_default.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_default.py
-
 def say(message, times = 1):
     print(message * times)
 
@@ -176,7 +161,7 @@ say('World', 5)
 Output:
 
 ~~~
-$ python func_default.py
+$ python3 func_default.py
 Hello
 WorldWorldWorldWorldWorld
 ~~~
@@ -199,12 +184,9 @@ If you have some functions with many parameters and you want to specify only som
 
 There are two *advantages* - one, using the function is easier since we do not need to worry about the order of the arguments. Two, we can give values to only those parameters to which we want to, provided that the other parameters have default argument values.
 
-Example:
+Example (save as `func_key.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_key.py
-
 def func(a, b=5, c=10):
     print('a is', a, 'and b is', b, 'and c is', c)
 
@@ -216,7 +198,7 @@ func(c=50, a=100)
 Output:
 
 ~~~
-$ python func_key.py
+$ python3 func_key.py
 a is 3 and b is 7 and c is 10
 a is 25 and b is 5 and c is 24
 a is 100 and b is 5 and c is 50
@@ -234,12 +216,9 @@ In the third usage `func(c=50, a=100)`, we use keyword arguments for all specifi
 
 ## VarArgs parameters
 
-Sometimes you might want to define a function that can take *any* number of parameters, this can be achieved by using the stars:
+Sometimes you might want to define a function that can take *any* number of parameters, this can be achieved by using the stars (save as `total.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: total.py
-
 def total(initial=5, *numbers, **keywords):
     count = initial
     for number in numbers:
@@ -254,7 +233,7 @@ print(total(10, 1, 2, 3, vegetables=50, fruits=100))
 Output:
 
 ~~~
-$ python total.py
+$ python3 total.py
 166
 ~~~
 
@@ -268,12 +247,9 @@ We will explore tuples and dictionaries in a [later chapter](#data-structures).
 
 ## Keyword-only Parameters 
 
-If we want to specify certain keyword parameters to be available as keyword-only and *not* as positional arguments, they can be declared after a starred parameter:
+If we want to specify certain keyword parameters to be available as keyword-only and *not* as positional arguments, they can be declared after a starred parameter (save as `keyword_only.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: keyword_only.py
-
 def total(initial=5, *numbers, extra_number):
     count = initial
     for number in numbers:
@@ -289,7 +265,7 @@ total(10, 1, 2, 3)
 Output:
 
 ~~~
-$ python keyword_only.py
+$ python3 keyword_only.py
 66
 Traceback (most recent call last):
   File "keyword_only.py", line 12, in <module>
@@ -309,12 +285,9 @@ If you want to have keyword-only arguments but have no need for a starred parame
 
 The `return` statement is used to *return* from a function i.e. break out of the function. We can optionally *return a value* from the function as well.
 
-Example:
+Example (save as `func_return.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_return.py
-
 def maximum(x, y):
     if x > y:
         return x
@@ -329,13 +302,13 @@ print(maximum(2, 3))
 Output:
 
 ~~~
-$ python func_return.py
+$ python3 func_return.py
 3
 ~~~
 
 How It Works:
 
-The `maximum` function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple `if..else`	 statement to find the greater value and then *returns* that value.
+The `maximum` function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple `if..else` statement to find the greater value and then *returns* that value.
 
 Note that a `return` statement without a value is equivalent to `return None`. `None` is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of `None`.
 
@@ -356,12 +329,9 @@ Note
 
 Python has a nifty feature called *documentation strings*, usually referred to by its shorter name *docstrings*. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!
 
-Example:
+Example (save as `func_doc.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: func_doc.py
-
 def printMax(x, y):
     '''Prints the maximum of two numbers.
 
@@ -381,7 +351,7 @@ print(printMax.__doc__)
 Output:
 
 ~~~
-$ python func_doc.py
+$ python3 func_doc.py
 5 is maximum
 Prints the maximum of two numbers.
 

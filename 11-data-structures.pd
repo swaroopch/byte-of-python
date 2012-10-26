@@ -20,12 +20,9 @@ A class can also have **methods** i.e. functions defined for use with respect to
 
 A class can also have **fields** which are nothing but variables defined for use with respect to that class only. You can use these variables/names only when you have an object of that class. Fields are also accessed by the dotted notation, for example, `mylist.field`.
 
-Example:
+Example (save as `using_list.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: using_list.py
-
 # This is my shopping list
 shoplist = ['apple', 'mango', 'carrot', 'banana']
 
@@ -53,7 +50,7 @@ print('My shopping list is now', shoplist)
 Output:
 
 ~~~
-$ python using_list.py
+$ python3 using_list.py
 I have 4 items to purchase.
 These items are: apple mango carrot banana
 I also have to buy rice.
@@ -89,12 +86,9 @@ Tuples are defined by specifying items separated by commas within an optional pa
 
 Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values i.e. the tuple of values used will not change.
 
-Example:
+Example (save as `using_tuple.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: using_tuple.py
-
 zoo = ('python', 'elephant', 'penguin') # remember the parentheses are optional
 print('Number of animals in the zoo is', len(zoo))
 
@@ -109,7 +103,7 @@ print('Number of animals in the new zoo is', len(new_zoo)-1+len(new_zoo[2]))
 Output:
 
 ~~~
-$ python using_tuple.py
+$ python3 using_tuple.py
 Number of animals in the zoo is 3
 Number of cages in the new zoo is 3
 All animals in new zoo are ('monkey', 'camel', ('python', 'elephant', 'penguin'))
@@ -150,12 +144,9 @@ Remember that key-value pairs in a dictionary are not ordered in any manner. If 
 
 The dictionaries that you will be using are instances/objects of the `dict` class.
 
-Example:
+Example (save as `using_dict.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: using_dict.py
-
 # 'ab' is short for 'a'ddress'b'ook
 
 ab = {  'Swaroop'   : 'swaroop@swaroopch.com',
@@ -184,7 +175,7 @@ if 'Guido' in ab:
 Output:
 
 ~~~
-$ python using_dict.py
+$ python3 using_dict.py
 Swaroop's address is swaroop@swaroopch.com
 
 There are 3 contacts in the address-book
@@ -222,12 +213,9 @@ The major features are **membership tests**, (i.e. the `in` and `not in` express
 
 The three types of sequences mentioned above - lists, tuples and strings, also have a **slicing** operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.
 
-Example:
+Example (save as `seq.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: seq.py
-
 shoplist = ['apple', 'mango', 'carrot', 'banana']
 name = 'swaroop'
 
@@ -256,7 +244,7 @@ print('characters start to end is', name[:])
 Output:
 
 ~~~
-$ python seq.py
+$ python3 seq.py
 Item 0 is apple
 Item 1 is mango
 Item 2 is carrot
@@ -337,12 +325,9 @@ When you create an object and assign it to a variable, the variable only *refers
 
 Generally, you don't need to be worried about this, but there is a subtle effect due to references which you need to be aware of:
 
-Example:
+Example (save as `reference.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: reference.py
-
 print('Simple Assignment')
 shoplist = ['apple', 'mango', 'carrot', 'banana']
 mylist = shoplist # mylist is just another name pointing to the same object!
@@ -366,7 +351,7 @@ print('mylist is', mylist)
 Output:
 
 ~~~
-$ python reference.py
+$ python3 reference.py
 Simple Assignment
 shoplist is ['mango', 'carrot', 'banana']
 mylist is ['mango', 'carrot', 'banana']
@@ -391,12 +376,9 @@ We have already discussed strings in detail earlier. What more can there be to k
 
 The strings that you use in program are all objects of the class `str`.  Some useful methods of this class are demonstrated in the next example. For a complete list of such methods, see `help(str)`.
 
-Example:
+Example (save as `str_methods.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: str_methods.py
-
 name = 'Swaroop' # This is a string object
 
 if name.startswith('Swa'):
@@ -417,7 +399,7 @@ print(delimiter.join(mylist))
 Output:
 
 ~~~
-$ python str_methods.py
+$ python3 str_methods.py
 Yes, the string starts with "Swa"
 Yes, it contains the string "a"
 Yes, it contains the string "war"

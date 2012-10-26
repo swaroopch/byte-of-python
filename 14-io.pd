@@ -8,10 +8,9 @@ Another common type of input/output is dealing with files. The ability to create
 
 ## Input from user
 
-~~~python
-#!/usr/bin/python
-# user_input.py
+Save this program as `user_input.py`:
 
+~~~python
 def reverse(text):
     return text[::-1]
 
@@ -28,15 +27,15 @@ else:
 Output:
 
 ~~~
-$ python user_input.py
+$ python3 user_input.py
 Enter text: sir
 No, it is not a palindrome
 
-$ python user_input.py
+$ python3 user_input.py
 Enter text: madam
 Yes, it is a palindrome
 
-$ python user_input.py
+$ python3 user_input.py
 Enter text: racecar
 Yes, it is a palindrome
 ~~~
@@ -61,12 +60,9 @@ Homework exercise
 
 You can open and use files for reading or writing by creating an object of the `file` class and using its `read`, `readline` or `write` methods appropriately to read from or write to the file. The ability to read or write to the file depends on the mode you have specified for the file opening. Then finally, when you are finished with the file, you call the `close` method to tell Python that we are done using the file.
 
-Example:
+Example (save as `using_file.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: using_file.py
- 
 poem = '''\
 Programming is fun
 When the work is done
@@ -90,7 +86,7 @@ f.close() # close the file
 Output:
 
 ~~~
-$ python using_file.py
+$ python3 using_file.py
 Programming is fun
 When the work is done
 if you wanna make your work also fun:
@@ -113,12 +109,9 @@ Now, check the contents of the `poem.txt` file to confirm that the program has i
 
 Python provides a standard module called `pickle` using which you can store **any** Python object in a file and then get it back later. This is called storing the object *persistently*.
 
-Example:
+Example (save as `pickling.py`):
 
 ~~~python
-#!/usr/bin/python
-# Filename: pickling.py
- 
 import pickle
  
 # the name of the file where we will store the object
@@ -142,7 +135,7 @@ print(storedlist)
 Output:
 
 ~~~
-$ python pickling.py
+$ python3 pickling.py
 ['apple', 'mango', 'carrot']
 ~~~
 

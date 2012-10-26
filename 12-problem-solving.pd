@@ -4,7 +4,7 @@ We have explored various parts of the Python language and now we will take a loo
 
 ## The Problem
 
-The problem is *"I want a program which creates a backup of all my important files"*.
+The problem we want to solve is *"I want a program which creates a backup of all my important files"*.
 
 Although, this is a simple problem, there is not enough information for us to get started with the solution. A little more **analysis** is required. For example, how do we specify *which* files are to be backed up? *How* are they stored? *Where* are they stored?
 
@@ -20,10 +20,9 @@ After analyzing the problem properly, we **design** our program. We make a list 
 
 As the design of our program is now reasonably stable, we can write the code which is an **implementation** of our solution.
 
-~~~python
-#!/usr/bin/python
-# Filename: backup_ver1.py
+Save as `backup_ver1.py`:
 
+~~~python
 import os
 import time
 
@@ -67,7 +66,7 @@ We make use of the `os` and `time` modules by first importing them. Then, we spe
 
 Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system i.e. it will be `'/'` in Linux and Unix, it will be `'\\'` in Windows and `':'` in Mac OS. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
 
-The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between  `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/3.0/library/time.html#time.strftime).
+The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between  `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/py3k/library/time.html#time.strftime).
 
 We create the name of the target zip file using the addition operator which *concatenates* the strings i.e. it joins the two strings together and returns a new one. Then, we create a string `zip_command` which contains the command that we are going to execute. You can check if this command works by running it in the shell (Linux terminal or DOS prompt).
 
@@ -93,10 +92,9 @@ The first version of our script works. However, we can make some refinements to 
 
 One of the refinements I felt was useful is a better file-naming mechanism - using the *time* as the name of the file within a directory with the current *date* as a directory within the main backup directory. The first advantage is that your backups are stored in a hierarchical manner and therefore it is much easier to manage. The second advantage is that the filenames are much shorter. The third advantage is that separate directories will help you check if you have made a backup for each day since the directory would be created only if you have made a backup for that day.
 
-~~~python
-#!/usr/bin/python
-# Filename: backup_ver2.py
+Save as `backup_ver2.py`:
 
+~~~python
 import os
 import time
 
@@ -134,11 +132,11 @@ else:
 Output:
 
 ~~~
-$ python backup_ver2.py
+$ python3 backup_ver2.py
 Successfully created directory E:\Backup\20080702
 Successful backup to E:\Backup\20080702\202311.zip
 
-$ python backup_ver2.py
+$ python3 backup_ver2.py
 Successful backup to E:\Backup\20080702\202325.zip
 ~~~
 
@@ -154,10 +152,9 @@ Note
 
 :   The following program does not work, so do not be alarmed, please follow along because there's a lesson in here.
 
-~~~python
-#!/usr/bin/python
-# Filename: backup_ver3.py
+Save as `backup_ver3.py`:
 
+~~~python
 import os
 import time
 
@@ -200,7 +197,7 @@ else:
 Output:
 
 ~~~
-$ python backup_ver3.py
+$ python3 backup_ver3.py
   File "backup_ver3.py", line 25
     target = today + os.sep + now + '_' +
                                         ^
@@ -215,10 +212,9 @@ On careful observation, we see that the single logical line has been split into 
 
 ## Fourth Version
 
-~~~python
-#!/usr/bin/python
-# Filename: backup_ver4.py
+Save as `backup_ver4.py`:
 
+~~~python
 import os
 import time
 
@@ -261,11 +257,11 @@ else:
 Output:
 
 ~~~
-$ python backup_ver4.py
+$ python3 backup_ver4.py
 Enter a comment --> added new examples
 Successful backup to E:\Backup\20080702\202836_added_new_examples.zip
 
-$ python backup_ver4.py
+$ python3 backup_ver4.py
 Enter a comment -->
 Successful backup to E:\Backup\20080702\202839.zip
 ~~~
@@ -286,7 +282,7 @@ The most important refinement would be to not use the `os.system` way of creatin
 
 However, I have been using the `os.system` way of creating a backup in the above examples purely for pedagogical purposes, so that the example is simple enough to be understood by everybody but real enough to be useful.
 
-Can you try writing the fifth version that uses the [zipfile](http://docs.python.org/3.0/library/zipfile.html) module instead of the `os.system` call?
+Can you try writing the fifth version that uses the [zipfile](http://docs.python.org/py3k/library/zipfile.html) module instead of the `os.system` call?
 
 ## The Software Development Process
 
