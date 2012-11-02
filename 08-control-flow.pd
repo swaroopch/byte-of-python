@@ -272,3 +272,5 @@ Note that the `continue` statement works with the `for`loop as well.
 We have seen how to use the three control flow statements - `if`, `while` and `for` along with their associated `break` and `continue` statements. These are some of the most commonly used parts of Python and hence, becoming comfortable with them is essential.
 
 Next, we will see how to create and use functions.
+
+
