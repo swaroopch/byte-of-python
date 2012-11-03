@@ -22,6 +22,7 @@ CONFIG = json.load(open('config.json'))
 
 
 import os
+import datetime
 import subprocess
 import copy
 from xmlrpclib import ServerProxy
@@ -57,9 +58,11 @@ else:
 
 # In my case, they are the same - 'files.swaroopch.com'
 # http://docs.amazonwebservices.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs
-S3_PUBLIC_URL = os.environ['AWS_S3_BUCKET_NAME']
-# else
-#S3_PUBLIC_URL = 's3.amazonaws.com/{}'.format(os.environ['AWS_S3_BUCKET_NAME'])
+if AWS_ENABLED:
+    S3_PUBLIC_URL = os.environ['AWS_S3_BUCKET_NAME']
+    #else
+    #S3_PUBLIC_URL = 's3.amazonaws.com/{}'.format(
+        #os.environ['AWS_S3_BUCKET_NAME'])
 
 
 if os.environ.get('WORDPRESS_RPC_URL') is not None \
@@ -248,6 +251,15 @@ def add_previous_next_links(chapter, i, chapters):
 
 
 @task
+def prepare():
+    frontpage = CONFIG['MARKDOWN_FILES'][0]
+    content = open(frontpage['file']).read()
+    content = content.replace("$$date$$",
+                              datetime.datetime.now().strftime("%d %b %Y"))
+    with open(frontpage['file'], 'w') as output:
+        output.write(content)
+
+@task
 def wp():
     """https://codex.wordpress.org/XML-RPC_WordPress_API/Posts"""
     if WORDPRESS_ENABLED:
@@ -315,7 +327,7 @@ def html():
             '-s',
             '--toc'] + [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
-    local('open {}.html'.format(CONFIG['FULL_PROJECT_NAME']))
+    local('firefox -new-tab {}.html'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
