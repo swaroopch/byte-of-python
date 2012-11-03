@@ -121,7 +121,7 @@ Each of these implementations have their specialized areas where they are useful
 
 ## Functional Programming (for advanced readers)
 
-When you start writing larger programs, you should definitely learn more about a functional approach to programming as opposed to the class-based approach to programming that we learned in the [object-oriented programming chapter](#oop):
+When you start writing larger programs, you should definitely learn more about a functional approach to programming as opposed to the class-based approach to programming that we learned in the [object-oriented programming chapter](#object-oriented-programming):
 
 - [Functional Programming Howto by A.M. Kuchling](http://docs.python.org/dev/howto/functional.html)
 - [Functional programming chapter in 'Dive Into Python' book](http://www.diveintopython.net/functional_programming/index.html)
