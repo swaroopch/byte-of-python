@@ -254,10 +254,14 @@ def add_previous_next_links(chapter, i, chapters):
 def prepare():
     frontpage = CONFIG['MARKDOWN_FILES'][0]
     content = open(frontpage['file']).read()
+    # TODO Can I make this always go change the third line instead?
+    # TODO And then go back and change it to "$$date$$" so that it
+    # is not inadvertently committed to the git repo.
     content = content.replace("$$date$$",
                               datetime.datetime.now().strftime("%d %b %Y"))
     with open(frontpage['file'], 'w') as output:
         output.write(content)
+
 
 @task
 def wp():
@@ -362,6 +366,7 @@ def pdf():
             # https://github.com/jgm/pandoc/issues/571
             #'-t', 'pdf',
             '-o', '{}.pdf'.format(CONFIG['FULL_PROJECT_NAME']),
+            '-N',
             '--toc'] + [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
     if AWS_ENABLED:
