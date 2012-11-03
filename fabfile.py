@@ -263,6 +263,8 @@ def prepare():
 def wp():
     """https://codex.wordpress.org/XML-RPC_WordPress_API/Posts"""
     if WORDPRESS_ENABLED:
+        prepare()
+
         chapters = copy.deepcopy(CONFIG['MARKDOWN_FILES'])
 
         # header anchor id -> index in MARKDOWN_FILES
@@ -320,6 +322,8 @@ def wp():
 @task
 def html():
     """HTML5 output."""
+    prepare()
+
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'html5',
@@ -333,6 +337,8 @@ def html():
 @task
 def epub():
     """http://johnmacfarlane.net/pandoc/epub.html"""
+    prepare()
+
     args = ['pandoc',
             '-f', 'markdown',
             '-t', 'epub',
@@ -349,6 +355,8 @@ def epub():
 @task
 def pdf():
     """http://johnmacfarlane.net/pandoc/README.html#creating-a-pdf"""
+    prepare()
+
     args = ['pandoc',
             '-f', 'markdown',
             # https://github.com/jgm/pandoc/issues/571
@@ -368,40 +376,12 @@ def push():
 
 
 @task
-def docx():
-    """OOXML document format."""
-    args = ['pandoc',
-            '-f', 'markdown',
-            '-t', 'docx',
-            '-o', '{}.docx'.format(CONFIG['FULL_PROJECT_NAME'])] + \
-        [i['file'] for i in CONFIG['MARKDOWN_FILES']]
-    local(' '.join(args))
-    if AWS_ENABLED:
-        upload_output_to_s3('{}.docx'.format(CONFIG['FULL_PROJECT_NAME']))
-
-
-@task
-def odt():
-    """OpenDocument document format."""
-    args = ['pandoc',
-            '-f', 'markdown',
-            '-t', 'odt',
-            '-o', '{}.odt'.format(CONFIG['FULL_PROJECT_NAME'])] + \
-        [i['file'] for i in CONFIG['MARKDOWN_FILES']]
-    local(' '.join(args))
-    if AWS_ENABLED:
-        upload_output_to_s3('{}.odt'.format(CONFIG['FULL_PROJECT_NAME']))
-
-
-@task
 def clean():
     """Remove generated output files"""
     possible_outputs = (
         '{}.html'.format(CONFIG['FULL_PROJECT_NAME']),
         '{}.epub'.format(CONFIG['FULL_PROJECT_NAME']),
         '{}.pdf'.format(CONFIG['FULL_PROJECT_NAME']),
-        '{}.docx'.format(CONFIG['FULL_PROJECT_NAME']),
-        '{}.odt'.format(CONFIG['FULL_PROJECT_NAME']),
     )
 
     for filename in possible_outputs:
