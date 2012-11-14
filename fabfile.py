@@ -335,7 +335,7 @@ def html():
             '-s',
             '--toc'] + [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
-    local('firefox -new-tab {}.html'.format(CONFIG['FULL_PROJECT_NAME']))
+    local('open {}.html'.format(CONFIG['FULL_PROJECT_NAME']))
 
 
 @task
