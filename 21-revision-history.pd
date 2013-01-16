@@ -53,7 +53,7 @@
     - Corrected some typos and errors. 
 - 0.15 
     - 20 Nov 2003
-    - Converted to [DocBook XML](https://en.wikipedia.org/wiki/DocBook). 
+    - Converted to [DocBook XML](https://en.wikipedia.org/wiki/DocBook) with XEmacs. 
 - 0.10 
     - 14 Nov 2003
     - Initial draft using [KWord](https://en.wikipedia.org/wiki/Kword).
