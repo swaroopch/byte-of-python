@@ -203,7 +203,7 @@ For the list of methods of the `dict` class, see `help(dict)`.
 
 Keyword Arguments and Dictionaries
 
-:   On a different note, if you have used keyword arguments in your functions, you have already used dictionaries! Just think about it - the key-value pair is specified by you in the parameter list of the function definition and when you access variables within your function, it is just a key access of a dictionary (which is called the *symbol table*in compiler design terminology).
+:   On a different note, if you have used keyword arguments in your functions, you have already used dictionaries! Just think about it - the key-value pair is specified by you in the parameter list of the function definition and when you access variables within your function, it is just a key access of a dictionary (which is called the *symbol table* in compiler design terminology).
 
 ## Sequence 
 
