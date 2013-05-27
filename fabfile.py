@@ -367,6 +367,8 @@ def pdf():
             #'-t', 'pdf',
             '-o', '{}.pdf'.format(CONFIG['FULL_PROJECT_NAME']),
             '-N',
+            # https://github.com/jgm/pandoc/issues/600
+            '-V', 'papersize:"a4paper"',
             '--toc'] + [i['file'] for i in CONFIG['MARKDOWN_FILES']]
     local(' '.join(args))
     if AWS_ENABLED:
