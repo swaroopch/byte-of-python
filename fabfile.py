@@ -451,8 +451,9 @@ def _wordpress_get_pages():
                                         "type": "page",
                                         "status": "publish",
                                         "number": number,
+                                        # TODO Use a proper category instead
+                                        "search": "python_en",
                                         "offset": offset},
-                                        # TODO "tag": CONFIG["FULL_PROJECT_NAME"]
                                 headers=_wordpress_headers())
         response.raise_for_status()
         new_posts = response.json()["posts"]
@@ -476,6 +477,7 @@ def wordpress_new_page(slug, title, content):
                                    "content": content,
                                    "parent": WORDPRESS_PARENT_PAGE_ID,
                                    "type": "page",
+                                   # TODO Use a proper category instead
                                    "tags": [CONFIG["FULL_PROJECT_NAME"]],
                                    "comments_open": False,
                                    "pings_open": False,
@@ -494,6 +496,7 @@ def wordpress_edit_page(post_id, title, content):
     response = requests.post(url,
                              data={"title": title,
                                    "content": content,
+                                   # TODO Use a proper category instead
                                    "tags": [CONFIG["FULL_PROJECT_NAME"]]},
                              headers=_wordpress_headers())
     response.raise_for_status()
