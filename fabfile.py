@@ -34,6 +34,8 @@ import subprocess
 import copy
 import webbrowser
 import urllib
+import time
+from functools import wraps
 
 import boto
 import boto.s3.bucket
@@ -44,9 +46,13 @@ import requests
 from fabric.api import task, local
 from fabric.utils import abort
 
+import logging
+
 
 ##### Start with checks ##########################
 
+logging.basicConfig(level=logging.DEBUG)
+log = logging.getLogger(__name__)
 
 for chapter in CONFIG["MARKDOWN_FILES"]:
     assert (chapter["slug"].lower() == chapter["slug"]), \
@@ -89,6 +95,25 @@ else:
 
 
 ##### Helper methods #############################
+
+def retry(f):
+    @wraps(f)
+    def wrapped_f(*args, **kwargs):
+        MAX_ATTEMPTS = 5
+        for attempt in range(1, MAX_ATTEMPTS + 1):
+            try:
+                return f(*args, **kwargs)
+            except:
+                log.exception("Attempt %s/%s failed : %s",
+                              attempt,
+                              MAX_ATTEMPTS,
+                              (args, kwargs))
+                time.sleep(10 * attempt)
+        log.critical("All %s attempts failed : %s",
+                     MAX_ATTEMPTS,
+                     (args, kwargs))
+    return wrapped_f
+
 
 def _upload_to_s3(filename, key):
     """http://docs.pythonboto.org/en/latest/s3_tut.html#storing-data"""
@@ -439,6 +464,7 @@ def _wordpress_get_pages():
     return posts
 
 
+@retry
 def wordpress_new_page(slug, title, content):
     """Create a new Wordpress page."""
     url = "https://public-api.wordpress.com/rest/v1/sites/{}/posts/new"
@@ -459,6 +485,7 @@ def wordpress_new_page(slug, title, content):
     return response.json()
 
 
+@retry
 def wordpress_edit_page(post_id, title, content):
     """Edit a Wordpress page."""
     url = "https://public-api.wordpress.com/rest/v1/sites/{}/posts/{}"
