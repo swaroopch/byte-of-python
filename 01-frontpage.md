@@ -19,36 +19,36 @@ Here are what people are saying about the book:
 
 > This is the best beginner's tutorial I've ever seen! Thank you for
 > your effort.
-
+>
 > -- _Walt Michalik_ (wmich50-at-theramp-dot-net)
 
 > The best thing i found was "A Byte of Python", which is simply a
 >brilliant book for a beginner. It's well written, the concepts are
 >well explained with self evident examples.
-
+>
 > --
 > [_Syed Talal_](http://littlepancakes.wordpress.com/2010/01/30/python)
 
 > You've made the best Python tutorial I've found on the Net. Great work. Thanks!
-
+>
 > -- _Joshua Robin_ (joshrob-at-poczta-dot-onet-dot-pl)
 
 > Excellent gentle introduction to programming #Python for beginners
-
+>
 > -- [Shan Rajasekaran](https://twitter.com/ShanRajasekaran/status/268910645842423809)
 
 > Hi, I'm from Dominican Republic. My name is Pavel, recently I read
 > your book 'A Byte of Python' and I consider it excellent!!  :). I
 > learnt much from all the examples. Your book is of great help for
 > newbies like me...
-
+>
 > -- _Pavel Simo_ (pavel-dot-simo-at-gmail-dot-com)
 
 > I recently finished reading Byte of Python, and I thought I really
 > ought to thank you. I was very sad to reach the final pages as I now
 > have to go back to dull, tedious oreilly or etc.  manuals for
 > learning about python. Anyway, I really appreciate your book.
-
+>
 > --  _Samuel Young_ (sy-one-three-seven-at-gmail-dot-com)
 
 > Dear Swaroop, I am taking a class from an instructor that has no
@@ -59,31 +59,31 @@ Here are what people are saying about the book:
 > clueless about Python and programming. Thanks a million, you are
 > able to 'break the message down' to a level that beginners can
 > understand and not everyone can.
-
+>
 > -- _Joseph Duarte_ (jduarte1-at-cfl-dot-rr-dot-com)
 
 > I love your book! It is the greatest Python tutorial ever, and a
 > very useful reference. Brilliant, a true masterpiece! Keep up the
 > good work!
-
+>
 > -- _Chris-André Sommerseth_
 
 > I'm just e-mailing you to thank you for writing Byte of Python
 > online.  I had been attempting Python for a few months prior to
 > stumbling across your book, and although I made limited success with
 > pyGame, I never completed a program.
-
+>
 > Thanks to your simplification of the categories, Python actually
 > seems a reachable goal. It seems like I have finally learned the
 > foundations and I can continue into my real goal, game development.
-
+>
 > ...
-
+>
 > Once again, thanks VERY much for placing such a structured and
 > helpful guide to basic programming on the web.  It shoved me into
 > and out of OOP with an understanding where two text books had
 > failed.
-
+>
 > -- _Matt Gallivan_ (m-underscore-gallivan12-at-hotmail-dot-com)
 
 > I would like to thank you for your book 'A byte of python' which i
@@ -96,14 +96,14 @@ Here are what people are saying about the book:
 > helpful). I will also start on learning java and if you can tell me
 > where to find a tutorial as good as yours for java that would help
 > me a lot. Thanx.
-
+>
 > -- _Ahmed Mohammed_ (sedo-underscore-91-at-hotmail-dot-com)
 
 > A wonderful resource for beginners wanting to learn more about
 > Python is the 110-page PDF tutorial A Byte of Python by Swaroop C
 > H. It is well-written, easy to follow, and may be the best
 > introduction to Python programming available.
-
+>
 > -- _Drew Ames_ in an article on
 > [Scripting Scribus](http://www.linux.com/feature/126522) published
 > on Linux.com
@@ -112,52 +112,55 @@ Here are what people are saying about the book:
 > it's the easiest and most concise introduction to Python I have yet
 > encountered. Highly recommended as a starting point for learning
 > Python.
-
+>
 > -- _Jason Delport_ on his
 > [weblog](http://paxmodept.com/telesto/blogitem.htm?id=627)
 
 > Byte of Vim and Python by @swaroopch is by far the best works in
 > technical writing to me. Excellent reads #FeelGoodFactor
-
+>
 > -- _Surendran_ says in a [tweet](http://twitter.com/suren/status/12840485454)
 
 > "Byte of python" best one by far man
-
+>
 > (in response to the question "Can anyone suggest a good, inexpensive
 > resource for learning the basics of Python? ")
-
+>
 > -- _Justin LoveTrue_ says in a
 > [Facebook community page](http://www.facebook.com/pythonlang/posts/406873916788)
 
 > "The Book Byte of python was very helpful ..Thanks bigtime :)"
-
+>
 > -- [Chinmay](https://twitter.com/a_chinmay/status/258822633741762560)
 
 > Always been a fan of A Byte of Python - made for both new and
 > experienced programmers.
-
+>
 > -- [Patrick Harrington, in a StackOverflow answer](http://stackoverflow.com/a/457785/4869)
 
 > i started learning python few days ago from your book..thanks for
 > such a nice book. it is so well written, you made my life easy..so
 > you found a new fan of yours..thats me :) tons of thanks
-
+>
 > --
 > [Gadadhari](https://twitter.com/Pagal_e_azam/statuses/242865516971163648)
 > [bheem](https://twitter.com/Pagal_e_azam/statuses/242865885256232960)
 
 > Hello Swaroop,
-
+>
 > Thank you ever so much for this book!!
-
-> This book cleared up many questions I had about certain aspects of Python such as object oriented programming.
-> I do not feel like an expert at OO but I know this book helped me on a first step or two.
-
+>
+> This book cleared up many questions I had about certain aspects of
+> Python such as object oriented programming.
+>
+> I do not feel like an expert at OO but I know this book helped me on
+> a first step or two.
+>
 > I have now written several python programs that actually do real things for me as a system administrator.
 > They are all procedural oriented but they are small by most peoples standards.
-
+>
 > Again, thanks for this book.  Thank you for having it on the web.
-
+>
 > -- Bob
 
 > I wrote you back in 2011 and I was just getting into Python and
@@ -196,9 +199,9 @@ Here are what people are saying about the book:
 > in the Caribbean and yet others in the US. It fills a niche no
 > others do.  I hope you are doing well and wish you all the success
 > in the future.
-
+>
 > Best Regards,
-
+>
 > -- Nick
 
 > hey, this is ankush(19). I was facing a great difficulty to start
@@ -206,7 +209,7 @@ Here are what people are saying about the book:
 > target oriented; and then i found this lovely one, which made me
 > love python in no time. Thanks a lot for this "beautiful piece of
 > book".
-
+>
 > -- Ankush
 
 > I would like to thank you for your excellent guide on Python. I am a
@@ -214,12 +217,12 @@ Here are what people are saying about the book:
 > work I need to handle big datasets of DNA sequences and to analyse
 > microscope images. For both things, programming in python has been
 > useful, if not essential to complete and publish a 6-years project.
-
+>
 > That such a guide is freely available is a clear sign that the
 > forces of evil are not yet ruling the world! :)
-
+>
 > Thank you,
-
+>
 > -- Luca
 
 > Since this is going to be the first language you learn, you should
@@ -227,7 +230,7 @@ Here are what people are saying about the book:
 > programming in Python and it is paced well enough for the average
 > beginner. The most important thing from then on will be actually
 > starting to practice making your own little programs.
-
+>
 > --
 > ["{Unregistered}"](http://www.overclock.net/t/1177951/want-to-learn-programming-where-do-i-start#post_15837176)
 
@@ -236,11 +239,11 @@ Here are what people are saying about the book:
 > me four or five years ago when I starting learning
 > programming. Right now I'm developing a project that was a dream for
 > a long, long time and just want to say *thank you*.
-
+>
 > Keep walking. You are a source of motivation.
-
+>
 > All the best.
-
+>
 > -- Jocimar
 
 The book is even used by NASA! It is being used in their
