@@ -1,11 +1,19 @@
-# Translation Howto
+# Translation Howto #
 
-The full source of the book is available from the Git repository <https://github.com/swaroopch/byte_of_python>.
+The full source of the book is available from
+<https://github.com/swaroopch/byte_of_python>.
 
-Please [fork the repository](https://help.github.com/articles/fork-a-repo).
+Please
+[fork the repository](https://help.github.com/articles/fork-a-repo).
 
-Then, fetch the repository to your computer. You need to know how to use [Git](http://www.git-scm.com) to do that.
+Then, fetch the repository to your computer. You need to know how to
+use [Git](http://www.git-scm.com) to do that.
 
-Start editing the `.pd` files to your local language. Please read the [Pandoc README](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown) to understand the formatting of the text.
+Start editing the `.md` files to your local language. Please read the
+[Pandoc README](http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown)
+to understand the formatting of the text.
 
-Then follow the instructions in the [README](http://github.com/swaroopch/byte_of_python#README) to install the software required to be able to convert the raw source files into PDFs, etc.
+Then follow the instructions in the
+[README](http://github.com/swaroopch/byte_of_python#README) to install
+the software required to be able to convert the raw source files into
+PDFs, etc.
