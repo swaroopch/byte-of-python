@@ -436,6 +436,7 @@ def _wordpress_headers():
     }
 
 
+@retry
 def _wordpress_get_pages():
     url = "https://public-api.wordpress.com/rest/v1/sites/{}/posts/"
     url = url.format(OAUTH_CONFIG["blog_id"])
