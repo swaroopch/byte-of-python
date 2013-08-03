@@ -1,2 +1,4 @@
 *.pyc
 *.*DS_Store
+.*.sw*
+.ropeproject
