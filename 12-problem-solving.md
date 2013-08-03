@@ -152,11 +152,8 @@ Note to Windows Users
     you end up using an unknown escape sequence `\D`.
 
 Now that we have a working backup script, we can use it whenever we
-want to take a backup of the files. Linux/Unix users are advised to
-use the [executable method](#executable-python-programs) as discussed
-earlier so that they can run the backup script anytime anywhere. This
-is called the **operation** phase or the **deployment** phase of the
-software.
+want to take a backup of the files. This is called the **operation**
+phase or the **deployment** phase of the software.
 
 The above program works properly, but (usually) first programs do not
 work exactly as you expect. For example, there might be problems if
