@@ -42,11 +42,13 @@ you just entered is a single Python *statement*. We use `print` to
 supplying the text `Hello World` and this is promptly printed to the
 screen.
 
-*How to Quit the Interpreter Prompt:* If you are using a Linux or Unix
-shell, you can exit the interpreter prompt by pressing `ctrl-d` or
-entering `exit()` (note: remember to include the parentheses, '()')
-followed by the `enter` key. If you are using the Windows command
-prompt, press `ctrl-z` followed by the `enter` key.
+How to Quit the Interpreter Prompt
+
+:   If you are using a Linux or Unix shell, you can exit the interpreter
+    prompt by pressing `ctrl-d` or entering `exit()` (note: remember to
+    include the parentheses, '()') followed by the `enter` key. If you are
+    using the Windows command prompt, press `ctrl-z` followed by the
+    `enter` key.
 
 ## Choosing An Editor ##
 
@@ -166,8 +168,10 @@ Python programs:
 To create a folder, use the `mkdir` command in the terminal, for
 example, `mkdir /tmp/py`.
 
-*Important:* Always ensure that you give it the file extension of
-`.py`, for example, `foo.py`.
+Important
+
+:   Always ensure that you give it the file extension of
+    `.py`, for example, `foo.py`.
 
 In Sublime Text, click on `Tools` --- `Build` output printed in a
 small window below.
@@ -217,7 +221,9 @@ very useful especially when using the interpreter prompt. For example,
 run `help(print)` - this displays the help for the print function
 which is used to print things to the screen.
 
-*Note:* Press `q` to exit the help.
+Note
+
+:   Press `q` to exit the help.
 
 Similarly, you can obtain information about almost anything in
 Python. Use `help()` to learn more about using `help` itself!
