@@ -221,6 +221,14 @@ The `assert` statement should be used judiciously. Most of the time,
 it is better to catch exceptions, either handle the problem or display
 an error message to the user and then quit.
 
+## Differences between Python 2 and Python 3 ##
+
+Read these articles:
+
+- [Armin's Porting to Python 3 Redux](http://lucumr.pocoo.org/2013/5/21/porting-to-python-3-redux/)
+- [PyDanny's Python 3 experience](http://pydanny.com/experiences-with-django-python3.html)
+- [Official Django Guide to Porting to Python 3](https://docs.djangoproject.com/en/dev/topics/python3/)
+
 ## Summary ##
 
 We have covered some more features of Python in this chapter and yet
