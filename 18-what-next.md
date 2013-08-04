@@ -68,6 +68,7 @@ and read a lot of code:
 ## Advice ##
 
 - [The Hitchhiker's Guide to Python!](http://docs.python-guide.org/en/latest/)
+- [Python Big Picture](http://slott-softwarearchitect.blogspot.ca/2013/06/python-big-picture-whats-roadmap.html)
 
 ## Videos ##
 
