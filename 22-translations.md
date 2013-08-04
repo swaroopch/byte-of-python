@@ -63,8 +63,9 @@ was present in the [erstwhile wiki](http://www.swaroopch.com/notes/).
 
 ## Chinese ##
 
-A translation is available at
-<http://woodpecker.org.cn/abyteofpython_cn/chinese/>.
+Translations are available at
+<http://woodpecker.org.cn/abyteofpython_cn/chinese/> and
+<http://zhgdg.gitcafe.com/static/doc/byte_of_python.html>.
 
 Juan Shen (orion-underscore-val-at-163-dot-com) has volunteered to
 translate the book to Chinese.
