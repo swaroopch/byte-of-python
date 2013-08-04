@@ -14,6 +14,6 @@ Start editing the `.md` files to your local language. Please read the
 to understand the formatting of the text.
 
 Then follow the instructions in the
-[README](http://github.com/swaroopch/byte_of_python#README) to install
-the software required to be able to convert the raw source files into
-PDFs, etc.
+[README](https://github.com/swaroopch/byte_of_python#readme) to
+install the software required to be able to convert the raw source
+files into PDFs, etc.
