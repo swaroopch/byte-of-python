@@ -37,12 +37,84 @@ Here are what people are saying about the book:
 >
 > -- [Shan Rajasekaran](https://twitter.com/ShanRajasekaran/status/268910645842423809)
 
+> Best newbie guide to python
+>
+> --
+> [Nickson Kaigi](https://twitter.com/nickaigi/status/175508815729541120)
+
+> start to love python with every single page read
+>
+> --
+> [Herbert Feutl](https://twitter.com/HerbertFeutl/status/11901471389913088)
+
+> perfect beginners guide for python, will give u key to unlock
+> magical world of python
+>
+> --
+> [Dilip](https://twitter.com/Dili_mathilakam/status/220033783066411008)
+
+> I should be doing my actual "work" but just found "A Byte of
+> Python". A great guide with great examples
+>
+> --
+> [Biologist John](https://twitter.com/BiologistJohn/statuses/194726001803132928)
+
+> Recently started reading a Byte of python. Awesome work. And that
+> too for free. Highly recommended for aspiring pythonistas.
+>
+> --
+> [Mangesh](https://twitter.com/mangeshnanoti/status/225680668867321857)
+
+> A Byte of Python, written by Swaroop. (this is the book I'm
+> currently reading. Probably the best to start with, and probably the
+> best in the world for every newbie or even a more experienced user.
+>
+> -- [Apostolos](http://apas.gr/2010/04/27/learning-python/)
+
+> Thank you so much for writing A Byte Of Python. I just started
+> learning how to code two days ago and I'm already building some
+> simple games. Your guide has been a dream and I just wanted to let
+> you know how valuable it has been.
+>
+> -- Franklin
+
+> I'm from Dayanandasagar College of Engineering (7th sem,
+> CSE). Firstly i want to say that your book "The byte of python" is
+> too good a book for a beginner in python like me.The concepts are so
+> well explained with simple examples that helped me to easily learn
+> python. Thank you so much.
+>
+> -- Madhura
+
+> I am a 18 year old IT student studying at University in Ireland. I
+> would like to express my gratitude to you for writing your book "A
+> Byte of Python", I already had knowledge of 3 programming
+> langagues - C, Java and Javascript, and Python was by far the
+> easiest langague I have ever learned, and that was mainly because
+> your book was fantastic and made learning python very simple and
+> interesting. It is one of the best written and easy to follow
+> programming books I have ever read. Congratulations and keep up the
+> great work.
+>
+> -- Matt
+
 > Hi, I'm from Dominican Republic. My name is Pavel, recently I read
 > your book 'A Byte of Python' and I consider it excellent!!  :). I
 > learnt much from all the examples. Your book is of great help for
 > newbies like me...
 >
 > -- _Pavel Simo_ (pavel-dot-simo-at-gmail-dot-com)
+
+> I am a student from China, Now ,I have read you book A byte of
+> Python, Oh it's beautiful. The book is very simple but can help all
+> the first learnners. You know I am interesting in Java and cloud
+> computing many times, i have to coding programm for the server, so i
+> think python is a good choice, finish your book, i think its not
+> only a good choice its must use the Python. My English is not very
+> well, the email to you, i just wanna thank you! Best Wishes for you
+> and your family.
+>
+> -- Roy Lau
 
 > I recently finished reading Byte of Python, and I thought I really
 > ought to thank you. I was very sad to reach the final pages as I now
@@ -162,6 +234,32 @@ Here are what people are saying about the book:
 > Again, thanks for this book.  Thank you for having it on the web.
 >
 > -- Bob
+
+> I just want to thank you for writing the first book on programming
+> I've ever really read. Python is now my first language, and I can
+> just imagine all the possibilities. So thank you for giving me the
+> tools to create things I never would have imagined I could do
+> before.
+>
+> -- "The Walrus"
+
+> I wanted to thank you for writing 'A Byte Of Python' (2 & 3
+> Versions).  It has been invaluable to my learning experience in
+> Python & Programming in general.
+>
+> Needless to say, I am a beginner in the programming world, a couple
+> of months of self study up to this point. I had been using youtube
+> tutorials & some other online tutorials including other free
+> books. I decided to dig into your book yesterday, & I've learned
+> more on the first few pages than any other book or tutorial. A few
+> things I had been confused about, were cleared right up with a GREAT
+> example & explanation. Can't wait to read (and learn) more!!
+>
+> Thank you so much for not only writing the book, but for putting it
+> under the creative commons license (free). Thank goodness there are
+> unselfish people like you out there to help & teach the rest of us.
+>
+> -- Chris
 
 > I wrote you back in 2011 and I was just getting into Python and
 > wanted to thank you for your tutorial "A Byte of Python".  Without
