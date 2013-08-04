@@ -105,9 +105,12 @@ To install and use these libraries, you can use
 
 ## Creating a Website ##
 
-Learn to use [Flask](http://flask.pocoo.org) or
-[Django](http://www.djangoproject.com). They are excellent frameworks
-to learn to create your own websites in Python.
+Learn [Flask](http://flask.pocoo.org) to create your own website. Some
+resources to get started:
+
+- [Flask Official Quickstart](http://flask.pocoo.org/docs/quickstart/)
+- [The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+- [Example Flask Projects](https://github.com/mitsuhiko/flask/tree/master/examples)
 
 ## Graphical Software ##
 
