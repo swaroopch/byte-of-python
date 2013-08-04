@@ -149,8 +149,10 @@ language itself. That is our goal in this book, and once you have
 achieved that goal, you can easily use Python 2 or Python 3 depending
 on your situation.*
 
-For details on differences between Python 2 to Python 3, see the
-[Python/3 page on the Ubuntu wiki](https://wiki.ubuntu.com/Python/3).
+For details on differences between Python 2 to Python 3, see:
+
+- [Python/3 page on the Ubuntu wiki](https://wiki.ubuntu.com/Python/3)
+- [The future of Python 2](http://lwn.net/Articles/547191/)
 
 ## What Programmers Say ##
 
