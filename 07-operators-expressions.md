@@ -112,7 +112,8 @@ the interpreter interactively. For example, to test the expression
 
 :   The bit-wise inversion of x is -(x+1)
 
-    `~5` gives `-6`.
+    `~5` gives `-6`. More details at
+    <http://stackoverflow.com/a/11810203>.
 
 `<` (less than)
 
