@@ -163,7 +163,7 @@ def markdown_to_html(source_text, upload_assets_to_s3=False):
              u"\n<!--/raw-->"
 
     # NOTE: Also assumes that you have added the CSS from
-    # `pandoc -S -t html5` to the `style.css` of your active Wordpress theme.
+    # `pandoc -t html5` to the `style.css` of your active Wordpress theme.
 
     if upload_assets_to_s3:
         output = replace_images_with_s3_urls(output)
