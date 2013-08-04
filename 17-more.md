@@ -221,59 +221,6 @@ The `assert` statement should be used judiciously. Most of the time,
 it is better to catch exceptions, either handle the problem or display
 an error message to the user and then quit.
 
-## Escape Sequences ##
-
-Suppose, you want to have a string which contains a single quote
-(`'`), how will you specify this string? For example, the string is
-`What's your name?`. You cannot specify `'What's your name?'` because
-Python will be confused as to where the string starts and ends. So,
-you will have to specify that this single quote does not indicate the
-end of the string. This can be done with the help of what is called an
-*escape sequence*. You specify the single quote as `\'` - notice the
-backslash. Now, you can specify the string as `'What\'s your name?'`.
-
-Another way of specifying this specific string would be `"What's your
-name?"` i.e. using double quotes. Similarly, you have to use an escape
-sequence for using a double quote itself in a double quoted
-string. Also, you have to indicate the backslash itself using the
-escape sequence `\\`.
-
-What if you wanted to specify a two-line string? One way is to use a
-triple-quoted string as shown [previously](#triple-quotes) or you can
-use an escape sequence for the newline character - `\n` to indicate
-the start of a new line. An example is `This is the first line\nThis
-is the second line`. Another useful escape sequence to know is the
-tab - `\t`. There are many more escape sequences but I have mentioned
-only the most useful ones here.
-
-One thing to note is that in a string, a single backslash at the end
-of the line indicates that the string is continued in the next line,
-but no newline is added. For example:
-
-~~~python
-"This is the first sentence. \
-This is the second sentence."
-~~~
-
-is equivalent to 
-
-~~~python
-"This is the first sentence. This is the second sentence."
-~~~
-
-### Raw String ###
-
-If you need to specify some strings where no special processing such
-as escape sequences are handled, then what you need is to specify a
-*raw* string by prefixing `r` or `R` to the string. An example is
-`r"Newlines are indicated by \n"`.
-
-Note for Regular Expression Users
-
-:   Always use raw strings when dealing with regular
-    expressions. Otherwise, a lot of backwhacking may be required. For
-    example, backreferences can be referred to as `'\\1'` or `r'\1'`.
-
 ## Summary ##
 
 We have covered some more features of Python in this chapter and yet
