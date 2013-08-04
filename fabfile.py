@@ -314,7 +314,7 @@ def push():
 
 
 ########## WordPress ##########
-
+## http://developer.wordpress.com/docs/api/ ##
 
 @task
 def oauth_step1():
