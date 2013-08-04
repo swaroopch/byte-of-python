@@ -321,6 +321,17 @@ translation at <http://wombat.org.ua/AByteOfPython/>.
 Averkiev Andrey (averkiyev-at-ukr-dot-net) has volunteered to
 translate the book to Russian, and perhaps Ukranian (time permitting).
 
+## Serbian ##
+
+"BugSpice" (amortizerka-at-gmail-dot-com) has completed a Serbian
+translation:
+
+> You can download it from
+> <http://www.sendspace.com/filegroup/DlNY1mF7DFqNt4e61LvVug> (Latin
+> and Cyrillic serbian (and similar languages) version.
+
+More details at <http://forum.ubuntu-rs.org/Thread-zagrljaj-pitona>.
+
 ## Slovak ##
 
 Albertio Ward (albertioward-at-gmail-dot-com) has translated the book
