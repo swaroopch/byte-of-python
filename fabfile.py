@@ -4,19 +4,19 @@ from __future__ import print_function
 
 ##### Configuration ##############################
 
-import codecs
+import io
 import os
 import json
 
 os.environ["PYTHONIOENCODING"] = "utf-8"
 
 CONFIG_FILE = "config.json"
-CONFIG = json.load(codecs.open(CONFIG_FILE, "r", "utf-8"))
+CONFIG = json.load(io.open(CONFIG_FILE, "r", encoding="utf-8"))
 
 OAUTH_CONFIG_FILE = "oauth.json"
 OAUTH_CONFIG = None
 if os.path.exists(OAUTH_CONFIG_FILE):
-    OAUTH_CONFIG = json.load(codecs.open(OAUTH_CONFIG_FILE, "r", "utf-8"))
+    OAUTH_CONFIG = json.load(io.open(OAUTH_CONFIG_FILE, "r", encoding="utf-8"))
 
 ## NOTES
 ## 1. This assumes that you have already created the S3 bucket whose name
@@ -227,13 +227,13 @@ def add_previous_next_links(chapter, i, chapters):
 @task
 def prepare():
     frontpage = CONFIG["MARKDOWN_FILES"][0]
-    content = codecs.open(frontpage["file"], "r", "utf-8").read()
+    content = io.open(frontpage["file"], "r", encoding="utf-8").read()
     # TODO Can I make this always go change the third line instead?
     # TODO And then go back and change it to "$$date$$" so that it
     # is not inadvertently committed to the git repo.
     today = unicode(datetime.datetime.now().strftime("%d %b %Y"))
     content = content.replace(u"$$date$$", today)
-    with codecs.open(frontpage["file"], "w", "utf-8") as output:
+    with io.open(frontpage["file"], "w", encoding="utf-8") as output:
         output.write(content)
 
 
@@ -366,7 +366,7 @@ def oauth_step2(code):
 
     print(response)
 
-    with codecs.open(OAUTH_CONFIG_FILE, "w", "utf-8") as output_file:
+    with io.open(OAUTH_CONFIG_FILE, "w", encoding="utf-8") as output_file:
         json.dump(response, output_file, sort_keys=True, indent=2)
 
 
@@ -384,7 +384,9 @@ def wp():
         # Render html
         print("Rendering html")
         for (i, chapter) in enumerate(chapters):
-            chapter_content = codecs.open(chapter["file"], "r", "utf-8").read()
+            chapter_content = io.open(chapter["file"],
+                                      "r",
+                                      encoding="utf-8").read()
             chapter["html"] = markdown_to_html(
                 chapter_content,
                 upload_assets_to_s3=AWS_ENABLED)
