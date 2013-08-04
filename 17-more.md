@@ -293,6 +293,11 @@ Write to a database or make a network call or etc.
 This will be automatically retried if exception is thrown.
 ~~~
 
+How It Works:
+
+Read
+<http://toumorokoshi.github.io/dry-principles-through-python-decorators.html>.
+
 ## Differences between Python 2 and Python 3 ##
 
 Read these articles:
