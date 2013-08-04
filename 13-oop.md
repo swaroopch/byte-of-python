@@ -221,55 +221,57 @@ easy to understand (save as `objvar.py`):
 
 ~~~python
 class Robot:
-    '''Represents a robot, with a name.'''
+    """Represents a robot, with a name."""
 
     # A class variable, counting the number of robots
     population = 0
- 
+
     def __init__(self, name):
-        '''Initializes the data.'''
+        """Initializes the data."""
         self.name = name
-        print('(Initializing {0})'.format(self.name))
- 
+        print("(Initializing {0})".format(self.name))
+
         # When this person is created, the robot
         # adds to the population
         Robot.population += 1
- 
-    def __del__(self):
-        '''I am dying.'''
-        print('{0} is being destroyed!'.format(self.name))
- 
-        Robot.population -= 1
- 
-        if Robot.population == 0:
-            print('{0} was the last one.'.format(self.name))
-        else:
-            print('There are still {0:d} robots working.'.format(Robot.population))
- 
-    def sayHi(self):
-        '''Greeting by the robot.
- 
-        Yeah, they can do that.'''
-        print('Greetings, my masters call me {0}.'.format(self.name))
 
-    def howMany():
-        '''Prints the current population.'''
-        print('We have {0:d} robots.'.format(Robot.population))
-    howMany = staticmethod(howMany)
- 
-droid1 = Robot('R2-D2')
+    def die(self):
+        """I am dying."""
+        print("{0} is being destroyed!".format(self.name))
+
+        Robot.population -= 1
+
+        if Robot.population == 0:
+            print("{0} was the last one.".format(self.name))
+        else:
+            print("There are still {0:d} robots working.".format(
+                Robot.population))
+
+    def sayHi(self):
+        """Greeting by the robot.
+
+        Yeah, they can do that."""
+        print("Greetings, my masters call me {0}.".format(self.name))
+
+    @classmethod
+    def howMany(cls):
+        """Prints the current population."""
+        print("We have {0:d} robots.".format(cls.population))
+
+
+droid1 = Robot("R2-D2")
 droid1.sayHi()
 Robot.howMany()
- 
-droid2 = Robot('C-3PO')
+
+droid2 = Robot("C-3PO")
 droid2.sayHi()
 Robot.howMany()
- 
+
 print("\nRobots can do some work here.\n")
 
 print("Robots have finished their work. So let's destroy them.")
-del droid1
-del droid2
+droid1.die()
+droid2.die()
 
 Robot.howMany()
 ~~~
@@ -309,24 +311,25 @@ that object. Remember this simple difference between class and object
 variables. Also note that an object variable with the same name as a
 class variable will hide the class variable!
 
+Instead of `Robot.population`, we could have also used
+`self.__class__.population` because every object refers to it's class
+via the `self.__class__` attribute.
+
 The `howMany` is actually a method that belongs to the class and not
 to the object. This means we can define it as either a `classmethod`
 or a `staticmethod` depending on whether we need to know which class
-we are part of. Since we don't need such information, we will go for
-`staticmethod` .
+we are part of. Since we refer to a class variable, let's use
+`classmethod`.
 
-We could have also achieved the same using
-[decorators](http://www.ibm.com/developerworks/linux/library/l-cpdecor.html):
+We have marked the `howMany` method as a class method using a
+[decorator](http://www.ibm.com/developerworks/linux/library/l-cpdecor.html).
+
+Decorators can be imagined to be a shortcut to calling a wrapper
+function, so applying the `@classmethod` decorator is same as calling:
 
 ~~~python
-@staticmethod
-def howMany():
-    '''Prints the current population.'''
-    print('We have {0:d} robots.'.format(Robot.population))
+howMany = classmethod(howMany)
 ~~~
-
-Decorators can be imagined to be a shortcut to calling an explicit
-statement, as we have seen in this example.
 
 Observe that the `__init__` method is used to initialize the `Robot`
 instance with a name. In this method, we increase the `population`
@@ -342,16 +345,8 @@ In this program, we also see the use of **docstrings** for classes as
 well as methods. We can access the class docstring at runtime using
 `Robot.__doc__` and the method docstring as `Robot.sayHi.__doc__`
 
-Just like the `__init__` method, there is another special method
-`__del__` which is called when an object is going to die i.e. it is no
-longer being used and is being returned to the computer system for
-reusing that piece of memory. In this method, we simply decrease the
-`Robot.population` count by 1.
-
-The `__del__` method is run when the object is no longer in use and
-there is no guarantee *when* that method will be run. If you want to
-explicitly see it in action, we have to use the `del` statement which
-is what we have done here.
+In the `die` method, we simply decrease the `Robot.population` count
+by 1.
 
 All class members are public. One exception: If you use data members
 with names using the *double underscore prefix* such as
