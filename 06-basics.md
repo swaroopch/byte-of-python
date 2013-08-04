@@ -177,6 +177,23 @@ detailed specifications such as:
 >>> '{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python')
 ~~~
 
+Since we are discussing formatting, note that `print()` always ends
+with an invisible "new line" character (`\n`) so that repeated calls
+to `print()` will all print on a separate line each. To prevent this
+newline character from being printed, you can override the `end`
+parameter to `print`:
+
+~~~python
+print("a", end="")
+print("b", end="")
+~~~
+
+Output:
+
+~~~
+ab
+~~~
+
 ### Escape Sequences ###
 
 Suppose, you want to have a string which contains a single quote
