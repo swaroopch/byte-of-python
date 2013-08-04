@@ -246,6 +246,12 @@ Here are what people are saying about the book:
 >
 > -- Jocimar
 
+> Finished reading A byte of Python in 3 days. It is thoroughly
+> interesting. Not a single page was boring. I want to understand the
+> Orca screen reader code. Your book has hopefully equipped me for it.
+>
+> -- Dattatray
+
 The book is even used by NASA! It is being used in their
 [Jet Propulsion Laboratory](http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/)
 with their Deep Space Network project.
