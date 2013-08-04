@@ -351,14 +351,6 @@ to Slovak at
 > accessible to our colleagues and friends. These translated
 > publications often help students in their daily study routine.
 
-> Why have I chosen your article for translation? It was made to help
-> the Bulgarians understand this article in all possible detail.
-> Having done some research concerning the novelty and relevance of
-> topics, I found that it was quite urgent for those who live in my
-> country. So,I think it can become very popular. The language barrier
-> in this little case no longer exists, because it was eliminated by
-> my translation.
-
 ## Spanish ##
 
 Alfonso de la Guarda Reyes (alfonsodg-at-ictechperu-dot-net), Gustavo
