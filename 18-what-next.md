@@ -88,6 +88,7 @@ and read a lot of code:
 
 ## Tutorials ##
 
+- [Hidden features of Python](http://stackoverflow.com/q/101268/4869)
 - [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
 
 ## Discussion ##
