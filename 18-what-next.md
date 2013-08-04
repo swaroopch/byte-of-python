@@ -59,6 +59,14 @@ and read a lot of code:
   another excellent must-read guide to the
   [Python Standard Library](#standard-library).
 
+## Advice ##
+
+- [The Hitchhiker's Guide to Python!](http://docs.python-guide.org/en/latest/)
+
+## Videos ##
+
+- [PyVideo](http://www.pyvideo.org/category)
+
 ## Questions and Answers ##
 
 - [Official Python Dos and Don'ts](http://docs.python.org/3/howto/doanddont.html)
@@ -70,10 +78,6 @@ and read a lot of code:
 ## Tutorials ##
 
 - [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
-
-## Videos ##
-
-- [PyVideo](http://www.pyvideo.org/category)
 
 ## Discussion ##
 
