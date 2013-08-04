@@ -277,6 +277,8 @@ educational institutions:
   [Michigan State University](http://www.msu.edu/~ashton/classes/825/index.html)
 - 'Multi Agent Semantic Web Systems' course at the
   [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/)
+- Introduction to Computer Science and Programming at
+  [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)
 
 ## License ##
 
