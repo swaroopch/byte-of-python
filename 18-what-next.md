@@ -44,6 +44,12 @@ The replace command can be as simple or as sophisticated as you wish,
 from simple string substitution to looking for patterns (regular
 expressions).
 
+If you found that also easy to create, then look at these list of
+projects and try writing your own programs:
+<https://github.com/thekarangoel/Projects#numbers> (the list is also
+at
+[Martyr2's Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/))
+
 After that, below are some ways to continue your journey with Python:
 
 ## Example Code ##
