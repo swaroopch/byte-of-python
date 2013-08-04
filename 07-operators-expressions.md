@@ -55,19 +55,19 @@ the interpreter interactively. For example, to test the expression
 
 :   Divide x by y
 
-    `4 / 3` gives `1.3333333333333333`.
+    `13 / 3` gives `4.333333333333333`.
 
 `//` (floor division)
 
 :   Returns the floor of the quotient
 
-    `4 // 3` gives `1`.
+    `13 // 3` gives `4`.
 
 `%` (modulo)
 
 :   Returns the remainder of the division
 
-    `8 % 3` gives `2`. `-25.5 % 2.25` gives `1.5`.
+    `13 % 3` gives `1`. `-25.5 % 2.25` gives `1.5`.
 
 `<<` (left shift)
 
