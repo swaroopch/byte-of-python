@@ -89,6 +89,7 @@ and read a lot of code:
 ## Tutorials ##
 
 - [Hidden features of Python](http://stackoverflow.com/q/101268/4869)
+- [What's the one code snippet/python trick/etc did you wish you knew when you learned python?](http://www.reddit.com/r/Python/comments/19dir2/whats_the_one_code_snippetpython_tricketc_did_you/)
 - [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
 
 ## Discussion ##
