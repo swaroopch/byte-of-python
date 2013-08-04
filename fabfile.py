@@ -249,7 +249,10 @@ def html():
             "-s",
             "--toc"] + [i["file"] for i in CONFIG["MARKDOWN_FILES"]]
     local(" ".join(args))
-    local("open {}.html".format(CONFIG["FULL_PROJECT_NAME"]))
+    html_file = "file://" + os.path.abspath(
+        "{}.html".format(CONFIG["FULL_PROJECT_NAME"]))
+    print(html_file)
+    webbrowser.open(html_file)
 
 
 @task
