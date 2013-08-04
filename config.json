@@ -1,6 +1,7 @@
 {
   "SHORT_PROJECT_NAME": "python",
   "FULL_PROJECT_NAME": "byte_of_python",
+  "BOOK_PAGES_SEARCH": "python_en",
   "MARKDOWN_FILES": [
     {
       "file": "01-frontpage.md",
