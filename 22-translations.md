@@ -63,12 +63,11 @@ was present in the [erstwhile wiki](http://www.swaroopch.com/notes/).
 
 ## Chinese ##
 
-Here's a Chinese version at
-[http://www.swaroopch.org/notes/Python_cn:Table_of_Contents](http://www.swaroopch.org/notes/Python_cn:Table_of_Contents).
+A translation is available at
+<http://woodpecker.org.cn/abyteofpython_cn/chinese/>.
 
 Juan Shen (orion-underscore-val-at-163-dot-com) has volunteered to
-translate the book to Chinese.  It is available at
-[http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%86%8C](http://www.pycn.org/python%E5%9C%A8%E7%BA%BF%E6%89%8B%E5%86%8C).
+translate the book to Chinese.
 
 > I am a postgraduate at Wireless Telecommunication Graduate School,
 > Beijing University of Technology, China PR. My current research
