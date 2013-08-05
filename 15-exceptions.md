@@ -168,12 +168,9 @@ appropriate message to the user.
 
 Suppose you are reading a file in your program. How do you ensure that
 the file object is closed properly whether or not an exception was
-raised? This can be done using the `finally` block. Note that you can
-use an `except` clause along with a `finally` block for the same
-corresponding `try` block. You will have to embed one within another
-if you want to use both.
+raised? This can be done using the `finally` block.
 
-Save as `finally.py`:
+Save this program as `finally.py`:
 
 ~~~python
 import time
