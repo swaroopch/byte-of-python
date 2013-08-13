@@ -142,12 +142,12 @@ Kivy
 PyGTK
 
 :   This is the Python binding for the GTK+ toolkit which is the
-    foundation upon which GNOME is built. GTK+ has many quirks in
-    usage but once you become comfortable, you can create GUI apps
-    fast. The Glade graphical interface designer is indispensable. The
-    documentation is yet to improve. GTK+ works well on Linux but its
-    port to Windows is incomplete. You can create both free as well as
-    proprietary software using GTK+. To get started, read the
+    foundation upon which GNOME is built. GTK+ has many quirks in usage
+    but once you become comfortable, you can create GUI apps fast. The
+    Glade graphical interface designer is indispensable. The
+    documentation is yet to improve. GTK+ works well on GNU/Linux but
+    its port to Windows is incomplete. You can create both free as well
+    as proprietary software using GTK+. To get started, read the
     [PyGTK tutorial](http://www.pygtk.org/tutorial.html).
 
 PyQt
@@ -163,16 +163,15 @@ PyQt
 
 wxPython
 
-:   This is the Python bindings for the wxWidgets toolkit. wxPython
-    has a learning curve associated with it. However, it is very
-    portable and runs on Linux, Windows, Mac and even embedded
-    platforms. There are many IDEs available for wxPython which
-    include GUI designers as well such as
+:   This is the Python bindings for the wxWidgets toolkit. wxPython has
+    a learning curve associated with it. However, it is very portable
+    and runs on GNU/Linux, Windows, Mac and even embedded
+    platforms. There are many IDEs available for wxPython which include
+    GUI designers as well such as
     [SPE (Stani's Python Editor)](http://spe.pycs.net/) and the
     [wxGlade](http://wxglade.sourceforge.net/) GUI builder. You can
     create free as well as proprietary software using wxPython. To get
-    started, read the
-    [wxPython tutorial](http://zetcode.com/wxpython/).
+    started, read the [wxPython tutorial](http://zetcode.com/wxpython/).
 
 ### Summary of GUI Tools ###
 
@@ -180,12 +179,12 @@ For more choices, see the
 [GuiProgramming wiki page at the official python website](http://www.python.org/cgi-bin/moinmoin/GuiProgramming).
 
 Unfortunately, there is no one standard GUI tool for Python. I suggest
-that you choose one of the above tools depending on your
-situation. The first factor is whether you are willing to pay to use
-any of the GUI tools. The second factor is whether you want the
-program to run only on Windows or on Mac and Linux or all of them. The
-third factor, if Linux is a chosen platform, is whether you are a KDE
-or GNOME user on Linux.
+that you choose one of the above tools depending on your situation. The
+first factor is whether you are willing to pay to use any of the GUI
+tools. The second factor is whether you want the program to run only on
+Windows or on Mac and GNU/Linux or all of them. The third factor, if
+GNU/Linux is a chosen platform, is whether you are a KDE or GNOME user
+on GNU/Linux.
 
 For a more detailed and comprehensive analysis, see Page 26 of the
 [The Python Papers, Volume 3, Issue 1](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).

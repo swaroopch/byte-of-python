@@ -23,7 +23,7 @@ that community sharing and building can create:
 [Ubuntu](http://www.ubuntu.com)
 
 :   This is a community-driven distribution, sponsored by Canonical
-    and it is the most popular Linux distribution today. It allows you
+    and it is the most popular GNU/Linux distribution today. It allows you
     to install a plethora of FLOSS available and all this in an
     easy-to-use and easy-to-install manner. Best of all, you can just
     reboot your computer and run GNU/Linux off the CD! This allows you

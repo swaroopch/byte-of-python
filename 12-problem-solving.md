@@ -26,10 +26,9 @@ perfectly okay.
 - The backup must be stored in a main backup directory.
 - The files are backed up into a zip file.
 - The name of the zip archive is the current date and time.
-- We use the standard `zip` command available by default in any
-  standard Linux/Unix distribution. Windows users can
-  [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) from
-  the
+- We use the standard `zip` command available by default in any standard
+  GNU/Linux or Unix distribution. Windows users can
+  [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) from the
   [GnuWin32 project page](http://gnuwin32.sourceforge.net/packages/zip.htm)
   and add `C:\Program Files\GnuWin32\bin` to your system PATH
   environment variable, similar to
@@ -104,7 +103,7 @@ the `target_dir` directory.
 
 Notice the use of the `os.sep` variable - this gives the directory
 separator according to your operating system i.e. it will be `'/'` in
-Linux and Unix, it will be `'\\'` in Windows and `':'` in Mac
+GNU/Linux and Unix, it will be `'\\'` in Windows and `':'` in Mac
 OS. Using `os.sep` instead of these characters directly will make our
 program portable and work across all of these systems.
 
@@ -116,11 +115,11 @@ on. The complete list of such specifications can be found in the
 [Python Reference Manual](http://docs.python.org/3/library/time.html#time.strftime).
 
 We create the name of the target zip file using the addition operator
-which *concatenates* the strings i.e. it joins the two strings
-together and returns a new one. Then, we create a string `zip_command`
-which contains the command that we are going to execute. You can check
-if this command works by running it in the shell (Linux terminal or
-DOS prompt).
+which *concatenates* the strings i.e. it joins the two strings together
+and returns a new one. Then, we create a string `zip_command` which
+contains the command that we are going to execute. You can check if this
+command works by running it in the shell (GNU/Linux terminal or DOS
+prompt).
 
 The `zip` command that we are using has some options and parameters
 passed. The `-q` option is used to indicate that the zip command

@@ -88,19 +88,18 @@ brew install python3
 
 Now, run `python3` and ensure there are no errors.
 
-## Installation on Linux ##
+## Installation on GNU/Linux ##
 
-For Linux users, open the terminal by opening the `Terminal`
-application or by pressing `Alt + F2` and entering
-`gnome-terminal`. If that doesn't work, please refer the documentation
-or forums of your particular Linux distribution.
+For GNU/Linux users, open the terminal by opening the `Terminal`
+application or by pressing `Alt + F2` and entering `gnome-terminal`. If
+that doesn't work, please refer the documentation or forums of your
+particular GNU/Linux distribution.
 
-Next, we have to install the `python3` package. For example, on
-Ubuntu, you can use
+Next, we have to install the `python3` package. For example, on Ubuntu,
+you can use
 [`sudo apt-get install python3`](http://packages.ubuntu.com/search?keywords=python3&searchon=names&suite=all&section=all).
-Please check the documentation or forums of the Linux distribution
-that you have installed for the correct package manager command to
-run.
+Please check the documentation or forums of the GNU/Linux distribution
+that you have installed for the correct package manager command to run.
 
 Once you have finished the installation, run the `python3` and ensure
 there are no errors.

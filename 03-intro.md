@@ -61,10 +61,10 @@ to make it work on) many platforms. All your Python programs can work
 on any of these platforms without requiring any changes at all if you
 are careful enough to avoid any system-dependent features.
 
-You can use Python on Linux, Windows, FreeBSD, Macintosh, Solaris,
-OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS,
-Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE
-and PocketPC!
+You can use Python on GNU/Linux, Windows, FreeBSD, Macintosh, Solaris,
+OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion,
+Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE and
+PocketPC!
 
 You can even use a platform like [Kivy](http://kivy.org) to create
 games for your computer *and* for iPhone, iPad, and Android.

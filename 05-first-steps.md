@@ -44,11 +44,11 @@ screen.
 
 How to Quit the Interpreter Prompt
 
-:   If you are using a Linux or Unix shell, you can exit the interpreter
-    prompt by pressing `ctrl-d` or entering `exit()` (note: remember to
-    include the parentheses, '()') followed by the `enter` key. If you are
-    using the Windows command prompt, press `ctrl-z` followed by the
-    `enter` key.
+:   If you are using a GNU/Linux or Unix shell, you can exit the
+    interpreter prompt by pressing `ctrl-d` or entering `exit()` (note:
+    remember to include the parentheses, '()') followed by the `enter`
+    key. If you are using the Windows command prompt, press `ctrl-z`
+    followed by the `enter` key.
 
 ## Choosing An Editor ##
 
@@ -70,7 +70,7 @@ can *see* your program and visualize its running.
 
 If you have no idea where to start, I would recommend using
 [Sublime Text 3](http://www.sublimetext.com/3) software which is
-available on Windows, Mac OS X and Linux. Details in next section.
+available on Windows, Mac OS X and GNU/Linux. Details in next section.
 
 If you are using Windows, **do not use Notepad** - it is a bad choice
 because it does not do syntax highlighting and also importantly it
