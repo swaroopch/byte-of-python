@@ -100,6 +100,20 @@ Python programs more fun and easy.
 To use Sublime Text with Python 3, click on `Tools` --- `Build System`
 --- `New Build System` and paste the following into the new file:
 
+For Windows users:
+
+~~~
+{
+    "cmd": ["C:\\python33\\python.exe", "-u", "$file"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.python",
+    "encoding": "utf8",
+    "path": "C:\\Python33\\"
+}
+~~~
+
+For Mac OS X users:
+
 ~~~
 {
     "cmd": ["/usr/local/bin/python3", "-u", "$file"],
@@ -110,15 +124,17 @@ To use Sublime Text with Python 3, click on `Tools` --- `Build System`
 }
 ~~~
 
-and save the file as `Python3`.
+and save the file as `Python3.sublime-build`.
 
 Note that you will have to change the `cmd` and `path` in the above
 configuration as per your system's installation.
 
-Next time you open or create a new Python file, be sure to select
-`Tools` --- `Build System` --- `Python3`. After that, you should be
-able to use `Tools` --- `Build` to run your Python file right from
-Sublime Text itself.
+When you create a new file and want to run using Sublime Text, make sure
+you first save the file with a `.py` extension, for example, `hello.py`.
+
+When you open or create a new Python file, be sure to select `Tools` ---
+`Build System` --- `Python3`. After that, you should be able to use
+`Tools` --- `Build` to run your Python file within Sublime Text.
 
 ## Vim ##
 
