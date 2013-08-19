@@ -359,7 +359,8 @@ def total(initial=5, *numbers, extra_number):
 
 total(10, 1, 2, 3, extra_number=50)
 total(10, 1, 2, 3)
-# Raises error because we have not supplied a default argument value for 'extra_number' #
+# Raises error because we have not supplied a
+# default argument value for 'extra_number'
 ~~~
 
 Output:
