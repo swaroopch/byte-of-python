@@ -11,7 +11,7 @@ If you plan to start a new translation, please read the
 [Translation Howto](#translation-howto).
 
 ## Arabic ##
- 
+
 Below is the link for the Arabic version. Thanks to Ashraf Ali Khalaf
 for translating the book, you can read the whole book online
 [here](http://www.khaledhosny.org/byte-of-python/index.html) or you
@@ -275,10 +275,10 @@ for more details.
 
 ## Polish ##
 
-Dominik Kozaczko (dkozaczko-at-gmail-dot-com) has volunteered to
+Dominik Kozaczko (dominik-at-kozaczko-dot-info) has volunteered to
 translate the book to Polish. Translation is in progress and it's main
 page is available here:
-[Ukąś Pythona](http://wiki.lo5.bielsko.pl/index.php/Uk%C4%85%C5%9B_Pythona).
+[Ukąś Pythona](http://python.edu.pl/byteofpython/).
 
 *Update* : The translation is complete and ready as of Oct
  2, 2009. Thanks to Dominik, his two students and their friend for
