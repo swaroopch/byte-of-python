@@ -179,13 +179,12 @@ detailed specifications such as:
 
 Since we are discussing formatting, note that `print()` always ends
 with an invisible "new line" character (`\n`) so that repeated calls
-to `print()` will all print on a separate line each. To prevent this
+to `print()` will all print on a separate line each.You can change print commands with a semikolon. To prevent this
 newline character from being printed, you can override the `end`
 parameter to `print`:
 
 ~~~python
-print("a", end="")
-print("b", end="")
+print("a", end="");print("b", end="")
 ~~~
 
 Output:
