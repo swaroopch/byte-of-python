@@ -168,8 +168,8 @@ argument value into the place of the specification. There can be more
 detailed specifications such as:
 
 ~~~python
- decimal (.) precision of 3 for float '0.333'
->>> '{0:.3}'.format(1/3)
+ decimal (.) precision of 3 for float '0.14285714285714285'
+>>> '{0:.3}'.format(1/7)
  fill with underscores (_) with the text centered
  (^) to 11 width '___hello___'
 >>> '{0:_^11}'.format('hello')
