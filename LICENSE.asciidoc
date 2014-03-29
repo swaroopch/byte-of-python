@@ -1,0 +1,14 @@
+This work is licensed under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
+Attribution-ShareAlike 4.0 International License].
+
+[IMPORTANT]
+--
+- Please do *not* sell electronic or printed copies of the book unless you have clearly and
+  prominently mentioned in the description that these copies are *not* from the original author of
+  this book.
+- Attribution *must* be shown in the introductory description and front page of the document by
+  linking back to {homepage} and clearly indicating that the original text can be fetched from this
+  location.
+- All the code/scripts provided in this book is licensed under the
+  http://www.opensource.org/licenses/bsd-license.php[3-clause BSD License] unless otherwise noted.
+--

@@ -11,7 +11,7 @@ To convert the book from AsciiDoc format to output formats (HTML, PDF, EPUB, etc
 https://github.com/swaroopch/byte_of_python/blob/master/commands.bash[commands.bash].
 
 To understand the freedoms you have with this book, see
-https://github.com/swaroopch/byte_of_python/blob/master/LICENSE.txt[LICENSE.txt].
+https://github.com/swaroopch/byte_of_python/blob/master/LICENSE.asciidoc[LICENSE.asciidoc].
 
 To translate this book, https://help.github.com/articles/fork-a-repo[fork the repository].
 
