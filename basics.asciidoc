@@ -443,7 +443,7 @@ print i
 Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the
 case where the logical line has a starting parentheses, starting square brackets or a starting
 curly braces but not an ending one. This is called *implicit line joining*. You can see this in
-action when we write programs using <<lists,lists>> in later chapters.
+action when we write programs using <<list,lists>> in later chapters.
 
 [[indentation]]
 === Indentation

@@ -1,4 +1,4 @@
-[[modules]]
+[[module]]
 == Modules
 
 You have seen how you can reuse code in your program by defining functions once. What if you wanted
@@ -302,7 +302,7 @@ This is how you would structure the folders:
 --------------------------------------------------
 
 Packages are just a convenience to hierarchically organize modules. You will see many instances of
-this in the <<standard_library,standard library>>.
+this in the <<stdlib,standard library>>.
 
 === Summary
 

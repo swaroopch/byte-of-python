@@ -325,7 +325,7 @@ include::programs/function_docstring.txt[]
 .How It Works
 
 A string on the first logical line of a function is the *docstring* for that function. Note that
-DocStrings also apply to <<modules,modules>> and <<oop,classes>> which we will learn about in the
+DocStrings also apply to <<module,modules>> and <<oop,classes>> which we will learn about in the
 respective chapters.
 
 The convention followed for a docstring is a multi-line string where the first line starts with a

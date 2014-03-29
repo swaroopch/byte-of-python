@@ -213,7 +213,7 @@ See:
 -  http://www.ibm.com/developerworks/linux/library/l-cpdecor.html
 - http://toumorokoshi.github.io/dry-principles-through-python-decorators.html
 
-[[2_vs_3]]
+[[two_vs_three]]
 === Differences between Python 2 and Python 3
 
 See:
