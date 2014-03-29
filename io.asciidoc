@@ -1,0 +1,180 @@
+[[io]]
+== Input and Output
+
+There will be situations where your program has to interact with the user. For example, you would
+want to take input from the user and then print some results back. We can achieve this using the
+`raw_input()` function and `print` statement respectively.
+
+For output, we can also use the various methods of the `str` (string) class. For example, you can
+use the `rjust` method to get a string which is right justified to a specified width. See
+`help(str)` for more details.
+
+Another common type of input/output is dealing with files. The ability to create, read and write
+files is essential to many programs and we will explore this aspect in this chapter.
+
+=== Input from user
+
+Save this program as `io_input.py`:
+
+[source,python]
+--------------------------------------------------
+include::programs/io_input.py[]
+--------------------------------------------------
+
+Output:
+
+--------------------------------------------------
+include::programs/io_input.txt[]
+--------------------------------------------------
+
+.How It Works
+
+We use the slicing feature to reverse the text. We've already seen how we can make
+<<sequence,slices from sequences>> using the `seq[a:b]` code starting from position `a` to position
+`b`. We can also provide a third argument that determines the _step_ by which the slicing is
+done. The default step is `1` because of which it returns a continuous part of the text. Giving a
+negative step, i.e., `-1` will return the text in reverse.
+
+The `raw_input()` function takes a string as argument and displays it to the user. Then it waits
+for the user to type something and press the return key. Once the user has entered and pressed the
+return key, the `raw_input()` function will then return that text the user has entered.
+
+We take that text and reverse it. If the original text and reversed text are equal, then the text
+is a http://en.wiktionary.org/wiki/palindrome[palindrome].
+
+==== Homework exercise
+
+Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For
+example, "Rise to vote, sir." is also a palindrome but our current program doesn't say it is. Can
+you improve the above program to recognize this palindrome?
+
+If you need a hint, the idea is that... footnote:[Use a tuple (you can find a list of _all_
+http://grammar.ccc.commnet.edu/grammar/marks/marks.htm[punctuation marks here]) to hold all the
+forbidden characters, then use the membership test to determine whether a character should be
+removed or not, i.e. forbidden = (`!`, `?`, `.`, ...).]
+
+=== Files
+
+You can open and use files for reading or writing by creating an object of the `file` class and
+using its `read`, `readline` or `write` methods appropriately to read from or write to the
+file. The ability to read or write to the file depends on the mode you have specified for the file
+opening. Then finally, when you are finished with the file, you call the `close` method to tell
+Python that we are done using the file.
+
+Example (save as `io_using_file.py`):
+
+[source,python]
+--------------------------------------------------
+include::programs/io_using_file.py[]
+--------------------------------------------------
+
+Output:
+
+--------------------------------------------------
+include::programs/io_using_file.txt[]
+--------------------------------------------------
+
+.How It Works
+
+First, open a file by using the built-in `open` function and specifying the name of the file and
+the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`)
+or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text
+mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)`
+will give you more details about them. By default, `open()` considers the file to be a 't'ext file
+and opens it in 'r'ead mode.
+
+In our example, we first open the file in write text mode and use the `write` method of the file
+object to write to the file and then we finally `close` the file.
+
+Next, we open the same file again for reading. We don't need to specify a mode because 'read text
+file' is the default mode. We read in each line of the file using the `readline` method in a
+loop. This method returns a complete line including the newline character at the end of the
+line. When an _empty_ string is returned, it means that we have reached the end of the file and we
+'break' out of the loop.
+
+In the end, we finally `close`the file.
+
+Now, check the contents of the `poem.txt` file to confirm that the program has indeed written to
+and read from that file.
+
+[[pickle]]
+=== Pickle
+
+Python provides a standard module called `pickle` using which you can store _any_ plain Python
+object in a file and then get it back later. This is called storing the object *persistently*.
+
+Example (save as `io_pickle.py`):
+
+[source,python]
+--------------------------------------------------
+include::programs/io_pickle.py[]
+--------------------------------------------------
+
+Output:
+
+--------------------------------------------------
+include::programs/io_pickle.txt[]
+--------------------------------------------------
+
+.How It Works
+
+To store an object in a file, we have to first `open` the file in __w__rite __b__inary mode and
+then call the `dump` function of the `pickle` module. This process is called _pickling_.
+
+Next, we retrieve the object using the `load` function of the `pickle` module which returns the
+object. This process is called _unpickling_.
+
+[[unicode]]
+=== Unicode
+
+So far, when we have been writing and using strings, or reading and writing to a file, we have used
+simple English characters only. If we want to be able to read and write other non-English
+languages, we need to use the `unicode` type, and it all starts with the character `u`:
+
+--------------------------------------------------
+>>> "hello world"
+'hello world'
+>>> type("hello world")
+<type 'str'>
+>>> u"hello world"
+u'hello world'
+>>> type(u"hello world")
+<type 'unicode'>
+--------------------------------------------------
+
+We use the `unicode` type instead of `strings` to make sure that we handle non-English languages in
+our programs. However, when we read or write to a file or when we talk to other computers on the
+Internet, we need to convert our unicode strings into a format that can be sent and received, and
+that format is called "UTF-8". We can read and write in that format, using a simple keyword
+argument to our standard `open` function:
+
+[source,python]
+--------------------------------------------------
+include::programs/io_unicode.py[]
+--------------------------------------------------
+
+.How It Works
+
+You can ignore the `import` statement for now, we'll explore that in detail in the <<module,modules
+chapter>>.
+
+Whenever we write a program that uses Unicode literals like we have used above, we have to make
+sure that Python itself is told that our program uses UTF-8, and we have to put `# encoding=utf-8`
+comment at the top of our program.
+
+We use `io.open` and provide the "encoding" and "decoding" argument to tell Python that we are
+using unicode, and in fact, we have to pass in a string in the form of `u""` to make it clear that
+we are using Unicode strings.
+
+You should learn more about this topic by reading:
+
+- http://www.joelonsoftware.com/articles/Unicode.html["The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"]
+- http://docs.python.org/2/howto/unicode.html[Python Unicode Howto]
+- http://nedbatchelder.com/text/unipain.html[Pragmatic Unicode talk by Nat Batchelder]
+
+=== Summary
+
+We have discussed various types of input/output, about file handling, about the pickle module and
+about Unicode.
+
+Next, we will explore the concept of exceptions.

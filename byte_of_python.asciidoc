@@ -1,0 +1,66 @@
+= A Byte of Python
+:Author: Swaroop C H
+:Email: swaroop@swaroopch.com
+:Revision: 3.0
+:doctype: book
+:lang: en
+:homepage: http://swaroopch.com/notes/python
+:buy: http://swaroopch.com/buybook
+:contact: http://swaroopch.com/contact
+:toc:
+:toclevels: 1
+:sectlinks:
+:experimental:
+// http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#ui-macros
+
+"A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial
+or guide to the Python language for a beginner audience. If all you know about computers is how to
+save text files, then this is the book for you.
+
+include::frontpage.asciidoc[]
+
+include::dedication.asciidoc[]
+
+include::preface.asciidoc[]
+
+include::intro.asciidoc[]
+
+include::installation.asciidoc[]
+
+include::first_steps.asciidoc[]
+
+include::basics.asciidoc[]
+
+include::op_exp.asciidoc[]
+
+include::control_flow.asciidoc[]
+
+include::functions.asciidoc[]
+
+include::modules.asciidoc[]
+
+include::data_structures.asciidoc[]
+
+include::problem_solving.asciidoc[]
+
+include::oop.asciidoc[]
+
+include::io.asciidoc[]
+
+include::exceptions.asciidoc[]
+
+include::stdlib.asciidoc[]
+
+include::more.asciidoc[]
+
+include::what_next.asciidoc[]
+
+include::floss.asciidoc[]
+
+include::about.asciidoc[]
+
+include::revision_history.asciidoc[]
+
+include::translations.asciidoc[]
+
+include::translation_howto.asciidoc[]

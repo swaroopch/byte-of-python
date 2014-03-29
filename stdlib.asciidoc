@@ -1,0 +1,107 @@
+[[stdlib]]
+=== Standard Library
+
+The Python Standard Library contains a huge number of useful modules and is part of every standard
+Python installation. It is important to become familiar with the Python Standard Library since many
+problems can be solved quickly if you are familiar with the range of things that these libraries
+can do.
+
+We will explore some of the commonly used modules in this library. You can find complete details
+for all of the modules in the Python Standard Library in the
+http://docs.python.org/2/library/['Library Reference' section] of the documentation that comes with
+your Python installation.
+
+Let us explore a few useful modules.
+
+CAUTION: If you find the topics in this chapter too advanced, you may skip this chapter. However, I
+highly recommend coming back to this chapter when you are more comfortable with programming using
+Python.
+
+=== +sys+ module
+
+The `sys` module contains system-specific functionality. We have already seen that the `sys.argv`
+list contains the command-line arguments.
+
+Suppose we want to check the version of the Python software being used, the `sys` module gives us
+that information.
+
+--------------------------------------------------
+$ python
+>>> import sys
+>>> sys.version_info
+sys.version_info(major=2, minor=7, micro=6, releaselevel='final', serial=0)
+>>> sys.version_info.major == 2
+True
+--------------------------------------------------
+
+.How It Works
+
+The `sys` module has a `version_info` tuple that gives us the version information. The first entry
+is the major version. We can pull out this information to use it.
+
+[[logging]]
+=== logging module
+
+What if you wanted to have some debugging messages or important messages to be stored somewhere so
+that you can check whether your program has been running as you would expect it? How do you "store
+somewhere" these messages? This can be achieved using the `logging` module.
+
+Save as `stdlib_logging.py`:
+
+[source,python]
+--------------------------------------------------
+include::programs/stdlib_logging.py[]
+--------------------------------------------------
+
+Output:
+
+--------------------------------------------------
+include::programs/stdlib_logging.txt[]
+--------------------------------------------------
+
+If you do not have the `cat` command, then you can just open the `test.log` file in a text editor.
+
+.How It Works
+
+We use three modules from the standard library - the `os` module for interacting with the operating
+system, the `platform` module for information about the platform i.e. the operating system and the
+`logging` module to *log* information.
+
+First, we check which operating system we are using by checking the string returned by
+`platform.platform()` (for more information, see `import platform; help(platform)`). If it is
+Windows, we figure out the home drive, the home folder and the filename where we want to store the
+information. Putting these three parts together, we get the full location of the file. For other
+platforms, we need to know just the home folder of the user and we get the full location of the
+file.
+
+We use the `os.path.join()` function to put these three parts of the location together. The reason
+to use a special function rather than just adding the strings together is because this function
+will ensure the full location matches the format expected by the operating system.
+
+We configure the `logging` module to write all the messages in a particular format to the file we
+have specified.
+
+Finally, we can put messages that are either meant for debugging, information, warning or even
+critical messages. Once the program has run, we can check this file and we will know what happened
+in the program, even though no information was displayed to the user running the program.
+
+[[motw]]
+=== Module of the Week Series
+
+There is much more to be explored in the standard library such as
+http://docs.python.org/2/library/pdb.html[debugging],
+http://docs.python.org/2/library/argparse.html[handling command line options],
+http://docs.python.org/2/library/re.html[regular expressions] and so
+on.
+
+The best way to further explore the standard library is to read Doug Hellmann's excellent
+http://pymotw.com/2/contents.html[Python Module of the Week] series (also available as a
+http://amzn.com/0321767349[book]) and reading the http://docs.python.org/2/[Python documentation].
+
+=== Summary
+
+We have explored some of the functionality of many modules in the Python Standard Library. It is
+highly recommended to browse through the http://docs.python.org/2/library/[Python Standard Library
+documentation] to get an idea of all the modules that are available.
+
+Next, we will cover various aspects of Python that will make our tour of Python more _complete_.

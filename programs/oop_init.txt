@@ -1,0 +1,2 @@
+$ python oop_init.py
+Hello, my name is Swaroop

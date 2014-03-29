@@ -1,5 +1,6 @@
 *.pyc
-*.*DS_Store
-.*.sw*
-.ropeproject
-oauth.json
+byte_of_python.html
+byte_of_python.xml
+byte_of_python.pdf
+byte_of_python.epub
+byte_of_python.mobi
