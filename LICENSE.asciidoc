@@ -7,8 +7,8 @@ Attribution-ShareAlike 4.0 International License].
   prominently mentioned in the description that these copies are *not* from the original author of
   this book.
 - Attribution *must* be shown in the introductory description and front page of the document by
-  linking back to {homepage} and clearly indicating that the original text can be fetched from this
-  location.
+  linking back to http://swaroopch.com/notes/python and clearly indicating that the original text
+  can be fetched from this location.
 - All the code/scripts provided in this book is licensed under the
   http://www.opensource.org/licenses/bsd-license.php[3-clause BSD License] unless otherwise noted.
 --
