@@ -1,4 +1,0 @@
-Fabric == 1.7.0
-boto == 2.9.9
-beautifulsoup4 == 4.2.1
-requests == 1.2.3
