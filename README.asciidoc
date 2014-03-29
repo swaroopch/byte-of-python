@@ -1,0 +1,18 @@
+== A Byte of Python
+
+"A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial
+or guide to the Python language for a beginner audience. If all you know about computers is how to
+save text files, then this is the book for you.
+
+To understand the http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc format], see the
+http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Syntax Quick Reference].
+
+To convert the book from AsciiDoc format to output formats (HTML, PDF, EPUB, etc.), see
+https://github.com/swaroopch/byte_of_python/blob/master/commands.bash[commands.bash].
+
+To understand the freedoms you have with this book, see
+https://github.com/swaroopch/byte_of_python/blob/master/LICENSE.txt[LICENSE.txt].
+
+To translate this book, https://help.github.com/articles/fork-a-repo[fork the repository].
+
+For queries, http://swaroopch.com/contact/[contact the author].
