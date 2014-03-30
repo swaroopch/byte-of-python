@@ -361,9 +361,10 @@ support the continued development and improvement of this book.
 
 === Download
 
-- http://files.swaroopch.com/python/byte_of_python.pdf[PDF]
-- http://files.swaroopch.com/python/byte_of_python.epub[EPUB]
-- https://github.com/swaroopch/byte_of_python[GitHub]
+- http://files.swaroopch.com/python/byte_of_python.pdf[PDF] (for desktop reading, etc.)
+- http://files.swaroopch.com/python/byte_of_python.epub[EPUB] (for iPhone/iPad, ebook readers, etc.)
+- http://files.swaroopch.com/python/byte_of_python.mobi[Mobi (for Kindle)]
+- https://github.com/swaroopch/byte_of_python[GitHub] (for raw text, translating, etc.)
 
 If you wish to support the continued development of this book, please consider
 {buy}[buying a hardcopy].
