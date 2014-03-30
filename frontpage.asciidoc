@@ -60,6 +60,11 @@ A Byte of Python, written by Swaroop. (this is the book I'm currently reading). 
 to start with, and probably the best in the world for every newbie or even a more experienced user.
 __________________________________________________
 
+[quote,'https://twitter.com/YuvrajPoudyal/status/448050415356346368[Yuvraj Sharma]']
+__________________________________________________
+Enjoying Reading #ByteOfPython by @swaroopch best book ever
+__________________________________________________
+
 [quote,Franklin]
 __________________________________________________
 Thank you so much for writing A Byte Of Python. I just started learning how to code two days ago
