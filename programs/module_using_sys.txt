@@ -1,4 +1,4 @@
-$ python module_using_sys.py
+$ python module_using_sys.py we are arguments
 The command line arguments are:
 module_using_sys.py
 we
