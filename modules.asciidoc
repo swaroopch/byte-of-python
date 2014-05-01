@@ -61,9 +61,9 @@ passed to the program. Python stores the command line arguments in the `sys.argv
 to use.
 
 Remember, the name of the script running is always the first argument in the `sys.argv` list. So,
-in this case we will have `'using_sys.py'` as `sys.argv[0]`, `'we'` as `sys.argv[1]`, `'are'` as
-`sys.argv[2]` and `'arguments'` as `sys.argv[3]`. Notice that Python starts counting from 0 and
-not 1.
+in this case we will have `'module_using_sys.py'` as `sys.argv[0]`, `'we'` as `sys.argv[1]`,
+`'are'` as `sys.argv[2]` and `'arguments'` as `sys.argv[3]`. Notice that Python starts counting
+from 0 and not 1.
 
 The `sys.path` contains the list of directory names where modules are imported from. Observe that
 the first string in `sys.path` is empty - this empty string indicates that the current directory is
@@ -192,7 +192,7 @@ You could also use:
 from mymodule import *
 --------------------------------------------------
 
-This will import all public names such as `sayhi` but would not import `__version__` because it
+This will import all public names such as `say_hi` but would not import `__version__` because it
 starts with double underscores.
 
 WARNING: Remember that you should avoid using import-star, i.e. `from mymodule import *`.

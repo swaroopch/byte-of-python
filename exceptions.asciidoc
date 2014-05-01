@@ -107,7 +107,7 @@ Here, we are creating our own exception type. This new exception type is called
 
 In the `except` clause, we mention the class of error which will be stored `as` the variable name
 to hold the corresponding error/exception object. This is analogous to parameters and arguments in
-a function call. Within this particular `except` clause, we use the`length` and `atleast` fields of
+a function call. Within this particular `except` clause, we use the `length` and `atleast` fields of
 the exception object to print an appropriate message to the user.
 
 === Try ... Finally
