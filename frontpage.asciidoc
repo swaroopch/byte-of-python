@@ -305,6 +305,21 @@ boring. I want to understand the Orca screen reader code. Your book has hopefull
 for it.
 __________________________________________________
 
+
+[quote,'mailto:lisen2010@gmail.com[LEE]']
+__________________________________________________
+Hi, 'A byte of python' is really a good reading for python beginners. So, again, NICE WORK!
+
+i'm a 4 years experienced Java&C developer from China. Recently, i want to do some work on zim-wiki
+note project which uses pygtk to implement.
+
+i read your book in 6 days, and i can read and write python code examples now.
+thx for your contribution.
+plz keep your enthusiasm to make this world better, this is just a little encourage from China.
+Your reader
+Lee
+__________________________________________________
+
 The book is even used by NASA! It is being used in their
 http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/[Jet Propulsion
 Laboratory] with their Deep Space Network project.
