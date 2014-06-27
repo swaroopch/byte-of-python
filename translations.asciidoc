@@ -117,7 +117,7 @@ Gérard Labadie (gerard.labadie@gmail.com) has completed to translate the book t
 Lutz Horn (lutz.horn@gmx.de), Bernd Hengelein (bernd.hengelein@gmail.com) and Christoph Zwerschke
 (cito@online.de) have volunteered to translate the book to German.
 
-Their translation is located at http://abop-german.berlios.de.
+Their translation is located at http://ftp.jaist.ac.jp/pub//sourceforge/a/ab/abop-german.berlios/
 
 Lutz Horn says:
 
