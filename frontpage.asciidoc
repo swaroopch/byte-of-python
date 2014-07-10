@@ -198,7 +198,7 @@ I started learning python few days ago from your book..thanks for such a nice bo
 written, you made my life easy..so you found a new fan of yours..thats me :) tons of thanks.
 __________________________________________________
 
-[quote,'mailto:fangbiyi@gmail.com[Fang Biyi]']
+[quote,'mailto:fangbiyi@gmail.com[Fang Biyi (PhD Candidate ECE, Michigan State University)]']
 __________________________________________________
 Before I started to learn Python, I've acquired basic programming skills in Assembly, C, C++, C#
 and Java. The very reason I wanted to learn Python is it's popular (people are talking about it)
