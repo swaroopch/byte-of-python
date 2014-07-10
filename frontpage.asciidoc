@@ -198,6 +198,14 @@ I started learning python few days ago from your book..thanks for such a nice bo
 written, you made my life easy..so you found a new fan of yours..thats me :) tons of thanks.
 __________________________________________________
 
+[quote,'mailto:fangbiyi@gmail.com[Fang Biyi]']
+__________________________________________________
+Before I started to learn Python, I've acquired basic programming skills in Assembly, C, C++, C#
+and Java. The very reason I wanted to learn Python is it's popular (people are talking about it)
+and powerful (reality). This book written by Mr. Swaroop is a very good guide for both brand-new
+programmers and new python programmers. Took 10 half days to go through it. Great Help!
+__________________________________________________
+
 [quote,Bob]
 __________________________________________________
 Thank you ever so much for this book!!
