@@ -197,6 +197,27 @@ __________________________________________________
 
 Shunro Dozono (dozono@gmail.com) is translating the book to Japanese.
 
+=== Korean
+
+Jeongbin Park (pjb7687@gmail.com) has translated the book to Korean -
+https://github.com/pjb7687/byte_of_python
+
+__________________________________________________
+I am Jeongbin Park, currently working as a Biophysics & Bioinformatics researcher in Korea.
+
+A year ago, I was looking for a good tutorial/guide for Python to introduce it to my colleagues,
+because using Python in such research fields is becoming inevitable due to the user base is growing
+more and more.
+
+But at that time only few Python books are available in Korean, so I decided to translate your
+ebook because it looks like one of the best guides that I have ever read!
+
+Currently, the book is almost completely translated in Korean, except some of the text in
+introduction chapter and the appendixes.
+
+Thank you again for writing such a good guide!
+__________________________________________________
+
 === Mongolian
 
 Ariunsanaa Tunjin (luftballons2010@gmail.com) has volunteered to translate the book to Mongolian.
