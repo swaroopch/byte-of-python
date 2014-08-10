@@ -39,15 +39,18 @@ Variables+ button on the bottom right.
 . Restart your system. Vista didn't pick up the system path environment variable change until I
 restarted.
 
-For Windows 7:
+For Windows 7 and 8:
 
 . Right click on Computer from your desktop and select +Properties+ or click +Start+ and choose
 +Control Panel+ -> +System and Security+ -> +System+. Click on +Advanced system settings+ on the
 left and then click on the +Advanced+ tab. At the bottom click on +Environment Variables+ and under
 +System variables+, look for the +PATH+ variable, select and then press +Edit+.
-. Go to the end of the line under Variable value and append `;C:\Python33`.
-. If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python33`
-. Click +OK+ and you are done. No restart is required.
+. Go to the end of the line under Variable value and append `;C:\Python27` (please verify that this
+folder exists, it will be different for newer versions of Python) to the end of what is already
+there. Of course, use the appropriate folder name.
+. If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python27`
+. Click +OK+ and you are done. No restart is required, however you may have to close and reopen the
+command line.
 
 ==== Running Python prompt on Windows
 
