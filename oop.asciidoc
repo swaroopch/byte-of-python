@@ -192,7 +192,7 @@ include::programs/oop_objvar.txt[]
 .How It Works
 
 This is a long example but helps demonstrate the nature of class and object variables. Here,
-`population` belongs to the`Robot` class and hence is a class variable. The `name` variable belongs
+`population` belongs to the `Robot` class and hence is a class variable. The `name` variable belongs
 to the object (it is assigned using `self`) and hence is an object variable.
 
 Thus, we refer to the `population` class variable as `Robot.population` and not as
