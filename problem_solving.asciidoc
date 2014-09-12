@@ -227,7 +227,7 @@ a `-v` option to make your program become more talkative or a `-q` to make it _q
 
 Another possible enhancement would be to allow extra files and directories to be passed to the
 script at the command line. We can get these names from the `sys.argv` list and we can add them to
-our `source` list using the `extend`method provided by the `list` class.
+our `source` list using the `extend` method provided by the `list` class.
 
 The most important refinement would be to not use the `os.system` way of creating archives and
 instead using the http://docs.python.org/2/library/zipfile.html[zipfile] or
