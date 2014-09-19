@@ -264,7 +264,7 @@ A note on `del` - this statement is used to *delete* a variable/name and after t
 run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed
 before at all.
 
-Note that the `dir()` function works on *any* object. For example, run `dir('print')` to learn
+Note that the `dir()` function works on *any* object. For example, run `dir(print)` to learn
 about the attributes of the print function, or `dir(str)` for the attributes of the str class.
 
 There is also a http://docs.python.org/2/library/functions.html#vars[`vars()`] function which can

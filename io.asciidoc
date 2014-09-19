@@ -92,7 +92,7 @@ loop. This method returns a complete line including the newline character at the
 line. When an _empty_ string is returned, it means that we have reached the end of the file and we
 'break' out of the loop.
 
-In the end, we finally `close`the file.
+In the end, we finally `close` the file.
 
 Now, check the contents of the `poem.txt` file to confirm that the program has indeed written to
 and read from that file.
