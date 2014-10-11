@@ -78,7 +78,6 @@ function s3_put () {
 
     if [[ -f $filename ]]
     then
-        # brew install s3cmd
         s3cmd --verbose \
               --access_key=$AWS_ACCESS_KEY \
               --secret_key=$AWS_SECRET_KEY \
