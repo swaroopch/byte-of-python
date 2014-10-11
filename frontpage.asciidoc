@@ -381,6 +381,9 @@ This book is/was being used as instructional material in various educational ins
 - 'Introduction to Computer Science and Programming' at
   http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/['MIT
   OpenCourseWare']
+- 'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' -
+  mailto:ales.ziberna@fdv.uni-lj.si[Aleš Žiberna] says _"I (and my predecessor) have been using
+  your book as the main literature for this course"_
 
 === License
 
