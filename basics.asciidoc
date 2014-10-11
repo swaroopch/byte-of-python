@@ -311,7 +311,25 @@ run the program.
 
 Henceforth, the standard procedure to save and run a Python program is as follows:
 
-. Open your editor of choice, such as Light Table.
+=== For PyCharm
+
+. Open <<pycharm>>.
+. Create new file with the filename mentioned.
+. Type the program code given in the example.
+. Right-click and run the current file.
+
+[NOTE]
+====
+Whenever you have to provide <<module,command line arguments>>,
+click on +Run+ -> +Edit Configurations+ and type the arguments in the
++Script parameters:+ section and click the +OK+ button:
+
+image::pycharm_command_line_arguments.png[PyCharm command line arguments,734,452]
+====
+
+=== For other editors
+
+. Open your editor of choice.
 . Type the program code given in the example.
 . Save it as a file with the filename mentioned.
 . Run the interpreter with the command +python program.py+ to run the program.

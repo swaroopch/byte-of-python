@@ -67,8 +67,9 @@ helps you reach your destination (achieve your goal) in a much faster and safer 
 One of the very basic requirements is _syntax highlighting_ where all the different parts of your
 Python program are colorized so that you can _see_ your program and visualize its running.
 
-If you have no idea where to start, I would recommend using http://www.lighttable.com/[Light Table]
-software which is available on Windows, Mac OS X and GNU/Linux. Details in the next section.
+If you have no idea where to start, I would recommend using
+http://www.jetbrains.com/pycharm/[PyCharm Community Edition] software which is available on
+Windows, Mac OS X and GNU/Linux. Details in the next section.
 
 If you are using Windows, *do not use Notepad* - it is a bad choice because it does not do syntax
 highlighting and also importantly it does not support indentation of the text which is very
@@ -82,35 +83,67 @@ Vim].
 
 In case you are willing to take the time to learn Vim or Emacs, then I highly recommend that you do
 learn to use either of them as it will be very useful for you in the long run. However, as I
-mentioned before, beginners can start with Light Table and focus the learning on Python rather than
-the editor at this moment.
+mentioned before, beginners can start with PyCharm and focus the learning on Python rather than the
+editor at this moment.
 
 To reiterate, please choose a proper editor - it can make writing Python programs more fun and
 easy.
 
-=== Light Table
+[[pycharm]]
+=== PyCharm
 
-http://www.lighttable.com[Light Table] is a free editor which you can use for writing Python
-programs.
+http://www.jetbrains.com/pycharm/download/[PyCharm Community Edition] is a free editor which you
+can use for writing Python programs.
 
-Click on +File+ -> +New file+, type the following:
+When you open PyCharm, you'll see this:
+
+image::pycharm_open.png[When you open PyCharm,440,282]
+
+Click on +Create New Project+, and type +helloworld+ as the name of the project, you should see
+details similar to this:
+
+image::pycharm_create_new_project.png[PyCharm project details,475,240]
+
+Click the +OK+ button.
+
+If you see the _Tip of the Day_ dialog box, click the +Close+ button.
+
+image::pycharm_tip_of_the_day.png[PyCharm Tip of the Day dialog box,714,445]
+
+Right-click on the +helloworld+ in the sidebar and select +New+ -> +Python File+.
+
+image::pycharm_new_python_file.png[PyCharm -> New -> Python File,777,494]
+
+You will be asked to type the name, type +hello+:
+
+image::pycharm_new_file_input.png[PyCharm New File dialog box,734,452]
+
+You can now see a file opened for you:
+
+image::pycharm_hello_open.png[PyCharm hello.py file,777,494]
+
+Delete the lines that are already present, and now type the following:
 
 [source,python]
 --------------------------------------------------
 print "hello world"
 --------------------------------------------------
 
-Click on +File+ -> +Save+ and call it +hello.py+.
+Now right-click on what you typed (without selecting the text), and click on +Run 'hello'+.
 
-Click on +View+ -> +Console+.
+image::pycharm_run.png[PyCharm Run 'hello',777,494]
 
-Now, place your cursor at the end of the above line and press kbd:[command + enter] to _evaluate_
-the line and you'll see the output in the console.
+You should now see the output (what it prints) of your program:
 
-Do watch the videos in the http://docs.lighttable.com/tutorials/python/[LightTable for Python
-tutorial] to understand how to use Light Table.
+image::pycharm_output.png[PyCharm output,777,494]
 
-image::light_table_screenshot.png[Screenshot of Light Table,594,536]
+Phew! That was quite a few steps to get started, but henceforth, every time we ask you to create a
+new file, remember to just right-click on +helloworld+ on the left -> +New+ -> +Python File+ and
+continue the same steps to type and run as shown above.
+
+You can find more information about PyCharm in the
+http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm[Getting Started with
+PyCharm] page.
 
 === Vim
 
@@ -145,14 +178,14 @@ learn the language better."
 
 Start your choice of editor, enter the following program and save it as +hello.py+.
 
-If you are using Light Table, click on +File+ -> +New file+, type the lines:
+If you are using PyCharm, we have already <<pycharm,discussed how to run from a source file>>.
+
+For other editors, open a new file +hello.py+ and type this:
 
 [source,python]
 --------------------------------------------------
 print "hello world"
 --------------------------------------------------
-
-In Light Table, click on +File+ -> +Save+ to save a file called +hello.py+.
 
 Where should you save the file? To any folder for which you know the location of the folder. If you
 don't understand what that means, create a new folder and use that location to save and run all
