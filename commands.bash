@@ -45,13 +45,6 @@ function make_mobi () {
     ls -lh "$PWD/$SLUG.mobi"
 }
 
-# TODO https://github.com/schacon/git-scribe/blob/master/lib/git-scribe/generate.rb#L107
-# TODO Instead, create an official backend for asciidoctor to create a website?
-#
-function make_website () {
-    echo "TODO"
-}
-
 function install_deps_osx () {
     # http://brew.sh
     brew update
@@ -59,6 +52,10 @@ function install_deps_osx () {
     brew tap homebrew/binary
     brew install kindlegen
     # brew install asciidoc
+
+    # http://s3tools.org/usage
+    sudo pip install -U python-magic
+    sudo pip install -U https://github.com/s3tools/s3cmd/archive/master.zip
 
     # http://asciidoctor.org/docs/install-asciidoctor-macosx/
     sudo gem update --system
@@ -72,6 +69,59 @@ function install_deps_osx () {
     mkdir -p $HOME/code/asciidoctor/
     cd $HOME/code/asciidoctor/
     git clone https://github.com/asciidoctor/asciidoctor-fopub
+}
 
-    # If emacs, install package: https://github.com/sensorflo/adoc-mode/wiki
+
+function s3_put () {
+    filename=$1
+    shift
+
+    if [[ -f $filename ]]
+    then
+        # brew install s3cmd
+        s3cmd --verbose \
+              --access_key=$AWS_ACCESS_KEY \
+              --secret_key=$AWS_SECRET_KEY \
+              --acl-public \
+              put \
+              "$filename" \
+              "s3://files.swaroopch.com/python/$filename"
+    fi
+}
+
+
+# https://en.wikipedia.org/wiki/Tput#Usage
+function say () {
+    echo "$(tput setaf 2)$(tput bold)$@$(tput sgr0)"
+}
+
+
+function make_upload () {
+    CWD=$PWD
+
+    say "Generating HTML"
+    make_html
+
+    say "Syncing to blog server"
+    cp -v "$SLUG.html" ../blog/notes/python/index.html
+    rm -v ../blog/notes/python/*.png
+    cp -v *.png ../blog/notes/python/
+    cd ../blog
+    blog_sync  # Defined in ~/.bash_profile
+    cd $CWD
+
+    say "Generating EPUB"
+    make_epub
+    say "Uploading EPUB"
+    s3_put "$SLUG.epub"
+
+    say "Generating PDF"
+    make_pdf
+    say "Uploading PDF"
+    s3_put "$SLUG.pdf"
+
+    say "Generating MOBI"
+    make_mobi
+    say "Uploading MOBI"
+    s3_put "$SLUG.mobi"
 }
