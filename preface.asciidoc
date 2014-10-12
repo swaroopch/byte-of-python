@@ -52,7 +52,9 @@ In the true spirit of open source, I have received lots of constructive suggesti
 
 === Status Of The Book
 
-- Latest update of this book was in Mar-Apr 2014, converted to
+- The book was last updated on {docdate} and generated using
+  http://www.asciidoctor.org[AsciiDoctor] {asciidoctor-version}.
+- Last major update of this book was in Mar-Apr 2014, converted to
   http://asciidoctor.org/docs/what-is-asciidoc/[Asciidoc] using
   http://swaroopch.com/2013/10/17/emacs-configuration-tutorial/[Emacs 24] and
   https://github.com/sensorflo/adoc-mode/wiki[adoc-mode].
