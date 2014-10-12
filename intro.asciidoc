@@ -107,15 +107,16 @@ features that make writing programs in Python both fun and easy.
 
 === Python 2 versus 3
 
-You can ignore this section if you're not interested in the difference between Python 2 and
-Python 3. But please do be aware of which version you are using.
+You can ignore this section if you're not interested in the difference between "Python version 2"
+and "Python version 3". But please do be aware of which version you are using. This book is written
+for Python 2.
 
-Remember that once you have properly understood and learn to use either of them, you can easily
-learn the changes between the two versions and adapt easily. The hard part is learning programming
-and understanding the core Python language itself. That is our goal in this book, and once you have
-achieved that goal, you can easily use Python 2 or Python 3 depending on your situation.
+Remember that once you have properly understood and learn to use one version, you can easily learn
+the differences and use the other one. The hard part is learning programming and understanding the
+basics of Python language itself. That is our goal in this book, and once you have achieved that
+goal, you can easily use Python 2 or Python 3 depending on your situation.
 
-For details on differences between Python 2 to Python 3, see:
+For details on differences between Python 2 and Python 3, see:
 
 - http://lwn.net/Articles/547191/[The future of Python 2]
 - https://wiki.ubuntu.com/Python/3[Python/3 page on the Ubuntu wiki]
