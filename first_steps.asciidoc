@@ -164,9 +164,8 @@ IDE] article by John M Anderson.
   .. Windows users should get Emacs from http://ftp.gnu.org/gnu/emacs/windows/
   .. GNU/Linux users should get Emacs from their distribution's software repositories, e.g. Debian
   and Ubuntu users can install the http://packages.ubuntu.com/saucy/emacs24[emacs24] package.
-. Install https://github.com/jorgenschaefer/elpy[ELPY]
-. Read https://github.com/jorgenschaefer/elpy/wiki[ELPY wiki] for details.
-. Also recommended is the https://github.com/bbatsov/prelude[Emacs Prelude] distribution.
+. Use https://github.com/jorgenschaefer/elpy/wiki[ELPY] or https://github.com/bbatsov/prelude[Emacs
+  Prelude] distribution.
 
 === Using A Source File
 
