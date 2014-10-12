@@ -17,6 +17,9 @@
 or guide to the Python language for a beginner audience. If all you know about computers is how to
 save text files, then this is the book for you.
 
+The book was last updated at {docdatetime} and generated using
+http://www.asciidoctor.org[AsciiDoctor] {asciidoctor-version}.
+
 include::frontpage.asciidoc[]
 
 include::dedication.asciidoc[]
