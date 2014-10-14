@@ -198,6 +198,7 @@ the <<oop,object oriented programming chapter>>:
 - http://docs.python.org/3/howto/functional.html[Functional Programming Howto by A.M. Kuchling]
 - http://www.diveintopython.net/functional_programming/index.html[Functional programming chapter in 'Dive Into Python' book]
 - http://ua.pycon.org/static/talks/kachayev/index.html[Functional Programming with Python presentation]
+- https://github.com/Suor/funcy[Funcy library]
 
 === Summary
 
