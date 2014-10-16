@@ -38,12 +38,12 @@ be zero.
 +
 `-5.2` gives a negative number and `50 - 24` gives `26`.
 
-`*` (multiply) ::
+++*++ (multiply) ::
 Gives the multiplication of the two numbers or returns the string repeated that many times.
 +
 `2 * 3` gives `6`. `'la' * 3` gives `'lalala'`.
 
-`**` (power) ::
+++**++ (power) ::
 Returns x to the power of y
 +
 `3 ** 4` gives `81` (i.e. `3 * 3 * 3 * 3`)

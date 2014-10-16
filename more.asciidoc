@@ -135,8 +135,8 @@ include::programs/more_list_comprehension.txt[]
 
 .How It Works
 
-Here, we derive a new list by specifying the manipulation to be done (`2*i`) when some condition is
-satisfied (`if i > 2`). Note that the original list remains unmodified.
+Here, we derive a new list by specifying the manipulation to be done (++2*i++) when some condition
+is satisfied (`if i > 2`). Note that the original list remains unmodified.
 
 The advantage of using list comprehensions is that it reduces the amount of boilerplate code
 required when we use loops to process each element of a list and store it in a new list.
@@ -144,7 +144,7 @@ required when we use loops to process each element of a list and store it in a n
 === Receiving Tuples and Dictionaries in Functions
 
 There is a special way of receiving parameters to a function as a tuple or a dictionary using the
-`*` or `**` prefix respectively. This is useful when taking variable number of arguments in the
+++*++ or ++**++ prefix respectively. This is useful when taking variable number of arguments in the
 function.
 
 --------------------------------------------------
@@ -161,8 +161,8 @@ function.
 100
 --------------------------------------------------
 
-Because we have a `*` prefix on the `args` variable, all extra arguments passed to the function are
-stored in `args` as a tuple.  If a `**` prefix had been used instead, the extra parameters would be
+Because we have a ++*++ prefix on the `args` variable, all extra arguments passed to the function are
+stored in `args` as a tuple.  If a ++**++ prefix had been used instead, the extra parameters would be
 considered to be key/value pairs of a dictionary.
 
 === The assert statement
