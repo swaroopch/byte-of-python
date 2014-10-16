@@ -1,5 +1,5 @@
 [[stdlib]]
-=== Standard Library
+== Standard Library
 
 The Python Standard Library contains a huge number of useful modules and is part of every standard
 Python installation. It is important to become familiar with the Python Standard Library since many
