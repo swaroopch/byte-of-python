@@ -285,8 +285,8 @@ are some rules you have to follow for naming identifiers:
   Unicode character), underscores (`_`) or digits (0-9).
 - Identifier names are case-sensitive. For example, `myname` and `myName` are _not_ the same. Note
   the lowercase `n` in the former and the uppercase `N` in the latter.
-- Examples of _valid_ identifier names are `i`, `__my_name`, `name_23`. Examples of _invalid_
-  identifier names are `2things`, `this is spaced out`, `my-name` and `>a1b2_c3`.
+- Examples of _valid_ identifier names are `i`, `name_2_3`. Examples of _invalid_ identifier names
+  are `2things`, `this is spaced out`, `my-name` and `>a1b2_c3`.
 
 === Data Types
 
