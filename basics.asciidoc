@@ -506,8 +506,8 @@ indentation, otherwise your program will show errors.
 
 .Note to static language programmers
 [NOTE]
-Python will always use indentation for blocks and will never use braces. Run `from __future__
-import braces` to learn more.
+Python will always use indentation for blocks and will never use braces. Run `+from __future__
+import braces+` to learn more.
 
 === Summary
 
