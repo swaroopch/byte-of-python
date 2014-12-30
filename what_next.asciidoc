@@ -1,4 +1,5 @@
-[[What Next]]
+[[what_next]]
+== What Next
 
 If you have read this book thoroughly till now and practiced writing a lot of programs, then you
 must have become comfortable and familiar with Python. You have probably created some Python
