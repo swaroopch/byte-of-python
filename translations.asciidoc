@@ -19,17 +19,11 @@ more info see http://itwadi.com/byteofpython_arabi.
 
 === Brazilian Portuguese
 
-There are two translations:
+There are two translations in various levels of completion and accessibility. The older translation is now missing/lost, and newer translation is incomplete.
 
-http://www.samueldiasneto.com/aprendendopython/index.html[Samuel Dias Neto]
-(samuel.arataca@gmail.com) made the first Brazilian Portuguese translation of this book when Python
-was in 2.3.5 version.
+Samuel Dias Neto (samuel.arataca@gmail.com) made the first Brazilian Portuguese translation (older translation) of this book when Python was in 2.3.5 version. This is no longer publicly accessible.
 
-Samuel's translation is available at
-http://www.samueldiasneto.com/aprendendopython/index.html[aprendendopython].
-
-http://rodrigoamaral.net[Rodrigo Amaral] (rodrigoamaral@gmail.com) has volunteered to translate the
-book to Brazilian Portuguese.
+http://rodrigoamaral.net[Rodrigo Amaral] (rodrigoamaral@gmail.com) has volunteered to translate the book to Brazilian Portuguese, (newer translation) which still remains to be completed.
 
 === Catalan
 
@@ -289,8 +283,7 @@ Ukranian (time permitting).
 "BugSpice" (amortizerka@gmail.com) has completed a Serbian translation:
 
 __________________________________________________
-You can download it from http://www.sendspace.com/filegroup/DlNY1mF7DFqNt4e61LvVug (Latin and
-Cyrillic serbian (and similar languages) version.
+This download link is no longer accessible.
 __________________________________________________
 
 More details at http://forum.ubuntu-rs.org/Thread-zagrljaj-pitona.
