@@ -152,8 +152,6 @@ https://www.jetbrains.com/pycharm-educational/quickstart/[PyCharm Quickstart] pa
   http://www.vim.org/download.php
   .. GNU/Linux users should get Vim from their distribution's software repositories, e.g. Debian and
   Ubuntu users can install the http://packages.ubuntu.com/saucy/vim[vim] package.
-. Read the http://blog.sontek.net/blog/detail/turning-vim-into-a-modern-python-ide[Vim as Python
-IDE] article by John M Anderson.
 . Install https://github.com/davidhalter/jedi-vim[jedi-vim] plugin for autocompletion.
 
 === Emacs
