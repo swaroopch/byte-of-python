@@ -71,7 +71,7 @@ out the greater number using a simple `if..else` statement and then print the bi
 The first time we call the function `print_max`, we directly supply the numbers as arguments. In
 the second case, we call the function with variables as arguments. `print_max(x, y)` causes the
 value of argument `x` to be assigned to parameter `a` and the value of argument `y` to be assigned
-to parameter `b`. The printMax function works the same way in both cases.
+to parameter `b`. The `print_max` function works the same way in both cases.
 
 [[local_variables]]
 === Local Variables
