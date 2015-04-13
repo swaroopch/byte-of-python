@@ -200,8 +200,7 @@ WARNING: Remember that you should avoid using import-star, i.e. `from mymodule i
 .Zen of Python
 **************************************************
 One of Python's guiding principles is that "Explicit is better than Implicit". Run `import this` in
-Python to learn more and see http://stackoverflow.com/questions/228181/zen-of-python[this
-StackOverflow discussion] which lists examples for each of the principles.
+Python to learn more.
 **************************************************
 
 [[the_dir_function]]
