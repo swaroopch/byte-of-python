@@ -54,8 +54,8 @@ function install_deps_osx () {
     # brew install asciidoc
 
     # http://s3tools.org/usage
-    sudo pip install -U python-magic
-    sudo pip install -U https://github.com/s3tools/s3cmd/archive/master.zip
+    pip install -U python-magic
+    pip install -U https://github.com/s3tools/s3cmd/archive/master.zip
 
     # http://asciidoctor.org/docs/install-asciidoctor-macosx/
     sudo gem update --system
