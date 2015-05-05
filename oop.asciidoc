@@ -155,7 +155,7 @@ Most importantly, notice that we do not explicitly call the `__init__` method bu
 arguments in the parentheses following the class name when creating a new instance of the
 class. This is the special significance of this method.
 
-Now, we are able to use the `self.name` field in our methods which is demonstrated in the `sayHi`
+Now, we are able to use the `self.name` field in our methods which is demonstrated in the `say_hi`
 method.
 
 [[class_obj_vars]]
