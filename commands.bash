@@ -45,6 +45,7 @@ function make_mobi () {
     ls -lh "$PWD/$SLUG.mobi"
 }
 
+
 function install_deps_osx () {
     # http://brew.sh
     brew update
@@ -66,6 +67,23 @@ function install_deps_osx () {
     echo 'export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"' >> ~/.bash_profile
 
     # https://github.com/asciidoctor/asciidoctor-fopub/blob/master/README.adoc
+    mkdir -p $HOME/code/asciidoctor/
+    cd $HOME/code/asciidoctor/
+    git clone https://github.com/asciidoctor/asciidoctor-fopub
+}
+
+
+function install_deps_linux() {
+    sudo apt-get update
+    sudo apt-get install -y dbtoepub docbook docbook-xsl epubcheck fop git python-pip python-virtualenv ruby2.0 ruby2.0-dev
+    # TODO Perhaps use rvm / rbenv to point to Ruby 2.0 by default
+
+    sudo pip install -U python-magic
+    sudo pip install -U https://github.com/s3tools/s3cmd/archive/master.zip
+
+    sudo gem2.0 install --no-rdoc --no-ri asciidoctor kindlegen pygments.rb
+    echo "Update PATH to point to kindlegen - see `gem2.0 contents kindlegen | fgrep bin`"
+
     mkdir -p $HOME/code/asciidoctor/
     cd $HOME/code/asciidoctor/
     git clone https://github.com/asciidoctor/asciidoctor-fopub
@@ -103,7 +121,7 @@ function make_upload () {
 
     say "Syncing to blog server"
     cp -v "$SLUG.html" ../blog/notes/python/index.html
-    rm -v ../blog/notes/python/*.png
+    rm -vf ../blog/notes/python/*.png
     cp -v *.png ../blog/notes/python/
     cd ../blog
     blog_sync  # Defined in ~/.bash_profile
