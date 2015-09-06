@@ -62,7 +62,7 @@ iPhone, iPad, and Android.
 Interpreted ::
 This requires a bit of explanation.
 +
-A program written in a compiled language like C or C\++ is converted from the source language
+A program written in a compiled language like C or C++ is converted from the source language
 i.e. C or C++ into a language that is spoken by your computer (binary code i.e. 0s and 1s) using a
 compiler with various flags and options. When you run the program, the linker/loader software
 copies the program from hard disk to memory and starts running it.
@@ -84,11 +84,11 @@ of doing OOP, especially when compared to big languages like C++ or Java.
 
 Extensible ::
 If you need a critical piece of code to run very fast or want to have some piece of algorithm not
-to be open, you can code that part of your program in C or C\++ and then use it from your Python
+to be open, you can code that part of your program in C or C++ and then use it from your Python
 program.
 
 Embeddable ::
-You can embed Python within your C/C\++ programs to give _scripting_ capabilities for your
+You can embed Python within your C/C++ programs to give _scripting_ capabilities for your
 program's users.
 
 Extensive Libraries ::
