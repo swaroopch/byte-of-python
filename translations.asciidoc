@@ -167,7 +167,7 @@ Wisnu Priyambodo (cibermen@gmail.com) also has volunteered to translate the book
 
 Also, Bagus Aji Santoso (baguzzzaji@gmail.com) has volunteered.
 
-=== Italian
+=== Italian (first)
 
 Enrico Morelli (mr.mlucci@gmail.com) and Massimo Lucci (morelli@cerm.unifi.it) have volunteered to
 translate the book to Italian.
@@ -186,6 +186,12 @@ Managements.That's all! We are impressed by the smart language used on your Book
 is essential for approaching the Python to new users (we are thinking about hundred of students and
 researcher working on our labs).
 __________________________________________________
+
+=== Italian (second)
+
+An Italian translation has been created by
+http://besthcgdropswebsite.com/translate[Calvina Bice] & colleagues at
+http://besthcgdropswebsite.com/translate/a-byte-of-python/
 
 === Japanese
 
