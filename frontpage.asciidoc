@@ -355,7 +355,7 @@ your book and appreciate it. Thanks.
 __________________________________________________
 
 The book is even used by NASA! It is being used in their
-http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/[Jet Propulsion
+https://web.archive.org/web/20130614003212/http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/[Jet Propulsion
 Laboratory] with their Deep Space Network project.
 
 === Academic Courses
