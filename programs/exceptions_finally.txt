@@ -1,0 +1,5 @@
+$ python exceptions_finally.py
+Programming is fun
+Press ctrl+c now
+^C!! You cancelled the reading from the file.
+(Cleaning up: Closed the file)

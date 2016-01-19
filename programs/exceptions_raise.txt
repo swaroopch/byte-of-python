@@ -1,0 +1,7 @@
+$ python exceptions_raise.py
+Enter something --> a
+ShortInputException: The input was 1 long, expected at least 3
+
+$ python exceptions_raise.py
+Enter something --> abc
+No exception was raised.

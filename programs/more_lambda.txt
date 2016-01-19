@@ -1,0 +1,2 @@
+$ python more_lambda.py
+[{'y': 1, 'x': 4}, {'y': 3, 'x': 2}]
