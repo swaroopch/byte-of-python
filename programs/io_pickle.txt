@@ -1,2 +1,0 @@
-$ python io_pickle.py
-['apple', 'mango', 'carrot']

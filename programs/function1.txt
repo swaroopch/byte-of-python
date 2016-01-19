@@ -1,3 +1,0 @@
-$ python function1.py
-hello world
-hello world

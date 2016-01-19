@@ -1,3 +1,0 @@
-$ python function_param.py
-4 is maximum
-7 is maximum
