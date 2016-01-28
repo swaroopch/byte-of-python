@@ -1,6 +1,6 @@
 ```
-npm install -g gitbook
+npm install -g gitbook-cli
 gitbook serve
 ```
 
-See https://help.gitbook.com
+See https://www.npmjs.com/package/gitbook and https://help.gitbook.com
