@@ -261,7 +261,7 @@ Please note:
 
 ## Read Now
 
-You can read it online at https://swaroopch.gitbooks.io/byte-of-python/content/
+You can read it online at <http://python.swaroopch.com/>
 
 ## Buy The Book
 
