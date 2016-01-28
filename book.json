@@ -2,9 +2,9 @@
     "variables": {
         "buyBookUrl": "http://www.swaroopch.com/buybook/",
         "downloadUrl": "https://www.gitbook.com/book/swaroopch/byte-of-python/details",
-        "officialUrl": "http://www.swaroopch.com/notes/python/",
+        "officialUrl": "http://python.swaroopch.com/",
         "pythonVersion": "3.5.1",
-        "sourceUrl": "https://github.com/swaroopch/byte_of_python",
+        "sourceUrl": "https://github.com/swaroopch/byte-of-python",
         "vimBookUrl": "http://www.swaroopch.com/notes/vim/"
     }
 }
