@@ -261,7 +261,7 @@ Please note:
 
 ## Read Now
 
-You can read it online at <http://python.swaroopch.com/>
+You can read it online at {{ book.officialUrl }}
 
 ## Buy The Book
 
