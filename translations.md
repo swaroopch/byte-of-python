@@ -10,6 +10,11 @@ If you plan to start a new translation, please read the [Translation how-to](./t
 
 Below is the link for the Arabic version. Thanks to Ashraf Ali Khalaf for translating the book, you can read the whole book online at <http://www.khaledhosny.org/byte-of-python/index.html> or you can download it from [sourceforge.net](http://downloads.sourceforge.net/omlx/byteofpython_arabic.pdf?use_mirror=osdn) for more info see <http://itwadi.com/byteofpython_arabi>.
 
+## Azerbaijani
+
+Jahangir Shabiyev (c.shabiev@gmail.com) has volunteered to translate the book to Azerbaijani. The translation is in progress.
+
+
 ## Brazilian Portuguese
 
 There are two translations in various levels of completion and accessibility. The older translation is now missing/lost, and newer translation is incomplete.
@@ -23,13 +28,13 @@ Samuel Dias Neto (samuel.arataca@gmail.com) made the first Brazilian Portuguese 
 Moises Gomez (moisesgomezgiron@gmail.com) has volunteered to translate the book to Catalan. The translation is in progress.
 
 > Moisès Gómez - I am a developer and also a teacher of programming (normally for people without any previous experience).
-> 
+>
 > Some time ago I needed to learn how to program in Python, and Swaroop's work was really helpful. Clear, concise, and complete enough. Just what I needed.
-> 
+>
 > After this experience, I thought some other people in my country could take benefit from it too. But English language can be a barrier.
-> 
+>
 > So, why not try to translate it? And I did for a previous version of BoP.
-> 
+>
 > I my country there are two official languages. I selected the Catalan language assuming that others will translate it to the more widespread Spanish.
 
 ## Chinese
@@ -39,7 +44,7 @@ Translations are available at <http://woodpecker.org.cn/abyteofpython_cn/chinese
 Juan Shen (orion_val@163.com) has volunteered to translate the book to Chinese.
 
 > I am a postgraduate at Wireless Telecommunication Graduate School, Beijing University of Technology, China PR. My current research interest is on the synchronization, channel estimation and multi-user detection of multicarrier CDMA system. Python is my major programming language for daily simulation and research job, with the help of Python Numeric, actually. I learned Python just half a year before, but as you can see, it's really easy-understanding, easy-to-use and productive. Just as what is ensured in Swaroop's book, 'It's my favorite programming language now'.
-> 
+>
 > 'A Byte of Python' is my tutorial to learn Python. It's clear and effective to lead you into a world of Python in the shortest time. It's not too long, but efficiently covers almost all important things in Python. I think 'A Byte of Python' should be strongly recommendable for newbies as their first Python tutorial. Just dedicate my translation to the potential millions of Python users in China.
 
 ## Chinese Traditional
@@ -51,13 +56,13 @@ It is available at <http://code.google.com/p/zhpy/wiki/ByteOfZhpy>.
 An exciting feature of this translation is that it also contains the _executable chinese python sources_ side by side with the original python sources.
 
 > Fred Lin - I'm working as a network firmware engineer at Delta Network, and I'm also a contributor of TurboGears web framework.
-> 
+>
 > As a python evangelist (:-p), I need some material to promote python language. I found 'A Byte of Python' hit the sweet point for both newbies and experienced programmers. 'A Byte of Python' elaborates the python essentials with affordable size.
-> 
+>
 > The translation are originally based on simplified chinese version, and soon a lot of rewrite were made to fit the current wiki version and the quality of reading.
-> 
+>
 > The recent chinese traditional version also featured with executable chinese python sources, which are achieved by my new 'zhpy' (python in chinese) project (launch from Aug 07).
-> 
+>
 > zhpy(pronounce (Z.H.?, or zippy) build a layer upon python to translate or interact with python in chinese(Traditional or Simplified). This project is mainly aimed for education.
 
 ## French
@@ -114,13 +119,13 @@ Shunro Dozono (dozono@gmail.com) is translating the book to Japanese.
 Jeongbin Park (pjb7687@gmail.com) has translated the book to Korean - <https://github.com/pjb7687/byte_of_python>
 
 > I am Jeongbin Park, currently working as a Biophysics & Bioinformatics researcher in Korea.
-> 
+>
 > A year ago, I was looking for a good tutorial/guide for Python to introduce it to my colleagues, because using Python in such research fields is becoming inevitable due to the user base is growing more and more.
-> 
+>
 > But at that time only few Python books are available in Korean, so I decided to translate your ebook because it looks like one of the best guides that I have ever read!
-> 
+>
 > Currently, the book is almost completely translated in Korean, except some of the text in introduction chapter and the appendixes.
-> 
+>
 > Thank you again for writing such a good guide!
 
 ## Mongolian
