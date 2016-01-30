@@ -12,7 +12,7 @@ Below is the link for the Arabic version. Thanks to Ashraf Ali Khalaf for transl
 
 ## Azerbaijani
 
-Jahangir Shabiyev (c.shabiev@gmail.com) has volunteered to translate the book to Azerbaijani. The translation is in progress.
+Jahangir Shabiyev (c.shabiev@gmail.com) has volunteered to translate the book to Azerbaijani. The translation is in progress at https://www.gitbook.com/book/jahangir-sh/piton-sancmasi
 
 
 ## Brazilian Portuguese
