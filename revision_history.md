@@ -12,7 +12,7 @@ In the true spirit of open source, I have received lots of constructive suggesti
 
 ## Status Of The Book
 
-The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author](http://www.swaroopch.com/contact/) or the respective [translators](./translations.md#translations) with your comments and suggestions.
+The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author]({{ book.contactUrl }}) or the respective [translators](./translations.md#translations) with your comments and suggestions.
 
 # Appendix: Revision History {#revision-history}
 

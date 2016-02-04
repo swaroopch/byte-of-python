@@ -1,10 +1,12 @@
 {
     "variables": {
+        "authorUrl": "http://www.swaroopch.com/about/",
         "buyBookUrl": "http://www.swaroopch.com/buybook/",
+        "contactUrl": "http://www.swaroopch.com/contact/",
         "downloadUrl": "https://www.gitbook.com/book/swaroopch/byte-of-python/details",
         "officialUrl": "http://python.swaroopch.com/",
         "pythonVersion": "3.5.1",
         "sourceUrl": "https://github.com/swaroopch/byte-of-python",
-        "vimBookUrl": "http://www.swaroopch.com/notes/vim/"
+        "vimBookUrl": "http://vim.swaroopch.com/"
     }
 }

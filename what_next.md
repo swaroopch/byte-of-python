@@ -8,7 +8,7 @@ I would suggest that you tackle this problem:
 
 This is fairly easy if you think about it in terms of all the various stuff that we have come across till now. If you still want directions on how to proceed, then here's a hint [^1].
 
-Once you are able to do this, you can claim to be a Python programmer. Now, immediately [send me an email](http://www.swaroopch.com/contact/) thanking me for this great book ;-). This step is optional but recommended. Also, please consider [buying a printed copy](http://www.swaroopch.com/buybook/) to support the continued development of this book.
+Once you are able to do this, you can claim to be a Python programmer. Now, immediately [send me an email]({{ book.contactUrl }}) thanking me for this great book ;-). This step is optional but recommended. Also, please consider [buying a printed copy]({{ book.buyBookUrl }}) to support the continued development of this book.
 
 If you found that program easy, here's another one:
 

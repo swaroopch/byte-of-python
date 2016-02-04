@@ -18,7 +18,7 @@ In the sixth draft, I decided to use Quanta+ to do all the editing. The standard
 
 For the seventh draft, I was using [MediaWiki](http://www.mediawiki.org) as the basis of my setup. I used to edit everything online and the readers can directly read/edit/discuss within the wiki website, but I ended up spending more time fighting spam than writing.
 
-For the eight draft, I used [Vim](http://www.swaroopch.com/notes/vim), [Pandoc](http://johnmacfarlane.net/pandoc/README.html), and Mac OS X.
+For the eight draft, I used [Vim]({{ book.vimBookUrl }}), [Pandoc](http://johnmacfarlane.net/pandoc/README.html), and Mac OS X.
 
 For the ninth draft, I switched to [AsciiDoc format](http://asciidoctor.org/docs/what-is-asciidoc/) and used [Emacs 24.3](http://www.masteringemacs.org/articles/2013/03/11/whats-new-emacs-24-3/),
 [tomorrow theme](https://github.com/chriskempson/tomorrow-theme),
@@ -32,4 +32,4 @@ For the tenth draft, I switched to writing in Markdown + [GitBook](https://www.g
 
 ## About the Author
 
-See http://www.swaroopch.com/about/
+See {{ book.authorUrl }}
