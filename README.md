@@ -279,4 +279,4 @@ Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, chan
 
 ## Read the book in your native language
 
-If you are interested in reading or contributing translations of this book to other human languages, please see "Translations" chapter.
+If you are interested in reading or contributing translations of this book to other human languages, please see [Translations](./translations.md#translations).
