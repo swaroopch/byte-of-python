@@ -38,8 +38,12 @@ Here is a quick overview of the available operators:
 
 - `/` (divide)
     - Divide x by y
-    - `13 / 3` gives `4`.
-    - `13.0 / 3` gives `4.333333333333333`
+    - `13 / 3` gives `4.333333333333333`
+
+- `//` (divide and floor)
+    - Divide x by y and round the answer _down_ to the nearest whole number
+    - `13 // 3` gives `4`
+    - `-13 // 3` gives `-5`
 
 - `%` (modulo)
     - Returns the remainder of the division
