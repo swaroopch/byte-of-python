@@ -41,6 +41,7 @@ The best way to learn a programming language is to write a lot of code and read 
 
 ## Videos
 
+- [Full Stack Web Development with Flask](https://github.com/realpython/discover-flask)
 - [PyVideo](http://www.pyvideo.org)
 
 ## Questions and Answers
