@@ -20,7 +20,7 @@ After analyzing the problem properly, we *design* our program. We make a list of
 
 > **For Windows users**
 > 
-> Windows users can http://gnuwin32.sourceforge.net/downlinks/zip.php[install] the `zip` command from the http://gnuwin32.sourceforge.net/packages/zip.htm[GnuWin32 project page] and add `C:\Program Files\GnuWin32\bin` to your system `PATH` environment variable, similar to [what we did for recognizing the python command itself](./installation.md#dos-prompt).
+> Windows users can [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) the `zip` command from the [GnuWin32 project page](http://gnuwin32.sourceforge.net/packages/zip.htm) and add `C:\Program Files\GnuWin32\bin` to your system `PATH` environment variable, similar to [what we did for recognizing the python command itself](./installation.md#dos-prompt).
 
 ## The Solution
 
