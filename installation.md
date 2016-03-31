@@ -4,9 +4,18 @@ When we refer to "Python 3" in this book, we will be referring to any version of
 
 ## Installation on Windows
 
-Visit https://www.python.org/downloads/ and download the latest version. The installation is just like any other Windows-based software.
+Visit https://www.python.org/downloads/ and download the latest version. At the time of this writing, it was Python 3.5.1 
+The installation is just like any other Windows-based software.
 
-CAUTION: When you are given the option of unchecking any "optional" components, don't uncheck any.
+CAUTION: Make sure you check option `Add Python 3.5 to PATH`.
+
+To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` as install location.
+
+If not checked, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
+
+You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
+
+If your path was not set corectly, then follow these steps to fix it. Otherwise, go to `Running Python prompt on Windows`.
 
 NOTE: For people who already know programming, if you are familiar with Docker, check out [Python in Docker](https://hub.docker.com/_/python/) and [Docker on Windows](https://docs.docker.com/windows/).
 
@@ -32,7 +41,7 @@ For Windows Vista:
 For Windows 7 and 8:
 
 - Right click on Computer from your desktop and select `Properties` or click `Start` and choose `Control Panel` -> `System and Security` -> `System`. Click on `Advanced system settings` on the left and then click on the `Advanced` tab. At the bottom click on `Environment Variables` and under `System variables`, look for the `PATH` variable, select and then press `Edit`.
-- Go to the end of the line under Variable value and append `;C:\Python27` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate folder name.
+- Go to the end of the line under Variable value and append `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate folder name.
 - If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python35` <!-- The directory should match pythonVersion variable in book.json -->
 - Click `OK` and you are done. No restart is required, however you may have to close and reopen the command line.
 
@@ -42,7 +51,7 @@ For Windows users, you can run the interpreter in the command line if you have [
 
 To open the terminal in Windows, click the start button and click `Run`. In the dialog box, type `cmd` and press `[enter]` key.
 
-Then, type `python3` and ensure there are no errors.
+Then, type `python` and ensure there are no errors.
 
 ## Installation on Mac OS X
 
