@@ -15,7 +15,7 @@ If not checked, check `Add Python to environment variables`. This does the same 
 
 You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
 
-If your path was not set corectly, then follow these steps to fix it. Otherwise, go to `Running Python prompt on Windows`.
+If your path was not set correctly, then follow these steps to fix it. Otherwise, go to `Running Python prompt on Windows`.
 
 NOTE: For people who already know programming, if you are familiar with Docker, check out [Python in Docker](https://hub.docker.com/_/python/) and [Docker on Windows](https://docs.docker.com/windows/).
 
