@@ -77,7 +77,7 @@ Here is a quick overview of the available operators:
 
 - `<` (less than)
     - Returns whether x is less than y. All comparison operators return `True` or `False`. Note the capitalization of these names.
-    - `5 &lt; 3` gives `False` and `3 &lt; 5` gives `True`.
+    - `5 < 3` gives `False` and `3 < 5` gives `True`.
     - Comparisons can be chained arbitrarily: `3 < 5 < 7` gives `True`.
 
 - `>` (greater than)

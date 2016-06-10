@@ -48,7 +48,7 @@ Some useful special methods are listed in the following table. If you want to kn
     - Called when we use the `print` function or when `str()` is used.
 
 - `__lt__(self, other)`
-    - Called when the _less than_ operator (&lt;) is used. Similarly, there are special methods for all the operators (+, >, etc.)
+    - Called when the _less than_ operator (<) is used. Similarly, there are special methods for all the operators (+, >, etc.)
 
 - `__getitem__(self, key)`
     - Called when `x[key]` indexing operation is used.
