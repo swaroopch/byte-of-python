@@ -5,7 +5,7 @@ def total(a=5, *numbers, **phonebook):
     for single_item in numbers:
         print('single_item', single_item)
         
-    #iterate through all items in dictionary    
+    #iterate through all the items in dictionary    
     for first_part, second_part in phonebook.items():
         print(first_part,second_part)
 
