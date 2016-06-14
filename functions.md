@@ -175,7 +175,7 @@ The `maximum` function returns the maximum of the parameters, in this case the n
 
 Note that a `return` statement without a value is equivalent to `return None`. `None` is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of `None`.
 
-Every function implicitly contains a `return None` statement at the end unless you have written your own `return` statement. You can see this by running `print some_function()` where the function `some_function` does not use the `return` statement such as:
+Every function implicitly contains a `return None` statement at the end unless you have written your own `return` statement. You can see this by running `print(some_function())` where the function `some_function` does not use the `return` statement such as:
 
 ```python
 def some_function():
