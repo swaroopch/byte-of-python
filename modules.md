@@ -123,9 +123,12 @@ This will import all public names such as `say_hi` but would not import `__versi
 
 ## The `dir` function {#dir-function}
 
-You can use the built-in `dir` function to list the identifiers that an object defines. For example, for a module, the identifiers include the functions, classes and variables defined in that module.
+Built-in `dir()` function returns list of names defined by an object.
+If the object is a module, this list includes functions, classes and variables, defined inside that module.
 
-When you supply a module name to the`dir()` function, it returns the list of the names defined in that module. When no argument is applied to it, it returns the list of names defined in the current module.
+This function can accept arguments.
+If the argument is the name of the module, function returns list of names from that specified module.
+If there is no argument, function returns list of names from the current module.
 
 Example:
 
