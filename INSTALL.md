@@ -3,4 +3,4 @@ npm install -g gitbook-cli
 gitbook serve
 ```
 
-See https://www.npmjs.com/package/gitbook and https://help.gitbook.com
+See http://toolchain.gitbook.com/
