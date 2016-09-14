@@ -32,7 +32,7 @@ If you are using an IDE to write and run these programs, look for a way to speci
 
 Here, when we execute `python module_using_sys.py we are arguments`, we run the module `module_using_sys.py` with the `python` command and the other things that follow are arguments passed to the program. Python stores the command line arguments in the `sys.argv` variable for us to use.
 
-Remember, the name of the script running is always the first argument in the `sys.argv` list. So, in this case we will have `'module_using_sys.py'` as `sys.argv[0]`, `'we'` as `sys.argv[1]`, `'are'` as `sys.argv[2]` and `'arguments'` as `sys.argv[3]`. Notice that Python starts counting from 0 and not 1.
+Remember, the name of the script running is always the first element in the `sys.argv` list. So, in this case we will have `'module_using_sys.py'` as `sys.argv[0]`, `'we'` as `sys.argv[1]`, `'are'` as `sys.argv[2]` and `'arguments'` as `sys.argv[3]`. Notice that Python starts counting from 0 and not 1.
 
 The `sys.path` contains the list of directory names where modules are imported from. Observe that the first string in `sys.path` is empty - this empty string indicates that the current directory is also part of the `sys.path` which is same as the `PYTHONPATH` environment variable. This means that you can directly import modules located in the current directory. Otherwise, you will have to place your module in one of the directories listed in `sys.path`.
 
