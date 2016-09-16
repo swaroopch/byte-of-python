@@ -49,9 +49,9 @@ zip_command = "zip -r {0} {1}".format(target,
                                       ' '.join(source))
 
 # Run the backup
-print("Zip command is:")
+print('Zip command is:')
 print(zip_command)
-print("Running:")
+print('Running:')
 if os.system(zip_command) == 0:
     print('Successful backup to', target)
 else:
