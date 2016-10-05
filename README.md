@@ -242,6 +242,7 @@ This book is/was being used as instructional material in various educational ins
 - 'Multi Agent Semantic Web Systems' course at the [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/)
 - 'Introduction to Computer Science and Programming' at [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)
 - 'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' -- [Aleš Žiberna](mailto:ales.ziberna@fdv.uni-lj.si) says _"I (and my predecessor) have been using your book as the main literature for this course"_
+-  'Introduction to programming', Department of Information Sciences, University of Zadar, Croatia -- Krešimir Zauder says _"I would like to inform you that A Byte of Python is a mandatory read at my course"_
 
 ## License
 
