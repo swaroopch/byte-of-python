@@ -21,7 +21,7 @@ Observe that a `NameError` is raised and also the location where the error was d
 
 ## Exceptions
 
-We will **try** to read input from the user. Press `[ctrl-d]` and see what happens.
+We will **try** to read input from the user. Press `[ctrl-d]`, (or `[ctrl-z]` if you are using Windows), and see what happens.
 
 ```python
 >>> s = input('Enter something --> ')
