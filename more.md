@@ -126,6 +126,7 @@ Because we have a `*` prefix on the `args` variable, all extra arguments passed 
 ## The assert statement {#assert}
 
 The `assert` statement is used to assert that something is true. For example, if you are very sure that you will have at least one element in a list you are using and want to check this, and raise an error if it is not true, then `assert` statement is ideal in this situation. When the assert statement fails, an `AssertionError` is raised.
+The `pop()` method removes and returns the last item from the list.
 
 ```python
 >>> mylist = ['item']
