@@ -39,6 +39,8 @@ Moises Gomez (moisesgomezgiron@gmail.com) has volunteered to translate the book 
 
 ## Chinese
 
+**The following URLs are unavailable now.**
+
 Translations are available at <http://woodpecker.org.cn/abyteofpython_cn/chinese/> and <http://zhgdg.gitcafe.com/static/doc/byte_of_python.html>.
 
 Juan Shen (orion_val@163.com) has volunteered to translate the book to Chinese.
