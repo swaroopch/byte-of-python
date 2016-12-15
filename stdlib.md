@@ -27,7 +27,7 @@ True
 
 The `sys` module has a `version_info` tuple that gives us the version information. The first entry is the major version. We can pull out this information to use it.
 
-## logging module {#logging}
+## `logging` module {#logging}
 
 What if you wanted to have some debugging messages or important messages to be stored somewhere so that you can check whether your program has been running as you would expect it? How do you "store somewhere" these messages? This can be achieved using the `logging` module.
 
