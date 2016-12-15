@@ -226,7 +226,7 @@ Here are what people are saying about the book:
 > I also saw that you do not mind that readers send you a thank note in your book. So I really like your book and appreciate it. Thanks.
 > -- [Isen I-Chun Chao](mailto:chao926@gmail.com)
 
-The book is even used by NASA! It is used in their [Jet Propulsion Laboratory](http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/) with their Deep Space Network project.
+The book is even used by NASA! It is used in their [Jet Propulsion Laboratory](https://web.archive.org/web/20130614003212/http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/) with their Deep Space Network project.
 
 ## Academic Courses
 
