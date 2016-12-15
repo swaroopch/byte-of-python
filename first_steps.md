@@ -142,7 +142,7 @@ your Python programs:
 
 - `/tmp/py` on Mac OS X
 - `/tmp/py` on GNU/Linux
-- `C:\\py` on Windows
+- `C:\py` on Windows
 
 To create the above folder (for the operating system you are using), use the `mkdir` command in the terminal, for example, `mkdir /tmp/py`.
 
