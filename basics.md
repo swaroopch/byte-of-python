@@ -307,7 +307,7 @@ Here's how this program works. First, we assign the literal constant value `5` t
 
 Then we add `1` to the value stored in `i` and store it back. We then print it and expectedly, we get the value `6`.
 
-Similarly, we assign the literal string to the variable +s+ and then print it.
+Similarly, we assign the literal string to the variable `s` and then print it.
 
 > **Note for static language programmers**
 > 
