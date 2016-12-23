@@ -111,7 +111,7 @@ This is a long example but helps demonstrate the nature of class and object vari
 
 Thus, we refer to the `population` class variable as `Robot.population` and not as `self.population`. We refer to the object variable `name` using `self.name` notation in the methods of that object. Remember this simple difference between class and object variables. Also note that an object variable with the same name as a class variable will hide the class variable!
 
-Instead of `Robot.population`, we could have also used `self.__class__.population` because every object refers to it's class via the `self.__class__` attribute.
+Instead of `Robot.population`, we could have also used `self.__class__.population` because every object refers to its class via the `self.__class__` attribute.
 
 The `how_many` is actually a method that belongs to the class and not to the object. This means we can define it as either a `classmethod` or a `staticmethod` depending on whether we need to know which class we are part of. Since we refer to a class variable, let's use `classmethod`.
 
