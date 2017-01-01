@@ -165,7 +165,9 @@ Output:
 
 **How It Works**
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition. Next, we observe that the `__init__` method of the base class is explicitly called using the `self` variable so that we can initialize the base class part of the object. This is very important to remember - Python does not automatically call the constructor of the base class, you have to explicitly call it yourself.
+To use inheritance, we specify the base class names in a tuple following the class name in the class definition. Next, we observe that the `__init__` method of the base class is explicitly called using the `self` variable so that we can initialize the base class part of the object. This is very important to remember - Since we are defining a `__init__` method in `Teacher` and `Student` subclasses, Python does not automatically call the constructor of the base class `SchoolMember`, you have to explicitly call it yourself.
+
+In contrast, if we have _not_ defined an `__init__` method in a subclass, Python will call the constructor of the base class automatically.
 
 We also observe that we can call methods of the base class by prefixing the class name to the method call and then pass in the `self` variable along with any arguments.
 
