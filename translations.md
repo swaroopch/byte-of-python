@@ -39,11 +39,21 @@ Moises Gomez (moisesgomezgiron@gmail.com) has volunteered to translate the book 
 
 ## Chinese
 
-**The following URLs are unavailable now.**
+In 2017 which is after 11 years, Mo Lun (i@molun.net) re-translated the book from the beginning based on Version 4.0. And the translation is storaged in GitHub and Gitbook. He is keeping follow this translated edition and ready to fix it if there is any wrong or mistake in the translated BoP.
 
-Translations are available at <http://woodpecker.org.cn/abyteofpython_cn/chinese/> and <http://zhgdg.gitcafe.com/static/doc/byte_of_python.html>.
+The 2017 translation edition is available in <https://bop.molun.net>.
 
-Juan Shen (orion_val@163.com) has volunteered to translate the book to Chinese.
+Mo Lun Says:
+
+> I am a common journalism student from CYU, Beijing. And actually, I am an absolute newbie in Python programming when I start to translate this book. Initially, it was just a whim, but when I done this work, I realized that a decision triggered by interest had prompted me to go so far.
+> With the help of my predecessors’ translations and the vast amount of information provided by the developed Internet, and with the help of my friends, I prudently presented this translation edition. I just hope my translation work will help other newcomers in learning Python.
+> At the same time, I am always waiting for my translation of the comments and suggestions, and ready to change or improve this superficial work.
+
+### Earlier Chinese translation
+
+In 2005, Shen Jieyuan translated this book with version 1.20 to Chinese and published it to the Internet. This is the first Chinese edition. In BoP official site, he was called Juan Shen, with Email adderss orion_val@163.com。This edition has been disseminated on the network widely, and the links provided by BoP official site are not available anymore, so that its original source is unable to find. Therefore in here can’t provide a certain address. But you can try to search keywords like “简明Python教程 沈洁元” to find a copy.
+
+Juan Shen says:
 
 > I am a postgraduate at Wireless Telecommunication Graduate School, Beijing University of Technology, China PR. My current research interest is on the synchronization, channel estimation and multi-user detection of multicarrier CDMA system. Python is my major programming language for daily simulation and research job, with the help of Python Numeric, actually. I learned Python just half a year before, but as you can see, it's really easy-understanding, easy-to-use and productive. Just as what is ensured in Swaroop's book, 'It's my favorite programming language now'.
 >
