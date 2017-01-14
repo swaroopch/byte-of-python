@@ -46,7 +46,9 @@ The 2017 translation edition is available in <https://bop.molun.net>.
 Mo Lun Says:
 
 > I am a common journalism student from CYU, Beijing. And actually, I am an absolute newbie in Python programming when I start to translate this book. Initially, it was just a whim, but when I done this work, I realized that a decision triggered by interest had prompted me to go so far.
+>
 > With the help of my predecessors’ translations and the vast amount of information provided by the developed Internet, and with the help of my friends, I prudently presented this translation edition. I just hope my translation work will help other newcomers in learning Python.
+>
 > At the same time, I am always waiting for my translation of the comments and suggestions, and ready to change or improve this superficial work.
 
 ### Earlier Chinese translation
