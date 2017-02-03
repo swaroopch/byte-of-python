@@ -44,7 +44,7 @@ For Windows 7 and 8:
 
 - Right click on Computer from your desktop and select `Properties` or click `Start` and choose `Control Panel` -> `System and Security` -> `System`. Click on `Advanced system settings` on the left and then click on the `Advanced` tab. At the bottom click on `Environment Variables` and under `System variables`, look for the `PATH` variable, select and then press `Edit`.
 - Go to the end of the line under Variable value and append `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate folder name.
-- If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python35` <!-- The directory should match pythonVersion variable in book.json -->
+- If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python36` <!-- The directory should match pythonVersion variable in book.json -->
 - Click `OK` and you are done. No restart is required, however you may have to close and reopen the command line.
 
 ### Running Python prompt on Windows
@@ -72,7 +72,7 @@ You can see the version of Python on the screen by running:
 <!-- The output should match pythonVersion variable in book.json -->
 ```
 $ python3 -V
-Python 3.5.1
+Python 3.6.0
 ```
 
 NOTE: `$` is the prompt of the shell. It will be different for you depending on the settings of the operating system on your computer, hence I will indicate the prompt by just the `$` symbol.

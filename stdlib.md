@@ -18,7 +18,7 @@ Suppose we want to check the version of the Python software being used, the `sys
 ```python
 >>> import sys
 >>> sys.version_info
-sys.version_info(major=3, minor=5, micro=1, releaselevel='final', serial=0)
+sys.version_info(major=3, minor=6, micro=0, releaselevel='final', serial=0)
 >>> sys.version_info.major == 3
 True
 ```

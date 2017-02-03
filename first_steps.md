@@ -22,9 +22,9 @@ Here is an example of what you should be seeing, when using a Mac OS X computer.
 
 <!-- The output should match pythonVersion variable in book.json -->
 ```python
-> python3
-Python 3.5.1 (default, Jan 14 2016, 06:54:11)
-[GCC 4.2.1 Compatible Apple LLVM 7.0.2 (clang-700.1.81)] on darwin
+$ python3
+Python 3.6.0 (default, Jan 12 2017, 11:26:36)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> print("Hello World")
 Hello World
