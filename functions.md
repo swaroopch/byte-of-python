@@ -22,10 +22,9 @@ Notice that we can call the same function twice which means we do not have to wr
 
 ## Function Parameters
 
-A function can take parameters, which are values you supply to the function so that the function
-can *do* something utilising those values. These parameters are just like variables except that the
-values of these variables are defined when we call the function and are already assigned values
-when the function runs.
+A function can take parameters, which are values you supply to the function, so that the function
+can *do* something utilising those values. These parameters are just like variables, except when 
+we call the function, the values of these variables are already defined.
 
 Parameters are specified within the pair of parentheses in the function definition, separated by
 commas. When we call the function, we supply the values in the same way.  Note the terminology
