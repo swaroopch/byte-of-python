@@ -89,7 +89,9 @@ Gérard Labadie (gerard.labadie@gmail.com) has completed to translate the book t
 
 Lutz Horn (lutz.horn@gmx.de), Bernd Hengelein (bernd.hengelein@gmail.com) and Christoph Zwerschke (cito@online.de) have volunteered to translate the book to German.
 
-Their translation is located at <http://ftp.jaist.ac.jp/pub//sourceforge/a/ab/abop-german.berlios/>
+Translation can be found at http://cito.github.io/byte_of_python/
+
+<!-- Their translation was located at http://ftp.jaist.ac.jp/pub//sourceforge/a/ab/abop-german.berlios/ -->
 
 Lutz Horn says:
 
