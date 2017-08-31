@@ -68,7 +68,7 @@ Here we see the `self` in action. Notice that the `say_hi` method takes no param
 
 There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
 
-The `__init__` method is run as soon as an object of a class is instantiated. The method is useful to do any *initialization* you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
+The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any *initialization* (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
 
 Example (save as `oop_init.py`):
 
@@ -117,7 +117,7 @@ The `how_many` is actually a method that belongs to the class and not to the obj
 
 We have marked the `how_many` method as a class method using a [decorator](./more.md#decorator).
 
-Decorators can be imagined to be a shortcut to calling a wrapper function, so applying the `@classmethod` decorator is same as calling:
+Decorators can be imagined to be a shortcut to calling a wrapper function (i.e. a function that "wraps" around another function so that it can do something before or after the inner function), so applying the `@classmethod` decorator is the same as calling:
 
 ```python
 how_many = classmethod(how_many)
@@ -147,9 +147,9 @@ Suppose you want to write a program which has to keep track of the teachers and 
 
 You can create two independent classes for each type and process them but adding a new common characteristic would mean adding to both of these independent classes. This quickly becomes unwieldy.
 
-A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
+A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class, i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
 
-There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that if you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected i.e. the object can be treated as an instance of the parent class.
+There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected, i.e. the object can be treated as an instance of the parent class.
 
 Also observe that we reuse the code of the parent class and we do not need to repeat it in the different classes as we would have had to in case we had used independent classes.
 
