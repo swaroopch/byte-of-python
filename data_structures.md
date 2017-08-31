@@ -50,7 +50,7 @@ Tuples are used to hold together multiple objects. Think of them as similar to l
 
 Tuples are defined by specifying items separated by commas within an optional pair of parentheses.
 
-Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values i.e. the tuple of values used will not change.
+Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values (i.e. the tuple of values used) will not change.
 
 Example (save as `ds_using_tuple.py`):
 
@@ -187,7 +187,7 @@ True
 
 **How It Works**
 
-The example is pretty much self-explanatory because it involves basic set theory mathematics taught in school.
+If you remember basic set theory mathematics from school, then this example is fairly self-explanatory.  But if not, I’d encourage you to google this topic as a general understanding in set theory and the Venn diagram will help you make better use of sets in Python.
 
 ## References
 
