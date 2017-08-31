@@ -1,4 +1,4 @@
-# Problem Solving
+﻿# Problem Solving
 
 We have explored various parts of the Python language and now we will take a look at how all these parts fit together, by designing and writing a program which _does_ something useful. The idea is to learn how to write a Python script on your own.
 
@@ -44,13 +44,13 @@ You will notice how we have converted our *design* into *code* in a step-by-step
 
 We make use of the `os` and `time` modules by first importing them. Then, we specify the files and directories to be backed up in the `source` list. The target directory is where we store all the backup files and this is specified in the `target_dir` variable. The name of the zip archive that we are going to create is the current date and time which we generate using the `time.strftime()` function. It will also have the `.zip` extension and will be stored in the `target_dir` directory.
 
-Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system i.e. it will be `'/'` in GNU/Linux, Unix, macOS, and will be `'\\'` in Windows. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
+Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system, i.e. it will be `'/'` in GNU/Linux, Unix, macOS, and will be `'\\'` in Windows. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
 
 The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/3/library/time.html#time.strftime).
 
 We create the name of the target zip file using the addition operator which _concatenates_ the strings i.e. it joins the two strings together and returns a new one. Then, we create a string `zip_command` which contains the command that we are going to execute. You can check if this command works by running it in the shell (GNU/Linux terminal or DOS prompt).
 
-The `zip` command that we are using has some options and parameters passed. The `-r` option specifies that the zip command should work **r**ecursively for directories i.e. it should include all the subdirectories and files. The two options are combined and specified in a shortcut as `-qr`. The options are followed by the name of the zip archive to create followed by the list of files and directories to backup. We convert the `source` list into a string using the `join` method of strings which we have already seen how to use.
+The `zip` command that we are using has some options available, and one of these options is `-r`.  The `-r` option specifies that the zip command should work **r**ecursively for directories, i.e. it should include all the subdirectories and files. Options are followed by the name of the zip archive to create, followed by the list of files and directories to backup. We convert the `source` list into a string using the `join` method of strings which we have already seen how to use.
 
 Then, we finally *run* the command using the `os.system` function which runs the command as if it was run from the *system* i.e. in the shell - it returns `0` if the command was successfully, else it returns an error number.
 
@@ -122,7 +122,7 @@ However, if a comment was supplied, then this is attached to the name of the zip
 
 ## More Refinements
 
-The fourth version is a satisfactorily working script for most users, but there is always room for improvement. For example, you can include a _verbosity_ level for the program where you can specify a `-v` option to make your program become more talkative or a `-q` to make it _quiet_.
+The fourth version is a satisfactorily working script for most users, but there is always room for improvement. For example, you can include a _verbosity_ level for the zip command by specifying a `-v` option to make your program become more talkative or a `-q` option to make it _quiet_.
 
 Another possible enhancement would be to allow extra files and directories to be passed to the script at the command line. We can get these names from the `sys.argv` list and we can add them to our `source` list using the `extend` method provided by the `list` class.
 
