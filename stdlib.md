@@ -39,7 +39,7 @@ Output:
 
 <pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
 
-If you do not have the `cat` command, then you can just open the `test.log` file in a text editor.
+I've used the `cat` command in the command line to read the 'test.log' file, but if you don't have the `cat` command, you can just open the `test.log` file in a text editor.
 
 **How It Works**
 
@@ -47,7 +47,7 @@ We use three modules from the standard library - the `os` module for interacting
 
 First, we check which operating system we are using by checking the string returned by `platform.platform()` (for more information, see `import platform; help(platform)`). If it is Windows, we figure out the home drive, the home folder and the filename where we want to store the information. Putting these three parts together, we get the full location of the file. For other platforms, we need to know just the home folder of the user and we get the full location of the file.
 
-We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system.
+We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system.  Note: the `join()' method we use here that's part of the `os` module is different from the string method `join()` that we've used elsewhere in this book.
 
 We configure the `logging` module to write all the messages in a particular format to the file we have specified.
 
