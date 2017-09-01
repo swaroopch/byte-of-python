@@ -44,19 +44,17 @@ Output:
 
 **How It Works**
 
-First, open a file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
 
-In our example, we first open the file in write text mode and use the `write` method of the file object to write to the file and then we finally `close` the file.
+In our example, we first open/create the file in write text mode and use the `write` method of the file object to write  our string variable `poem` to the file and then we finally `close` the file.
 
 Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the `readline` method in a loop. This method returns a complete line including the newline character at the end of the line. When an _empty_ string is returned, it means that we have reached the end of the file and we 'break' out of the loop.
 
 In the end, we finally `close` the file.
 
-Now, check the contents of the `poem.txt` file to confirm that the program has indeed written to and read from that file.
 
 ## Pickle
 
-Python provides a standard module called `pickle` using which you can store _any_ plain Python object in a file and then get it back later. This is called storing the object *persistently*.
+Python provides a standard module called `pickle` which you can use to store _any_ plain Python object in a file and then get it back later. This is called storing the object *persistently*.
 
 Example (save as `io_pickle.py`):
 
