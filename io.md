@@ -44,6 +44,7 @@ Output:
 
 **How It Works**
 
+Note that we can create a new file object simply by using the `open` method.  We open (or create it if it doesn't already exist) this file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
 
 In our example, we first open/create the file in write text mode and use the `write` method of the file object to write  our string variable `poem` to the file and then we finally `close` the file.
 
@@ -51,6 +52,7 @@ Next, we open the same file again for reading. We don't need to specify a mode b
 
 In the end, we finally `close` the file.
 
+We can see from our `readline` output that this program has indeed written to and read from our new `poem.txt` file.
 
 ## Pickle
 
