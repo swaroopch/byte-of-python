@@ -74,7 +74,6 @@ Next, we retrieve the object using the `load` function of the `pickle` module wh
 
 ## Unicode
 
-So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.
 
 > NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
 
@@ -89,13 +88,12 @@ So far, when we have been writing and using strings, or reading and writing to a
 <class 'str'>
 ```
 
-When we read or write to a file or when we talk to other computers on the Internet, we need to convert our unicode strings into a format that can be sent and received, and that format is called "UTF-8". We can read and write in that format, using a simple keyword argument to our standard `open` function:
+The rules for translating Unicode into bytes (which is what computers use to process info) is called encoding.  Encoding is important when you want to send and receive info from other computers, and a popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open function`.
 
 <pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
 **How It Works**
 
-You can ignore the `import` statement for now, we'll explore that in detail in the [modules chapter](./modules.md#modules).
 
 Whenever we write a program that uses Unicode literals like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put `# encoding=utf-8` comment at the top of our program.
 
