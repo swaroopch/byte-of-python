@@ -74,6 +74,7 @@ Next, we retrieve the object using the `load` function of the `pickle` module wh
 
 ## Unicode
 
+So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  
 
 > NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
 
@@ -94,10 +95,9 @@ The rules for translating Unicode into bytes (which is what computers use to pro
 
 **How It Works**
 
+We use  io.open  and then use the `encoding` argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.
 
-Whenever we write a program that uses Unicode literals like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put `# encoding=utf-8` comment at the top of our program.
-
-We use `io.open` and provide the "encoding" and "decoding" argument to tell Python that we are using unicode.
+Whenever we write a program that uses Unicode literals (by putting a `u` before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  `# encoding=utf-8`  comment at the top of our program.  
 
 You should learn more about this topic by reading:
 
