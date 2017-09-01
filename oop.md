@@ -165,19 +165,14 @@ Output:
 
 **How It Works**
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition. Next, we observe that the `__init__` method of the base class is explicitly called using the `self` variable so that we can initialize the base class part of the object. This is very important to remember - Since we are defining a `__init__` method in `Teacher` and `Student` subclasses, Python does not automatically call the constructor of the base class `SchoolMember`, you have to explicitly call it yourself.
 
-In contrast, if we have _not_ defined an `__init__` method in a subclass, Python will call the constructor of the base class automatically.
+In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
 
-We also observe that we can call methods of the base class by prefixing the class name to the method call and then pass in the `self` variable along with any arguments.
-
-Notice that we can treat instances of `Teacher` or `Student` as just instances of the `SchoolMember` when we use the `tell` method of the `SchoolMember` class.
-
-Also, observe that the `tell` method of the subtype is called and not the `tell` method of the `SchoolMember` class. One way to understand this is that Python _always_ starts looking for methods in the actual type, which in this case it does. If it could not find the method, it starts looking at the methods belonging to its base classes one by one in the order they are specified in the tuple in the class definition.
 
 A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
 
 The `end` parameter is used in the `print` function in the superclass's `tell()` method to print a line and allow the next print to continue on the same line. This is a trick to make `print` not print a `\n` (newline) symbol at the end of the printing.
+
 
 ## Summary
 
