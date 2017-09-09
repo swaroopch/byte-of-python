@@ -187,7 +187,7 @@ True
 
 **How It Works**
 
-If you remember basic set theory mathematics from school, then this example is fairly self-explanatory.  But if not, I’d encourage you to google this topic as a general understanding in set theory and the Venn diagram will help you make better use of sets in Python.
+If you remember basic set theory mathematics from school, then this example is fairly self-explanatory.  But if not, you can google "set theory" and "Venn diagram" to better understand our use of sets in Python.
 
 ## References
 
