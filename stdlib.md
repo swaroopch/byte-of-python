@@ -39,7 +39,7 @@ Output:
 
 <pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
 
-I've used the `cat` command in the command line to read the 'test.log' file, but if you don't have the `cat` command, you can just open the `test.log` file in a text editor.
+The `cat` command is used in the command line to read the 'test.log' file.  If the `cat` command is not available, you can open the `test.log` file in a text editor instead.
 
 **How It Works**
 
