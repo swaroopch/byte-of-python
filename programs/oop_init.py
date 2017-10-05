@@ -7,6 +7,5 @@ class Person:
 
 p = Person('Swaroop')
 p.say_hi()
-# We can get the same output by
-# rewriting the previous 2 lines as
-# Person('Swaroop').say_hi()
+# The previous 2 lines can also be written as
+# Person().say_hi()
