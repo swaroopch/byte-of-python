@@ -7,7 +7,7 @@ log = logging.getLogger("retry")
 
 def retry(f):
     @wraps(f)
-    def wrapped_f(*args, **kwargs):
+    def wrapper_function(*args, **kwargs):
         MAX_ATTEMPTS = 5
         for attempt in range(1, MAX_ATTEMPTS + 1):
             try:
@@ -21,7 +21,7 @@ def retry(f):
         log.critical("All %s attempts failed : %s",
                      MAX_ATTEMPTS,
                      (args, kwargs))
-    return wrapped_f
+    return wrapper_function
 
 
 counter = 0

@@ -5,7 +5,7 @@
 zoo = ('python', 'elephant', 'penguin')
 print('Number of animals in the zoo is', len(zoo))
 
-new_zoo = 'monkey', 'camel', zoo
+new_zoo = 'monkey', 'camel', zoo    # parentheses not required but are a good idea
 print('Number of cages in the new zoo is', len(new_zoo))
 print('All animals in new zoo are', new_zoo)
 print('Animals brought from old zoo are', new_zoo[2])

@@ -50,7 +50,7 @@ Tuples are used to hold together multiple objects. Think of them as similar to l
 
 Tuples are defined by specifying items separated by commas within an optional pair of parentheses.
 
-Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values i.e. the tuple of values used will not change.
+Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values (i.e. the tuple of values used) will not change.
 
 Example (save as `ds_using_tuple.py`):
 
@@ -187,7 +187,7 @@ True
 
 **How It Works**
 
-The example is pretty much self-explanatory because it involves basic set theory mathematics taught in school.
+If you remember basic set theory mathematics from school, then this example is fairly self-explanatory.  But if not, you can google "set theory" and "Venn diagram" to better understand our use of sets in Python.
 
 ## References
 
@@ -215,9 +215,9 @@ Remember that if you want to make a copy of a list or such kinds of sequences or
 
 ## More About Strings {#more-strings}
 
-We have already discussed strings in detail earlier. What more can there be to know?  Well, did you know that strings are also objects and have methods which do everything from checking part of a string to stripping spaces!
+We have already discussed strings in detail earlier. What more can there be to know?  Well, did you know that strings are also objects and have methods which do everything from checking part of a string to stripping spaces?  In fact, you've already been using a string method... the `format` method!
 
-The strings that you use in program are all objects of the class `str`.  Some useful methods of this class are demonstrated in the next example. For a complete list of such methods, see `help(str)`.
+The strings that you use in programs are all objects of the class `str`.  Some useful methods of this class are demonstrated in the next example. For a complete list of such methods, see `help(str)`.
 
 Example (save as `ds_str_methods.py`):
 

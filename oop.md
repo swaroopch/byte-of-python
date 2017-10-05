@@ -68,7 +68,7 @@ Here we see the `self` in action. Notice that the `say_hi` method takes no param
 
 There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
 
-The `__init__` method is run as soon as an object of a class is instantiated. The method is useful to do any *initialization* you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
+The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any *initialization* (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
 
 Example (save as `oop_init.py`):
 
@@ -117,7 +117,7 @@ The `how_many` is actually a method that belongs to the class and not to the obj
 
 We have marked the `how_many` method as a class method using a [decorator](./more.md#decorator).
 
-Decorators can be imagined to be a shortcut to calling a wrapper function, so applying the `@classmethod` decorator is same as calling:
+Decorators can be imagined to be a shortcut to calling a wrapper function (i.e. a function that "wraps" around another function so that it can do something before or after the inner function), so applying the `@classmethod` decorator is the same as calling:
 
 ```python
 how_many = classmethod(how_many)
@@ -147,9 +147,9 @@ Suppose you want to write a program which has to keep track of the teachers and 
 
 You can create two independent classes for each type and process them but adding a new common characteristic would mean adding to both of these independent classes. This quickly becomes unwieldy.
 
-A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
+A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class, i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
 
-There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that if you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected i.e. the object can be treated as an instance of the parent class.
+There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected, i.e. the object can be treated as an instance of the parent class.
 
 Also observe that we reuse the code of the parent class and we do not need to repeat it in the different classes as we would have had to in case we had used independent classes.
 
@@ -165,19 +165,16 @@ Output:
 
 **How It Works**
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition. Next, we observe that the `__init__` method of the base class is explicitly called using the `self` variable so that we can initialize the base class part of the object. This is very important to remember - Since we are defining a `__init__` method in `Teacher` and `Student` subclasses, Python does not automatically call the constructor of the base class `SchoolMember`, you have to explicitly call it yourself.
+To use inheritance, we specify the base class names in a tuple following the class name in the class definition (for example, `class Teacher(SchoolMember)`).   Next, we observe that the `__init__` method of the base class is explicitly called using the  `self`  variable so that we can initialize the base class part of an instance in the subclass. This is very important to remember- Since we are defining a  `__init__`  method in `Teacher`  and  `Student`  subclasses, Python does not automatically call the constructor of the base class  `SchoolMember`, you have to explicitly call it yourself.
 
-In contrast, if we have _not_ defined an `__init__` method in a subclass, Python will call the constructor of the base class automatically.
+In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
 
-We also observe that we can call methods of the base class by prefixing the class name to the method call and then pass in the `self` variable along with any arguments.
-
-Notice that we can treat instances of `Teacher` or `Student` as just instances of the `SchoolMember` when we use the `tell` method of the `SchoolMember` class.
-
-Also, observe that the `tell` method of the subtype is called and not the `tell` method of the `SchoolMember` class. One way to understand this is that Python _always_ starts looking for methods in the actual type, which in this case it does. If it could not find the method, it starts looking at the methods belonging to its base classes one by one in the order they are specified in the tuple in the class definition.
+While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
 
 A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
 
 The `end` parameter is used in the `print` function in the superclass's `tell()` method to print a line and allow the next print to continue on the same line. This is a trick to make `print` not print a `\n` (newline) symbol at the end of the printing.
+
 
 ## Summary
 

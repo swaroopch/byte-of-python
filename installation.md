@@ -11,13 +11,13 @@ Note that if your Windows version is pre-Vista, you should [download Python 3.4 
 
 CAUTION: Make sure you check option `Add Python 3.5 to PATH`.
 
-To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` as install location.
+To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` (or another appropriate location) as the install location.
 
-If not checked, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
+If you didn’t check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
 
 You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
 
-If your path was not set correctly, then follow these steps to fix it. Otherwise, go to `Running Python prompt on Windows`.
+If your path was not set correctly (by checking the `Add Python 3.5 Path` or `Add Python to environment variables` options), then follow the steps in the next section (`DOS Prompt`) to fix it. Otherwise, go to the `Running Python prompt on Windows` section in this document.
 
 NOTE: For people who already know programming, if you are familiar with Docker, check out [Python in Docker](https://hub.docker.com/_/python/) and [Docker on Windows](https://docs.docker.com/windows/).
 
@@ -46,6 +46,11 @@ For Windows 7 and 8:
 - Go to the end of the line under Variable value and append `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate folder name.
 - If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python36` <!-- The directory should match pythonVersion variable in book.json -->
 - Click `OK` and you are done. No restart is required, however you may have to close and reopen the command line.
+
+For Windows 10:
+
+Windows Start Menu > `Settings` > `About` > `System Info` (this is all the way over to the right) > `Advanced System Settings` > `Environment Variables` (this is towards the bottom) > (then highlight `Path` variable and click `Edit`) > `New` > (type in whatever your python location is.  For example, `C:\Python35\`)
+
 
 ### Running Python prompt on Windows
 
