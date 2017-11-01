@@ -146,19 +146,19 @@ $ python
 # get names of attributes for current module
 >>> dir()
 ['__builtins__', '__doc__',
-'__name__', '__package__']
+'__name__', '__package__', 'sys']
 
 # create a new variable 'a'
 >>> a = 5
 
 >>> dir()
-['__builtins__', '__doc__', '__name__', '__package__', 'a']
+['__builtins__', '__doc__', '__name__', '__package__', 'sys', 'a']
 
 # delete/remove a name
 >>> del a
 
 >>> dir()
-['__builtins__', '__doc__', '__name__', '__package__']
+['__builtins__', '__doc__', '__name__', '__package__', 'sys']
 ```
 
 **How It Works**
