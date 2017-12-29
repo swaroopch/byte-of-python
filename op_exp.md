@@ -41,9 +41,10 @@ Here is a quick overview of the available operators:
     - `13 / 3` gives `4.333333333333333`
 
 - `//` (divide and floor)
-    - Divide x by y and round the answer _down_ to the nearest whole number
+    - Divide x by y and round the answer _down_ to the nearest integer value. Note that if one of the values is a float, you'll get back a float.
     - `13 // 3` gives `4`
     - `-13 // 3` gives `-5`
+    - `9//1.81` gives `4.0`
 
 - `%` (modulo)
     - Returns the remainder of the division
