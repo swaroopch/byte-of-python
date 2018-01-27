@@ -26,7 +26,7 @@ If it was not a compiled module i.e. a module written in Python, then the Python
 
 The `argv` variable in the `sys` module is accessed using the dotted notation i.e. `sys.argv`. It clearly indicates that this name is part of the `sys` module. Another advantage of this approach is that the name does not clash with any `argv` variable used in your program.
 
-The `sys.argv` variable is a *list* of strings (lists are explained in detail in a [later chapter](./data_structures.md#data-structures). Specifically, the `sys.argv` contains the list of *command line arguments* i.e. the arguments passed to your program using the command line.
+The `sys.argv` variable is a *list* of strings (lists are explained in detail in a [later chapter](./data_structures.md#data-structures)). Specifically, the `sys.argv` contains the list of *command line arguments* i.e. the arguments passed to your program using the command line.
 
 If you are using an IDE to write and run these programs, look for a way to specify command line arguments to the program in the menus.
 
