@@ -89,7 +89,7 @@ So far, when we have been writing and using strings, or reading and writing to a
 <class 'str'>
 ```
 
-When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open function`.
+When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open` function.
 
 <pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
