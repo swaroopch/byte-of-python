@@ -168,6 +168,12 @@ _Update_ : The translation is complete and ready as of Oct 2, 2009. Thanks to Do
 
 Artur Weber (arturweberguimaraes@gmail.com) has completed a translation of this book to Portuguese (as of Feb 21, 2018) at <https://www.homeyou.com/~edu/introducao>.
 
+> __Artur Weber_: My students study at the Polytechnic faculty in Ecological University in the city of Curitiba (Brazil) and some of them are interested in different papers. 
+> 
+> As they are writing course and academic papers, they always look for interesting articles and pages. I also do my best to find interesting materials which can be the sources for their university works.
+>
+> I found the materials from your site useful for some of my students who are writing papers based on programming on Python. Actually, that is why I made a decision to perform a Portuguese translation to let my students who don't know English read exciting articles in their mother tongue ( in Portuguese).
+
 ## Romanian
 
 Paul-Sebastian Manole (brokenthorn@gmail.com) has volunteered to translate this book to Romanian.
