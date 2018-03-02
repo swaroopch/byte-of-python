@@ -166,7 +166,7 @@ _Update_ : The translation is complete and ready as of Oct 2, 2009. Thanks to Do
 
 ## Portuguese
 
-Fidel Viegas (fidel.viegas@gmail.com) has volunteered to translate the book to Portuguese.
+Artur Weber (arturweberguimaraes@gmail.com) has completed a translation of this book to Portuguese (as of Feb 21, 2018) at <https://www.homeyou.com/~edu/introducao>.
 
 ## Romanian
 
