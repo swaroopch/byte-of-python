@@ -12,7 +12,7 @@ def retry(f):
         for attempt in range(1, MAX_ATTEMPTS + 1):
             try:
                 return f(*args, **kwargs)
-            except:
+            except Exception:
                 log.exception("Attempt %s/%s failed : %s",
                               attempt,
                               MAX_ATTEMPTS,
