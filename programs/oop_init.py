@@ -8,4 +8,4 @@ class Person:
 p = Person('Swaroop')
 p.say_hi()
 # The previous 2 lines can also be written as
-# Person().say_hi()
+# Person('Swaroop').say_hi()
