@@ -153,7 +153,7 @@ print('Why is {name} playing with that python?'.format(name=name))
 
 which will give the same exact output as the previous program.
 
-Python 3.7 introduced a shorter way to do named parameters, called "f-strings":
+Python 3.6 introduced a shorter way to do named parameters, called "f-strings":
 
 ```python
 age = 20
