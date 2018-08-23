@@ -155,6 +155,7 @@ Output:
 
 See:
 
+- [Video : Python Decorators Made Easy](https://youtu.be/MYAEv3JoenI) 
 - http://www.ibm.com/developerworks/linux/library/l-cpdecor.html
 - http://toumorokoshi.github.io/dry-principles-through-python-decorators.html
 
