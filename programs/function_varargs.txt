@@ -6,4 +6,3 @@ single_item 3
 Inge 1560
 John 2231
 Jack 1123
-None
