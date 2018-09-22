@@ -123,12 +123,12 @@ This will import all public names such as `say_hi` but would not import `__versi
 
 ## The `dir` function {#dir-function}
 
-Built-in `dir()` function returns list of names defined by an object.
+The built-in `dir()` function returns the list of names defined by an object.
 If the object is a module, this list includes functions, classes and variables, defined inside that module.
 
 This function can accept arguments.
-If the argument is the name of the module, function returns list of names from that specified module.
-If there is no argument, function returns list of names from the current module.
+If the argument is the name of a module, the function returns the list of names from that specified module.
+If there is no argument, it returns the list of names from the current module.
 
 Example:
 
@@ -167,9 +167,9 @@ First, we see the usage of `dir` on the imported `sys` module. We can see the hu
 
 Next, we use the `dir` function without passing parameters to it. By default, it returns the list of attributes for the current module. Notice that the list of imported modules is also part of this list.
 
-In order to observe the `dir` in action, we define a new variable `a` and assign it a value and then check `dir` and we observe that there is an additional value in the list of the same name. We remove the variable/attribute of the current module using the `del` statement and the change is reflected again in the output of the `dir` function.
+In order to observe `dir` in action, we define a new variable `a` and assign it a value and then check `dir` and we observe that there is an additional value in the list of the same name. We remove the variable/attribute of the current module using the `del` statement and the change is reflected again in the output of the `dir` function.
 
-A note on `del` - this statement is used to *delete* a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
+A note on `del`: This statement is used to *delete* a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
 
 Note that the `dir()` function works on *any* object. For example, run `dir(str)` for the attributes of the `str` (string) class.
 
@@ -201,7 +201,7 @@ This is how you would structure the folders:
                 - bar.py
 ```
 
-Packages are just a convenience to hierarchically organize modules. You will see many instances of this in the [standard library](./stdlib.md#stdlib).
+Packages are just a convenience to organize modules hierarchically. You will see many instances of this in the [standard library](./stdlib.md#stdlib).
 
 ## Summary
 
