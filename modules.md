@@ -128,7 +128,7 @@ If the object is a module, this list includes functions, classes and variables, 
 
 This function can accept arguments.
 If the argument is the name of a module, the function returns the list of names from that specified module.
-If there is no argument, it returns the list of names from the current module.
+If there is no argument, the function returns the list of names from the current module.
 
 Example:
 
