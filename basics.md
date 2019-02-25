@@ -1,73 +1,63 @@
-# Basics
+# 파이썬 기초 지식
 
-Just printing `hello world` is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we'll learn some other concepts as well in this chapter.
+3장에서는 `hello world`만을 출력하는 간단한 프로그램을 만들어 보았지만, 이번에는 상수와 변수 같은 다양한 개념을 배워 보고 `hello world` 이외의 다른 문자열을 출력하는 방법을 배워보겠습니다.
 
-## Comments
+## 주석
 
-_Comments_ are any text to the right of the `#` symbol and is mainly useful as notes for the reader of the program.
+주석은 보통 `#` 뒤에 오는 문자열을 가리키며, 다른 사람들이 프로그램을 쉽게 이해할 수 있도록 하기 위해 사용합니다.
 
-For example:
+다음은 주석의 사용 예입니다.
 
 ```python
-print('hello world') # Note that print is a function
+print('hello world') # print()는 문자열을 화면에 표시한다.
 ```
 
-or:
-
 ```python
-# Note that print is a function
+# print()는 문자열을 화면에 표시한다.
 print('hello world')
 ```
 
-Use as many useful comments as you can in your program to:
+주석은 주로 이런 경우에 많이 사용합니다.
 
-- explain assumptions
-- explain important decisions
-- explain important details
-- explain problems you're trying to solve
-- explain problems you're trying to overcome in your program, etc.
+- `"이 부분은 프로그램이 실행되면 이렇게 되겠지"` 같은 가정에 대해 자세히 적어놓고 싶을 때
+- 문제 해결 중에 내린 중요한 결정이나 세부적인 내용을 설명할 필요가 있을 때
+- 프로그램을 짜다가 막히는 부분을 적어놓고 싶을 때
 
 [*Code tells you how, comments should tell you why*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
 
-This is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
+주석은 작성한 프로그램을 다른 사람들이 보았을 때 그 내용을 쉽게 이해할 수 있도록 합니다. 프로그램을 몇 달 뒤에 다시 봤을 때 이해가 잘 안될 것 같으면 주석을 반드시 적어놓으세요.
 
-## Literal Constants
+## 리터럴
 
-An example of a literal constant is a number like `5`, `1.23`, or a string like `'This is a string'` or `"It's a string!"`.
+`5`, `1.23`, `'This is a string'`, `"It's a string!"`처럼 절대 변하지 않는 데이터 그 자체를 리터럴(literals)이라고 부릅니다.
 
-It is called a literal because it is _literal_ - you use its value literally. The number `2` always represents itself and nothing else - it is a _constant_ because its value cannot be changed. Hence, all these are referred to as literal constants.
+리터럴([literal](https://dictionary.cambridge.org/dictionary/english/literal))은 영어로 '문자 그대로의'라는 뜻으로, _문자 그대로_ 값을 사용하기 때문에 붙은 이름입니다. 예를 들어, 숫자 `2`는 항상 2라는 값을 나타내고 절대로 변하지 않습니다.
 
-## Numbers
+> **참고: 다른 프로그래밍 언어에서 배우는 상수(constant)와 리터럴의 차이점은 다음과 같습니다.**
+> - 상수는 정의한 다음에 그 값을 지정해주어야 합니다.
+> - 리터럴은 변수나 상수에 지정되거나 단독으로 쓰이는 값 그 자체를 말합니다.
 
-Numbers are mainly of two types - integers and floats.
+## 숫자
 
-An example of an integer is `2` which is just a whole number.
+파이썬에서 숫자는 `2` 같은 정수형와 `3.23`나 `52.3E-4`같은 실수형으로 나눌 수 있습니다.
 
-Examples of floating point numbers (or _floats_ for short) are `3.23` and `52.3E-4`. The `E` notation indicates powers of 10. In this case, `52.3E-4` means `52.3 * 10^-4^`.
+실수형 변수에서 `E`는 10의 제곱을 뜻합니다. 예를 들면, `52.3E-4`는 `52.3 * 10^-4^`와 같은 뜻입니다.
 
-> **Note for Experienced Programmers**
+> **숙련된 프로그래머라면 참고하세요**
 > 
-> There is no separate `long` type. The `int` type can be an integer of any size.
+> 파이썬 3에서 `long` 타입은 존재하지 않으며, `int` 타입에 모든 크기의 정수를 저장할 수 있습니다.
 
-## Strings
+## 문자열
 
-A string is a _sequence_ of _characters_. Strings are basically just a bunch of words.
+문자열은 단어나 문장처럼 여러 개의 문자가 모인 것을 말합니다.
 
-You will be using strings in almost every Python program that you write, so pay attention to the following part.
+문자열은 파이썬 프로그래머라면 반드시 알아두어야 하는 부분이므로, 다음 내용을 잘 기억해두도록 합시다.
 
-### Single Quote
+### 따옴표
 
-You can specify strings using single quotes such as `'Quote me on this'`.
+문자열은 `'Quote me on this'`이나 `"What's your name?"`처럼 작은 따옴표나 큰 따옴표 안에 저장합니다. 따옴표 안에 있는 스페이스나 탭 등의 공백은 그대로 저장됩니다.
 
-All white space i.e. spaces and tabs, within the quotes, are preserved as-is.
-
-### Double Quotes
-
-Strings in double quotes work exactly the same way as strings in single quotes. An example is `"What's your name?"`.
-
-### Triple Quotes {#triple-quotes}
-
-You can specify multi-line strings using triple quotes - (`"""` or `'''`). You can use single quotes and double quotes freely within the triple quotes. An example is:
+여러 줄의 문자열은 `"""`이나 `'''` 안에 저장합니다. `"""`이나 `'''` 안에서는 다음과 같이 작은 따옴표나 큰 따옴표를 자유롭게 사용할 수 있습니다.
 
 ```python
 '''This is a multi-line string. This is the first line.
@@ -77,23 +67,23 @@ He said "Bond, James Bond."
 '''
 ```
 
-### Strings Are Immutable
+### 문자열은 절대 수정할 수 없다
 
-This means that once you have created a string, you cannot change it. Although this might seem like
+문자열은 한번 만들면 절대로 다시 수정할 수 없습니다. Although this might seem like
 a bad thing, it really isn't. We will see why this is not a limitation in the various programs that
 we see later on.
 
-> **Note for C/C++ Programmers**
+> **C/C++ 프로그래머라면 참고하세요**
 > 
 > There is no separate `char` data type in Python. There is no real need for it and I am sure you won't miss it.
 
 <!-- -->
 
-> **Note for Perl/PHP Programmers**
+> **Perl/PHP 프로그래머라면 참고하세요**
 > 
 > Remember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.
 
-### The format method
+### format() 메소드 사용하기
 
 Sometimes we may want to construct strings from other information. This is where the `format()` method is useful.
 
@@ -212,7 +202,7 @@ Output is:
 a b c
 ```
 
-### Escape Sequences
+### 이스케이프 문자
 
 Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `"What's your name?"`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an _escape sequence_. You specify the single quote as `\'` : notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
 
@@ -239,7 +229,7 @@ is equivalent to
 "This is the first sentence. This is the second sentence."
 ```
 
-### Raw String
+### 순수 문자열
 
 If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a _raw_ string by prefixing `r` or `R` to the string. An example is:
 
@@ -247,11 +237,11 @@ If you need to specify some strings where no special processing such as escape s
 r"Newlines are indicated by \n"
 ```
 
-> **Note for Regular Expression Users**
+> **정규 표현식을 사용하기 전 꼭 확인하세요**
 > 
 > Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
 
-## Variable
+## 변수
 
 Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where _variables_ come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer's memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.
 
@@ -402,7 +392,7 @@ i = 5
 
 Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called *implicit line joining*. You can see this in action when we write programs using [list](./data_structures.md#lists) in later chapters.
 
-## Indentation
+## 들여쓰기 (Indentation)
 
 Whitespace is important in Python. Actually, *whitespace at the beginning of the line is important*. This is called _indentation_. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
 
@@ -438,7 +428,7 @@ Notice that there is a single space at the beginning of the second line. The err
 > 
 > Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
 
-## Summary
+## 정리
 
 Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as control flow statements. Be sure to become comfortable with what you have read in this chapter.
 

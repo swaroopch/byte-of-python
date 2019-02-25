@@ -1,4 +1,4 @@
-# Control Flow {#control-flow}
+# 프로그램 제어와 구조화 {#control-flow}
 
 In the programs we have seen till now, there has always been a series of statements faithfully executed by Python in exact top-down order. What if you wanted to change the flow of how it works? For example, you want the program to take some decisions and do different things depending on different situations, such as printing 'Good Morning' or 'Good Evening' depending on the time of the day?
 

@@ -1,27 +1,32 @@
-# Installation {#installation}
+# 파이썬 설치하기 {#installation}
 
-When we refer to "Python 3" in this book, we will be referring to any version of Python equal to or greater than version [Python {{ book.pythonVersion }}](https://www.python.org/downloads/).
+이제부터 이 책에서 "파이썬 3"은 [파이썬 3.6.0](https://www.python.org/downloads/) 이상의 모든 파이썬 버전을 가리키는 것으로 하겠습니다.
 
-## Installation on Windows
+## Windows에서 파이썬 설치하기
 
-Visit https://www.python.org/downloads/ and download the latest version. At the time of this writing, it was Python 3.5.1 
-The installation is just like any other Windows-based software.
+파이썬 공식 홈페이지의 [다운로드 페이지](https://www.python.org/downloads/)에 들어가서 최신 버전 (2019-02-24 기준 3.7.2)을 다운로드한 다음, 설치 파일을 더블 클릭하여 파이썬을 설치하세요.
 
-Note that if your Windows version is pre-Vista, you should [download Python 3.4 only](https://www.python.org/downloads/windows/) as later versions require newer versions of Windows.
+Windows Vista 이하의 버전을 사용하고 계시다면, Windows Vista 이하 버전을 지원하는 마지막 파이썬 버전인 [파이썬 3.4](https://www.python.org/downloads/windows/)를 다운로드하셔야 합니다.
 
-CAUTION: Make sure you check option `Add Python 3.5 to PATH`.
+![파이썬 3.7.2: `Add Python 3.7 to PATH`](./img/python372_installation_01.png)
 
-To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` (or another appropriate location) as the install location.
+파이썬을 설치하기 전에 `Add Python 3.7 to PATH` 옵션이 체크되어 있는지 반드시 확인하세요.
 
-If you didn�t check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
+파이썬을 다른 곳에 설치하려면 `Customize installation`을 클릭하고, `Next` 버튼을 누른 다음 `Customize install location` 아래 칸에 `C:\python37`같이 새로운 설치 경로를 입력해줍니다.
 
-You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
+![파이썬 3.7.2: `Add Python to environment variables`](./img/python372_installation_02.png)
 
-If your path was not set correctly (by checking the `Add Python 3.5 Path` or `Add Python to environment variables` options), then follow the steps in the next section (`DOS Prompt`) to fix it. Otherwise, go to the `Running Python prompt on Windows` section in this document.
+`Add Python 3.7 PATH` 옵션을 깜박하고 체크하지 않으셨다면, 여기서 `Add Python to environment variables`을 체크해주세요. `Add Python 3.7 to PATH`과 똑같은 기능을 제공합니다.
 
-NOTE: For people who already know programming, if you are familiar with Docker, check out [Python in Docker](https://hub.docker.com/_/python/) and [Docker on Windows](https://docs.docker.com/windows/).
+![파이썬 3.7.2: for all users (requires elevation)](./img/python372_installation_03.png)
 
-### DOS Prompt {#dos-prompt}
+`모든 사용자를 위해 (for all users) py launcher 설치` 옵션은 선택하지 않아도 상관없습니다. `py launcher`는 주로 다른 파이썬 버전 (파이썬 2.x 등)을 실행하기 위해 사용됩니다.
+
+`Add Python 3.7 PATH`나 `Add Python to environment variables` 옵션을 체크하고 설치했는데 파이썬 설치 경로가 제대로 설정되지 않았다면, 바로 밑의 `명령 프롬프트`에 있는 내용을 차근차근 따라하도록 합니다. 설치 경로가 제대로 설정되었다면 이 페이지 아래로 내려가 `Windows에서 파이썬 실행하기`의 내용을 읽어보세요.
+
+참고: Docker를 많이 사용해보셨다면 [Docker용 Python 이미지](https://hub.docker.com/_/python/)와 [Windows에서 Docker를 사용하는 방법](https://docs.docker.com/windows/)을 확인해 보세요.
+
+### 명령 프롬프트 {#dos-prompt}
 
 If you want to be able to use Python from the Windows command line i.e. the DOS prompt, then you need to set the PATH variable appropriately.
 
@@ -52,40 +57,38 @@ For Windows 10:
 Windows Start Menu > `Settings` > `About` > `System Info` (this is all the way over to the right) > `Advanced System Settings` > `Environment Variables` (this is towards the bottom) > (then highlight `Path` variable and click `Edit`) > `New` > (type in whatever your python location is.  For example, `C:\Python35\`)
 
 
-### Running Python prompt on Windows
+### Windows에서 파이썬 실행하기
 
-For Windows users, you can run the interpreter in the command line if you have [set the `PATH` variable appropriately](#dos-prompt).
+[`PATH` 환경 변수](#dos-prompt)를 제대로 설정했다면 명령 프롬프트에서 파이썬 인터프리터를 실행할 수 있습니다.
 
-To open the terminal in Windows, click the start button and click `Run`. In the dialog box, type `cmd` and press `[enter]` key.
+명령 프롬프트를 실행하려면, 시작 버튼을 오른쪽 클릭하고 `실행(R)`을 클릭하세요. 실행 창이 뜨면 `cmd`를 입력하고 `[enter]` 키를 눌러 주세요.
 
-Then, type `python` and ensure there are no errors.
+![파이썬 3.7.2 설치하기 04](./img/python372_installation_04.png)
 
-## Installation on Mac OS X
+명령 프롬프트가 보이면 `python`를 입력해 제대로 파이썬이 설치되었는지 확인하세요.
 
-For Mac OS X users, use [Homebrew](http://brew.sh): `brew install python3`.
+## Mac OS X에서 파이썬 설치하기
 
-To verify, open the terminal by pressing `[Command + Space]` keys (to open Spotlight search), type `Terminal` and press `[enter]` key. Now, run `python3` and ensure there are no errors.
+Mac OS X를 사용하고 계신다면, [Homebrew](http://brew.sh)를 사용해주세요. 터미널 창에 `brew install python3`를 입력하시면 파이썬이 설치됩니다.
 
-## Installation on GNU/Linux
+설치가 제대로 되었는지 확인하려면 `[Command + Space]` 키를 눌러 Spotlight 검색창을 실행하고, `터미널`을 입력한 다음 `[enter]` 키를 눌러 주세요. 터미널이 보이면 `python3`을 실행해 제대로 파이썬이 설치되었는지 확인하세요.
 
-For GNU/Linux users, use your distribution's package manager to install Python 3, e.g. on Debian & Ubuntu: `sudo apt-get update && sudo apt-get install python3`.
+## GNU/Linux에서 파이썬 설치하기
 
-To verify, open the terminal by opening the `Terminal` application or by pressing `Alt + F2` and entering `gnome-terminal`. If that doesn't work, please refer the documentation of your particular GNU/Linux distribution. Now, run `python3` and ensure there are no errors.
+GNU/Linux를 사용하고 계시다면, 패키지 관리 시스템을 사용해 파이썬을 설치하세요. 예를 들어, Debian과 Ubuntu에서는 `sudo apt-get update && sudo apt-get install python3`를 실행하면 파이썬이 설치됩니다.
 
-You can see the version of Python on the screen by running:
+설치가 제대로 되었는지 확인하려면 `터미널` 창을 실행하고 `python3`을 실행해 제대로 파이썬이 설치되었는지 확인하세요.
+
+`python3 -V` 명령어를 사용해서 설치된 파이썬 버전을 확인해볼 수 있습니다.
 
 <!-- The output should match pythonVersion variable in book.json -->
 ```
 $ python3 -V
-Python 3.6.0
+Python 3.7.2
 ```
 
-NOTE: `$` is the prompt of the shell. It will be different for you depending on the settings of the operating system on your computer, hence I will indicate the prompt by just the `$` symbol.
+설치된 리눅스 배포판이나 파이썬 버전에 따라, 위의 내용은 조금씩 다르게 보일 수도 있습니다.
 
-CAUTION: Output may be different on your computer, depending on the version of Python software installed on your computer.
+## 정리
 
-## Summary
-
-From now on, we will assume that you have Python installed on your system.
-
-Next, we will write our first Python program.
+이제 파이썬 3 설치가 모두 끝났습니다. 다음 장에서는 첫 번째 파이썬 프로그램을 만들어 보겠습니다.

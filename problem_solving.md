@@ -1,4 +1,4 @@
-﻿# Problem Solving
+﻿# 실용적 프로그램 만들기
 
 We have explored various parts of the Python language and now we will take a look at how all these parts fit together, by designing and writing a program which _does_ something useful. The idea is to learn how to write a Python script on your own.
 

@@ -1,4 +1,4 @@
-# Object Oriented Programming {#oop}
+# 객체 지향 프로그래밍 (Object-Oriented Programming) {#oop}
 
 In all the programs we wrote till now, we have designed our program around functions i.e. blocks of statements which manipulate data. This is called the _procedure-oriented_ way of programming. There is another way of organizing your program which is to combine data and functionality and wrap it inside something called an object. This is called the _object oriented_ programming paradigm. Most of the time you can use procedural programming, but when writing large programs or have a problem that is better suited to this method, you can use object oriented programming techniques.
 

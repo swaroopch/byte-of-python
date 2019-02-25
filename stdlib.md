@@ -1,12 +1,10 @@
-# Standard Library {#stdlib}
+# 파이썬 표준 라이브러리 {#stdlib}
 
-The Python Standard Library contains a huge number of useful modules and is part of every standard Python installation. It is important to become familiar with the Python Standard Library since many problems can be solved quickly if you are familiar with the range of things that these libraries can do.
+파이썬 표준 라이브러리는 파이썬을 설치하면 기본적으로 제공되며, 여러가지 모듈이 포함되어 있습니다. 표준 라이브러리는 다양한 문제를 쉽고 빠르게 해결할 수 있게 해주는 모듈이 많이 포함되어 있기 때문에 표준 라이브러리를 많이 사용해보고 각 모듈이 어떤 기능을 제공하는지 꼼꼼히 확인하는 것이 매우 중요합니다.
 
-We will explore some of the commonly used modules in this library. You can find complete details for all of the modules in the Python Standard Library in the ['Library Reference' section](http://docs.python.org/3/library/) of the documentation that comes with your Python installation.
+이번 장에서는 표준 라이브러리에서 많이 사용되는 몇 가지 모듈에 대해 알아보도록 하겠습니다. 파이썬 표준 라이브러리에 포함되어 있는 모듈 목록을 확인하시려면 [파이썬 표준 라이브러리 문서](http://docs.python.org/3/library/)를 확인하시기 바랍니다.
 
-Let us explore a few useful modules.
-
-> CAUTION: If you find the topics in this chapter too advanced, you may skip this chapter. However, I highly recommend coming back to this chapter when you are more comfortable with programming using Python.
+> 아래의 내용이 너무 복잡하다고 생각하시면, 이번 장을 그냥 건너뛰셔도 괜찮습니다. 파이썬 프로그래밍에 어느 정도 익숙해졌다고 생각하시면 아래의 내용을 꼭 읽어주세요.
 
 ## `sys` module {#sys}
 
