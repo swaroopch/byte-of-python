@@ -132,6 +132,15 @@ Shunro Dozono (dozono@gmail.com) is translating the book to Japanese.
 
 ## Korean
 
+### Epsimatt (2019)
+
+Epsimatt has started a new Korean translation:
+
+- Read online at https://epsimatt.gitbook.io/byte-of-python/
+- Follow progress at https://github.com/epsimatt/byte-of-python/issues/2
+
+### Older
+
 Jeongbin Park (pjb7687@gmail.com) has translated the book to Korean - <https://github.com/pjb7687/byte_of_python>
 
 > I am Jeongbin Park, currently working as a Biophysics & Bioinformatics researcher in Korea.
