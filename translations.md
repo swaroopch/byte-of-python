@@ -85,6 +85,10 @@ Gregory (coulix@ozforces.com.au) has volunteered to translate the book to French
 
 Gérard Labadie (gerard.labadie@gmail.com) has completed to translate the book to French.
 
+This translation was later ported to the markdown format, updated to match the last version of the book, and published on GitBook by Romain Gilliotte (rgilliotte@gmail.com).
+
+It can be found at https://rgilliotte.gitbook.io/byte-of-python/
+
 ## German
 
 Lutz Horn (lutz.horn@gmx.de), Bernd Hengelein (bernd.hengelein@gmail.com) and Christoph Zwerschke (cito@online.de) have volunteered to translate the book to German.
