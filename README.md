@@ -25,11 +25,6 @@ Here are what people are saying about the book:
 
 <!-- -->
 
-> Best newbie guide to python
-> -- [Nickson Kaigi](https://twitter.com/nickaigi/status/175508815729541120)
-
-<!-- -->
-
 > start to love python with every single page read
 > -- [Herbert Feutl](https://twitter.com/HerbertFeutl/status/11901471389913088)
 
@@ -57,6 +52,11 @@ Here are what people are saying about the book:
 
 > Enjoying Reading #ByteOfPython by @swaroopch best book ever
 > -- [Yuvraj Sharma](https://twitter.com/YuvrajPoudyal/status/448050415356346368)
+
+<!-- -->
+
+> A Byte of Python by @swaroopch is still the "Best newbie guide to python"
+> -- [Nickson Kaigi](https://twitter.com/nickaigi/status/1136963950711648256)
 
 <!-- -->
 
