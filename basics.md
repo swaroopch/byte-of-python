@@ -341,7 +341,7 @@ Similarly, we assign the literal string to the variable `s` and then print it.
 
 A physical line is what you _see_ when you write the program. A logical line is what _Python sees_ as a single statement. Python implicitly assumes that each _physical line_ corresponds to a _logical line_.
 
-An example of a logical line is a statement like `print 'hello world'` - if this was on a line by itself (as you see it in an editor), then this also corresponds to a physical line.
+An example of a logical line is a statement like `print('hello world')` - if this was on a line by itself (as you see it in an editor), then this also corresponds to a physical line.
 
 Implicitly, Python encourages the use of a single statement per line which makes code more readable.
 
