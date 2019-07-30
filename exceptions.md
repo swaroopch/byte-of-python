@@ -94,7 +94,7 @@ We do the usual file-reading stuff, but we have arbitrarily introduced sleeping 
 
 Observe that the `KeyboardInterrupt` exception is thrown and the program quits. However, before the program exits, the finally clause is executed and the file object is always closed.
 
-Notice that a variable assigned a value of 0 or `None` or a variable which is an empty sequence or collection is considered `False` by Python.  This is why we can use `if: f` in the code above.
+Notice that a variable assigned a value of 0 or `None` or a variable which is an empty sequence or collection is considered `False` by Python.  This is why we can use `if f:` in the code above.
 
 Also note that we use `sys.stdout.flush()` after `print` so that it prints to the screen immediately.
 
