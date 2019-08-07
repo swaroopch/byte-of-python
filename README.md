@@ -10,6 +10,12 @@ This book will teach you to use Python version 3. There will also be guidance fo
 
 Here are what people are saying about the book:
 
+> This is the book that got me into programming almost a decade ago.
+> Thank you @swaroopch. You changed my life.
+> -- [Stefan Froelich](https://twitter.com/TheDumbTechGuy/status/1157245235052929024)
+
+<!-- -->
+
 > This is the best beginner's tutorial I've ever seen! Thank you for your effort.
 > -- [Walt Michalik](mailto:wmich50@theramp.net)
 
