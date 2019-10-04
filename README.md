@@ -17,7 +17,6 @@ Here are what people are saying about the book:
 <!-- -->
 
 > I am writing this email to thank you for the great help your book has done for me! It was a really good book that I enjoyed thoroughly. As a 15 year old who has never done programming before, trying to learn Python online was difficult and I couldn't understand anything. But I felt like your book gave was much easier to understand and eased me into the whole new world of programming. Thanks to you, I can now write a high level language with ease. I thought programming would be hard and boring, but with your book's help, I realised how fun and interesting yet simple it can be! I would like to thank you again for your hard work on helping out beginners like me.
->
 > -- [Prottyashita Tahiyat](mailto:protahiyat@gmail.com) on Sep 17, 2019
 
 <!-- -->
