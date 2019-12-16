@@ -141,7 +141,7 @@ Shunro Dozono (dozono@gmail.com) is translating the book to Japanese.
 Epsimatt has started a new Korean translation:
 
 - Read online at https://epsimatt.gitbook.io/byte-of-python/
-- Follow progress at https://github.com/epsimatt/byte-of-python/issues/2
+- Follow progress at https://github.com/epsimatt/byte-of-python/issues/16
 
 ### Older
 
