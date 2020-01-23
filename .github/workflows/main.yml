@@ -1,0 +1,25 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Setup Node.js for use with actions
+      uses: actions/setup-node@v1.1.0
+   
+    - name: git checkout
+      uses: actions/checkout@v1
+
+    - name: Run gitbook
+      run: |
+        # https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
+        npm install gitbook-cli
+        gitbook build . public --log=debug --debug
+
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v1.2.5
