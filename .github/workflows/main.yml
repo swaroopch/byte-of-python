@@ -27,5 +27,6 @@ jobs:
       with:
         target_branch: gh-pages
         build_dir: public
+        fqdn: python.swaroopch.com
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
