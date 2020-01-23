@@ -12,15 +12,19 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v1.1.0
    
+    # https://github.com/actions/checkout
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
+    # https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
     - name: Run Gitbook
       run: |
-        # https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
         npm install gitbook-cli
         node ./node_modules/gitbook-cli/bin/gitbook.js build . public --log=debug --debug
+        node ./node_modules/gitbook-cli/bin/gitbook.js pdf . byte-of-python.pdf
+        node ./node_modules/gitbook-cli/bin/gitbook.js epub . byte-of-python.epub 
 
+    # https://github.com/crazy-max/ghaction-github-pages
     - name: Push to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
@@ -30,3 +34,39 @@ jobs:
         fqdn: python.swaroopch.com
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+
+    # https://github.com/actions/create-release
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+    # https://github.com/actions/upload-release-asset
+    - name: Upload Release PDF
+      id: upload-release-pdf
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./byte-of-python.pdf
+        asset_name: byte-of-python.pdf
+        asset_content_type: application/pdf
+  
+    # https://github.com/actions/upload-release-asset
+    - name: Upload Release EPUB
+      id: upload-release-epub
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./byte-of-python.epub
+        asset_name: byte-of-python.epub
+        asset_content_type: application/epub+zip
