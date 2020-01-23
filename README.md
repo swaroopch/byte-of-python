@@ -285,7 +285,6 @@ Visit {{ book.downloadUrl }} for the following types of downloads:
 
 - [PDF (for desktop reading, etc.)](https://www.gitbook.com/download/pdf/book/swaroopch/byte-of-python)
 - [EPUB (for iPhone/iPad, ebook readers, etc.)](https://www.gitbook.com/download/epub/book/swaroopch/byte-of-python)
-- [Mobi (for Kindle)](https://www.gitbook.com/download/mobi/book/swaroopch/byte-of-python)
 
 Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.)
 
