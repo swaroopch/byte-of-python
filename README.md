@@ -281,10 +281,7 @@ A printed hardcopy of the book can be purchased at {{ book.buyBookUrl }} for you
 
 ## Download
 
-Visit {{ book.downloadUrl }} for the following types of downloads:
-
-- [PDF (for desktop reading, etc.)](https://www.gitbook.com/download/pdf/book/swaroopch/byte-of-python)
-- [EPUB (for iPhone/iPad, ebook readers, etc.)](https://www.gitbook.com/download/epub/book/swaroopch/byte-of-python)
+Visit {{ book.downloadUrl }} to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers).
 
 Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.)
 
