@@ -9,19 +9,19 @@ jobs:
 
     steps:
 
-    - name: Setup Node.js for use with actions
+    - name: Install Node.js
       uses: actions/setup-node@v1.1.0
    
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: Run gitbook
+    - name: Run Gitbook
       run: |
         # https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
         npm install gitbook-cli
         node ./node_modules/gitbook-cli/bin/gitbook.js build . public --log=debug --debug
 
-    - name: GitHub Pages
+    - name: Push to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
