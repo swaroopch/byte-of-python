@@ -12,14 +12,20 @@ jobs:
     - name: Setup Node.js for use with actions
       uses: actions/setup-node@v1.1.0
    
-    - name: git checkout
+    - name: Checkout
       uses: actions/checkout@v1
 
     - name: Run gitbook
       run: |
         # https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
         npm install gitbook-cli
-        gitbook build . public --log=debug --debug
+        node ./node_modules/gitbook-cli/bin/gitbook.js build . public --log=debug --debug
 
     - name: GitHub Pages
+      if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
+      with:
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
