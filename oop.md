@@ -32,7 +32,7 @@ You must be wondering how Python gives the value for `self` and why you don't ne
 
 This also means that if you have a method which takes no arguments, then you still have to have one argument - the `self`.
 
-## Classes {#class}
+## Classes {#classes}
 
 The simplest class possible is shown in the following example (save as `oop_simplestclass.py`).
 
