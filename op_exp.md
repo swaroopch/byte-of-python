@@ -69,7 +69,7 @@ Here is a quick overview of the available operators:
     - `5 | 3` gives `7` (`0101 | 0011` gives `0111`)
     
 - `^` (bit-wise XOR) 
-    - Bitwise XOR of the numbers: if both bits (`1 or 0`) are the the same, the result is `0`. Else it's `1`.
+    - Bitwise XOR of the numbers: if both bits (`1 or 0`) are the same, the result is `0`. Else it's `1`.
     - `5 ^ 3` gives `6` (`O101 ^ 0011` gives `0110`)
 
 - `~` (bit-wise invert)
