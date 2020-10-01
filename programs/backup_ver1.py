@@ -36,7 +36,7 @@ zip_command = 'zip -r {0} {1}'.format(target,
 print('Zip command is:')
 print(zip_command)
 print('Running:')
-if os.system(zip_command) == 0:
+if os.system(zip_command):
     print('Successful backup to', target)
 else:
     print('Backup FAILED')
