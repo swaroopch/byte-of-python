@@ -16,6 +16,10 @@ The book needs the help of its readers such as yourselves to point out any parts
 
 # Appendix: Revision History {#revision-history}
 
+- No version change
+    - 06 Nov 2020
+    - Migrated from abandoned GitBook to [community-maintained Honkit, a fork of GitBook legacy](https://github.com/honkit/honkit)
+
 - 4.0
     - 19 Jan 2016
     - Switched back to Python 3
