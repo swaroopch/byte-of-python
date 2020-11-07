@@ -1,10 +1,10 @@
 {
     "variables": {
-        "authorUrl": "https://www.swaroopch.com/about/",
-        "buyBookUrl": "https://www.swaroopch.com/buybook/",
-        "contactUrl": "https://www.swaroopch.com/contact/",
+        "authorUrl": "https://swaroopch.com/about",
+        "buyBookUrl": "https://swaroopch.com/buybook",
+        "contactUrl": "https://swaroopch.com/contact",
         "downloadUrl": "https://github.com/swaroopch/byte-of-python/releases/latest",
-        "officialUrl": "https://python.swaroopch.com/",
+        "officialUrl": "https://python.swaroopch.com",
         "pythonVersion": "3.6.0",
         "sourceUrl": "https://github.com/swaroopch/byte-of-python",
         "vimBookUrl": "https://vim.swaroopch.com/"
