@@ -40,7 +40,7 @@ jobs:
         build_dir: public
         fqdn: python.swaroopch.com
       env:
-        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # https://github.com/actions/create-release
     - name: Create Release
