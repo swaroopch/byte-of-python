@@ -1,7 +1,10 @@
 # https://help.github.com/en/actions/automating-your-workflow-with-github-actions
 name: CI
 
-on: [push]
+on:
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
