@@ -27,9 +27,9 @@ jobs:
     - name: Run Honkit
       run: |
         npm install honkit --save-dev
-        honkit build . public --log=debug --debug
-        honkit pdf . byte-of-python.pdf
-        honkit epub . byte-of-python.epub 
+        npx honkit build . public --log=debug
+        npx honkit pdf . byte-of-python.pdf
+        npx honkit epub . byte-of-python.epub 
 
     # https://github.com/crazy-max/ghaction-github-pages
     - name: Push to GitHub Pages
