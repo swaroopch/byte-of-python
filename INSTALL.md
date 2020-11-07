@@ -1,4 +1,7 @@
 ```
+# install node.js
+# see https://nodejs.dev/learn/how-to-install-nodejs
+
 # install honkit
 npm install honkit --save-dev
 
