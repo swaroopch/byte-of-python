@@ -30,6 +30,8 @@ For the ninth draft, I switched to [AsciiDoc format](http://asciidoctor.org/docs
 
 For the tenth draft, I switched to writing in Markdown + [GitBook](https://www.gitbook.com) format, using the [Spacemacs editor](http://spacemacs.org).
 
+Nov 2020: Since Gitbook abandoned their open source software, migrated to [Honkit, a maintained fork of Gitbook legacy](https://github.com/honkit/honkit).
+
 ## About the Author
 
 See {{ book.authorUrl }}
