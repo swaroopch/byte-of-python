@@ -15,19 +15,21 @@ jobs:
 
     # https://github.com/actions/setup-node
     - name: Install Node.js
-      uses: actions/setup-node@v1.1.0
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '14'
    
     # https://github.com/actions/checkout
     - name: Checkout
       uses: actions/checkout@v2
 
-    # https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
-    - name: Run Gitbook
+    # https://github.com/honkit/honkit
+    - name: Run Honkit
       run: |
-        npm install gitbook-cli
-        node ./node_modules/gitbook-cli/bin/gitbook.js build . public --log=debug --debug
-        node ./node_modules/gitbook-cli/bin/gitbook.js pdf . byte-of-python.pdf
-        node ./node_modules/gitbook-cli/bin/gitbook.js epub . byte-of-python.epub 
+        npm install honkit --save-dev
+        honkit build . public --log=debug --debug
+        honkit pdf . byte-of-python.pdf
+        honkit epub . byte-of-python.epub 
 
     # https://github.com/crazy-max/ghaction-github-pages
     - name: Push to GitHub Pages
