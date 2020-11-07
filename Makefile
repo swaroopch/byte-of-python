@@ -1,6 +1,6 @@
-# https://toolchain.gitbook.com/setup.html
+# https://github.com/honkit/honkit
 setup:
-	npm install gitbook-cli -g
+	npm install honkit --save-dev
 
 serve:
-	gitbook serve
+	npx honkit serve
