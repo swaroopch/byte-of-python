@@ -440,5 +440,5 @@ Notice that there is a single space at the beginning of the second line. The err
 
 ## Summary
 
-Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as [control flow statements](control_flow.md). Be sure to become comfortable with what you have read in this chapter.
+Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as [Operators and Expressions in python](op_exp.md). Be sure to become comfortable with what you have read in this chapter.
 

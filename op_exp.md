@@ -201,4 +201,4 @@ Also, notice how Python _pretty-prints_ the output. Even though we have not spec
 
 ## Summary
 
-We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using statements.
+We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using [statements](control_flow.md).
