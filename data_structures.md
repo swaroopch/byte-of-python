@@ -237,4 +237,4 @@ The `find` method is used to locate the position of the given substring within t
 
 We have explored the various built-in data structures of Python in detail. These data structures will be essential for writing programs of reasonable size.
 
-Now that we have a lot of the basics of Python in place, we will next see how to design and write a real-world Python program.
+Now that we have a lot of the basics of Python in place, we will next see how to design and [write a real-world Python program](problem_solving.md).

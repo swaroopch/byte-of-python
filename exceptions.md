@@ -122,4 +122,4 @@ More discussion on this topic is beyond scope of this book, so please refer [PEP
 
 We have discussed the usage of the `try..except` and `try..finally` statements. We have seen how to create our own exception types and how to raise exceptions as well.
 
-Next, we will explore the Python Standard Library.
+Next, we will explore the [Python Standard Library](stdlib.md).

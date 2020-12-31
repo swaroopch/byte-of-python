@@ -214,4 +214,4 @@ Automated tools can retrieve the documentation from your program in this manner.
 
 We have seen so many aspects of functions but note that we still haven't covered all aspects of them. However, we have already covered most of what you'll use regarding Python functions on an everyday basis.
 
-Next, we will see how to use as well as create Python modules.
+Next, we will see how to use as well as create [Python modules](modules.md).

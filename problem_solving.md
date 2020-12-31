@@ -154,4 +154,4 @@ Remember:
 
 We have seen how to create our own Python programs/scripts and the various stages involved in writing such programs. You may find it useful to create your own program just like we did in this chapter so that you become comfortable with Python as well as problem-solving.
 
-Next, we will discuss object-oriented programming.
+Next, we will discuss [object-oriented programming](oop.md).

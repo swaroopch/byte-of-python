@@ -209,4 +209,4 @@ Just like functions are reusable parts of programs, modules are reusable program
 
 We have seen how to use these modules and create our own modules.
 
-Next, we will learn about some interesting concepts called data structures.
+Next, we will learn about some interesting concepts called [data structures](data_structures.md).

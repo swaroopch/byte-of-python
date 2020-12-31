@@ -109,7 +109,7 @@ You should learn more about this topic by reading:
 
 We have discussed various types of input/output, about file handling, about the pickle module and about Unicode.
 
-Next, we will explore the concept of exceptions.
+Next, we will explore the concept of [exceptions](exceptions.md).
 
 ---
 

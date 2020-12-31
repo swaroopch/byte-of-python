@@ -173,4 +173,4 @@ See:
 
 We have covered some more features of Python in this chapter and yet we haven't covered all the features of Python. However, at this stage, we have covered most of what you are ever going to use in practice. This is sufficient for you to get started with whatever programs you are going to create.
 
-Next, we will discuss how to explore Python further.
+Next, we will discuss how to [explore Python further](what_next.md).

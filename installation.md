@@ -88,4 +88,4 @@ CAUTION: Output may be different on your computer, depending on the version of P
 
 From now on, we will assume that you have Python installed on your system.
 
-Next, we will write our first Python program.
+Next, we will write our [first Python program](first_steps.md).

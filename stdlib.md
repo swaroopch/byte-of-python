@@ -64,4 +64,4 @@ The best way to further explore the standard library is to read Doug Hellmann's 
 
 We have explored some of the functionality of many modules in the Python Standard Library. It is highly recommended to browse through the [Python Standard Library documentation](http://docs.python.org/3/library/) to get an idea of all the modules that are available.
 
-Next, we will cover various aspects of Python that will make our tour of Python more _complete_.
+Next, [we will cover various aspects of Python that will make our tour of Python more _complete_](more.md).

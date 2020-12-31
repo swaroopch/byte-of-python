@@ -180,4 +180,4 @@ The `end` parameter is used in the `print` function in the superclass's `tell()`
 
 We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
 
-Next, we will learn how to deal with input/output and how to access files in Python.
+Next, we will learn how to deal with [input/output and how to access files in Python](io.md).

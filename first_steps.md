@@ -183,7 +183,7 @@ In case you need to get help for operators like `return`, then you need to put t
 
 You should now be able to write, save and run Python programs at ease.
 
-Now that you are a Python user, let's learn some more Python concepts.
+Now that you are a Python user, let's learn some [more Python concepts](basics.md).
 
 ---
 
