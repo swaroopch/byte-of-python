@@ -5,11 +5,11 @@ In all the programs we wrote till now, we have designed our program around funct
 Classes and objects are the two main aspects of object oriented programming. A **class** creates a new _type_ where **objects** are **instances** of the class. An analogy is that you can have variables of type `int` which translates to saying that variables that store integers are variables which are instances (objects) of the `int` class.
 
 > **Note for Static Language Programmers**
-> 
+>
 > Note that even integers are treated as objects (of the `int` class). This is unlike C++ and Java (before version 1.5) where integers are primitive native types.
-> 
+>
 > See `help(int)` for more details on the class.
-> 
+>
 > C# and Java 1.5 programmers will find this similar to the _boxing and unboxing_ concept.
 
 Objects can store data using ordinary variables that _belong_ to the object. Variables that belong to an object or class are referred to as **fields**. Objects can also have functionality by using functions that _belong_ to a class. Such functions are called **methods** of the class. This terminology is important because it helps us to differentiate between functions and variables which are independent and those which belong to a class or object. Collectively, the fields and methods can be referred to as the **attributes** of that class.
@@ -25,7 +25,7 @@ Class methods have only one specific difference from ordinary functions - they m
 Although, you can give any name for this parameter, it is _strongly recommended_ that you use the name `self` - any other name is definitely frowned upon. There are many advantages to using a standard name - any reader of your program will immediately recognize it and even specialized IDEs (Integrated Development Environments) can help you if you use `self`.
 
 > **Note for C++/Java/C# Programmers**
-> 
+>
 > The `self` in Python is equivalent to the `this` pointer in C++ and the `this` reference in Java and C#.
 
 You must be wondering how Python gives the value for `self` and why you don't need to give a value for it. An example will make this clear. Say you have a class called `MyClass` and an instance of this class called `myobject`. When you call a method of this object as `myobject.method(arg1, arg2)`, this is automatically converted by Python into `MyClass.method(myobject, arg1, arg2)` - this is all the special `self` is about.
@@ -68,7 +68,7 @@ Here we see the `self` in action. Notice that the `say_hi` method takes no param
 
 There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
 
-The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any *initialization* (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
+The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any _initialization_ (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
 
 Example (save as `oop_init.py`):
 
@@ -125,9 +125,9 @@ how_many = classmethod(how_many)
 
 Observe that the `__init__` method is used to initialize the `Robot` instance with a name. In this method, we increase the `population` count by 1 since we have one more robot being added. Also observe that the values of `self.name` is specific to each object which indicates the nature of object variables.
 
-Remember, that you must refer to the variables and methods of the same object using the `self` *only*. This is called an *attribute reference*.
+Remember, that you must refer to the variables and methods of the same object using the `self` _only_. This is called an _attribute reference_.
 
-In this program, we also see the use of *docstrings* for classes as well as methods. We can access the class docstring at runtime using `Robot.__doc__` and the method docstring as `Robot.say_hi.__doc__`
+In this program, we also see the use of _docstrings_ for classes as well as methods. We can access the class docstring at runtime using `Robot.__doc__` and the method docstring as `Robot.say_hi.__doc__`
 
 In the `die` method, we simply decrease the `Robot.population` count by 1.
 
@@ -136,7 +136,7 @@ All class members are public. One exception: If you use data members with names 
 Thus, the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. Remember that this is only a convention and is not enforced by Python (except for the double underscore prefix).
 
 > **Note for C++/Java/C# Programmers**
-> 
+>
 > All class members (including the data members) are _public_ and all the methods are _virtual_ in Python.
 
 ## Inheritance
@@ -165,16 +165,15 @@ Output:
 
 **How It Works**
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition (for example, `class Teacher(SchoolMember)`).   Next, we observe that the `__init__` method of the base class is explicitly called using the  `self`  variable so that we can initialize the base class part of an instance in the subclass. This is very important to remember- Since we are defining a  `__init__`  method in `Teacher`  and  `Student`  subclasses, Python does not automatically call the constructor of the base class  `SchoolMember`, you have to explicitly call it yourself.
+To use inheritance, we specify the base class names in a tuple following the class name in the class definition (for example, `class Teacher(SchoolMember)`). Next, we observe that the `__init__` method of the base class is explicitly called using the `self` variable so that we can initialize the base class part of an instance in the subclass. This is very important to remember- Since we are defining a `__init__` method in `Teacher` and `Student` subclasses, Python does not automatically call the constructor of the base class `SchoolMember`, you have to explicitly call it yourself.
 
-In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
+In contrast, if we have not defined an `__init__` method in a subclass, Python will call the constructor of the base class automatically.
 
-While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
+While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass. Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass. However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass. Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
 
 A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
 
 The `end` parameter is used in the `print` function in the superclass's `tell()` method to print a line and allow the next print to continue on the same line. This is a trick to make `print` not print a `\n` (newline) symbol at the end of the printing.
-
 
 ## Summary
 

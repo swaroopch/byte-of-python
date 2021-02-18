@@ -4,7 +4,7 @@ When we refer to "Python 3" in this book, we will be referring to any version of
 
 ## Installation on Windows
 
-Visit https://www.python.org/downloads/ and download the latest version. At the time of this writing, it was Python 3.5.1 
+Visit https://www.python.org/downloads/ and download the latest version. At the time of this writing, it was Python 3.5.1
 The installation is just like any other Windows-based software.
 
 Note that if your Windows version is pre-Vista, you should [download Python 3.4 only](https://www.python.org/downloads/windows/) as later versions require newer versions of Windows.
@@ -13,7 +13,7 @@ CAUTION: Make sure you check option `Add Python 3.5 to PATH`.
 
 To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` (or another appropriate location) as the install location.
 
-If you didn’t check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
+If you didnï¿½t check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
 
 You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
 
@@ -28,6 +28,7 @@ If you want to be able to use Python from the Windows command line i.e. the DOS 
 For Windows 2000, XP, 2003 , click on `Control Panel` -> `System` -> `Advanced` -> `Environment Variables`. Click on the variable named `PATH` in the _System Variables_ section, then select `Edit` and add `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate directory name.
 
 <!-- The directory should match pythonVersion variable in book.json -->
+
 For older versions of Windows, open the file `C:\AUTOEXEC.BAT` and add the line `PATH=%PATH%;C:\Python35` and restart the system. For Windows NT, use the `AUTOEXEC.NT` file.
 
 For Windows Vista:
@@ -49,8 +50,7 @@ For Windows 7 and 8:
 
 For Windows 10:
 
-Windows Start Menu > `Settings` > `About` > `System Info` (this is all the way over to the right) > `Advanced System Settings` > `Environment Variables` (this is towards the bottom) > (then highlight `Path` variable and click `Edit`) > `New` > (type in whatever your python location is.  For example, `C:\Python35\`)
-
+Windows Start Menu > `Settings` > `About` > `System Info` (this is all the way over to the right) > `Advanced System Settings` > `Environment Variables` (this is towards the bottom) > (then highlight `Path` variable and click `Edit`) > `New` > (type in whatever your python location is. For example, `C:\Python35\`)
 
 ### Running Python prompt on Windows
 
@@ -75,6 +75,7 @@ To verify, open the terminal by opening the `Terminal` application or by pressin
 You can see the version of Python on the screen by running:
 
 <!-- The output should match pythonVersion variable in book.json -->
+
 ```
 $ python3 -V
 Python 3.6.0

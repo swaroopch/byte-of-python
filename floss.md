@@ -4,7 +4,7 @@
 
 "Free/Libre and Open Source Software", in short, [FLOSS](http://en.wikipedia.org/wiki/FLOSS) is based on the concept of a community, which itself is based on the concept of sharing, and particularly the sharing of knowledge. FLOSS are free for usage, modification and redistribution.
 
-If you have already read this book, then you are already familiar with FLOSS since you have been using *Python* all along and Python is an open source software!
+If you have already read this book, then you are already familiar with FLOSS since you have been using _Python_ all along and Python is an open source software!
 
 Here are some examples of FLOSS to give an idea of the kind of things that community sharing and building can create:
 
@@ -16,7 +16,7 @@ Here are some examples of FLOSS to give an idea of the kind of things that commu
 
 [Mozilla Firefox](http://www.mozilla.org/products/firefox): This is _the_ best web browser. It is blazingly fast and has gained critical acclaim for its sensible and impressive features. The extensions concept allows any kind of plugins to be used.
 
-[Mono](http://www.mono-project.com): This is an open source implementation of the Microsoft .NET platform.  It allows .NET applications to be created and run on GNU/Linux, Windows, FreeBSD, Mac OS and many other platforms as well.
+[Mono](http://www.mono-project.com): This is an open source implementation of the Microsoft .NET platform. It allows .NET applications to be created and run on GNU/Linux, Windows, FreeBSD, Mac OS and many other platforms as well.
 
 [Apache web server](http://httpd.apache.org): This is the popular open source web server. In fact, it is _the_ most popular web server on the planet! It runs nearly more than half of the websites out there. Yes, that's right - Apache handles more websites than all the competition (including Microsoft IIS) combined.
 

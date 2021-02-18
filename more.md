@@ -39,22 +39,27 @@ Special methods are used to mimic certain behaviors of built-in types. For examp
 Some useful special methods are listed in the following table. If you want to know about all the special methods, [see the manual](http://docs.python.org/3/reference/datamodel.html#special-method-names).
 
 - `__init__(self, ...)`
-    - This method is called just before the newly created object is returned for usage.
+
+  - This method is called just before the newly created object is returned for usage.
 
 - `__del__(self)`
-    - Called just before the object is destroyed (which has unpredictable timing, so avoid using this)
+
+  - Called just before the object is destroyed (which has unpredictable timing, so avoid using this)
 
 - `__str__(self)`
-    - Called when we use the `print` function or when `str()` is used.
+
+  - Called when we use the `print` function or when `str()` is used.
 
 - `__lt__(self, other)`
-    - Called when the _less than_ operator (<) is used. Similarly, there are special methods for all the operators (+, >, etc.)
+
+  - Called when the _less than_ operator (<) is used. Similarly, there are special methods for all the operators (+, >, etc.)
 
 - `__getitem__(self, key)`
-    - Called when `x[key]` indexing operation is used.
+
+  - Called when `x[key]` indexing operation is used.
 
 - `__len__(self)`
-    - Called when the built-in `len()` function is used for the sequence object.
+  - Called when the built-in `len()` function is used for the sequence object.
 
 ## Single Statement Blocks
 
@@ -67,7 +72,7 @@ We have seen that each block of statements is set apart from the rest by its own
 Yes
 ```
 
-Notice that the single statement is used in-place and not as a separate block.  Although, you can use this for making your program _smaller_, I strongly recommend avoiding this short-cut method, except for error checking, mainly because it will be much easier to add an extra statement if you are using proper indentation.
+Notice that the single statement is used in-place and not as a separate block. Although, you can use this for making your program _smaller_, I strongly recommend avoiding this short-cut method, except for error checking, mainly because it will be much easier to add an extra statement if you are using proper indentation.
 
 ## Lambda Forms
 
@@ -121,7 +126,7 @@ There is a special way of receiving parameters to a function as a tuple or a dic
 100
 ```
 
-Because we have a `*` prefix on the `args` variable, all extra arguments passed to the function are stored in `args` as a tuple.  If a `**` prefix had been used instead, the extra parameters would be considered to be key/value pairs of a dictionary.
+Because we have a `*` prefix on the `args` variable, all extra arguments passed to the function are stored in `args` as a tuple. If a `**` prefix had been used instead, the extra parameters would be considered to be key/value pairs of a dictionary.
 
 ## The assert statement {#assert}
 
@@ -155,7 +160,7 @@ Output:
 
 See:
 
-- [Video : Python Decorators Made Easy](https://youtu.be/MYAEv3JoenI) 
+- [Video : Python Decorators Made Easy](https://youtu.be/MYAEv3JoenI)
 - http://www.ibm.com/developerworks/linux/library/l-cpdecor.html
 - http://toumorokoshi.github.io/dry-principles-through-python-decorators.html
 

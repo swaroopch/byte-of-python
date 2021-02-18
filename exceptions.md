@@ -21,7 +21,7 @@ Observe that a `NameError` is raised and also the location where the error was d
 
 ## Exceptions
 
-We will **try** to read input from the user.  Enter the first line below and hit the `Enter` key.  When your computer prompts you for input, instead press `[ctrl-d]` on a Mac or `[ctrl-z]` with Windows and see what happens.  (If you're using Windows and neither option works, you can try `[ctrl-c]` in the Command Prompt to generate a KeyboardInterrupt error instead).
+We will **try** to read input from the user. Enter the first line below and hit the `Enter` key. When your computer prompts you for input, instead press `[ctrl-d]` on a Mac or `[ctrl-z]` with Windows and see what happens. (If you're using Windows and neither option works, you can try `[ctrl-c]` in the Command Prompt to generate a KeyboardInterrupt error instead).
 
 ```python
 >>> s = input('Enter something --> ')
@@ -30,11 +30,11 @@ Enter something --> Traceback (most recent call last):
 EOFError
 ```
 
-Python raises an error called `EOFError` which basically means it found an *end of file* symbol (which is represented by `ctrl-d`) when it did not expect to see it.
+Python raises an error called `EOFError` which basically means it found an _end of file_ symbol (which is represented by `ctrl-d`) when it did not expect to see it.
 
 ## Handling Exceptions
 
-We can handle exceptions using the `try..except` statement.  We basically put our usual statements within the try-block and put all our error handlers in the except-block.
+We can handle exceptions using the `try..except` statement. We basically put our usual statements within the try-block and put all our error handlers in the except-block.
 
 Example (save as `exceptions_handle.py`):
 
@@ -94,7 +94,7 @@ We do the usual file-reading stuff, but we have arbitrarily introduced sleeping 
 
 Observe that the `KeyboardInterrupt` exception is thrown and the program quits. However, before the program exits, the finally clause is executed and the file object is always closed.
 
-Notice that a variable assigned a value of 0 or `None` or a variable which is an empty sequence or collection is considered `False` by Python.  This is why we can use `if f:` in the code above.
+Notice that a variable assigned a value of 0 or `None` or a variable which is an empty sequence or collection is considered `False` by Python. This is why we can use `if f:` in the code above.
 
 Also note that we use `sys.stdout.flush()` after `print` so that it prints to the screen immediately.
 

@@ -6,7 +6,7 @@ There are various methods of writing modules, but the simplest way is to create 
 
 Another method is to write the modules in the native language in which the Python interpreter itself was written. For example, you can write modules in the [C programming language](http://docs.python.org/3/extending/) and when compiled, they can be used from your Python code when using the standard Python interpreter.
 
-A module can be *imported* by another program to make use of its functionality. This is how we can use the Python standard library as well. First, we will see how to use the standard library modules.
+A module can be _imported_ by another program to make use of its functionality. This is how we can use the Python standard library as well. First, we will see how to use the standard library modules.
 
 Example (save as `module_using_sys.py`):
 
@@ -18,15 +18,15 @@ Output:
 
 **How It Works**
 
-First, we *import* the `sys` module using the `import` statement. Basically, this translates to us telling Python that we want to use this module. The `sys` module contains functionality related to the Python interpreter and its environment i.e. the **sys**tem.
+First, we _import_ the `sys` module using the `import` statement. Basically, this translates to us telling Python that we want to use this module. The `sys` module contains functionality related to the Python interpreter and its environment i.e. the **sys**tem.
 
 When Python executes the `import sys` statement, it looks for the `sys` module. In this case, it is one of the built-in modules, and hence Python knows where to find it.
 
-If it was not a compiled module i.e. a module written in Python, then the Python interpreter will search for it in the directories listed in its `sys.path` variable. If the module is found, then the statements in the body of that module are run and the module is made *available* for you to use. Note that the initialization is done only the *first* time that we import a module.
+If it was not a compiled module i.e. a module written in Python, then the Python interpreter will search for it in the directories listed in its `sys.path` variable. If the module is found, then the statements in the body of that module are run and the module is made _available_ for you to use. Note that the initialization is done only the _first_ time that we import a module.
 
 The `argv` variable in the `sys` module is accessed using the dotted notation i.e. `sys.argv`. It clearly indicates that this name is part of the `sys` module. Another advantage of this approach is that the name does not clash with any `argv` variable used in your program.
 
-The `sys.argv` variable is a *list* of strings (lists are explained in detail in a [later chapter](./data_structures.md#data-structures)). Specifically, the `sys.argv` contains the list of *command line arguments* i.e. the arguments passed to your program using the command line.
+The `sys.argv` variable is a _list_ of strings (lists are explained in detail in a [later chapter](./data_structures.md#data-structures)). Specifically, the `sys.argv` contains the list of _command line arguments_ i.e. the arguments passed to your program using the command line.
 
 If you are using an IDE to write and run these programs, look for a way to specify command line arguments to the program in the menus.
 
@@ -40,7 +40,7 @@ Note that the current directory is the directory from which the program is launc
 
 ## Byte-compiled .pyc files {#pyc}
 
-Importing a module is a relatively costly affair, so Python does some tricks to make it faster. One way is to create *byte-compiled* files with the extension `.pyc` which is an intermediate form that Python transforms the program into (remember the [introduction section](./about_python.md#interpreted) on how Python works?). This `.pyc` file is useful when you import the module the next time from a different program - it will be much faster since a portion of the processing required in importing a module is already done. Also, these byte-compiled files are platform-independent.
+Importing a module is a relatively costly affair, so Python does some tricks to make it faster. One way is to create _byte-compiled_ files with the extension `.pyc` which is an intermediate form that Python transforms the program into (remember the [introduction section](./about_python.md#interpreted) on how Python works?). This `.pyc` file is useful when you import the module the next time from a different program - it will be much faster since a portion of the processing required in importing a module is already done. Also, these byte-compiled files are platform-independent.
 
 NOTE: These `.pyc` files are usually created in the same directory as the corresponding `.py` files. If Python does not have permission to write to files in that directory, then the `.pyc` files will _not_ be created.
 
@@ -48,7 +48,7 @@ NOTE: These `.pyc` files are usually created in the same directory as the corres
 
 If you want to directly import the `argv` variable into your program (to avoid typing the `sys.` everytime for it), then you can use the `from sys import argv` statement.
 
-> WARNING: In general, *avoid* using the `from..import` statement, use the `import` statement instead. This is because your program will avoid name clashes and will be more readable.
+> WARNING: In general, _avoid_ using the `from..import` statement, use the `import` statement instead. This is because your program will avoid name clashes and will be more readable.
 
 Example:
 
@@ -75,13 +75,13 @@ Every Python module has its `__name__` defined. If this is `'__main__'`, that im
 
 ## Making Your Own Modules
 
-Creating your own modules is easy, you've been doing it all along!  This is because every Python program is also a module. You just have to make sure it has a `.py` extension. The following example should make it clear.
+Creating your own modules is easy, you've been doing it all along! This is because every Python program is also a module. You just have to make sure it has a `.py` extension. The following example should make it clear.
 
 Example (save as `mymodule.py`):
 
 <pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>
 
-The above was a sample *module*. As you can see, there is nothing particularly special about it compared to our usual Python program. We will next see how to use this module in our other Python programs.
+The above was a sample _module_. As you can see, there is nothing particularly special about it compared to our usual Python program. We will next see how to use this module in our other Python programs.
 
 Remember that the module should be placed either in the same directory as the program from which we import it, or in one of the directories listed in `sys.path`.
 
@@ -118,7 +118,7 @@ This will import all public names such as `say_hi` but would not import `__versi
 <!-- -->
 
 > **Zen of Python**
-> 
+>
 > One of Python's guiding principles is that "Explicit is better than Implicit". Run `import this` in Python to learn more.
 
 ## The `dir` function {#dir-function}
@@ -169,9 +169,9 @@ Next, we use the `dir` function without passing parameters to it. By default, it
 
 In order to observe `dir` in action, we define a new variable `a` and assign it a value and then check `dir` and we observe that there is an additional value in the list of the same name. We remove the variable/attribute of the current module using the `del` statement and the change is reflected again in the output of the `dir` function.
 
-A note on `del`: This statement is used to *delete* a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
+A note on `del`: This statement is used to _delete_ a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
 
-Note that the `dir()` function works on *any* object. For example, run `dir(str)` for the attributes of the `str` (string) class.
+Note that the `dir()` function works on _any_ object. For example, run `dir(str)` for the attributes of the `str` (string) class.
 
 There is also a [`vars()`](http://docs.python.org/3/library/functions.html#vars) function which can potentially give you the attributes and their values, but it will not work for all cases.
 

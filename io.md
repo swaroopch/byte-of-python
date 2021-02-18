@@ -44,9 +44,9 @@ Output:
 
 **How It Works**
 
-Note that we can create a new file object simply by using the `open` method.  We open (or create it if it doesn't already exist) this file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
+Note that we can create a new file object simply by using the `open` method. We open (or create it if it doesn't already exist) this file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
 
-In our example, we first open/create the file in write text mode and use the `write` method of the file object to write  our string variable `poem` to the file and then we finally `close` the file.
+In our example, we first open/create the file in write text mode and use the `write` method of the file object to write our string variable `poem` to the file and then we finally `close` the file.
 
 Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the `readline` method in a loop. This method returns a complete line including the newline character at the end of the line. When an _empty_ string is returned, it means that we have reached the end of the file and we 'break' out of the loop.
 
@@ -56,7 +56,7 @@ We can see from our `readline` output that this program has indeed written to an
 
 ## Pickle
 
-Python provides a standard module called `pickle` which you can use to store _any_ plain Python object in a file and then get it back later. This is called storing the object *persistently*.
+Python provides a standard module called `pickle` which you can use to store _any_ plain Python object in a file and then get it back later. This is called storing the object _persistently_.
 
 Example (save as `io_pickle.py`):
 
@@ -68,13 +68,13 @@ Output:
 
 **How It Works**
 
-To store an object in a file, we have to first `open` the file in __w__rite __b__inary mode and then call the `dump` function of the `pickle` module. This process is called _pickling_.
+To store an object in a file, we have to first `open` the file in **w**rite **b**inary mode and then call the `dump` function of the `pickle` module. This process is called _pickling_.
 
 Next, we retrieve the object using the `load` function of the `pickle` module which returns the object. This process is called _unpickling_.
 
 ## Unicode
 
-So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  
+So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only. Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.
 
 > NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
 
@@ -89,15 +89,15 @@ So far, when we have been writing and using strings, or reading and writing to a
 <class 'str'>
 ```
 
-When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open` function.
+When data is sent over the Internet, we need to send it in bytes... something your computer easily understands. The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding. A popular encoding to use is UTF-8. We can read and write in UTF-8 by using a simple keyword argument in our `open` function.
 
 <pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
 **How It Works**
 
-We use `io.open` and then use the `encoding` argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.
+We use `io.open` and then use the `encoding` argument in the first open statement to encode the message, and then again in the second open statement when decoding the message. Note that we should only use encoding in the open statement when in text mode.
 
-Whenever we write a program that uses Unicode literals (by putting a `u` before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  `# encoding=utf-8`  comment at the top of our program.  
+Whenever we write a program that uses Unicode literals (by putting a `u` before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put `# encoding=utf-8` comment at the top of our program.
 
 You should learn more about this topic by reading:
 

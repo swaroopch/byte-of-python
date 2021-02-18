@@ -27,7 +27,7 @@ Use as many useful comments as you can in your program to:
 - explain problems you're trying to solve
 - explain problems you're trying to overcome in your program, etc.
 
-[*Code tells you how, comments should tell you why*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
+[_Code tells you how, comments should tell you why_](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
 
 This is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
 
@@ -46,7 +46,7 @@ An example of an integer is `2` which is just a whole number.
 Examples of floating point numbers (or _floats_ for short) are `3.23` and `52.3E-4`. The `E` notation indicates powers of 10. In this case, `52.3E-4` means `52.3 * 10^-4^`.
 
 > **Note for Experienced Programmers**
-> 
+>
 > There is no separate `long` type. The `int` type can be an integer of any size.
 
 ## Strings
@@ -84,13 +84,13 @@ a bad thing, it really isn't. We will see why this is not a limitation in the va
 we see later on.
 
 > **Note for C/C++ Programmers**
-> 
+>
 > There is no separate `char` data type in Python. There is no real need for it and I am sure you won't miss it.
 
 <!-- -->
 
 > **Note for Perl/PHP Programmers**
-> 
+>
 > Remember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.
 
 ### The format method
@@ -248,7 +248,7 @@ r"Newlines are indicated by \n"
 ```
 
 > **Note for Regular Expression Users**
-> 
+>
 > Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
 
 ## Variable
@@ -270,7 +270,7 @@ Variables can hold values of different types called _data types_. The basic type
 
 ## Object
 
-Remember, Python refers to anything used in a program as an _object_.  This is meant in the generic sense. Instead of saying "the _something_"', we say "the _object_".
+Remember, Python refers to anything used in a program as an _object_. This is meant in the generic sense. Instead of saying "the _something_"', we say "the _object_".
 
 > **Note for Object Oriented Programming users**:
 >
@@ -334,7 +334,7 @@ Then we add `1` to the value stored in `i` and store it back. We then print it a
 Similarly, we assign the literal string to the variable `s` and then print it.
 
 > **Note for static language programmers**
-> 
+>
 > Variables are used by just assigning them a value. No declaration or data type definition is needed/used.
 
 ## Logical And Physical Line
@@ -371,7 +371,7 @@ and same as
 i = 5; print(i)
 ```
 
-However, I *strongly recommend* that you stick to *writing a maximum of a single logical line on each single physical line*. The idea is that you should never use the semicolon. In fact, I have _never_ used or even seen a semicolon in a Python program.
+However, I _strongly recommend_ that you stick to _writing a maximum of a single logical line on each single physical line_. The idea is that you should never use the semicolon. In fact, I have _never_ used or even seen a semicolon in a Python program.
 
 There is one kind of situation where this concept is really useful: if you have a long line of code, you can break it into multiple physical lines by using the backslash. This is referred to as _explicit line joining_:
 
@@ -400,13 +400,13 @@ is the same as
 i = 5
 ```
 
-Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called *implicit line joining*. You can see this in action when we write programs using [list](./data_structures.md#lists) in later chapters.
+Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called _implicit line joining_. You can see this in action when we write programs using [list](./data_structures.md#lists) in later chapters.
 
 ## Indentation
 
-Whitespace is important in Python. Actually, *whitespace at the beginning of the line is important*. This is called _indentation_. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
+Whitespace is important in Python. Actually, _whitespace at the beginning of the line is important_. This is called _indentation_. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
 
-This means that statements which go together _must_ have the same indentation. Each such set of statements is called a *block*. We will see examples of how blocks are important in later chapters.
+This means that statements which go together _must_ have the same indentation. Each such set of statements is called a _block_. We will see examples of how blocks are important in later chapters.
 
 One thing you should remember is that wrong indentation can give rise to errors. For example:
 
@@ -429,16 +429,15 @@ IndentationError: unexpected indent
 Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that _you cannot arbitrarily start new blocks of statements_ (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the [control flow](./control_flow.md#control_flow).
 
 > **How to indent**
-> 
+>
 > Use four spaces for indentation. This is the official Python language recommendation. Good editors will automatically do this for you. Make sure you use a consistent number of spaces for indentation, otherwise your program will not run or will have unexpected behavior.
 
 <!-- -->
 
 > **Note to static language programmers**
-> 
+>
 > Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
 
 ## Summary
 
 Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as control flow statements. Be sure to become comfortable with what you have read in this chapter.
-

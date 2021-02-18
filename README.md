@@ -86,7 +86,7 @@ Here are what people are saying about the book:
 
 <!-- -->
 
-> Hi, I'm from Dominican Republic. My name is Pavel, recently I read your book _A Byte of Python_ and I consider it excellent!!  :). I learnt much from all the examples. Your book is of great help for newbies like me...
+> Hi, I'm from Dominican Republic. My name is Pavel, recently I read your book _A Byte of Python_ and I consider it excellent!! :). I learnt much from all the examples. Your book is of great help for newbies like me...
 > -- [Pavel Simo](mailto:pavel.simo@gmail.com)
 
 <!-- -->
@@ -96,12 +96,12 @@ Here are what people are saying about the book:
 
 <!-- -->
 
-> I recently finished reading Byte of Python, and I thought I really ought to thank you. I was very sad to reach the final pages as I now have to go back to dull, tedious oreilly or etc.  manuals for learning about python. Anyway, I really appreciate your book.
+> I recently finished reading Byte of Python, and I thought I really ought to thank you. I was very sad to reach the final pages as I now have to go back to dull, tedious oreilly or etc. manuals for learning about python. Anyway, I really appreciate your book.
 > [Samuel Young](mailto:sy137@gmail.com)
 
 <!-- -->
 
-> Dear Swaroop, I am taking a class from an instructor that has no interest in teaching. We are using Learning Python, second edition, by O'Reilly. It is not a text for beginner without any programming knowledge, and an instructor that should be working in another field.  Thank you very much for your book, without it I would be clueless about Python and programming. Thanks a million, you are able to _break the message down_ to a level that beginners can understand and not everyone can.
+> Dear Swaroop, I am taking a class from an instructor that has no interest in teaching. We are using Learning Python, second edition, by O'Reilly. It is not a text for beginner without any programming knowledge, and an instructor that should be working in another field. Thank you very much for your book, without it I would be clueless about Python and programming. Thanks a million, you are able to _break the message down_ to a level that beginners can understand and not everyone can.
 > -- [Joseph Duarte](mailto:jduarte1@cfl.rr.com)
 
 <!-- -->
@@ -118,10 +118,10 @@ Here are what people are saying about the book:
 
 <!-- -->
 
-> I'm just e-mailing you to thank you for writing Byte of Python online.  I had been attempting Python for a few months prior to stumbling across your book, and although I made limited success with pyGame, I never completed a program.
+> I'm just e-mailing you to thank you for writing Byte of Python online. I had been attempting Python for a few months prior to stumbling across your book, and although I made limited success with pyGame, I never completed a program.
 > Thanks to your simplification of the categories, Python actually seems a reachable goal. It seems like I have finally learned the foundations and I can continue into my real goal, game development.
 > ...
-> Once again, thanks VERY much for placing such a structured and helpful guide to basic programming on the web.  It shoved me into and out of OOP with an understanding where two text books had failed.
+> Once again, thanks VERY much for placing such a structured and helpful guide to basic programming on the web. It shoved me into and out of OOP with an understanding where two text books had failed.
 > -- [Matt Gallivan](mailto:m_gallivan12@hotmail.com)
 
 <!-- -->
@@ -186,14 +186,14 @@ Here are what people are saying about the book:
 
 <!-- -->
 
-> I wanted to thank you for writing _A Byte Of Python_ (2 & 3 Versions).  It has been invaluable to my learning experience in Python & Programming in general.
+> I wanted to thank you for writing _A Byte Of Python_ (2 & 3 Versions). It has been invaluable to my learning experience in Python & Programming in general.
 > Needless to say, I am a beginner in the programming world, a couple of months of self study up to this point. I had been using youtube tutorials & some other online tutorials including other free books. I decided to dig into your book yesterday, & I've learned more on the first few pages than any other book or tutorial. A few things I had been confused about, were cleared right up with a GREAT example & explanation. Can't wait to read (and learn) more!!
 > Thank you so much for not only writing the book, but for putting it under the creative commons license (free). Thank goodness there are unselfish people like you out there to help & teach the rest of us.
 > -- Chris
 
 <!-- -->
 
-> I wrote you back in 2011 and I was just getting into Python and wanted to thank you for your tutorial "A Byte of Python".  Without it, I would have fallen by the wayside.  Since then I have gone on to program a number of functions in my organization with this language with yet more on the horizon.  I would not call myself an advanced programmer by any stretch but I notice the occasional request for assistance now from others since I started using it.  I discovered, while reading "Byte" why I had ceased studying C and C\++ and it was because the book given to me started out with an example containing an augmented assignment.  Of course, there was no explanation for this arrangement of operators and I fell on my head trying to make sense of what was on the written page.  As I recall it was a most frustrating exercise which I eventually abandoned. Doesn't mean C or C++ is impossible to learn, or even that I am stupid, but it does mean that the documentation I worked my way through did not define the symbols and words which is an essential part of any instruction. Just as computers will not be able to understand a computer word or computer symbol that is outside the syntax for the language being used, a student new to any field will not grasp his subject if he encounters words or symbols for which there are no definitions.  You get a "blue screen" as it were in either case.  The solution is simple, though: find the word or symbol and get the proper definition or symbol and lo and behold,the computer or student can proceed.  Your book was so well put together that I found very little in it I couldn't grasp.  So, thank you.  I encourage you to continue to include full definitions of terms.  The documentation with Python is good, once you know, (the examples are its strength from what I see) but in many cases it seems that you have to know in order to understand the documentation which to my mind is not what should be.  Third party tutorials express the need for clarification of the documentation and their success largely depends on the words that are used to describe the terminology.  I have recommended your book to many others. Some in Australia, some in the Caribbean and yet others in the US. It fills a niche no others do.  I hope you are doing well and wish you all the success in the future.
+> I wrote you back in 2011 and I was just getting into Python and wanted to thank you for your tutorial "A Byte of Python". Without it, I would have fallen by the wayside. Since then I have gone on to program a number of functions in my organization with this language with yet more on the horizon. I would not call myself an advanced programmer by any stretch but I notice the occasional request for assistance now from others since I started using it. I discovered, while reading "Byte" why I had ceased studying C and C\++ and it was because the book given to me started out with an example containing an augmented assignment. Of course, there was no explanation for this arrangement of operators and I fell on my head trying to make sense of what was on the written page. As I recall it was a most frustrating exercise which I eventually abandoned. Doesn't mean C or C++ is impossible to learn, or even that I am stupid, but it does mean that the documentation I worked my way through did not define the symbols and words which is an essential part of any instruction. Just as computers will not be able to understand a computer word or computer symbol that is outside the syntax for the language being used, a student new to any field will not grasp his subject if he encounters words or symbols for which there are no definitions. You get a "blue screen" as it were in either case. The solution is simple, though: find the word or symbol and get the proper definition or symbol and lo and behold,the computer or student can proceed. Your book was so well put together that I found very little in it I couldn't grasp. So, thank you. I encourage you to continue to include full definitions of terms. The documentation with Python is good, once you know, (the examples are its strength from what I see) but in many cases it seems that you have to know in order to understand the documentation which to my mind is not what should be. Third party tutorials express the need for clarification of the documentation and their success largely depends on the words that are used to describe the terminology. I have recommended your book to many others. Some in Australia, some in the Caribbean and yet others in the US. It fills a niche no others do. I hope you are doing well and wish you all the success in the future.
 > -- Nick
 
 <!-- -->
@@ -253,7 +253,7 @@ This book is/was being used as instructional material in various educational ins
 - 'Multi Agent Semantic Web Systems' course at the [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/)
 - 'Introduction to Computer Science and Programming' at [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)
 - 'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' -- [Aleš Žiberna](mailto:ales.ziberna@fdv.uni-lj.si) says _"I (and my predecessor) have been using your book as the main literature for this course"_
--  'Introduction to programming', Department of Information Sciences, University of Zadar, Croatia -- Krešimir Zauder says _"I would like to inform you that A Byte of Python is a mandatory read at my course"_
+- 'Introduction to programming', Department of Information Sciences, University of Zadar, Croatia -- Krešimir Zauder says _"I would like to inform you that A Byte of Python is a mandatory read at my course"_
 
 ## License
 
@@ -267,8 +267,8 @@ This means:
 
 Please note:
 
-- Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are *not* from the original author of this book.
-- Attribution *must* be shown in the introductory description and front page of the document by linking back to {{ book.officialUrl }} and clearly indicating that the original text can be fetched from this location.
+- Please do _not_ sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are _not_ from the original author of this book.
+- Attribution _must_ be shown in the introductory description and front page of the document by linking back to {{ book.officialUrl }} and clearly indicating that the original text can be fetched from this location.
 - All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
 
 ## Read Now

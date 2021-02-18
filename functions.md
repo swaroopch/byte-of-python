@@ -1,10 +1,10 @@
 # Functions
 
-Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. This is known as *calling* the function. We have already used many built-in functions such as `len` and `range`.
+Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. This is known as _calling_ the function. We have already used many built-in functions such as `len` and `range`.
 
-The function concept is probably *the* most important building block of any non-trivial software (in any programming language), so we will explore various aspects of functions in this chapter.
+The function concept is probably _the_ most important building block of any non-trivial software (in any programming language), so we will explore various aspects of functions in this chapter.
 
-Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. An example will show that this is actually very simple:
+Functions are defined using the `def` keyword. After this keyword comes an _identifier_ name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. An example will show that this is actually very simple:
 
 Example (save as `function1.py`):
 
@@ -23,14 +23,14 @@ Notice that we can call the same function twice which means we do not have to wr
 ## Function Parameters
 
 A function can take parameters, which are values you supply to the function so that the function
-can *do* something utilising those values. These parameters are just like variables except that the
+can _do_ something utilising those values. These parameters are just like variables except that the
 values of these variables are defined when we call the function and are already assigned values
 when the function runs.
 
 Parameters are specified within the pair of parentheses in the function definition, separated by
-commas. When we call the function, we supply the values in the same way.  Note the terminology
-used - the names given in the function definition are called *parameters* whereas the values you
-supply in the function call are called *arguments*.
+commas. When we call the function, we supply the values in the same way. Note the terminology
+used - the names given in the function definition are called _parameters_ whereas the values you
+supply in the function call are called _arguments_.
 
 Example (save as `function_param.py`):
 
@@ -42,13 +42,13 @@ Output:
 
 **How It Works**
 
-Here, we define a function called `print_max` that uses two parameters called `a` and `b`.  We find out the greater number using a simple `if..else` statement and then print the bigger number.
+Here, we define a function called `print_max` that uses two parameters called `a` and `b`. We find out the greater number using a simple `if..else` statement and then print the bigger number.
 
 The first time we call the function `print_max`, we directly supply the numbers as arguments. In the second case, we call the function with variables as arguments. `print_max(x, y)` causes the value of argument `x` to be assigned to parameter `a` and the value of argument `y` to be assigned to parameter `b`. The `print_max` function works the same way in both cases.
 
 ## Local Variables
 
-When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are *local* to the function. This is called the *scope* of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
+When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are _local_ to the function. This is called the _scope_ of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
 
 Example (save as `function_local.py`):
 
@@ -60,15 +60,15 @@ Output:
 
 **How It Works**
 
-The first time that we print the *value* of the name *x* with the first line in the function's body, Python uses the value of the parameter declared in the main block, above the function definition.
+The first time that we print the _value_ of the name _x_ with the first line in the function's body, Python uses the value of the parameter declared in the main block, above the function definition.
 
-Next, we assign the value `2` to `x`. The name `x` is local to our function.  So, when we change the value of `x` in the function, the `x` defined in the main block remains unaffected.
+Next, we assign the value `2` to `x`. The name `x` is local to our function. So, when we change the value of `x` in the function, the `x` defined in the main block remains unaffected.
 
 With the last `print` statement, we display the value of `x` as defined in the main block, thereby confirming that it is actually unaffected by the local assignment within the previously called function.
 
 ## The `global` statement {#global-statement}
 
-If you want to assign a value to a name defined at the top level of the program (i.e. not inside any kind of scope such as functions or classes), then you have to tell Python that the name is not local, but it is *global*. We do this using the `global` statement. It is impossible to assign a value to a variable defined outside a function without the `global` statement.
+If you want to assign a value to a name defined at the top level of the program (i.e. not inside any kind of scope such as functions or classes), then you have to tell Python that the name is not local, but it is _global_. We do this using the `global` statement. It is impossible to assign a value to a variable defined outside a function without the `global` statement.
 
 You can use the values of such variables defined outside the function (assuming there is no variable with the same name within the function). However, this is not encouraged and should be avoided since it becomes unclear to the reader of the program as to where that variable's definition is. Using the `global` statement makes it amply clear that the variable is defined in an outermost block.
 
@@ -88,7 +88,7 @@ You can specify more than one global variable using the same `global` statement 
 
 ## Default Argument Values {#default-arguments}
 
-For some functions, you may want to make some parameters *optional* and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator (`=`) followed by the default value.
+For some functions, you may want to make some parameters _optional_ and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator (`=`) followed by the default value.
 
 Note that the default argument value should be a constant. More precisely, the default argument value should be immutable - this is explained in detail in later chapters. For now, just remember this.
 
@@ -104,20 +104,19 @@ Output:
 
 The function named `say` is used to print a string as many times as specified. If we don't supply a value, then by default, the string is printed just once. We achieve this by specifying a default argument value of `1` to the parameter `times`.
 
-In the first usage of `say`, we supply only the string and it prints the string once. In the second usage of `say`, we supply both the string and an argument `5` stating that we want to *say* the string message 5 times.
+In the first usage of `say`, we supply only the string and it prints the string once. In the second usage of `say`, we supply both the string and an argument `5` stating that we want to _say_ the string message 5 times.
 
-> *CAUTION*
-> 
+> _CAUTION_
+>
 > Only those parameters which are at the end of the parameter list can be given default argument
 > values i.e. you cannot have a parameter with a default argument value preceding a parameter without
 > a default argument value in the function's parameter list.
-> 
-> This is because the values are assigned to the parameters by position. For example,`def func(a,
-> b=5)` is valid, but `def func(a=5, b)` is *not valid*.
+>
+> This is because the values are assigned to the parameters by position. For example,`def func(a, b=5)` is valid, but `def func(a=5, b)` is _not valid_.
 
 ## Keyword Arguments
 
-If you have some functions with many parameters and you want to specify only some of them, then you can give values for such parameters by naming them - this is called *keyword arguments* - we use the name (keyword) instead of the position (which we have been using all along) to specify the arguments to the function.
+If you have some functions with many parameters and you want to specify only some of them, then you can give values for such parameters by naming them - this is called _keyword arguments_ - we use the name (keyword) instead of the position (which we have been using all along) to specify the arguments to the function.
 
 There are two advantages - one, using the function is easier since we do not need to worry about the order of the arguments. Two, we can give values to only those parameters to which we want to, provided that the other parameters have default argument values.
 
@@ -159,7 +158,7 @@ We will explore tuples and dictionaries in a [later chapter](./data_structures.m
 
 ## The `return` statement {#return-statement}
 
-The `return` statement is used to *return* from a function i.e. break out of the function. We can optionally *return a value* from the function as well.
+The `return` statement is used to _return_ from a function i.e. break out of the function. We can optionally _return a value_ from the function as well.
 
 Example (save as `function_return.py`):
 
@@ -171,7 +170,7 @@ Output:
 
 **How It Works**
 
-The `maximum` function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple `if..else` statement to find the greater value and then *returns* that value.
+The `maximum` function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple `if..else` statement to find the greater value and then _returns_ that value.
 
 Note that a `return` statement without a value is equivalent to `return None`. `None` is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of `None`.
 
@@ -188,7 +187,7 @@ The `pass` statement is used in Python to indicate an empty block of statements.
 
 ## DocStrings
 
-Python has a nifty feature called *documentation strings*, usually referred to by its shorter name *docstrings*. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!
+Python has a nifty feature called _documentation strings_, usually referred to by its shorter name _docstrings_. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!
 
 Example (save as `function_docstring.py`):
 
@@ -200,15 +199,15 @@ Output:
 
 **How It Works**
 
-A string on the first logical line of a function is the *docstring* for that function. Note that DocStrings also apply to [modules](./modules.md#modules) and [classes](./oop.md#oop) which we will learn about in the respective chapters.
+A string on the first logical line of a function is the _docstring_ for that function. Note that DocStrings also apply to [modules](./modules.md#modules) and [classes](./oop.md#oop) which we will learn about in the respective chapters.
 
-The convention followed for a docstring is a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank followed by any detailed explanation starting from the third line. You are *strongly advised* to follow this convention for all your docstrings for all your non-trivial functions.
+The convention followed for a docstring is a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank followed by any detailed explanation starting from the third line. You are _strongly advised_ to follow this convention for all your docstrings for all your non-trivial functions.
 
-We can access the docstring of the `print_max` function using the `__doc__` (notice the *double underscores*) attribute (name belonging to) of the function. Just remember that Python treats *everything* as an object and this includes functions. We'll learn more about objects in the chapter on [classes](./oop.md#oop).
+We can access the docstring of the `print_max` function using the `__doc__` (notice the _double underscores_) attribute (name belonging to) of the function. Just remember that Python treats _everything_ as an object and this includes functions. We'll learn more about objects in the chapter on [classes](./oop.md#oop).
 
 If you have used `help()` in Python, then you have already seen the usage of docstrings! What it does is just fetch the `__doc__` attribute of that function and displays it in a neat manner for you. You can try it out on the function above - just include `help(print_max)` in your program. Remember to press the `q` key to exit `help`.
 
-Automated tools can retrieve the documentation from your program in this manner. Therefore, I *strongly recommend* that you use docstrings for any non-trivial function that you write. The `pydoc` command that comes with your Python distribution works similarly to `help()` using docstrings.
+Automated tools can retrieve the documentation from your program in this manner. Therefore, I _strongly recommend_ that you use docstrings for any non-trivial function that you write. The `pydoc` command that comes with your Python distribution works similarly to `help()` using docstrings.
 
 ## Summary
 

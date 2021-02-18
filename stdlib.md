@@ -15,6 +15,7 @@ The `sys` module contains system-specific functionality. We have already seen th
 Suppose we want to check the version of the Python software being used, the `sys` module gives us that information.
 
 <!-- The output should match pythonVersion variable in book.json -->
+
 ```python
 >>> import sys
 >>> sys.version_info
@@ -39,15 +40,15 @@ Output:
 
 <pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
 
-The `cat` command is used in the command line to read the 'test.log' file.  If the `cat` command is not available, you can open the `test.log` file in a text editor instead.
+The `cat` command is used in the command line to read the 'test.log' file. If the `cat` command is not available, you can open the `test.log` file in a text editor instead.
 
 **How It Works**
 
-We use three modules from the standard library - the `os` module for interacting with the operating system, the `platform` module for information about the platform i.e. the operating system and the `logging` module to *log* information.
+We use three modules from the standard library - the `os` module for interacting with the operating system, the `platform` module for information about the platform i.e. the operating system and the `logging` module to _log_ information.
 
 First, we check which operating system we are using by checking the string returned by `platform.platform()` (for more information, see `import platform; help(platform)`). If it is Windows, we figure out the home drive, the home folder and the filename where we want to store the information. Putting these three parts together, we get the full location of the file. For other platforms, we need to know just the home folder of the user and we get the full location of the file.
 
-We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system.  Note: the `join()' method we use here that's part of the `os` module is different from the string method `join()` that we've used elsewhere in this book.
+We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system. Note: the `join()' method we use here that's part of the `os`module is different from the string method`join()` that we've used elsewhere in this book.
 
 We configure the `logging` module to write all the messages in a particular format to the file we have specified.
 

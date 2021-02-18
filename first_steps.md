@@ -21,6 +21,7 @@ followed by the `[enter]` key. You should see the words `Hello World` printed to
 Here is an example of what you should be seeing, when using a Mac OS X computer. The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be the same regardless of the operating system.
 
 <!-- The output should match pythonVersion variable in book.json -->
+
 ```python
 $ python3
 Python 3.6.0 (default, Jan 12 2017, 11:26:36)
@@ -48,7 +49,7 @@ One of the very basic requirements is _syntax highlighting_ where all the differ
 
 If you have no idea where to start, I would recommend using [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) software which is available on Windows, Mac OS X and GNU/Linux. Details in the next section.
 
-If you are using Windows, *do not use Notepad* - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors will automatically do this.
+If you are using Windows, _do not use Notepad_ - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors will automatically do this.
 
 If you are an experienced programmer, then you must be already using [Vim](http://www.vim.org) or [Emacs](http://www.gnu.org/software/emacs/). Needless to say, these are two of the most powerful editors and you will benefit from using them to write your Python programs. I personally use both for most of my programs, and have even written an [entire book on Vim]({{ book.vimBookUrl }}).
 
@@ -93,6 +94,7 @@ Delete the lines that are already present, and now type the following:
 ```python
 print("hello world")
 ```
+
 Now right-click on what you typed (without selecting the text), and click on `Run 'hello'`.
 
 ![PyCharm Run 'hello'](./img/pycharm_run.png)
@@ -108,18 +110,18 @@ You can find more information about PyCharm in the [PyCharm Quickstart](https://
 ## Vim
 
 1. Install [Vim](http://www.vim.org)
-    * Mac OS X users should install `macvim` package via [HomeBrew](http://brew.sh/)
-    * Windows users should download the "self-installing executable" from [Vim website](http://www.vim.org/download.php)
-    * GNU/Linux users should get Vim from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `vim` package.
+   - Mac OS X users should install `macvim` package via [HomeBrew](http://brew.sh/)
+   - Windows users should download the "self-installing executable" from [Vim website](http://www.vim.org/download.php)
+   - GNU/Linux users should get Vim from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `vim` package.
 2. Install [jedi-vim](https://github.com/davidhalter/jedi-vim) plugin for autocompletion.
 3. Install corresponding `jedi` python package : `pip install -U jedi`
 
 ## Emacs
 
 1. Install [Emacs 24+](http://www.gnu.org/software/emacs/).
-    * Mac OS X users should get Emacs from http://emacsformacosx.com
-    * Windows users should get Emacs from http://ftp.gnu.org/gnu/emacs/windows/
-    * GNU/Linux users should get Emacs from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `emacs24` package.
+   - Mac OS X users should get Emacs from http://emacsformacosx.com
+   - Windows users should get Emacs from http://ftp.gnu.org/gnu/emacs/windows/
+   - GNU/Linux users should get Emacs from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `emacs24` package.
 2. Install [ELPY](https://github.com/jorgenschaefer/elpy/wiki)
 
 ## Using A Source File
