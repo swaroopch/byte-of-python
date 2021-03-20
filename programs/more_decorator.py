@@ -1,6 +1,7 @@
 from time import sleep
 from functools import wraps
 import logging
+
 logging.basicConfig()
 log = logging.getLogger("retry")
 
@@ -13,14 +14,12 @@ def retry(f):
             try:
                 return f(*args, **kwargs)
             except Exception:
-                log.exception("Attempt %s/%s failed : %s",
-                              attempt,
-                              MAX_ATTEMPTS,
-                              (args, kwargs))
+                log.exception(
+                    "Attempt %s/%s failed : %s", attempt, MAX_ATTEMPTS, (args, kwargs)
+                )
                 sleep(10 * attempt)
-        log.critical("All %s attempts failed : %s",
-                     MAX_ATTEMPTS,
-                     (args, kwargs))
+        log.critical("All %s attempts failed : %s", MAX_ATTEMPTS, (args, kwargs))
+
     return wrapper_function
 
 
@@ -39,5 +38,5 @@ def save_to_database(arg):
         raise ValueError(arg)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     save_to_database("Some bad value")

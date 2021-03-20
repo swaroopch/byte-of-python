@@ -9,7 +9,7 @@ try:
         line = f.readline()
         if len(line) == 0:
             break
-        print(line, end='')
+        print(line, end="")
         sys.stdout.flush()
         print("Press ctrl+c now")
         # To make sure it runs for a while
