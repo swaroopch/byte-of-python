@@ -10,9 +10,12 @@ This book will teach you to use Python version 3. There will also be guidance fo
 
 Here are what people are saying about the book:
 
+> Somewhere around 2004 - 05 when I was convinced I wasn’t smart enough to be a programmer , I came came across the original A Byte of #Python, and that changed my entire perspective on computing and life , I owe a lot to that book @swaroopch had written: https://python.swaroopch.com
+> -- [Rahul](https://twitter.com/unrahu1/status/1288743029637959682) on Jul 30, 2020
+
 > This is the book that got me into programming almost a decade ago.
 > Thank you @swaroopch. You changed my life.
-> -- [Stefan Froelich](https://twitter.com/TheDumbTechGuy/status/1157245235052929024)
+> -- [Stefan Froelich](https://twitter.com/TheDumbTechGuy/status/1157245235052929024) on Aug 2, 2019
 
 <!-- -->
 
