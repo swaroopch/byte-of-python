@@ -10,3 +10,5 @@ node_modules
 byte-of-python.epub
 byte-of-python.pdf
 package-lock.json
+package.json
+public
