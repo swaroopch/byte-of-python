@@ -12,3 +12,5 @@ byte-of-python.pdf
 package-lock.json
 package.json
 public
+venv
+.vscode
