@@ -276,17 +276,17 @@ Please note:
 
 ## Read Now
 
-You can read it online at {{ book.officialUrl }}
+You can read it online at [swaroopch.com](https://python.swaroopch.com)
 
 ## Buy The Book
 
-A printed hardcopy of the book can be purchased at {{ book.buyBookUrl }} for your offline reading pleasure, and to support the continued development and improvement of this book.
+A printed hardcopy of the book can be purchased at https://swaroopch.com/buybook for your offline reading pleasure, and to support the continued development and improvement of this book.
 
 ## Download
 
-Visit {{ book.downloadUrl }} to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers).
+Visit https://github.com/swaroopch/byte-of-python/releases/latest to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers).
 
-Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.)
+Visit https://github.com/swaroopch/byte-of-python for the raw content (for suggesting corrections, changes, translating, etc.)
 
 ## Read the book in your native language
 
