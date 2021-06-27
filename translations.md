@@ -134,6 +134,10 @@ An Italian translation has been created by
 
 Shunro Dozono (dozono@gmail.com) is translating the book to Japanese.
 
+## Kazakh
+
+Nurislam Askaruly (askaruly@hotmail.com) is translating the book to Kazakh
+
 ## Korean
 
 ### Epsimatt (2019)
