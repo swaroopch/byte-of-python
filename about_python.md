@@ -1,89 +1,75 @@
-# About Python
+# Python туралы
 
-Python is one of those rare languages which can claim to be both _simple_ and _powerful_. You will find yourself pleasantly surprised to see how easy it is to concentrate on the solution to the problem rather than the syntax and structure of the language you are programming in.
+Python-қарапайым, мықты деген қасиеттерге ие бола алатын сирек кездесетін бағдарламалау тілдердің бірі.
+Сіз бағдарламау тілінің синтаксисі мен құрылымына емес, мәселені(проблеманы) шешуге көңіл бөлудің қаншалықты оңай екендігіне таң қаласыз.
 
-The official introduction to Python is:
+Python тілінің ресми сайтында:
 
-> Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
+> Python үйренуге оңай,мықты бағдарламау тілі. Ол тиімді жоғары деңгейлі деректер құрылымына ие болып, бірақ сондада объектігі бағытталған қарапайым бағдарлау тілі. Python тілінің әдемі синтаксисі, динамикалық типтендедіруі және интепритаторлық сипаты -  бұл тілді  көптеген платформаларда көптеген салаларда ,сценарий жазу және программаларды жазу үшін тамаша тіл етеді.
 
-I will discuss most of these features in more detail in the next section.
+Мен бұл ерекшеліктер бойынша келесі бөлімдерде тоқталып кетемін
 
-## Story behind the name
+## Адамның артындағы оқиға
 
-Guido van Rossum, the creator of the Python language, named the language after the BBC show "Monty
-Python's Flying Circus". He doesn't particularly like snakes that kill animals for food by winding
-their long bodies around them and crushing them.
+Гвидо Ван Россум - Python(ағыл. ауд. жылан түрі) тілінің авторы, бұл тілді Би-би-си "Monty Python's Flying Circus" шоуының  құрметіне  атады.
 
-## Features of Python
+## Python - ның ерекшеліктері
 
-### Simple
+### Қарапайым
 
-Python is a simple and minimalistic language. Reading a good Python program feels almost like reading English, although very strict English! This pseudo-code nature of Python is one of its greatest strengths. It allows you to concentrate on the solution to the problem rather than the language itself.
+Python қарапайым және минималистикалық тіл. Python тілінде дұрыс жазылған программаны оқығанда өзінді Ағылшын тілін оқығандай сезінесін, бірақ өте қатаң Ағылшын тілін! Python-ның бұл псевдокодты табиғаты оның ең күшті жақтарының бірі. Бұл сізге тілдің өзінде емес, мәселені шешуге назар аударуға мүмкіндік береді.
 
-### Easy to Learn
+### Үйренуге оңай
 
-As you will see, Python is extremely easy to get started with. Python has an extraordinarily simple syntax, as already mentioned.
+Көріп отырғаныңыздай, Python-мен жұмысты бастау өте оңай.
 
-### Free and Open Source
+### Тегін және ашық
 
-Python is an example of a _FLOSS_ (Free/Libre and Open Source Software). In simple terms, you can freely distribute copies of this software, read its source code, make changes to it, and use pieces of it in new free programs. FLOSS is based on the concept of a community which shares knowledge. This is one of the reasons why Python is so good - it has been created and is constantly improved by a community who just want to see a better Python.
+Python - бұл _FLOSS_ мысалы (Free/Libre and Open Source Software) яғни тегін және коды ашық. Қарапайым сөзбен айтқанда, сіз Python-ның көшірмелерін еркін тарата аласыз, оның бастапқы кодын оқи аласыз, оған өзгертулер енгізе аласыз және оның бөліктерін өзіңіздің программаларыңызда қолдана аласыз. FLOOS - тың артында білімді қауымдастықпен бөлісу жатыр. Бұл Python - ның соншалықты жақсы болуының бір себебі- қауымдастық оны үнемі жетілдіріп отырады.
 
-### High-level Language
 
-When you write programs in Python, you never need to bother about the low-level details such as managing the memory used by your program, etc.
+### Жоғары деңгейлі тіл
 
-### Portable
+Python тілінде бағдарламаларды жазған кезде, сіз ешқашан төмен деңгейдегі мәліметтер туралы алаңдамайсыз, мысалы, сіздің бағдарламаңыз пайдаланатын жадты басқару және т. б.
 
-Due to its open-source nature, Python has been ported to (i.e. changed to make it work on) many platforms. All your Python programs can work on any of these platforms without requiring any changes at all if you are careful enough to avoid any system-dependent features.
+### Портативті
 
-You can use Python on GNU/Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE and PocketPC!
+Ашық табиғатының арқасында Python көптеген платформаларға көшірілді (яғни, олар үшін жұмыс істейтін етіп өзгертілген). Барлық Python бағдарламалары осы платформалардың кез-келгенінде жұмыс істей алады.
 
-You can even use a platform like [Kivy](http://kivy.org) to create games for your computer _and_ for iPhone, iPad, and Android.
+Сіз Python-ды GNU/Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE and PocketPC платформалырда қолдана аласыз.
 
-### Interpreted
+Сіз тіпті [Kivy](http://kivy.org) платформаны пайдалана отырып iPhone, iPad және Android үшін өзіңіздің ойындарды жасай аласыз.
 
-This requires a bit of explanation.
+### Интерпритаторлық
 
-A program written in a compiled language like C or C\++ is converted from the source language i.e. C or C++ into a language that is spoken by your computer (binary code i.e. 0s and 1s) using a compiler with various flags and options. When you run the program, the linker/loader software copies the program from hard disk to memory and starts running it.
+Бұл термин анықтаманы талап етеді ...
 
-Python, on the other hand, does not need compilation to binary. You just _run_ the program directly from the source code. Internally, Python converts the source code into an intermediate form called bytecodes and then translates this into the native language of your computer and then runs it. All this, actually, makes using Python much easier since you don't have to worry about compiling the program, making sure that the proper libraries are linked and loaded, etc. This also makes your Python programs much more portable, since you can just copy your Python program onto another computer and it just works!
 
-### Object Oriented
+### Объектіге Бағытталған
 
-Python supports procedure-oriented programming as well as object-oriented programming (OOP). In _procedure-oriented_ languages, the program is built around procedures or functions which are nothing but reusable pieces of programs. In _object-oriented_ languages, the program is built around objects which combine data and functionality. Python has a very powerful but simplistic way of doing OOP, especially when compared to big languages like C++ or Java.
+...
 
-### Extensible
+### Кеңейтілетін
 
-If you need a critical piece of code to run very fast or want to have some piece of algorithm not to be open, you can code that part of your program in C or C\++ and then use it from your Python program.
+...
 
-### Embeddable
+### Кірістірілген (Встраиваемый)
 
-You can embed Python within your C/C\++ programs to give _scripting_ capabilities for your program's users.
+...
 
-### Extensive Libraries
+### Кітапханалары көп
 
-The Python Standard Library is huge indeed. It can help you do various things involving regular expressions,documentation generation, unit testing, threading, databases, web browsers, CGI, FTP, email, XML, XML-RPC, HTML, WAV files, cryptography, GUI (graphical user interfaces), and other system-dependent stuff. Remember, all this is always available wherever Python is installed. This is called the _Batteries Included_ philosophy of Python.
+...
 
-Besides the standard library, there are various other high-quality libraries which you can find at the [Python Package Index](http://pypi.python.org/pypi).
+### Түйіндеме
 
-### Summary
-
-Python is indeed an exciting and powerful language. It has the right combination of performance and features that make writing programs in Python both fun and easy.
+Python - бұл өте қызықты және күшті тіл. Ол өнімділік пен мүмкіндіктердің жақсы арақатынасына ие, осының арқасында бағдарламаларды жазуды қызықты әрі оңай.
 
 ## Python 3 versus 2
 
-You can ignore this section if you're not interested in the difference between "Python version 2" and "Python version 3". But please do be aware of which version you are using. This book is written for Python version 3.
+...
 
-Remember that once you have properly understood and learn to use one version, you can easily learn the differences and use the other one. The hard part is learning programming and understanding the basics of Python language itself. That is our goal in this book, and once you have achieved that goal, you can easily use Python 2 or Python 3 depending on your situation.
-
-For details on differences between Python 2 and Python 3, see:
-
-- [The future of Python 2](http://lwn.net/Articles/547191/)
-- [Porting Python 2 Code to Python 3](https://docs.python.org/3/howto/pyporting.html)
-- [Writing code that runs under both Python2 and 3](https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef)
-- [Supporting Python 3: An in-depth guide](http://python3porting.com)
-
-## What Programmers Say
+## Программистер Python туралы
 
 You may find it interesting to read what great hackers like Eric S. Raymond (ESR) have to say about Python:
 
