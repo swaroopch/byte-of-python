@@ -127,7 +127,7 @@ Notice that we could have achieved the same using string concatenation:
 name + ' is ' + str(age) + ' years old'
 ```
 
-but that is much uglier and error-prone. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion to strings needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
+but that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion to strings needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
 
 Also note that the numbers are optional, so you could have also written as:
 
