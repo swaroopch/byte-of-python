@@ -114,8 +114,8 @@ Here are what people are saying about the book:
 
 <!-- -->
 
-> First of all, I want to say thanks to you for this greate book. I think it is a good book for those who are looking for a beginner's tutorial for Python.
-> It is about two or there years ago, I think, when I first heard of this book. At that time, I am not able to read some book in English yet, so I got a chinese translation, which took me into the gate of Python programming.
+> First of all, I want to say thanks to you for this great book. I think it is a good book for those who are looking for a beginner's tutorial for Python.
+> It is about two or there years ago, I think, when I first heard of this book. At that time, I was unable to read books in English yet, so I got a chinese translation, which took me into the gate of Python programming.
 > Recently, I reread this book. This time, of course, the english version. I couldn't believe that I can read the whole book without my dictionary at hand. Of course, it all dues to your effort to make this book an easy-to-understand one.
 > -- [myd7349](https://github.com/swaroopch/byte_of_python/pull/13)
 
