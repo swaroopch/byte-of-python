@@ -13,7 +13,7 @@ CAUTION: Make sure you check option `Add Python 3.5 to PATH`.
 
 To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` (or another appropriate location) as the install location.
 
-If you didn’t check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
+If you didn't check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
 
 You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
 
