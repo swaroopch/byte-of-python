@@ -1,6 +1,4 @@
-# 책머리
-
-## A Byte of Python 한국어 번역(Korean Translation of A Byte of Python)
+# A Byte of Python 한국어 번역(Korean Translation of A Byte of Python)
 
 이전에 번역된 파이썬 2 버전 책에 이어서 파이썬 3에 맞도록 책의 내용을 새롭게 재번역하는 중입니다.
 
