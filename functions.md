@@ -1,217 +1,217 @@
-# Functions
+# 함수
 
-Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. This is known as *calling* the function. We have already used many built-in functions such as `len` and `range`.
+함수는 재사용 가능한 프로그램의 조각을 말합니다. 이것은 특정 블록의 명령어 덩어리를 묶어 이름을 짓고, 그 이름을 프로그램 어디에서건 사용함으로써 그 블록에 포함된 명령어들을 몇번이고 다시 실행할 수 있게 하는 것입니다. 이를 보고 함수를 *호출한다*고 합니다. 사실 우리는 이미 앞에서 `len` 이나 `range` 와 같은 많은 내장 함수들을 사용해 왔습니다.
 
-The function concept is probably *the* most important building block of any non-trivial software (in any programming language), so we will explore various aspects of functions in this chapter.
+이러한 함수들은 프로그램을 작성할 때 *가장* 중요한 단위가 될 것입니다 (아마 어떤 프로그래밍 언어에서라도 그럴 것입니다). 따라서 이 챕터에서는 함수라는 것을 다양한 관점에서 살펴보도록 하겠습니다.
 
-Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. An example will show that this is actually very simple:
+함수는 `def` 키워드를 통해 정의됩니다. `def` 뒤에는 함수의 *식별자* 이름을 입력하고, 괄호로 감싸여진 함수에서 사용될 인자(arguments)의 목록을 입력하며 마지막으로 콜론을 입력하면 함수의 정의가 끝납니다. 새로운 블록이 시작되는 다음 줄부터는 이 함수에서 사용될 명령어들을 입력해 줍니다. 복잡해 보이지만, 아래 예제를 통해 함수를 정의하는 것이 얼마나 간단한지 알아봅시다:
 
-Example (save as `function1.py`):
+예제 (`function1.py` 로 저장합니다):
 
 <pre><code class="lang-python">{% include "./programs/function1.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function1.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We define a function called `say_hello` using the syntax as explained above. This function takes no parameters and hence there are no variables declared in the parentheses. Parameters to functions are just input to the function so that we can pass in different values to it and get back corresponding results.
+여기에서는 위에서 설명한 문법을 이용하여 `say_hello` 라는 함수를 정의하였습니다. 이 함수는 어떤 인자도 넘겨받지 않으므로, 괄호 내에 매개 변수를 정의하지 않습니다. 함수의 인수란 함수로 넘겨지는 입력값들을 말하며, 함수는 이 값을 처리하여 결과를 넘겨줍니다.
 
-Notice that we can call the same function twice which means we do not have to write the same code again.
+함수를 두 번 호출하는 것은 같은 코드를 두 번 작성하는 것과 같은 효과를 가진다는 것을 알아두세요.
 
-## Function Parameters
+## 함수의 매개 변수
 
-A function can take parameters, which are values you supply to the function so that the function
-can *do* something utilising those values. These parameters are just like variables except that the
-values of these variables are defined when we call the function and are already assigned values
-when the function runs.
+함수를 정의할 때 매개 변수를 지정할 수 있습니다. 매개 변수란 함수로 넘겨지는 값들의 이름을 말하며, 함수는
+이 값들을 이용해서 뭔가를 할 수 있습니다. 매개 변수는 변수와 거의 비슷한 개념으로 취급되지만, 매개 변수의 값들은
+함수가 호출되어질때 넘겨받은 값들로 채워지며 함수가 실행되는 시점에서 이미 할당이 완료되어 있다는 점이
+다릅니다.
 
-Parameters are specified within the pair of parentheses in the function definition, separated by
-commas. When we call the function, we supply the values in the same way.  Note the terminology
-used - the names given in the function definition are called *parameters* whereas the values you
-supply in the function call are called *arguments*.
+매개 변수는 함수를 정의할 때 괄호 안에 쉼표로 구분하여 지정합니다. 함수를 호출할 때에는,
+동일한 방법으로 함수에 값을 넘겨 줍니다. 이 때 함수를 정의할 때 주어진 이름을
+*매개 변수* 라 부르고, 함수에 넘겨준 값들을 *인자* 라
+부릅니다.
 
-Example (save as `function_param.py`):
+예제 (`function_param.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_param.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_param.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Here, we define a function called `print_max` that uses two parameters called `a` and `b`.  We find out the greater number using a simple `if..else` statement and then print the bigger number.
+여기서는 두 매개 변수 `a` 와 `b` 를 받는 `print_max` 라는 함수를 정의합니다. 그리고 간단한 `if..else` 문을 이용하여 크기를 비교하고 둘 중에 더 큰 값을 출력합니다.
 
-The first time we call the function `print_max`, we directly supply the numbers as arguments. In the second case, we call the function with variables as arguments. `print_max(x, y)` causes the value of argument `x` to be assigned to parameter `a` and the value of argument `y` to be assigned to parameter `b`. The `print_max` function works the same way in both cases.
+`print_max` 함수를 처음 호출할 때에는 값을 직접 인자로 입력하여 넘겨주었습니다. 반면 두 번째 호출시에는 변수를 인자로 입력하여 주었습니다. 이것은 `print_max(x, y)` 는 변수 `x` 에 지정된 값을 변수 `a` 에 입력해 주고 변수 `y` 의 값을 변수 `b` 에 입력해 주는 것을 의미합니다. 따라서 두 경우 모두 `print_max` 함수는 동일한 결과를 줍니다.
 
-## Local Variables
+## 지역 변수
 
-When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are *local* to the function. This is called the *scope* of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
+여러분이 정의한 함수 안에서 변수를 선언하고 사용할 경우, 함수 밖에 있는 같은 이름의 변수들과 함수 안에 있는 변수들과는 서로 연관이 없습니다. 이러한 변수들을 함수의 *지역* (*local*) 변수라고 하며, 그 범위를 변수의 *스코프* (*scope*) 라고 부릅니다. 모든 변수들은 변수가 정의되는 시점에서의 블록을 스코프로 가지게 됩니다.
 
-Example (save as `function_local.py`):
+예제 (`function_local.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_local.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_local.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The first time that we print the *value* of the name *x* with the first line in the function's body, Python uses the value of the parameter declared in the main block, above the function definition.
+먼저 함수의 첫번째 줄에서 *x* 라는 이름을 가진 변수에 담긴 *값*을 출력합니다. 이 때 함수를 정의하는 부분의 상단에서 정의되었던 값을 함수의 매개 변수 x로 넘겨받은 값이 출력됩니다.
 
-Next, we assign the value `2` to `x`. The name `x` is local to our function.  So, when we change the value of `x` in the function, the `x` defined in the main block remains unaffected.
+다음으로, `x` 에 값 `2` 를 대입합니다. 그러나 `x` 는 함수의 지역 변수이므로, 함수 안에서 `x` 의 값이 대입된 값으로 변하는 반면 메인 블록의 `x` 는 변하지 않고 그대로 남아 있습니다.
 
-With the last `print` statement, we display the value of `x` as defined in the main block, thereby confirming that it is actually unaffected by the local assignment within the previously called function.
+프로그램에서 사용된 마지막 `print` 함수를 통해 메인 블록의 `x` 값을 출력해 보면, 그 이전에 호출된 함수 안에서 시행된 지역 변수값의 변화가 적용되지 않았음을 확인할 수 있습니다.
 
-## The `global` statement {#global-statement}
+## `global` 문 {#global-statement}
 
-If you want to assign a value to a name defined at the top level of the program (i.e. not inside any kind of scope such as functions or classes), then you have to tell Python that the name is not local, but it is *global*. We do this using the `global` statement. It is impossible to assign a value to a variable defined outside a function without the `global` statement.
+함수나 클래스 내부에서 상위 블록에서 선언된 변수의 값을 변경하고 싶을 경우, 파이썬에게 이 변수를 앞으로 지역 변수가 아닌 *전역* (*global*) 변수로 사용할 것임을 알려 주어야 합니다. 이때 `global` 문을 이용합니다. `global` 문을 사용하지 않으면, 함수 외부에서 선언된 변수의 값을 함수 내부에서 변경할 수 없습니다.
 
-You can use the values of such variables defined outside the function (assuming there is no variable with the same name within the function). However, this is not encouraged and should be avoided since it becomes unclear to the reader of the program as to where that variable's definition is. Using the `global` statement makes it amply clear that the variable is defined in an outermost block.
+함수 안에서 동일한 이름으로 선언된 변수가 없을 경우, 함수 밖의 변수값을 함수 안에서 읽고 변경할 수도 있습니다. 그러나, 이것은 프로그램을 읽을 때 변수가 어디서 어떻게 선언되었는지 파악하기 힘들게 만들기 때문에 추천할만한 방법이 아니며, 가능한 이런 경우를 피하시기 바랍니다. `global` 문을 사용하면 그 블록의 밖에서 그 변수가 선언되어 있음을 알려 주므로 좀 더 프로그램이 좀 더 명확해집니다.
 
-Example (save as `function_global.py`):
+예제 (`function_global.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_global.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_global.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The `global` statement is used to declare that `x` is a global variable - hence, when we assign a value to `x` inside the function, that change is reflected when we use the value of `x` in the main block.
+`global` 문을 통해 `x` 가 전역 변수임을 파이썬에게 알려 줍니다. 따라서, 이후로 `x` 에 값을 대입하면 메인 블록의 `x` 값 또한 변경됩니다.
 
-You can specify more than one global variable using the same `global` statement e.g. `global x, y, z`.
+하나의 `global` 문으로 여러 개의 전역 변수를 동시에 지정해 줄 수도 있습니다. `global x, y, z` 와 같이 하면 됩니다.
 
-## Default Argument Values {#default-arguments}
+## 기본 인수값 {#default-arguments}
 
-For some functions, you may want to make some parameters *optional* and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator (`=`) followed by the default value.
+어떤 특별한 경우, 함수를 호출할 때 인수를 *선택적으로* 넘겨주게 하여 사용자가 값을 넘겨주지 않으면 자동으로 기본값을 사용하도록 하는 것이 편할 때가 있습니다. 이런 경우, 기본 인수값을 지정하면 됩니다. 함수를 선언할 때 원하는 매개 변수 뒤에 대입 연산자 (`=`)와 기본값을 입력하여 기본 인수값을 지정합니다.
 
-Note that the default argument value should be a constant. More precisely, the default argument value should be immutable - this is explained in detail in later chapters. For now, just remember this.
+이 때, 기본 인수값은 반드시 상수이어야 합니다. 좀 더 정확히 말하자면, 불변값이어야 합니다. 불변값에 대해서는 뒤 챕터에서 다룰 것입니다. 일단 지금은 그래야 한다는 것만 기억해 두기 바랍니다.
 
-Example (save as `function_default.py`):
+예제 (`function_default.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_default.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_default.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The function named `say` is used to print a string as many times as specified. If we don't supply a value, then by default, the string is printed just once. We achieve this by specifying a default argument value of `1` to the parameter `times`.
+함수 `say` 는 지정된 숫자 만큼 문자열을 반복하여 출력하는 합수입니다. 숫자를 지정하지 않으면 기본값이 적용되어, 문자열이 한 번만 출력됩니다. 이 결과는 매개 변수 `times` 의 기본값을 `1` 로 지정해 줌으로써 얻어집니다.
 
-In the first usage of `say`, we supply only the string and it prints the string once. In the second usage of `say`, we supply both the string and an argument `5` stating that we want to *say* the string message 5 times.
+프로그램에서 처음 `say` 를 호출할 때에는 함수에 문자열만 넘겨 주어 한 번 출력하게 합니다. 두 번째 호출에서는 문자열과 인수 `5` 를 넘겨 주어 함수가 문자열을 5 번 반복하게 합니다.
 
 > *CAUTION*
 > 
-> Only those parameters which are at the end of the parameter list can be given default argument
-> values i.e. you cannot have a parameter with a default argument value preceding a parameter without
-> a default argument value in the function's parameter list.
+> 매개 변수 목록에서 마지막에 있는 매개 변수들에만 기본값을 지정해 줄 수 있습니다.
+> 즉, 기본값을 지정하지 않은 매개 변수의 앞에 위치한 매개 변수에는 기본을 지
+> 정할 수 없습니다.
 > 
-> This is because the values are assigned to the parameters by position. For example,`def func(a,
-> b=5)` is valid, but `def func(a=5, b)` is *not valid*.
+> 이것은 함수 를 호출할 때 매개 변수의 위치에 맞도록 값이 지정되기 때문입니다. 예를 들어,
+> `def func(a, b=5)` 는 옳은 함수 정의이지만 `def func(a=5, b)` 는 *올바르지 않은* 정의입니다.
 
-## Keyword Arguments
+## 키워드 인자
 
-If you have some functions with many parameters and you want to specify only some of them, then you can give values for such parameters by naming them - this is called *keyword arguments* - we use the name (keyword) instead of the position (which we have been using all along) to specify the arguments to the function.
+여러 개의 매개 변수를 가지고 있는 함수를 호출할 때, 그 중 몇 개만 인수를 넘겨주고 싶을 때가 있습니다. 이때 매개 변수의 이름을 지정하여 직접 값을 넘겨줄 수 있는데 이것을 *키워드 인자* 라 부릅니다. 함수 선언시 지정된 매개 변수의 순서대로 값을 넘겨주는 것 대신, 매개 변수의 이름 (키워드) 를 사용하여 각각의 매개 변수에 인수를 넘겨 주도록 지정해 줍니다.
 
-There are two advantages - one, using the function is easier since we do not need to worry about the order of the arguments. Two, we can give values to only those parameters to which we want to, provided that the other parameters have default argument values.
+키워드 인자를 사용하는 데 두가지 장점이 있습니다. 첫째로, 인수의 순서를 신경쓰지 않고도 함수를 쉽게 호출할 수 있는 점입니다. 둘째로는, 특정한 매개 변수에만 값을 넘기도록 하여 나머지는 자동으로 기본 인수값으로 채워지게 할 수 있습니다.
 
-Example (save as `function_keyword.py`):
+예제 (`function_keyword.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_keyword.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_keyword.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The function named `func` has one parameter without a default argument value, followed by two parameters with default argument values.
+위의 `func` 라 이름 지어진 함수는 기본 인수값이 지정되지 않은 한 개의 매개 변수와, 기본 인수값이 지정된 두 개의 매개 변수, 총 세 개의 매개 변수를 가지고 있습니다.
 
-In the first usage, `func(3, 7)`, the parameter `a` gets the value `3`, the parameter `b` gets the value `7` and `c` gets the default value of `10`.
+첫 번째 호출 `func(3, 7)` 에서, 매개 변수 `a` 는 값 `3`, 매개 변수 `b` 는 `7` 을 넘겨 받으며, `c` 에는 기본값 `10` 이 주어집니다.
 
-In the second usage `func(25, c=24)`, the variable `a` gets the value of 25 due to the position of the argument. Then, the parameter `c` gets the value of `24` due to naming i.e. keyword arguments. The variable `b` gets the default value of `5`.
+두 번째 호출 `func(25, c=24)` 에서는, 첫 번째 인수인 `25` 가 변수 `a` 에 넘겨집니다. 그리고 매개 변수 `c` 는 키워드 인수를 통해 값 `24` 가 지정되며, 변수 `b` 에는 기본값 `5` 가 주어집니다.
 
-In the third usage `func(c=50, a=100)`, we use keyword arguments for all specified values. Notice that we are specifying the value for parameter `c` before that for `a` even though `a` is defined before `c` in the function definition.
+세 번째 호출 `func(c=50, a=100)` 에서는, 모든 값을 지정하는 데 키워드 인자가 사용됩니다. 함수 정의에는 `a` 다음에 `c` 가 정의되어 있지만, 키워드 인수를 사용하면 그 순서에 상관없이 `c` 를 먼저 지정하고 `a` 를 나중에 지정할 수도 있다는 점을 확인하세요.
 
-## VarArgs parameters
+## VarArgs 매개 변수
 
-Sometimes you might want to define a function that can take _any_ number of parameters, i.e. **var**iable number of **arg**uments, this can be achieved by using the stars (save as `function_varargs.py`):
+가끔 함수에 임의의 개수의 매개 변수를 지정해주고 싶을 때가 있습니다. 이때 VarArgs 매개 변수를 사용합니다. 아래 예제와 같이 별 (\*) 기호를 사용하여 정해지지 않은 개수의 (*Var*iable) 인수(*Arg*uments) 를 표현합니다 (`function_varargs.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_varargs.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_varargs.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-When we declare a starred parameter such as `*param`, then all the positional arguments from that point till the end are collected as a tuple called 'param'.
+앞에 별 기호가 달린 매개 변수, 예를 들어 `*param` 과 같이 매개 변수를 지정해 주면 함수에 넘겨진 모든 위치 기반 인수들이 'param' 이라는 이름의 튜플로 묶여서 넘어옵니다.
 
-Similarly, when we declare a double-starred parameter such as `**param`, then all the keyword arguments from that point till the end are collected as a dictionary called 'param'.
+또 이와 비슷하게 앞에 별 두 개가 달린 매개 변수, 예를 들어 `**param` 과 같이 매개 변수를 지정해 주면 함수에 넘겨진 모든 키워드 인수들이 'param' 이라는 이름의 사전으로 묶여서 넘어옵니다.
 
-We will explore tuples and dictionaries in a [later chapter](./data_structures.md#data-structures).
+튜플과 사전에 대해서는 [뒤에서](./data_structures.md#data-structures) 좀 더 자세히 다뤄보도록 하곘습니다.
 
-## The `return` statement {#return-statement}
+## `return` 문 {#return-statement}
 
-The `return` statement is used to *return* from a function i.e. break out of the function. We can optionally *return a value* from the function as well.
+`return` 문은 함수로부터 반환될 (*return*) 때, 즉 함수를 빠져 나올 때 사용됩니다. 이 때 return 뒤에 값을 지정해 주면, 함수가 종료될 때 그 *값을 반환하도록* 할 수 있습니다.
 
-Example (save as `function_return.py`):
+예제 (`function_return.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_return.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_return.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The `maximum` function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple `if..else` statement to find the greater value and then *returns* that value.
+여기에서 사용된 `maximum` 함수는 매개 변수들 중 최대 값을 반환합니다. 위 경우에는 함수에 넘겨진 숫자들 중 최대값을 반환합니다. 간단한 `if..else` 구문을 통해 더 큰 값을 찾고, 최종 값을 반환(*return*) 합니다.
 
-Note that a `return` statement without a value is equivalent to `return None`. `None` is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of `None`.
+`return` 문 뒤에 아무 값도 지정하지 않는 경우, `return None` 을 실행하는 것과 같습니다. `None` 이란 파이썬에서 사용되는 특별한 형식으로 아무것도 없음을 의미합니다. 예를 들면, 어떤 변수의 값이 `None` 이라는 것은 변수에 할당된 값이 없다는 것을 의미합니다.
 
-Every function implicitly contains a `return None` statement at the end unless you have written your own `return` statement. You can see this by running `print(some_function())` where the function `some_function` does not use the `return` statement such as:
+여러분이 `return` 문을 함수에 지정하지 않으면, 함수는 끝날 때 자동으로 `return None` 구문을 암시적으로 호출합니다. 아래 예제에서 `return` 문이 지정되지 않은 `some_function` 이라는 함수를 선언하고 `print some_function()` 을 실행하여 그 결과를 확인해 보시기 바랍니다:
 
 ```python
 def some_function():
     pass
 ```
 
-The `pass` statement is used in Python to indicate an empty block of statements.
+`pass` 문은 아무 기능이 없는 구문입니다. 이것은 빈 블록을 지정해 줄 때 사용됩니다.
 
-> TIP: There is a built-in function called `max` that already implements the 'find maximum' functionality, so use this built-in function whenever possible.
+> TIP: 사실 파이썬에는 '최대값을 찾는' 에 쓸 수 있는 내장 함수 `max` 가 이미 포함되어 있습니다. 따라서 가능하면 이 내장 함수를 사용하시기 바랍니다.
 
-## DocStrings
+## DocString
 
-Python has a nifty feature called *documentation strings*, usually referred to by its shorter name *docstrings*. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!
+파이썬은 DocString (*Doc*umentation *String*) 이라는 편리한 기능을 가지고 있습니다. DocString은 여러분이 만든 프로그램을 알아보기 쉽게 해 주고, 또 후에 프로그램에 대한 설명서를 작성할 때 유용하게 사용될 수 있는 중요한 도구입니다. 아래 예제와 같이, DocString은 프로그램이 실행중일 때도 읽어올 수 있습니다.
 
-Example (save as `function_docstring.py`):
+예제 (`function_docstring.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/function_docstring.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/function_docstring.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-A string on the first logical line of a function is the *docstring* for that function. Note that DocStrings also apply to [modules](./modules.md#modules) and [classes](./oop.md#oop) which we will learn about in the respective chapters.
+함수에 포함된 첫 논리적 명령줄에 적어둔 문자열은 함수의 DocString 이라고 불리우는 것입니다. 여기에서 설명하는 DocString은 [모듈](./modules.md#modules) 과 [클래스](./oop.md#oop) 에도 똑같이 적용됩니다. 각각에 대해서는 각 챕터에서 좀 더 자세히 알아보도록 하겠습니다.
 
-The convention followed for a docstring is a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank followed by any detailed explanation starting from the third line. You are *strongly advised* to follow this convention for all your docstrings for all your non-trivial functions.
+DocString은 일반적으로 첫째줄의 첫 글자는 대문자로, 마지막 문자는 마침표로 끝나도록 작성합니다. 그리고 두번째 줄은 비워 두고, 세번째 줄부터는 이것이 어떤 기능을 하는지에 대해 상세하게 작성합니다. 저는 앞으로 여러분이 함수의 DocString를 작성할 때 이 규칙을 따르기를 *강력히 권합니다*.
 
-We can access the docstring of the `print_max` function using the `__doc__` (notice the *double underscores*) attribute (name belonging to) of the function. Just remember that Python treats *everything* as an object and this includes functions. We'll learn more about objects in the chapter on [classes](./oop.md#oop).
+`print_max` 함수의 DocString은 함수의 `__doc__` 속성을 통해 접근할 수 있습니다 (*밑줄이 두 개* 입니다). `__doc__` 은 함수 객체가 갖고 있는 기본 속성입니다. 파이썬에서는 함수를 포함한 *모든 것*이 객체로 간주된다는 점을 기억하세요. 이에 대해서는 [클래스](./oop.md#oop) 챕터에서 좀 더 자세히 알아볼 것입니다.
 
-If you have used `help()` in Python, then you have already seen the usage of docstrings! What it does is just fetch the `__doc__` attribute of that function and displays it in a neat manner for you. You can try it out on the function above - just include `help(print_max)` in your program. Remember to press the `q` key to exit `help`.
+파이썬에서 `help()` 를 활용해 보셨다면, 여러분은 이미 DocString을 본 적이 있는 것입니다! `help()` 가 하는 일은 주어진 대상의 `__doc__` 속성을 가져와서 화면에 보여주는 것이 다입니다. 따라서 위에서 만든 함수에 대해서도 마찬가지로 동작합니다. 여러분의 프로그램에 `help(print_max)` 라고 한 줄 추가해 보시기 바랍니다. `help` 창을 닫으려면 `q` 키를 누르세요.
 
-Automated tools can retrieve the documentation from your program in this manner. Therefore, I *strongly recommend* that you use docstrings for any non-trivial function that you write. The `pydoc` command that comes with your Python distribution works similarly to `help()` using docstrings.
+이러한 방식을 활용하여 여러분의 프로그램에 대한 명세서를 자동으로 만들어주는 프로그램들이 있습니다. 따라서, 저는 여러분이 어떤 함수를 작성하시던지 DocString을 작성할 것을 *강력히 권합니다*. 파이썬과 함께 설치되는 `pydoc` 또한 `help()` 와 비슷한 방법으로 DocString을 활용하여 동작합니다.
 
-## Summary
+## 요약
 
-We have seen so many aspects of functions but note that we still haven't covered all aspects of them. However, we have already covered most of what you'll use regarding Python functions on an everyday basis.
+지금까지 함수에 대해 많은 것들을 알아 보았습니다만, 사실 아직 모든 기능을 다 알아본 것은 아닙니다. 그러나, 실질적으로 많이 활용되는 기능에 대해서는 거의 모든 것을 설명해 드렸기 때문에 아마 당장 프로그램을 작성할 때는 별 무리가 없을 것입니다.
 
-Next, we will see how to use as well as create Python modules.
+다음으로는, 모듈을 작성하고 사용하는 방법에 대해 알아보도록 하겠습니다.

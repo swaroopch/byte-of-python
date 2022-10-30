@@ -1,12 +1,12 @@
-# Exceptions
+# 예외 처리
 
-Exceptions occur when _exceptional_ situations occur in your program. For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using **exceptions**.
+예외 (Exception) 란 말 그대로 프로그램에서 벌어지는 _예외적인_ 상황을 뜻합니다. 예를 들자면 여러분이 파일을 읽고자 할 때 그 파일이 존재하지 않는 경우라던지, 또는 프로그램이 한참 실행중인데 그 파일을 갑자기 지워버렸다던지 하는 경우 등입니다. 이러한 상황을 ***예외 (Exception)** 를 활용하여 처리할 수 있습니다.
 
-Similarly, what if your program had some invalid statements? This is handled by Python which **raises** its hands and tells you there is an **error**.
+비슷하게 여러분의 프로그램에 부적절한 명령문이 있을 경우 어떻게 될까요? 이런 경우 파이썬은 프로그램에 오류 (**error**) 가 있음을 제기 (**raise**) 해 줍니다.
 
-## Errors
+## 오류 (Error)
 
-Consider a simple `print` function call. What if we misspelt `print` as `Print`? Note the capitalization. In this case, Python _raises_ a syntax error.
+간단한 `print` 함수를 호출하는 상황을 생각해 봅시다. 이 때 `print` 를 `Print` 라고 잘못 입력했을 경우 어떻게 될까요 (대/소문자 구분에 유의해 주세요)? 이 경우, 파이썬은 구문 오류를 _발생_ (_raise_) 시킵니다.
 
 ```python
 >>> Print("Hello World")
@@ -17,11 +17,11 @@ NameError: name 'Print' is not defined
 Hello World
 ```
 
-Observe that a `NameError` is raised and also the location where the error was detected is printed. This is what an **error handler** for this error does.
+위와 같이 `NameError` 가 발생되었고 오류가 발생한 위치가 표시됩니다. 이렇게 오류를 처리해 주는 부분을 **오류 핸들러** 라 합니다.
 
-## Exceptions
+## 예외 (Exception)
 
-We will **try** to read input from the user.  Enter the first line below and hit the `Enter` key.  When your computer prompts you for input, instead press `[ctrl-d]` on a Mac or `[ctrl-z]` with Windows and see what happens.  (If you're using Windows and neither option works, you can try `[ctrl-c]` in the Command Prompt to generate a KeyboardInterrupt error instead).
+이번에는 사용자로부터 뭔가를 입력 받는 것을 시도하는 (**try**) 경우를 생각해 봅시다. 아래 예제에서의 첫 줄을 입력하고 `Enter` 를 누릅니다. 여러분의 컴퓨터가 입력을 받기 위해 대기중일 때, 어떠한 것을 입력하는 대신 `[ctrl-d]` (Mac OS) 또는 `[ctrl-z]` (Windows) 를 누르고 어떻게 되는지 살펴봅시다 (만약 여러분이 Windows를 사용중인데 둘 다 안 되는 경우 `[ctrl-c]`를 대신 눌러 보세요. 다만 이 경우 아래와 달리 `KeyboardInterrupt` 오류가 표시될 것입니다).
 
 ```python
 >>> s = input('Enter something --> ')
@@ -30,96 +30,96 @@ Enter something --> Traceback (most recent call last):
 EOFError
 ```
 
-Python raises an error called `EOFError` which basically means it found an *end of file* symbol (which is represented by `ctrl-d`) when it did not expect to see it.
+그러면 파이썬은 `EOFError` 라는 오류를 발생시키는데, 이때 EOF란 파일의 끝 (*end of file*) 을 의미하며 (파일의 끝은 `ctrl-d` 에 의해 표현됩니다), 파이썬이 갑자기 파일의 끝이 올 것을 예상하지 못했기 때문에 위와 같은 오류가 발생하는 것입니다.
 
-## Handling Exceptions
+## 예외 처리
 
-We can handle exceptions using the `try..except` statement.  We basically put our usual statements within the try-block and put all our error handlers in the except-block.
+예외는 `try..except` 문을 통해 처리할 수 있습니다. 이것은 try 블록 안에 명령을 입력하고, 발생할 수 있는 각 예외 상황을 처리해줄 수 있는 _오류 핸들러_ 를 except 블록에 입력해 주면 됩니다.
 
-Example (save as `exceptions_handle.py`):
+예제 (`exceptions_handle.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/exceptions_handle.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/exceptions_handle.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We put all the statements that might raise exceptions/errors inside the `try` block and then put handlers for the appropriate errors/exceptions in the `except` clause/block. The `except` clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle _all_ errors and exceptions.
+이 예제에서는 예외가 발생할 수 있는 명령문들을 `try` 블록에 넣어 주었으며 오류 또는 예외를 적절하게 처리해 줄 오류 핸들러를 `except` 절 (또는 블록) 에 넣어 주었습니다. `except` 절에서는 지정된 한 개의 오류 혹은 예외를 처리할 수도 있고, 괄호로 묶여진 모든 오류나 예외들의 목록을 처리해 줄 수도 있습니다. 만일 오류나 예외를 특별히 지정하지 않은 경우에는 _모든_ 오류 및 예외를 처리하게 됩니다.
 
-Note that there has to be at least one `except` clause associated with every `try` clause. Otherwise, what's the point of having a try block?
+이 때 모든 `try` 절에는 적어도 한 개의 `except` 절이 있어야 합니다. 아니면 try 블록을 사용할 아무런 이유가 없겠지요?
 
-If any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.
+만약 어떤 오류나 예외든지 이처럼 처리되지 않는 경우, 기본 파이썬 오류 핸들러가 호출되는데 그러면 이에 의해 프로그램의 수행이 중단되며 해당하는 오류 메시지가 출력됩니다. 위 예제에서는 기본적인 파이썬 오류 핸들러가 어떻게 동작하는지 확인해 보았습니다.
 
-You can also have an `else` clause associated with a `try..except` block. The `else` clause is executed if no exception occurs.
+또한 `try..except` 블록에는 추가로 `else` 절을 붙여줄 수 있습니다. 이 때 `else` 절은 어떤 예외도 발생하지 않았을 경우 호출됩니다.
 
-In the next example, we will also see how to get the exception object so that we can retrieve additional information.
+다음으로는 예외 객체를 얻어오는 방법과 이를 통해 예외에 대한 추가 정보를 얻어오는 방법에 대해 알아보겠습니다.
 
-## Raising Exceptions
+## 예외 발생시키기
 
-You can _raise_ exceptions using the `raise` statement by providing the name of the error/exception and the exception object that is to be _thrown_.
+`raise` 문에 오류나 예외의 이름을 넘겨 주는 것을 통해 예외를 직접 발생(_raise_) 시킬 수 있습니다. 그러면 예외 객체가 _throw_ 됩니다.
 
-The error or exception that you can raise should be a class which directly or indirectly must be a derived class of the `Exception` class.
+이 때 발생시킬 수 있는 오류나 예외는 반드시 직접적으로든 간접적으로든 Exception 클래스에서 파생된 클래스이어야 합니다.
 
-Example (save as `exceptions_raise.py`):
+예제 (`exceptions_raise.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/exceptions_raise.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/exceptions_raise.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Here, we are creating our own exception type. This new exception type is called `ShortInputException`. It has two fields - `length` which is the length of the given input, and `atleast` which is the minimum length that the program was expecting.
+위 예제에서는 `ShortInputException` 이라고 하는 새로운 예외 형식을 직접 하나 만들어 보았습니다. 여기에는 두 개의 필드가 있습니다. 하나는 `length` 필드로 주어진 입력의 길이를 의미하며, 또 하나는 `atleast` 필드로 프로그램이 요구하는 최소한의 길이를 의미합니다.
 
-In the `except` clause, we mention the class of error which will be stored `as` the variable name to hold the corresponding error/exception object. This is analogous to parameters and arguments in a function call. Within this particular `except` clause, we use the `length` and `atleast` fields of the exception object to print an appropriate message to the user.
+이제 `except` 절에서 `as` 를 이용하여 해당 오류의 클래스를 좀 더 짧은 이름의 변수로 대신하여 사용할 수 있게 해 줍니다. 여기서 새로 정의한 예외 형식에 정의한 필드와 값의 관계는 마치 함수에서의 매개 변수와 인수의 관계와 비슷합니다. 마지막으로 이 오류를 처리해주는 `except` 절에서는 해당 예외 객체의 `length` 와 `atleast` 필드를 이용하여 사용자에게 적절한 결과를 출력해 줍니다.
 
-## Try ... Finally {#try-finally}
+## Try ... Finally 문 {#try-finally}
 
-Suppose you are reading a file in your program. How do you ensure that the file object is closed properly whether or not an exception was raised? This can be done using the `finally` block.
+프로그램이 파일을 읽고 있는 상황을 가정해 봅시다. 이 때 예외가 발생할 경우, 예외의 발생 여부와 상관없이 파일 객체를 항상 닫아 주도록 할 수는 없을까요? 이를 위해 `finally` 블록을 사용합니다.
 
-Save this program as `exceptions_finally.py`:
+아래 프로그램을 `exceptions_finally.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/exceptions_finally.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/exceptions_finally.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We do the usual file-reading stuff, but we have arbitrarily introduced sleeping for 2 seconds after printing each line using the `time.sleep` function so that the program runs slowly (Python is very fast by nature). When the program is still running, press `ctrl + c` to interrupt/cancel the program.
+위 예데는 단순히 파일을 읽는 코드이지만, 파일에서 한 줄을 읽어올 때마다 `time.sleep` 함수를 호출하여 2초씩 멈추게 하는 인위적인 코드를 집어넣어 프로그램이 천천히 실행되도록 해 주었습니다 (파이썬은 원래 굉장히 빠릅니다). 프로그램이 실행중일 때, `ctrl + c` 를 눌러 프로그램을 강제로 중단 (interrupt) 시켜 봅시다.
 
-Observe that the `KeyboardInterrupt` exception is thrown and the program quits. However, before the program exits, the finally clause is executed and the file object is always closed.
+그러면 `KeyboardInterrupt` 예외가 발생되며 프로그램이 종료됩니다. 그러나 프로그램이 종료되기 전에 finally 절이 실행되므로 열어주었던 파일 객체는 항상 닫히게 됩니다.
 
-Notice that a variable assigned a value of 0 or `None` or a variable which is an empty sequence or collection is considered `False` by Python.  This is why we can use `if f:` in the code above.
+여기서 0, `None`, 빈 열거형 객체 등은 파이썬에서 `거짓 (False)` 에 해당하는 것으로 처리됩니다. 위 예제에서 `if f:` 를 쓸 수 있는 이유입니다.
 
-Also note that we use `sys.stdout.flush()` after `print` so that it prints to the screen immediately.
+또한 여기서 `print` 문 뒤에 `sys.stdout.flush()` 를 사용하여 화면에 결과를 곧바로 출력하도록 해 주었습니다.
 
-## The with statement {#with}
+## with 문 {#with}
 
-Acquiring a resource in the `try` block and subsequently releasing the resource in the `finally` block is a common pattern. Hence, there is also a `with` statement that enables this to be done in a clean manner:
+`try` 블록에서 어떠한 시스템 자원을 가져오고 `finally` 문에서 이를 해제하여 주는 것은 자주 활용되는 패턴입니다. 그렇지만, `with` 문을 활용하면 이것을 좀 더 깔끔하게 작성해 줄 수 있습니다:
 
-Save as `exceptions_using_with.py`:
+`exceptions_using_with.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/exceptions_using_with.py" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The output should be same as the previous example. The difference here is that we are using the `open` function with the `with` statement - we leave the closing of the file to be done automatically by `with open`.
+위 예제는 이전의 예제와 동일한 결과를 출력합니다. 차이점은 `open` 함수를 사용할 때 `with` 문을 사용하였다는 것입니다. 그러면 파일을 직접 닫아 주지 않아도 `with open` 이 자동으로 파일을 닫아 줍니다.
 
-What happens behind the scenes is that there is a protocol used by the `with` statement. It fetches the object returned by the `open` statement, let's call it "thefile" in this case.
+그러면 `with` 문은 어떻게 자동으로 이러한 것들을 처리해 주는 것일까요? 우선 `with` 문은 `open` 문이 반환해 주는 객체를 받아 오는데, 일단 여기서는 이것을 "thefile" 이라고 해 봅시다.
 
-It _always_ calls the `thefile.__enter__` function before starting the block of code under it and _always_ calls `thefile.__exit__` after finishing the block of code.
+with 문은 항상 `thefile.__enter__` 함수를 호출한 뒤 해당 블록의 코드를 실행하며, 실행이 끝난 후에는 항상 `thefile.__exit__` 를 호출합니다.
 
-So the code that we would have written in a `finally` block should be taken care of automatically by the `__exit__` method. This is what helps us to avoid having to use explicit `try..finally` statements repeatedly.
+따라서 `finally` 블록에서 써 줬어야 했을 코드가 `__exit__` 메소드에 의해 자동적으로 이루어지는 것입니다. 따라서 `with`를 쓰면 매번 `try..finally` 문을 명시적으로 쓰지 않고도 같은 일을 할 수 있습니다.
 
-More discussion on this topic is beyond scope of this book, so please refer [PEP 343](http://www.python.org/dev/peps/pep-0343/) for a comprehensive explanation.
+이에 대한 좀 더 자세한 설명은 이 책이 다루는 범위를 벗어납니다. 자세한 설명은 [PEP 343](http://www.python.org/dev/peps/pep-0343/) 을 읽어 보시기 바랍니다.
 
 ## Summary
 
-We have discussed the usage of the `try..except` and `try..finally` statements. We have seen how to create our own exception types and how to raise exceptions as well.
+지금까지 `try..except` 문과 `try..finally` 문의 사용법을 배워 보았습니다. 또 사용자 정의 예외 형식을 만드는 법과 예외를 일으키는 법에 대해서도 알아 보았습니다.
 
-Next, we will explore the Python Standard Library.
+다음으로, 파이썬 표준 라이브러리에 대해 알아 보겠습니다.

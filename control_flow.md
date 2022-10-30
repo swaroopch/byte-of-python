@@ -1,138 +1,138 @@
-# Control Flow {#control-flow}
+# 흐름 제어 {#control-flow}
 
-In the programs we have seen till now, there has always been a series of statements faithfully executed by Python in exact top-down order. What if you wanted to change the flow of how it works? For example, you want the program to take some decisions and do different things depending on different situations, such as printing 'Good Morning' or 'Good Evening' depending on the time of the day?
+지금까지 우리가 본 파이썬 프로그램들은 전부 맨 윗줄부터 차례대로 실행되기만 하는 것들 뿐이었습니다. 이러한 실행 흐름을 바꿀 수 있다면 어떨까요? 예를 들어, 프로그램이 현재 시간에 따라 'Good Morning' 혹은 'Good Evening’을 출력하는 결정을 내리도록 할 수 있게 하면 좋지 않을까요?
 
-As you might have guessed, this is achieved using control flow statements. There are three control flow statements in Python - `if`, `for` and `while`.
+예상하시는대로 지금부터 배울 흐름 제어문들을 활용하면 이러한 프로그램을 제작할 수 있습니다. 파이썬에서는 `if`, `for`, `while` 이라는 세 종류의 흐름 제어문을 사용할 수 있습니다.
 
-## The `if` statement
+## `if` 문
 
-The `if` statement is used to check a condition: *if* the condition is true, we run a block of statements (called the _if-block_), *else* we process another block of statements (called the _else-block_). The *else* clause is optional.
+`if` 문은 조건을 판별할 때 사용됩니다. if (만약) 조건이 참이라면, _if 블록_ 의 명령문을 실행하며 else (아니면) _else 블록_ 의 명령문을 실행합니다. 이 때 *else* 블록은 생략이 가능합니다.
 
-Example (save as `if.py`):
+예제 (`if.py` 로 저장하세요):
 
 <!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
 <pre><code class="lang-python">{% include "./programs/if.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/if.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-In this program, we take guesses from the user and check if it is the number that we have. We set the variable `number` to any integer we want, say `23`. Then, we take the user's guess using the `input()` function. Functions are just reusable pieces of programs. We'll read more about them in the [next chapter](./functions.md#functions).
+이 프로그램에서는, 사용자로부터 숫자를 입력받아 그 숫자가 프로그램에 지정된 숫자와 같은지 확인합니다. 먼저 `number` 변수에 원하는 숫자를 넣습니다. 여기서는 `23` 입니다. 그리고, `input()` 함수를 통해 사용자로부터 입력을 받습니다. 여기서 함수란 재사용 가능한 프로그램 조각을 의미합니다. 다음 장에서, [함수](./functions.md#functions)에 대해 좀 더 자세히 배울 것입니다.
 
-We supply a string to the built-in `input` function which prints it to the screen and waits for input from the user. Once we enter something and press kbd:[enter] key, the `input()` function returns what we entered, as a string. We then convert this string to an integer using `int` and then store it in the variable `guess`. Actually, the `int` is a class but all you need to know right now is that you can use it to convert a string to an integer (assuming the string contains a valid integer in the text).
+파이썬에 내장된 `input` 함수에 문자열을 넣어 주면 화면에 이 문자열이 출력되며, 또 사용자의 입력을 기다리게 됩니다. 이제 사용자가 무엇인가를 입력하고 kbd:[enter] 키를 누르면, `input()` 함수는 사용자가 입력한 것을 문자열의 형태로 반환해 줍니다. 이제 `int` 를 이용하여 이것을 정수형으로 변환한 뒤, 그 값을 변수 `guess`에 대입합니다. 사실 여기에서 사용된 `int`는 클래스라는 것입니다만, 일단 여기서는 이것이 문자열을 숫자형으로 변환해 준다는 것만 기억하셔도 됩니다 (다만 이 때 사용된 문자열은 올바른 숫자를 포함하고 있어야 합니다).
 
-Next, we compare the guess of the user with the number we have chosen. If they are equal, we print a success message. Notice that we use indentation levels to tell Python which statements belong to which block. This is why indentation is so important in Python. I hope you are sticking to the "consistent indentation" rule. Are you?
+다음으로, 사용자가 입력한 숫자와 우리가 고른 숫자를 비교합니다. 만약 이 두 숫자가 같으면, 성공했다는 메시지를 화면에 출력합니다. 이때 들여쓰기를 이용하여 어디부터 어디까지가 이 블록에 해당하는지를 표시했다는 것을 확인하세요. 이러한 이유로 파이썬에서 들여쓰기는 굉장히 중요합니다. 앞서 말씀드렸듯이 여러분이 "일관성 있게 들여쓰는" 습관에 익숙해져 있었으면 좋겠네요. 이미 그렇게 하고 계시지요?
 
-Notice how the `if` statement contains a colon at the end - we are indicating to Python that a block of statements follows.
+또한 `if` 문의 뒷부분에 콜론(:)이 붙어 있는 것을 확인하세요. 콜론은 그 다음 줄부터 새로운 블록이 시작된다는 것을 의미합니다.
 
-Then, we check if the guess is less than the number, and if so, we inform the user that they must guess a little higher than that. What we have used here is the `elif` clause which actually combines two related `if else-if else` statements into one combined `if-elif-else` statement. This makes the program easier and reduces the amount of indentation required.
+이제, 사용자가 입력한 숫자가 우리가 고른 숫자에 비해 작다면, 사용자에게 좀 더 큰 숫자를 입력하라고 알려 줍니다. 여기에 사용된 것은 `elif` 절인데, 이것은 두 개의 if 문을 중첩해서 사용해야 할 경우 (즉 `if else`를 쓰고 밑에 또 다시 `if else`를 써야 될 경우) 이것을 `if-elif-else`로 한번에 줄여서 쓸 수 있게 해 주는 것입니다. 즉 `elif`를 쓰면 프로그래밍을 좀 더 짧게 만들 수 있고 더 많은 들여쓰기를 해야 하는 수고도 줄여 줍니다.
 
-The `elif` and `else` statements must also have a colon at the end of the logical line followed by their corresponding block of statements (with proper indentation, of course)
+elif 와 else 문을 사용할 경우, 논리적 명령줄의 마지막에는 항상 콜론이 붙어 있어야 하며 그 다음 줄에는 다른 들여쓰기 단계로 시작되는 새로운 명령문 블록이 시작되어야 합니다.
 
-You can have another `if` statement inside the if-block of an `if` statement and so on - this is called a nested `if` statement.
+또한 `if`문의 if 블록 안에 또다른 `if`문을 넣고, 또 넣고 하는 식으로 작성할 수도 있습니다. 이 경우 이것을 중첩 `if` 문이라 부릅니다.
 
-Remember that the `elif` and `else` parts are optional. A minimal valid `if` statement is:
+`elif` 와 `else` 절은 생략이 가능합니다. 최소한의 올바른 `if` 문 사용법은 다음과 같습니다:
 
 ```python
 if True:
     print('Yes, it is true')
 ```
 
-After Python has finished executing the complete `if` statement along with the associated `elif` and `else` clauses, it moves on to the next statement in the block containing the `if` statement. In this case, it is the main block (where execution of the program starts), and the next statement is the `print('Done')` statement. After this, Python sees the ends of the program and simply finishes up.
+`if` - `elif` - `else` 문의 실행이 끝나면, 파이썬은 `if` 문을 담고 있는 블록의 다음 줄부터 실행을 재개합니다. 위 예제의 경우 그 블록은 최상위 블록 (프로그램이 실행된 시점의 블록)이 되며, 따라서 그 다음에 실행될 명령문은 `print('Done')` 이 됩니다. 그 이후는 프로그램의 끝이고 실행이 종료되게 됩니다.
 
-Even though this is a very simple program, I have been pointing out a lot of things that you should notice. All these are pretty straightforward (and surprisingly simple for those of you from C/C++ backgrounds). You will need to become aware of all these things initially, but after some practice you will become comfortable with them, and it will all feel 'natural' to you.
+지금 여러분이 본 것은 굉장히 간단한 프로그램이지만, 이를 통해서도 충분히 많은 것들에 대해 이야기했습니다. 하지만 이 모든 내용은 상당히 직관적입니다 (만약 여러분이 C/C++ 경험이 있다면 훨씬 더 쉽다고 느껴지기까지 할 것입니다). 지금 당장은 여러분이 이 모든 내용을 익혀야 하겠지만, 몇번 연습을 해보고 나면 아마 좀 더 편하게 받아들여질 것이며 곧 '자연스럽게' 여기게 될 것입니다.
 
-> **Note for C/C++ Programmers**
+> **C/C++ 프로그래머를 위한 주석**
 > 
-> There is no `switch` statement in Python. You can use an `if..elif..else` statement to do the same thing (and in some cases, use a [dictionary](./data_structures.md#dictionary) to do it quickly)
+> 파이썬에는 `switch` 문이 없습니다. 그 대신 `if..elif..else` 문을 이용하여야 합니다 (몇몇 상황에서는 [사전](./data_structures.md#dictionary)을 이용하는 것이 더 편리합니다).
 
-## The while Statement
+## while 문
 
-The `while` statement allows you to repeatedly execute a block of statements as long as a condition is true. A `while` statement is an example of what is called a *looping* statement. A `while` statement can have an optional `else` clause.
+`while` 문은 특정 조건이 참일 경우 계속해서 블록의 명령문들을 반복하여 실행할 수 있도록 합니다. `while` 문은 *반복문*의 한 예입니다. 또한 `while` 문에도 `else` 절이 따라올 수 있습니다.
 
-Example (save as `while.py`):
+예제 (`while.py`로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/while.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/while.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-In this program, we are still playing the guessing game, but the advantage is that the user is allowed to keep guessing until he guesses correctly - there is no need to repeatedly run the program for each guess, as we have done in the previous section. This aptly demonstrates the use of the `while` statement.
+이 프로그램 또한 숫자 알아맞히기 게임입니다만, 더 나은 점은 사용자가 답을 맞출 때까지 계속 숫자를 입력할 수 있다는 것입니다. 즉, 이전 섹션에서 작성한 프로그램처럼 다른 숫자를 입력해 보기 위해 프로그램을 또 실행시킬 필요가 없습니다. 이 예제는 `while`문의 사용법을 잘 보여줍니다.
 
-We move the `input` and `if` statements to inside the `while` loop and set the variable `running` to `True` before the while loop. First, we check if the variable `running` is `True` and then proceed to execute the corresponding *while-block*. After this block is executed, the condition is again checked which in this case is the `running` variable. If it is true, we execute the while-block again, else we continue to execute the optional else-block and then continue to the next statement.
+이 예제에서는 `input` 과 `if` 문들을 `while` 안으로 옮겼고, 반복절이 실행되기 전 변수 `running`을 `참(True)`으로 설정했습니다. 이제 `running` 변수가 `True`로 설정되어 있으므로, `while` 문에 딸려 있는 *while 블록*이 실행됩니다. 이 블록의 실행이 끝나면, `while` 문은 변수 `running` 의 값을 다시 한번 확인합니다. 이 때 이 값이 `True` 인 경우 while 블록을 다시 한번 실행하며, 거짓인 경우 else 블록을 실행한 뒤 블록을 빠져나오게 되고 그 아래의 명령문이 계속 실행되게 됩니다.
 
-The `else` block is executed when the `while` loop condition becomes `False` - this may even be the first time that the condition is checked. If there is an `else` clause for a `while` loop, it is always executed unless you break out of the loop with a `break` statement.
+`else` 블록은 `while` 반복절의 조건이 `거짓(False)` 인 경우 실행됩니다. 물론 이 조건을 처음으로 확인했을 경우에도 이 블록이 실행될 수 있습니다. `while` 반복절에 `else` 절이 딸려있는 경우, `break` 명령으로 루프를 강제로 빠져나오지 않는 이상 이 블록은 항상 실행되게 됩니다.
 
-The `True` and `False` are called Boolean types and you can consider them to be equivalent to the value `1` and `0` respectively.
+여기서 `참(True)` 과 `거짓(False)` 을 담는 자료형을 `불리언(Boolean)`형이라고 하며, 각각은 숫자로 변환하면 `1` 과 `0` 으로 간주됩니다.
 
-> **Note for C/C++ Programmers**
+> **C/C++ 프로그래머를 위한 주석**
 > 
-> Remember that you can have an `else` clause for the `while` loop.
+> `while` 루프에 `else` 절이 사용될 수 있음을 기억하세요.
 
-## The `for` loop
+## `for` 문
 
-The `for..in` statement is another looping statement which *iterates* over a sequence of objects i.e. go through each item in a sequence. We will see more about [sequences](./data_structures.md#sequence) in detail in later chapters. What you need to know right now is that a sequence is just an ordered collection of items.
+`for..in` 문은 객체의 열거형(Sequence)을 따라서 반복하여 실행할 때 사용되는 파이썬에 내장된 또 하나의 반복문으로, 열거형에 포함된 각 항목을 하나씩 거쳐가며 실행합니다. [열거형]](./data_structures.md#sequence)에 대해서는 이후에 좀 더 자세히 다룰 것입니다. 일단 여기서는, 열거형이란 여러 항목이 나열된 어떤 목록을 의미한다고 생각하시기 바랍니다.
 
-Example (save as `for.py`):
+예제 (`for.py`로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/for.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/for.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-In this program, we are printing a *sequence* of numbers. We generate this sequence of numbers using the built-in `range` function.
+이 프로그램은 화면상에 숫자의 나열을 출력합니다. 파이썬에 내장된 `range` 함수를 통해 이러한 숫자의 나열을 생성합니다.
 
-What we do here is supply it two numbers and `range` returns a sequence of numbers starting from the first number and up to the second number. For example, `range(1,5)` gives the sequence `[1, 2, 3, 4]`. By default, `range` takes a step count of 1. If we supply a third number to `range`, then that becomes the step count. For example, `range(1,5,2)` gives `[1,3]`. Remember that the range extends *up to* the second number i.e. it does *not* include the second number.
+여기서는 `range` 함수에 두 개의 숫자를 넣어 주었으며, 그러면 이 함수는 첫 번째 숫자 이상, 그리고 두 번째 숫자 미만까지의 숫자 목록(리스트)을 반환합니다. 예를 들어, range(1,5) 는 리스트 [1, 2, 3, 4] 를 반환합니다. 기본적으로, range 는 1씩 증가하는 숫자의 리스트를 반환합니다. 그러나 range 에 세 번째 숫자를 입력하면, 이 세 번째 숫자만큼씩 증가하는 숫자들의 리스트를 얻을 수 있습니다. 예를 들어, range(1,5,2) 는 [1,3] 을 반환합니다. 반환되는 리스트는 두번째 숫자 미만 까지 반환되며, 이하 까지 반환되는 것이 아니라는 점을 꼭 기억하세요.
 
-Note that `range()` generates only one number at a time, if you want the full list of numbers, call `list()` on the `range()`, for example, `list(range(5))` will result in `[0, 1, 2, 3, 4]`. Lists are explained in the [data structures chapter](./data_structures.md#data-structures).
+range 함수는 호출될 때 해당 범위 내의 숫자를 모두 한번에 생성하는 것이 아니라 한번에 하나씩만 생성하여 반환해 주기 때문에, 모든 생성될 숫자의 목록을 얻고 싶은 경우 `range()`의 결과를 `list()` 에 넣어주면 됩니다. 예를 들어, `list(range(5))` 와 같이 하면 `[0, 1, 2, 3, 4]` 가 반환될 것입니다. 리스트에 대해서는 [자료구조](./data_structures.md#data-structures) 챕터에서 좀 더 자세히 설명할 것입니다.
 
-The `for` loop then iterates over this range - `for i in range(1,5)` is equivalent to `for i in [1, 2, 3, 4]` which is like assigning each number (or object) in the sequence to i, one at a time, and then executing the block of statements for each value of `i`.  In this case, we just print the value in the block of statements.
+위 예제의 for 루프는 range 함수에서 반환된 리스트를 따라 반복하여 실행됩니다. 즉, `for i in range(1,5)` 는 `for i in [1, 2, 3, 4]` 와 같습니다. 이것은 리스트에 들어 있는 각각의 숫자 (각 숫자는 곧 객체이기도 합니다) 를 한번에 하나씩 `i` 에 대입하고, 이렇게 대입된 각 `i` 값을 이용하여 for 에 딸린 블록을 실행합니다. 이 경우, for 블록에서 하는 일은 단순히 `i` 값을 화면에 출력해 주는 것입니다.
 
-Remember that the `else` part is optional. When included, it is always executed once after the `for` loop is over unless a [break](#break-statement) statement is encountered.
+또한, 원하는 경우 추가로 `else` 절을 포함시켜 줄 수 있습니다. 이것이 포함되면, [break](#break-statement) 문으로 루프를 강제로 빠져나오지 않는 한 `for` 반복절을 다 마치고 난 뒤에는 이 절이 항상 실행되게 됩니다.
 
-Remember that the `for..in` loop works for any sequence. Here, we have a list of numbers generated by the built-in `range` function, but in general we can use any kind of sequence of any kind of objects! We will explore this idea in detail in later chapters.
+`for..in` 반복문은 어떤 종류의 열거형 자료형과도 함께 사용될 수 있습니다. 여기서는 `range` 라는 내장 함수를 통해 숫자 리스트를 생성하여 사용하였습니다만, 일반적으로는 아무 종류의 객체를 담고 있는 아무 열거형이나 사용이 가능합니다! 이 책의 후반부에서 이에 대해 좀 더 자세히 다뤄 보겠습니다.
 
-> **Note for C/C++/Java/C# Programmers**
+> **C/C++/Java/C# 프로그래머를 위한 주석**
 > 
-> The Python `for` loop is radically different from the C/C++ `for` loop. C# programmers will note that the `for` loop in Python is similar to the `foreach` loop in C#. Java programmers will note that the same is similar to `for (int i : IntArray)` in Java 1.5.
+> 파이썬의 `for` 루프는 C/C++ 에서 제공하는 `for` 루프와는 근본적으로 다릅니다. C# 프로그래머분들은 파이썬의 `for` 문이 C# 의 `foreach` 루프와 비슷하며, 자바 프로그래머분들은 이것이 Java 1.5의 `for (int i : IntArray)`와 비슷하다는 점을 확인하실 수 있을 것입니다.
 > 
-> In C/C++, if you want to write `for (int i = 0; i < 5; i++)`, then in Python you write just `for i in range(0,5)`. As you can see, the `for` loop is simpler, more expressive and less error prone in Python.
+> C/C 처럼 `for (int i = 0; i < 5; i)` 와 같이 사용하고 싶은 경우, 파이썬에서는 단순히 `for i in range(0,5)`라고 입력하기만 하면 됩니다. 보시다시피, 파이썬의 `for` 루프는 더 단순하며 명확하고, 따라서 오류가 발생하기도 어렵습니다.
 
-## The break Statement {#break-statement}
+## break 문 {#break-statement}
 
-The `break` statement is used to *break* out of a loop statement i.e. stop the execution of a looping statement, even if the loop condition has not become `False` or the sequence of items has not been completely iterated over.
+`break` 문은 루프 문을 *탈출*할 때 (*break* out), 즉 아직 루프 조건이 `False` 가 되지 않았거나 열거형의 끝까지 루프가 도달하지 않았을 경우에 루프 문의 실행을 강제로 정지시키고 싶을 때 사용됩니다.
 
-An important note is that if you *break* out of a `for` or `while` loop, any corresponding loop `else` block is **not** executed.
+중요한 점은 만약 여러분이 `break` 문을 써서 `for` 루프나 `while` 루프를 빠져나왔을 경우, 루프에 딸린 `else` 블록은 실행되지 **않습니다**.
 
-Example (save as `break.py`):
+예제 (`break.py`로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/break.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/break.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-In this program, we repeatedly take the user's input and print the length of each input each
-time. We are providing a special condition to stop the program by checking if the user input is
-`'quit'`. We stop the program by *breaking* out of the loop and reach the end of the program.
+이 프로그램에서는 사용자의 입력을 반복해서 받고, 매 반복시 입력받은 문자열의 길이를 출력합니다.
+다만 사용자가 입력한 문자열이 `'quit'` 일 경우, `break`문으로 루프를 빠져나와 프로그램을
+끝내도록 조건을 넣어 주었습니다.
 
-The length of the input string can be found out using the built-in `len` function.
+입력받은 문자열의 길이는 내장함수 `len` 을 이용하여 계산할 수 있습니다.
 
-Remember that the `break` statement can be used with the `for` loop as well.
+`break` 문은 `for` 루프 내에서도 이용될 수 있음을 기억하세요.
 
-**Swaroop's Poetic Python**
+**Swaroop의 파이썬 시**
 
-The input I have used here is a mini poem I have written:
+예제에서 입력한 것은 이 책의 저자가 작성한 작은 시입니다:
 
 ```
 Programming is fun
@@ -141,26 +141,26 @@ if you wanna make your work also fun:
     use Python!
 ```
 
-## The `continue` Statement {#continue-statement}
+## `continue` 문 {#continue-statement}
 
-The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to *continue* to the next iteration of the loop.
+`continue` 문은 현재 실행중인 루프 블록의 나머지 명령문들을 실행하지 않고 곧바로 다음 루프로 *넘어가도록* (*continue*) 합니다.
 
-Example (save as `continue.py`):
+예제 (`continue.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/continue.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/continue.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-In this program, we accept input from the user, but we process the input string only if it is at least 3 characters long. So, we use the built-in `len` function to get the length and if the length is less than 3, we skip the rest of the statements in the block by using the `continue` statement. Otherwise, the rest of the statements in the loop are executed, doing any kind of processing we want to do here.
+이 프로그램에서는 사용자로부터 입력을 받습니다만, 입력받은 문자열의 길이가 적어도 3 이상인 경우에만 문자열을 처리합니다. 즉, 내장함수 `len` 을 통해 입력받은 문자열의 길이를 알아낸 후 그 길이가 3보다 작으면, `continue` 문을 이용하여 그 이하의 명령문을 실행하지 않고 다음 루프로 넘어가도록 합니다. 입력받은 문자열의 길이가 3 이상일 경우에만 그 이하의 명령문이 실행되고, 지정된 작업이 실행됩니다.
 
-Note that the `continue` statement works with the `for` loop as well.
+`continue` 문은 `for` 루프 내에서도 이용될 수 있음을 기억하세요.
 
-## Summary
+## 요약
 
-We have seen how to use the three control flow statements - `if`, `while` and `for` along with their associated `break` and `continue` statements. These are some of the most commonly used parts of Python and hence, becoming comfortable with them is essential.
+이 챕터에서는 `if`, `while`, `for` 세 종류의 흐름 제어문에 대해 배워 보았습니다. 또한 그와 같이 이용할 수 있는 `break` 과 `continue` 문에 대해서도 배웠습니다. 이 명령문들은 파이썬에서 가장 많이 사용되는 명령문 중 일부라고 볼 수 있으며, 따라서 이 명령문들에 필수로 친숙해져야 할 필요가 있습니다.
 
-Next, we will see how to create and use functions.
+다음으로, 함수를 만들고 사용하는 방법에 대해 배워 보겠습니다.

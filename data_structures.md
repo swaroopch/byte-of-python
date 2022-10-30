@@ -1,152 +1,152 @@
-# Data Structures {#data-structures}
+# 자료구조 {#data-structures}
 
-Data structures are basically just that - they are *structures* which can hold some *data* together. In other words, they are used to store a collection of related data.
+자료구조란 간단하게, 어떤 *자료*를 담는 *구조*를 말합니다. 다른 말로 하면, 서로 연관있는 어떤 자료들의 집합을 저장하는 데 사용됩니다.
 
-There are four built-in data structures in Python - _list, tuple, dictionary and set_. We will see how to use each of them and how they make life easier for us.
+파이썬에는 네 종류의 자료구조가 있는데, 각각 _리스트, 튜플, 사전(dictionary), 집합(set)_ 입니다. 이제 앞으로 각각의 사용법에 대해 알아보고 또 각각이 얼마나 편리한지 알아보도록 하겠습니다.
 
-## List
+## 리스트
 
-A `list` is a data structure that holds an ordered collection of items i.e. you can store a *sequence* of items in a list. This is easy to imagine if you can think of a shopping list where you have a list of items to buy, except that you probably have each item on a separate line in your shopping list whereas in Python you put commas in between them.
+`리스트`란 순서대로 정리된 항목들을 담고 있는 자료 구조입니다. 즉, 리스트에는 항목의 *목록*을 저장할 수 있습니다. 이것은 쉽게 말하자면 장 보러 갈 때 적는 일종의 장바구니 목록 같은 것인데, 아마도 여러분은 각 품목들을 한줄씩 적는 데 익숙하시겠지만 리스트에서는 줄 대신 쉼표로 각 항목을 구분한다는 점이 다릅니다.
 
-The list of items should be enclosed in square brackets so that Python understands that you are specifying a list. Once you have created a list, you can add, remove or search for items in the list. Since we can add and remove items, we say that a list is a *mutable* data type i.e. this type can be altered.
+리스트를 정의할 때는 대괄호 [] 를 이용해서 파이썬에게 이것이 리스트를 의미한다는 것을 알려 줍니다. 한번 리스트를 만들어 두면 여기에 새로운 항목을 추가하거나 삭제할 수 있으며, 특정 항목이 존재하는지 검색할 수도 있습니다. 이 때 항목을 추가 및 삭제가 가능하다는 특징을 *비정적(mutable)*이라고 하며, 리스트는 비정적 자료구조의 한 예로 내부 항목을 변경할 수 있는 자료형입니다.
 
-## Quick Introduction To Objects And Classes
+## 객체와 클래스에 대한 간단한 소개
 
-Although I've been generally delaying the discussion of objects and classes till now, a little explanation is needed right now so that you can understand lists better. We will explore this topic in detail in a [later chapter](./oop.md#oop).
+객체와 클래스에 대해서는 좀 더 나중에 다룰 예정이지만, 여기서 여러분이 리스트에 대해 좀 더 잘 이해하실 수 있도록 이에 대한 간단한 소개를 하도록 하겠습니다. 이들에 대해서는 [뒤 챕터](./oop.md#oop)에서 좀 더 자세하게 다루겠습니다.
 
-A list is an example of usage of objects and classes. When we use a variable `i` and assign a value to it, say integer `5` to it, you can think of it as creating an *object* (i.e. instance) `i` of *class* (i.e. type) `int`. In fact, you can read `help(int)` to understand this better.
+리스트는 객체와 클래스가 사용된 한 예입니다. 변수 `i` 를 선언하고 예를 들어 `5` 라는 정수형 값을 할당해 주는 것은, `int` 라는 *클래스* (또는 *타입*) 의 *객체* (또는 *인스턴스*) `i` 를 만드는 것입니다. 이에 대해 좀 더 자세히 알아보려면 `help(int)` 를 읽어보시기 바랍니다.
 
-A class can also have *methods* i.e. functions defined for use with respect to that class only. You can use these pieces of functionality only when you have an object of that class. For example, Python provides an `append` method for the `list` class which allows you to add an item to the end of the list. For example, `mylist.append('an item')` will add that string to the list `mylist`. Note the use of dotted notation for accessing methods of the objects.
+클래스는 *메소드*를 가질 수 있는데, 여기서 메소드란 그 클래스 내에 정의된 고유의 내장 함수들을 말합니다. 또 이러한 내장 함수들은 클래스로 객체를 생성했을 때에야 비로소 사용할 수 있습니다. 예를 들어, 파이썬의 `list` 클래스에는 `append` 라는 메소드가 포함되어 있으며 이는 리스트의 마지막에 항목을 한 개 추가할 때 사용되는 메소드입니다. 즉 `mylist.append('an item')` 라 하면 리스트 `mylist` 의 마지막에 해당 문자열을 추가해 줍니다. 이 때 객체의 메소드에 접근할 때에도 마침표를 이용한다는 점을 기억하세요.
 
-A class can also have *fields* which are nothing but variables defined for use with respect to that class only. You can use these variables/names only when you have an object of that class. Fields are also accessed by the dotted notation, for example, `mylist.field`.
+또 클래스는 *필드*를 가질 수 있는데 이것은 단순히 그 클래스 내에 정의된 변수들을 의미합니다. 메소드와 마찬가지로 이러한 변수들은 클래스로 객체를 생성했을 때에야 비로소 사용할 수 있습니다. 필드도 메소드와 마찬가지로 마침표를 이용하여 접근합니다. 예를 들면 `mylist.field` 와 같습니다.
 
-Example (save as `ds_using_list.py`):
+예제 (`ds_using_list.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/ds_using_list.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/ds_using_list.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The variable `shoplist` is a shopping list for someone who is going to the market. In `shoplist`, we only store strings of the names of the items to buy but you can add _any kind of object_ to a list including numbers and even other lists.
+어떤 사람이 마트에 장 보러 갈 때 장바구니 목록을 변수 `shoplist` 에 담아 두었다고 합시다. 이 `shoplist` 에는 구매할 항목들의 이름들, 즉 문자열들이 담겨 있을 것이지만, 사실 리스트에는 _어떤 종류의 객체_ 든지 담을 수 있어서 숫자도 담을 수 있고, 심지어는 리스트 안에 다른 리스트도 담을 수 있습니다.
 
-We have also used the `for..in` loop to iterate through the items of the list. By now, you must have realised that a list is also a sequence. The speciality of sequences will be discussed in a [later section](#sequence).
+여기서는 `for..in` 반복문을 사용하여 리스트 안에 담겨 있는 항목들을 하나씩 반복하여 읽어왔습니다. 이제쯤 되면 리스트는 열거형이라는 점을 알고 계셔야 합니다. [열거형](#sequence)에 대해서는 뒤에 좀 더 자세히 다루겠습니다.
 
-Notice the use of the `end` parameter in the call to `print` function to indicate that we want to end the output with a space instead of the usual line break.
+print 함수에 추가한 `end` 매개변수는 출력될 내용 뒤에 줄바꿈 기호 대신 공백을 출력하도록 지정해 준 것입니다.
 
-Next, we add an item to the list using the `append` method of the list object, as already discussed before. Then, we check that the item has been indeed added to the list by printing the contents of the list by simply passing the list to the `print` function which prints it neatly.
+다음으로, 앞서 설명했듯이 리스트 객체의 `append` 메소드를 이용해서 리스트에 항목을 한 개 추가합니다. 그리고, 추가된 항목이 제대로 추가되었는지 확인하기 위해 print 함수에 리스트를 넘겨 주어 리스트의 내용을 화면에 예쁘게 출력해 줍니다.
 
-Then, we sort the list by using the `sort` method of the list. It is important to understand that this method affects the list itself and does not return a modified list - this is different from the way strings work. This is what we mean by saying that lists are _mutable_ and that strings are _immutable_.
+이제 리스트의 `sort` 메소드를 이용하여 리스트의 내용을 정렬해 줍니다. 여기서 이 메소드는 해당 리스트 자체를 변화시키며 수정된 리스트를 또 반환해주지 않는데 이 점을 이해하는 것이 중요합니다. _정적(immutable)_ 인 문자열과 달리 리스트는 변화될 수 있는 성질을 지녔으며 이것을 _비정적(mutable)_ 이라 합니다.
 
-Next, when we finish buying an item in the market, we want to remove it from the list. We achieve this by using the `del` statement. Here, we mention which item of the list we want to remove and the `del` statement removes it from the list for us.  We specify that we want to remove the first item from the list and hence we use `del shoplist[0]` (remember that Python starts counting from 0).
+다음으로 물건을 구매한 뒤에는 장바구니 목록에서 해당 항목을 지워야 할 것입니다. 이 때 `del` 문을 사용하여 항목을 삭제합니다. 항목을 삭제할 때는 어떤 항목을 지울지 del 문에 알려 주면 리스트로부터 해당 항목이 삭제됩니다. 여기서는 `del shoplist[0]` 이라고 입력하여 첫 번째 항목을 삭제할 것임을 알려 주었습니다 (파이썬은 숫자를 0부터 센다는 점을 기억하시기 바랍니다).
 
-If you want to know all the methods defined by the list object, see `help(list)` for details.
+리스트 객체가 갖고 있는 모든 메소드에 대해 알고 싶으시면, `help(list)` 를 입력해 보시기 바랍니다.
 
-## Tuple
+## 튜플
 
-Tuples are used to hold together multiple objects. Think of them as similar to lists, but without the extensive functionality that the list class gives you. One major feature of tuples is that they are *immutable* like strings i.e. you cannot modify tuples.
+튜플은 여러 개의 객체를 모아 담는 데 사용됩니다. 튜플은 리스트와 비슷하지만, 리스트 클래스에 있는 여러가지 기능이 없습니다. 또 튜플은 수정이 불가능하며, 그래서 주로 문자열과 같이 *비정적*인 객체들을 담을 때 사용됩니다.
 
-Tuples are defined by specifying items separated by commas within an optional pair of parentheses.
+튜플은 괄호로 묶인 쉼표로 구분된 여러 개의 항목으로 정의되며, 괄호는 생략이 가능합니다.
 
-Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values (i.e. the tuple of values used) will not change.
+튜플에 저장된 값들은 수정이 불가능하기 때문에, 단순히 값들의 목록을 저장해두고 쓸 때 주로 사용됩니다.
 
-Example (save as `ds_using_tuple.py`):
+예제 (`ds_using_tuple.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/ds_using_tuple.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/ds_using_tuple.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-The variable `zoo` refers to a tuple of items. We see that the `len` function can be used to get the length of the tuple. This also indicates that a tuple is a [sequence](#sequence) as well.
+변수 `zoo` 는 여러 항목들을 담고 있는 튜플입니다. 보시는 바와 같이 `len` 함수를 통해 튜플의 길이를 알아올 수 있습니다. 튜플 또한 [열거형](#sequence) 의 한 예입니다.
 
-We are now shifting these animals to a new zoo since the old zoo is being closed. Therefore, the `new_zoo` tuple contains some animals which are already there along with the animals brought over from the old zoo. Back to reality, note that a tuple within a tuple does not lose its identity.
+이제 동물원(zoo) 안의 동물들을 새로운 동물원으로 옮겨야 한다고 해 봅시다. 이를 위해 `new_zoo` 튜플이라는 새로운 동물원을 만들어 주고, 새 동물원에 원래 있던 동물들에 추가로 기존의 동물원에 있던 동물들을 옮겨 왔습니다. 이 때 예제와 같이 튜플 안에 튜플을 담아도 튜플의 성질을 잃지 않습니다.
 
-We can access the items in the tuple by specifying the item's position within a pair of square brackets just like we did for lists. This is called the _indexing_ operator. We access the third item in `new_zoo` by specifying `new_zoo[2]` and we access the third item within the third item in the `new_zoo` tuple by specifying `new_zoo[2][2]`. This is pretty simple once you've understood the idiom.
+리스트에서 했던 것과 같이, 튜플 안에 있는 항목의 위치를 대괄호로 묶어 지정해주면 각 항목에 접근할 수 있습니다. 이를 _인덱싱_ 연산자라고 부릅니다. `new_zoo` 의 세 번째 항목에 접근하려면 `new_zoo[2]` 와 같이 하며, 이 세 번째 항목은 튜플이므로 이것의 세 번째 항목에 접근하려면 `new_zoo[2][2]` 와 같이 합니다. 익숙해지면 쉽게 느껴질 것입니다.
 
-> **Tuple with 0 or 1 items**
+> **빈 튜플과 한 개짜리 튜플**
 > 
-> An empty tuple is constructed by an empty pair of parentheses such as `myempty = ()`. However, a tuple with a single item is not so simple. You have to specify it using a comma following the first (and only) item so that Python can differentiate between a tuple and a pair of parentheses surrounding the object in an expression i.e. you have to specify `singleton = (2 , )` if you mean you want a tuple containing the item `2`.
+> 빈 튜플은 괄호 안에 아무것도 적지 않고 `myempty = ()` 와 같이 생성할 수 있습니다. 그러나, 항목 한 개만 담고 있는 튜플을 정의할 때는 주의해야 합니다. 이 경우 첫 번째 항목의 뒤에 쉼표를 붙여 주어 파이썬에게 이것이 숫자 연산에 사용되는 괄호가 아니라 객체를 담는 튜플을 의미하는 것이라는 것을 구분할 수 있도록 단서를 주어야 합니다. 예를 들어, 항목 `2` 를 담고 있는 튜플을 정의하려면 `singleton = (2 , )` 와 같이 합니다.
 
 <!-- -->
 
-> **Note for Perl programmers**
+> **펄 프로그래머를 위한 주석**
 > 
-> A list within a list does not lose its identity i.e. lists are not flattened as in Perl. The same applies to a tuple within a tuple, or a tuple within a list, or a list within a tuple, etc. As far as Python is concerned, they are just objects stored using another object, that's all.
+> 리스트 안의 리스트는 리스트의 성질을 잃지 않습니다. 리스트는 펄에서처럼 flatten 되지 않습니다. 이 성질은 튜플 안의 튜플이나 리스트 안의 튜플 혹은 튜프 안의 리스트의 경우 모두에 적용됩니다. 파이썬에서는 이들은 단지 다른 객체 안에 저장된 객체들일 뿐입니다.
 
-## Dictionary
+## 사전 (딕셔너리)
 
-A dictionary is like an address-book where you can find the address or contact details of a person by knowing only his/her name i.e. we associate *keys* (name) with *values* (details). Note that the key must be unique just like you cannot find out the correct information if you have two persons with the exact same name.
+사전(딕셔너리)은 이를테면 전화번호부 같은 것인데, 누군가의 이름을 찾으면 그 사람의 주소와 연락처를 알 수 있는 것과 같습니다. 이 때 그 사람의 이름에 해당하는 것을 *키* 라 부르고, 주소와 연락처 등 세부사항에 해당하는 것을 *값* 이라 부릅니다. 전화번호부에 동명이인이 있을 경우 어떤 정보가 맞는 정보인지 제대로 알아낼 수 없듯이, 사전의 키는 사전에서 유일한 값이어야 합니다.
 
-Note that you can use only immutable objects (like strings) for the keys of a dictionary but you can use either immutable or mutable objects for the values of the dictionary.  This basically translates to say that you should use only simple objects for keys.
+사전의 키는 정적 객체 (문자열 등등) 이어야 하지만, 값으로는 정적 객체나 비정적 객체 모두 사용할 수 있습니다. 이것을 간단하게 다시 말하면 사전의 키로는 단순 객체만 사용할 수 있다고 표현합니다.
 
-Pairs of keys and values are specified in a dictionary by using the notation `d = {key1 : value1, key2 : value2 }`. Notice that the key-value pairs are separated by a colon and the pairs are separated themselves by commas and all this is enclosed in a pair of curly braces.
+사전을 정의할 때 키와 값의 쌍은 `d = {key1 : value1, key2 : value2 }` 와 같이 지정해 줍니다. 이 때 키와 값은 콜론으로 구분하며 각 키-값 쌍은 쉼표로 구분하고 이 모든 것을 중괄호 `{}`로 묶어 준다는 것을 기억하시기 바랍니다.
 
-Remember that key-value pairs in a dictionary are not ordered in any manner. If you want a particular order, then you will have to sort them yourself before using it.
+여기서 사전의 키-값 쌍은 자동으로 정렬되지 않으며, 파이썬 3.6 이상에서는 값이 저장된 순서대로 순서가 지정됩니다. 다르게 정렬된 값을 원한다면, 사용하기 전에 먼저 직접 정렬을 해 주어야 합니다.
 
-The dictionaries that you will be using are instances/objects of the `dict` class.
+앞으로 여러분이 사용하게 될 사전은 `dict` 라는 클래스의 인스턴스/객체입니다.
 
-Example (save as `ds_using_dict.py`):
+예제 (`ds_using_dict.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/ds_using_dict.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/ds_using_dict.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We create the dictionary `ab` using the notation already discussed. We then access key-value pairs by specifying the key using the indexing operator as discussed in the context of lists and tuples. Observe the simple syntax.
+먼저 앞서 설명한대로 사전 `ab` 를 생성합니다. 그러면 리스트와 튜플을 설명할 때 언급했었던 인덱싱 연산자 (대괄호, []) 에 키를 지정해 주어 사전의 키-값 쌍에 접근할 수 있습니다. 간단하지요?
 
-We can delete key-value pairs using our old friend - the `del` statement. We simply specify the dictionary and the indexing operator for the key to be removed and pass it to the `del` statement. There is no need to know the value corresponding to the key for this operation.
+키-값 쌍도 리스트에서 했던 것과 똑같이 `del` 문으로 삭제할 수 있습니다. `del` 을 적고 사전의 이름을 적은 뒤, 인덱싱 연산자 안에 삭제하고 싶은 키를 지정해 주기만 하면 됩니다. 이 때 그 키에 해당하는 값은 지정해 줄 필요가 없습니다.
 
-Next, we access each key-value pair of the dictionary using the `items` method of the dictionary which returns a list of tuples where each tuple contains a pair of items - the key followed by the value. We retrieve this pair and assign it to the variables `name` and `address` correspondingly for each pair using the `for..in` loop and then print these values in the for-block.
+다음으로, 사전의 `items` 메소드를 사용하여 각 키-값 쌍에 접근합니다. 이 메소드는 키와 값 순으로 구성된 튜플들을 묶은 튜플 하나를 반환해 줍니다. 그 후 `for..in` 반복문을 사용하여 키와 값 각각을 변수 `name` 과 `address` 에 지정해 주게 하고 그 값을 출력합니다.
 
-We can add new key-value pairs by simply using the indexing operator to access a key and assign that value, as we have done for Guido in the above case.
+위 예제의 'Guido' 와 같이 인덱싱 연산자를 사용하여 새로운 키-값 쌍을 추가할 수도 있습니다.
 
-We can check if a key-value pair exists using the `in` operator.
+또, 사전 안에 키-값 쌍이 존재하는지 `in` 연산자를 통해 확인할 수 있습니다.
 
-For the list of methods of the `dict` class, see `help(dict)`.
+`dict` 클래스의 모든 메소드 목록을 확인하시려면 `help(dict)` 를 입력하시기 바랍니다.
 
-> **Keyword Arguments and Dictionaries**
+> **키워드 인수와 사전의 관계**
 > 
-> If you have used keyword arguments in your functions, you have already used dictionaries! Just think about it - the key-value pair is specified by you in the parameter list of the function definition and when you access variables within your function, it is just a key access of a dictionary (which is called the _symbol table_ in compiler design terminology).
+> 함수를 호출할 때 키워드 인수를 사용해 보셨다면, 여러분은 이미 사전을 사용해 본 것입니다. 여기서 함수의 매개 변수들의 이름은 사전의 키에 대응하고, 각 매개 변수에 넘겨주는 값은 사전의 값에 대응합니다. 이러한 사전과 같은 것을 _심볼 테이블_ 이라고 부릅니다.
 
-## Sequence
+## 열거형
 
-Lists, tuples and strings are examples of sequences, but what are sequences and what is so special about them?
+열거형들은 리스트, 튜플, 문자열 같은 것입니다. 그러면 열거형이란 무엇이고 열거형에서는 무엇이 중요할까요?
 
-The major features are *membership tests*, (i.e. the `in` and `not in` expressions) and *indexing operations*, which allow us to fetch a particular item in the sequence directly.
+열거형의 주요한 두 가지 기능은 *멤버십 테스트* (`in` 과 `not in` 연산), 즉 어떤 항목이 열거형 안에 있는지 없는지 확인하는 것, 그리고 열거형 안의 특정 항목을 지정하여 가져올 수 있는 *인덱싱 연산* 입니다.
 
-The three types of sequences mentioned above - lists, tuples and strings, also have a *slicing* operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.
+여기에 더하여 위에서 설명한 리스트, 튜플, 문자열의 세 가지 열거형은 *슬라이스* 연산 기능을 가지고 있는데, 이것은 열거형의 일부분을 잘라(slice) 반환하는 연산을 말하며, 다시 말해 열거형의 부분집합을 반환해 주는 연산입니다.
 
-Example (save as `ds_seq.py`):
+예제 (`ds_seq.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/ds_seq.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/ds_seq.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-First, we see how to use indexes to get individual items of a sequence. This is also referred to as the _subscription operation_. Whenever you specify a number to a sequence within square brackets as shown above, Python will fetch you the item corresponding to that position in the sequence. Remember that Python starts counting numbers from 0. Hence, `shoplist[0]` fetches the first item and `shoplist[3]` fetches the fourth item in the `shoplist` sequence.
+먼저, 열거형의 각 항목을 얻어오기 위해 어떻게 인덱스 연산을 사용하는지 보겠습니다. 이를 다른 말로 _서브스크립션 연산_ 이라고도 합니다. 위 예제에서 보인 것과 같이 대괄호 내에 특정 숫자를 지정해 주면, 파이썬은 열거형에서 그 위치에 있는 항목을 얻어옵니다. 여기서 파이썬은 숫자를 0부터 센다는 점을 기억하시기 바랍니다. 따라서 `shoplist[0]` 과 `shoplist[3]` 은 각각 열거형 `shoplist` 의 첫 번째와 네 번째 항목을 읽어오는 연산을 의미합니다.
 
-The index can also be a negative number, in which case, the position is calculated from the end of the sequence. Therefore, `shoplist[-1]` refers to the last item in the sequence and `shoplist[-2]` fetches the second last item in the sequence.
+인덱스에는 음수가 지정될 수도 있습니다. 이 경우, 열거형의 마지막부터 그 위치가 계산됩니다. 따라서, `shoplist[-1]` 은 열거형의 마지막 항목을 의미하며 `shoplist[-2]` 는 열거형의 마지막 항목 바로 뒤의 항목을 의미합니다.
 
-The slicing operation is used by specifying the name of the sequence followed by an optional pair of numbers separated by a colon within square brackets. Note that this is very similar to the indexing operation you have been using till now. Remember the numbers are optional but the colon isn't.
+슬라이스 연산은 대괄호 안에 콜론으로 구분한 숫자들을 입력해 주는 것입니다. 슬라이스 연산은 앞서 설명한 인덱싱 연산과 매우 비슷합니다. 이 경우 숫자는 반드시 지정해 줄 필요는 없지만 콜론은 반드시 들어가야 합니다.
 
-The first number (before the colon) in the slicing operation refers to the position from where the slice starts and the second number (after the colon) indicates where the slice will stop at. If the first number is not specified, Python will start at the beginning of the sequence. If the second number is left out, Python will stop at the end of the sequence. Note that the slice returned _starts_ at the start position and will end just before the _end_ position i.e. the start position is included but the end position is excluded from the sequence slice.
+슬라이스 연산에서 콜론 앞의 첫 번째 숫자는 슬라이스를 시작할 위치를 의미하며 콜론 뒤의 두 번째 숫자는 슬라이스를 멈출 위치를 지정합니다. 만약 첫 번째 숫자가 지정되지 않았을 경우, 파이썬은 열거형의 맨 처음부터 슬라이스를 시작합니다. 두 번째 숫자가 지정되지 않았을 경우, 파이썬은 열거형의 맨 끝에서 슬라이스를 멈춥니다. 이 때 슬라이스는 시작 위치부터 슬라이스를 _시작_ 하며 _끝_ 위치의 직전까지 수행됩니다. 즉, 시작 위치에 해당하는 항목은 슬라이스에 포함되나 마지막 위치에 해당하는 항목은 포함되지 않습니다.
 
-Thus, `shoplist[1:3]` returns a slice of the sequence starting at position 1, includes position 2 but stops at position 3 and therefore a *slice* of two items is returned.  Similarly, `shoplist[:]` returns a copy of the whole sequence.
+따라서, `shoplist[1:3]` 은 위치 1 에 해당하는 항목부터 시작하여 위치 2 에 해당하는 항목을 포함하지만, 위치 3 에 해당하는 항목은 포함하지 않습니다. 따라서 두 개의 항목의 *슬라이스* 가 반환됩니다. 이와 비슷하게, `shoplist[:]` 는 전체 열거형의 복사본이 반환됩니다.
 
-You can also do slicing with negative positions. Negative numbers are used for positions from the end of the sequence. For example, `shoplist[:-1]` will return a slice of the sequence which excludes the last item of the sequence but contains everything else.
+슬라이스 숫자로도 음의 위치를 지정해 줄 수 있습니다. 음수는 열거형의 마지막부터 위치를 계산하는 것을 의미합니다. 예를 들어, `shoplist[:-1]` 은 마지막 항목을 제외한 모든 항목을 포함하고 있는 슬라이스를 반환해 줍니다.
 
-You can also provide a third argument for the slice, which is the _step_ for the slicing (by default, the step size is 1):
+슬라이스 숫자에 세 번째 인수를 지정해 줄 수 있는데, 이것을 슬라이스의 _스텝_ 이라 합니다 (기본값은 1 입니다):
 
 ```python
 >>> shoplist = ['apple', 'mango', 'carrot', 'banana']
@@ -160,15 +160,15 @@ You can also provide a third argument for the slice, which is the _step_ for the
 ['banana', 'carrot', 'mango', 'apple']
 ```
 
-Notice that when the step is 2, we get the items with position 0, 2,... When the step size is 3, we get the items with position 0, 3, etc.
+보시는 바와 같이 스텝이 2일 경우 위치 0, 2, ...​ 에 해당되는 항목들이 반환되며 스텝이 3일 경우 0, 3, ...​ 에 해당되는 항목들이 반환됩니다.
 
-Try various combinations of such slice specifications using the Python interpreter interactively i.e. the prompt so that you can see the results immediately. The great thing about sequences is that you can access tuples, lists and strings all in the same way!
+파이썬 인터프리터에서 여러 가능한 슬라이스 숫자의 조합들을 시험해 보시면 그 결과를 곧바로 확인해 보실 수 있습니다. 이 모든 사항은 모든 열겨형에 적용되므로, 튜플, 리스트, 문자열의 경우 모두 동일한 방법을 사용할 수 있습니다.
 
-## Set
+## 집합 (Set)
 
-Sets are _unordered_ collections of simple objects. These are used when the existence of an object in a collection is more important than the order or how many times it occurs.
+집합은 _정렬되지 않은_, 복잡하지 않은 객체들의 묶음입니다. 집합은 포함된 객체들의 순서나 중복에 상관없이 객체를 묶음 자체를 필요로 할 때 주로 사용합니다.
 
-Using sets, you can test for membership, whether it is a subset of another set, find the intersection between two sets, and so on.
+집합끼리는 멤버십 테스트를 통해 한 집합이 다른 집합의 부분집합인지 확인할 수 있으며, 두 집합의 교집합 등을 알아낼 수도 있습니다.
 
 ```python
 >>> bri = set(['brazil', 'russia', 'india'])
@@ -185,56 +185,56 @@ True
 {'brazil', 'india'}
 ```
 
-**How It Works**
+**동작 원리**
 
-If you remember basic set theory mathematics from school, then this example is fairly self-explanatory.  But if not, you can google "set theory" and "Venn diagram" to better understand our use of sets in Python.
+이 책을 읽는 여러분들은 아마도 학교에서 기초 집합론에 대해 이미 배우셨을 것이므로 위 예제에 대해서는 딱히 설명할 것이 없습니다. 만약 아니라면, "집합론" 이나 "벤 다이어그램" 등을 검색해 보시면 파이썬에서 집합을 어떻게 활용할 수 있는지 좀 더 자세히 알 수 있을 것입니다.
 
-## References
+## 참조
 
-When you create an object and assign it to a variable, the variable only _refers_ to the object and does not represent the object itself!  That is, the variable name points to that part of your computer's memory where the object is stored. This is called *binding* the name to the object.
+객체를 생성하고 변수에 할당해 줄 때, 사실 실제 객체가 변수에 할당되는 것은 아닙니다! 변수에는 객체의 _참조_ 가 할당됩니다. 참조란, 그 변수의 이름이 여러분의 컴퓨터 메모리 어딘가에 저장되어 있는 실제 객체의 위치를 가리키는 것을 말합니다. 이러한 것을 객체에 이름을 *바인딩* 한다고 합니다.
 
-Generally, you don't need to be worried about this, but there is a subtle effect due to references which you need to be aware of:
+일반적으로는 참조에 대해 크게 신경 쓸 필요가 없습니다만, 이로 인해 발생하는 몇 가지 현상에 대해 알고 계실 필요가 있습니다:
 
-Example (save as `ds_reference.py`):
+예제 (`ds_reference.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/ds_reference.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/ds_reference.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Most of the explanation is available in the comments.
+주석에 거의 모든 설명을 달아 두었습니다.
 
-Remember that if you want to make a copy of a list or such kinds of sequences or complex objects (not simple _objects_ such as integers), then you have to use the slicing operation to make a copy. If you just assign the variable name to another name, both of them will ''refer'' to the same object and this could be trouble if you are not careful.
+리스트와 같은 어떤 열거형이나 복잡한 객체 (정수형과 같이 단순한 _객체_ 들을 제외한 것들) 의 복사본을 생성하고 싶을 때에는, 슬라이스 연산자를 이용하여 복사본을 생성해야 합니다. 단순히 한 변수를 다른 변수에 할당하게 되면 두 변수는 같은 객체를 ''참조'' 하게 되며 실제 복사본이 생성되지 않습니다. 따라서 이 점을 유의하지 않으면 문제가 발생할 수 있습니다.
 
-> **Note for Perl programmers**
+> **펄 프로그래머를 위한 주석**
 > 
-> Remember that an assignment statement for lists does **not** create a copy. You have to use slicing operation to make a copy of the sequence.
+> 이미 존재하는 리스트를 다른 변수에 할당하는 구문은 복사본을 만드는 것이 **아닙니다**. 열거형의 복사본을 만들려면 반드시 슬라이스 연산자를 사용하시기 바랍니다.
 
-## More About Strings {#more-strings}
+## 문자열에 대한 좀 더 자세한 설명 {#more-strings}
 
-We have already discussed strings in detail earlier. What more can there be to know?  Well, did you know that strings are also objects and have methods which do everything from checking part of a string to stripping spaces?  In fact, you've already been using a string method... the `format` method!
+앞서 문자열에 대해 이미 상세히 다루었지만, 몇 가지 더 알아두면 좋을 것들이 있습니다. 문자열도 객체이므로 여러 메소드를 가지고 있는데 이를 통해 문자열의 앞 뒤 공백을 제거한다거나 하는 일들을 할 수 있습니다. 사실 우리는 이미 문자열의 메소드를 한번 써 본 적이 있습니다... 바로 `format` 메소드입니다.
 
-The strings that you use in programs are all objects of the class `str`.  Some useful methods of this class are demonstrated in the next example. For a complete list of such methods, see `help(str)`.
+파이썬에서 사용되는 모든 문자열은 `str` 클래스의 객체입니다. 아래에 이 객체가 제공하는 몇가지 유용한 메소드들의 예제가 있습니다. str 클래스의 모든 메소드의 목록을 확인해 보시려면 `help(str)` 을 실행해 보시기 바랍니다.
 
-Example (save as `ds_str_methods.py`):
+예제 (`ds_str_methods.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/ds_str_methods.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/ds_str_methods.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Here, we see a lot of the string methods in action. The `startswith` method is used to find out whether the string starts with the given string. The `in` operator is used to check if a given string is a part of the string.
+여기서는 문자열이 제공하는 여러 메소드에 대해 알아보았습니다. `startswith` 메소드는 문자열이 주어진 문자열로 시작하는지 여부를 반환합니다. `in` 연산자는 문자열에 주어진 문자열이 포함되어 있는지 확인하는데 사용합니다.
 
-The `find` method is used to locate the position of the given substring within the string; `find` returns -1 if it is unsuccessful in finding the substring. The `str` class also has a neat method to `join` the items of a sequence with the string acting as a delimiter between each item of the sequence and returns a bigger string generated from this.
+`find` 메소드는 문자열 내에 포함된 특정 문자열의 위치를 반환합니다. 이 때 주어진 문자열을 찾지 못한 경우 `find` 는 -1 을 반환합니다. 또 `str` 클래스는 `join` 이라는 유용한 메소드를 가지고 있는데, 이것은 주어진 문자열들을 해당 문자열을 구분자로 하여 결합한 하나의 큰 문자열을 만들어 반환해 주는 메소드입니다.
 
 ## Summary
 
-We have explored the various built-in data structures of Python in detail. These data structures will be essential for writing programs of reasonable size.
+이 챕터에서는 파이썬의 여러 내장 자료구조들에 대해 상세히 알아보았습니다. 이 자료 구조들은 프로그램을 짧고 보기 쉽게 작성하는데 꼭 필요한 구성 요소들입니다.
 
-Now that we have a lot of the basics of Python in place, we will next see how to design and write a real-world Python program.
+이제 여러분은 파이썬의 여러 기본적인 문법에 익숙해졌을 것입니다. 이 다음부터는 실제 파이썬 프로그램을 설계하고 작성해 보도록 하겠습니다.
