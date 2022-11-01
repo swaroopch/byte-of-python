@@ -11,6 +11,8 @@
 
 번역에 문제가 있거나 의견 주시려면 pjb7687@gmail.com로 메일 주시기 바랍니다.
 
-Jeongbin Park is currently updating the contents for Python 3.
+Jeongbin Park has updated the contents for Python 3.
 
-If you find any error or want to give some comments, please notify via pjb7687@gmail.com.
+If you find any error or want to give some comments, please send an email to pjb7687@gmail.com.
+
+The original book was written by Swaroop C H. The English version is accessible from here: http://www.swaroopch.com/notes/python/
