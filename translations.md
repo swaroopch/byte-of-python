@@ -1,10 +1,10 @@
-# Translations
+# 번역
 
-There are many translations of the book available in different human languages, thanks to many tireless volunteers!
+번역에 자원해주신 많은 지칠 줄 모르는 번역자 분들 덕택에, 이 책은 여러 다른 언어로 번역되어 있습니다!
 
-If you want to help with these translations, please see the list of volunteers and languages below and decide if you want to start a new translation or help in existing translation projects.
+번역에 도움을 주실 분들께서는 아래 번역 목록을 확인하시고 기존의 번역 프로젝트에 기여를 할 것인지 아니면 새로운 번역을 시작할 것인지를 결정해 주세요.
 
-If you plan to start a new translation, please read the [Translation how-to](./translation_howto.md#translation-howto).
+새로운 번역을 시작하시려는 분들께서는 [번역 방법](./translation_howto.md#translation-howto) 챕터를 읽어 주세요.
 
 ## Arabic
 

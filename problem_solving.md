@@ -1,157 +1,157 @@
-# 실제 문제 해결
+# 실생활 문제 해결
 
 지금까지 파이썬이라는 언어의 여러 가지 구성 요소에 대해 배워 보았습니다. 이제는 지금까지 배운 것들을 토대로, 뭔가 _유용한_ 것을 하는 프로그램을 만들어 보도록 합시다. 이 챕터의 목표는 여러분이 직접 파이썬 스크립트를 만들고 사용하는 법을 배우는 것입니다.
 
 ## 문제
 
-The problem we want to solve is:
+다음과 같은 문제를 해결해 봅시다:
 
-> I want a program which creates a backup of all my important files.
+> 내 중요한 파일들을 백업해두는 프로그램을 만들고 싶어요.
 
-Although, this is a simple problem, there is not enough information for us to get started with the solution. A little more *analysis* is required. For example, how do we specify _which_ files are to be backed up? _How_ are they stored? _Where_ are they stored?
+이것은 간단한 문제이지만, 아직 어떻게 접근하면 좋을지 정보가 부족합니다. 따라서 약간 *분석*을 해 보도록 합시다. 예를 들어, _어떤_ 파일을 백업해야 할까요? 파일들은 _어떻게_, 또 _어디에_ 저장되어야 할까요?
 
-After analyzing the problem properly, we *design* our program. We make a list of things about how our program should work. In this case, I have created the following list on how _I_ want it to work. If you do the design, you may not come up with the same kind of analysis since every person has their own way of doing things, so that is perfectly okay.
+문제에 대해 분석한 이후에는, 프로그램을 *설계*해야 합니다. 이를 위해 우리가 만들 프로그램이 어떻게 동작하면 좋을지 그 목록을 만들어 봅시다. 저는 아래와 같이 저의 방식대로 목록을 만들었습니다. 그러나 모든 사람이 서로 다른 생각을 가지고 있는 것이 당연하므로, 여러분이 목록을 만들어도 저와 같은 항목들로 구성되어 있지 않을 수 있겠죠. 달라도 아무 상관 없습니다.
 
-- The files and directories to be backed up are specified in a list.
-- The backup must be stored in a main backup directory.
-- The files are backed up into a zip file.
-- The name of the zip archive is the current date and time.
-- We use the standard `zip` command available by default in any standard GNU/Linux or Unix distribution. Note that you can use any archiving command you want as long as it has a command line interface.
+- 백업할 파일과 디렉토리들은 리스트의 형태로 지정해 둔다.
+- 백업된 대상들은 백업 디렉토리 안에 저장되어야 한다.
+- 백업된 파일들은 zip 파일로 압축한다.
+- zip 파일의 이름은 현재 날짜와 시간으로 한다.
+- GNU/Linux 환경이나 Unix 환경에서 기본으로 제공되는 `zip` 명령을 이용한다. (참고: 명령줄 인터페이스에서 사용할 수 있는 어떤 압축 유틸리티든지 사용이 가능합니다)
 
-> **For Windows users**
+> **윈도우 사용사를 위한 주석**
 > 
-> Windows users can [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) the `zip` command from the [GnuWin32 project page](http://gnuwin32.sourceforge.net/packages/zip.htm) and add `C:\Program Files\GnuWin32\bin` to your system `PATH` environment variable, similar to [what we did for recognizing the python command itself](./installation.md#dos-prompt).
+> 윈도우 사용자는 [GnuWin32 프로젝트 페이지](http://gnuwin32.sourceforge.net/packages/zip.htm) 에서 `zip` 명령을 [내려받아 설치](http://gnuwin32.sourceforge.net/downlinks/zip.php) 할 수 있습니다. 또한 설치한 후 [파이썬 명령을 어디서든 실행할 수 있도록 해 주었던 것처럼](./installation.md#dos-prompt) `C:\Program Files\GnuWin32\bin` 폴더를 시스템의 `PATH` 환경변수에 추가해 주면 어디서든 `zip` 명령을 사용할 수 있습니다.
 
-## The Solution
+## 첫번째 프로그램
 
-As the design of our program is now reasonably stable, we can write the code which is an *implementation* of our solution.
+일단은 프로그램을 안정적이게 설계한 것 같으므로, 코드를 입력하여 프로그램으로 *구현* 해 보도록 합시다.
 
-Save as `backup_ver1.py`:
+`backup_ver1.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>
 
-Now, we are in the *testing* phase where we test that our program works properly. If it doesn't behave as expected, then we have to *debug* our program i.e. remove the *bugs* (errors) from the program.
+이제 테스트 단계로 넘어와서 프로그램이 잘 동작하는지 *테스트* 해보아야 합니다. 만약 예상대로 프로그램이 동작하지 않으면, 프로그램의 *버그(bug)*를 제거하는 과정, 즉 *디버그(debug)* 과정을 거쳐야 합니다.
 
-If the above program does not work for you, copy the line printed after the `Zip command is` line in the output, paste it in the shell (on GNU/Linux and Mac OS X) / `cmd` (on Windows), see what the error is and try to fix it. Also check the zip command manual on what could be wrong. If this command succeeds, then the problem might be in the Python program itself, so check if it exactly matches the program written above.
+위 예시 프로그램이 잘 동작하지 않는 경우, 실행 결과의 `Zip command is` 줄 뒤의 내용을 복사한 후 쉘 (GNU/Linux 나 Mac OS X) 혹은 `cmd` (윈도우 환경) 에 입력해본 뒤 무엇이 문제인지 확인하고 고쳐 보도록 합시다. 또 무엇이 잘못되었는지 확인하기 위해 zip 명령 설명서 또한 확인해 보시기 바랍니다. 만약 위 명령이 올바르게 실행된다면, 문제는 파이썬 프로그램 자체에 있는 것으로 추정되므로 프로그램을 올바르게 정확히 작성했는지 다시 한번 확인해 보시기 바랍니다.
 
-**How It Works**
+**동작 원리**
 
-You will notice how we have converted our *design* into *code* in a step-by-step manner.
+아래에서 단계별로 어떻게 우리의 *설계* 를 *코드* 로 바꾸었는지에 대해 설명할 것입니다.
 
-We make use of the `os` and `time` modules by first importing them. Then, we specify the files and directories to be backed up in the `source` list. The target directory is where we store all the backup files and this is specified in the `target_dir` variable. The name of the zip archive that we are going to create is the current date and time which we generate using the `time.strftime()` function. It will also have the `.zip` extension and will be stored in the `target_dir` directory.
+먼저 `os` 와 `time` 모듈을 불러왔습니다. 그리고, 백업할 파일들과 디렉토리들을 `source` 라는 리스트에 담아 두었고, 또 백업을 저장해 둘 대상 디렉토리는 `target_dir` 변수에 지정해 주었습니다. zip 파일의 이름은 현재 날짜와 시간으로 할 것이므로 `time.strftime()` 함수를 사용하여 현재 날짜와 시간을 얻어온 후 `.zip` 확장자를 붙여 `target_dir` 디렉토리에 저장하도록 했습니다.
 
-Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system, i.e. it will be `'/'` in GNU/Linux, Unix, macOS, and will be `'\\'` in Windows. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
+여기서 `os.sep` 변수를 주목하시기 바랍니다. 이것은 여러분의 운영 체제에 다른 디렉토리 구분자를 나타내는 것으로 GNU/Linux, Unix, macOS 환경에서는 `'/'` 일 것이고, 윈도우 환경에서는 `'\\'` 일 것입니다. 이러한 문자들을 직접 사용하지 않고 `os.sep` 을 사용함으로써 여러분의 프로그램에 범용성을 제공할 수 있고, 따라서 여러 운영체제에서 수정 없이 사용할 수 있게 할 수 있습니다.
 
-The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/3/library/time.html#time.strftime).
+위 프로그램에서 사용한 것처럼 `time.strftime()` 함수는 특별한 형식을 인수로 넘겨 받습니다. `%Y` 는 네 자리의 연도로 치환되며, `%m` 은 두 자리의 달 즉 `01` 과 `12` 사이의 숫자를 의미합니다. 날짜 형식에 대해서는 [파이썬 레퍼런스 매뉴얼](http://docs.python.org/3/library/time.html#time.strftime) 을 참고하시기 바랍니다.
 
-We create the name of the target zip file using the addition operator which _concatenates_ the strings i.e. it joins the two strings together and returns a new one. Then, we create a string `zip_command` which contains the command that we are going to execute. You can check if this command works by running it in the shell (GNU/Linux terminal or DOS prompt).
+이제 대상 zip 파일의 이름을 생성하기 위해 문자열 결합 연산자인 더하기 연산자를 사용하여 두 문자열을 합쳐서 하나의 문자열로 만듭니다. 그리고, `zip_command` 라는 문자열을 만들어 실제로 실행하게 될 문자열을 만듭니다. GNU/Linux 터미널이나 DOS 프롬프트에서 이 문자열을 실행시켜 보고 잘 동작하는지 확인해 볼 수 있을 것입니다.
 
-The `zip` command that we are using has some options available, and one of these options is `-r`.  The `-r` option specifies that the zip command should work **r**ecursively for directories, i.e. it should include all the subdirectories and files. Options are followed by the name of the zip archive to create, followed by the list of files and directories to backup. We convert the `source` list into a string using the `join` method of strings which we have already seen how to use.
+앞으로 우리가 사용할 `zip` 명령은 몇 가지 옵션과 매개 변수를 필요로 합니다. `-r` 옵션은 zip 명령이 주어진 디렉토리에 대해 회귀적(**r**ecursive)으로, 즉 해당 디렉토리가 포함하고 있는 모든 하위 디렉토리와 파일들을 포함하도록 하는 명령입니다. 여기서는 두 가지 옵션을 결합하여 하나의 축약 옵션 -qr 을 지정해 주었습니다. zip 명령 뒤에는 차례로 이 옵션이 지정되고, 그 뒤에는 생성될 zip 파일의 이름이, 마지막으로는 압축될 대상 디렉토리들과 파일들이 지정됩니다. 이를 위해 `source` 리스트를 앞서 설명한 `join` 메소드를 통해 문자열로 바꿔서 넘겨 주었습니다.
 
-Then, we finally *run* the command using the `os.system` function which runs the command as if it was run from the *system* i.e. in the shell - it returns `0` if the command was successfully, else it returns an error number.
+그러면, 최종적으로 `os.system` 함수를 통해 이 명령을 실제 시스템(system) 의 쉘에서 *실행*시킵니다. 그러면 프로그램이 성공적으로 실행된 경우 `0` 이 반환되며 그렇지 않으면 숫자로 된 오류 코드가 반환됩니다.
 
-Depending on the outcome of the command, we print the appropriate message that the backup has failed or succeeded.
+이제 명령의 실행 결과에 따라, 적절한 메시지를 출력해 주고 백업이 성공했는지 실패했는지를 화면에 출력해 줍니다.
 
-That's it, we have created a script to take a backup of our important files!
+여기까지입니다. 이제 우리는 중요한 파일을 백업하는 스크립트를 성공적으로 만들었습니다!
 
-> **Note to Windows Users**
+> **윈도우 사용자를 위한 주석**
 > 
-> Instead of double backslash escape sequences, you can also use raw strings. For example, use `'C:\\Documents'` or `r'C:\Documents'`. However, do *not* use `'C:\Documents'` since you end up using an unknown escape sequence `\D`.
+> 이스케이프 문자 백슬래시를 두 번씩 입력하는 것보다 raw 문자열을 이용할 수도 있습니다. 예를 들어, `'C:\\Documents'` 는 `r’C:\Documents'` 로도 쓸 수 있습니다. 그러나, `'C:\Documents'` 와 같이 사용할 수는 *없습니다*. 이것은 `\D` 라는 알 수 없는 이스케이프 문자를 의미하는 것으로 오류가 발생합니다.
 
-Now that we have a working backup script, we can use it whenever we want to take a backup of the files. This is called the *operation* phase or the *deployment* phase of the software.
+이제 잘 동작하는 백업 스크립트를 만들었으므로, 이 스크립트를 언제든지 사용하여 중요한 파일들을 백업할 수 있습니다. 이 단계를 소프트웨어의 *운영(Operation)* 단계 혹은 *배포(Deployment)* 단계라고 합니다.
 
-The above program works properly, but (usually) first programs do not work exactly as you expect. For example, there might be problems if you have not designed the program properly or if you have made a mistake when typing the code, etc. Appropriately, you will have to go back to the design phase or you will have to debug your program.
+위 프로그램은 잘 동작하지만, 첫번째로 만든 프로그램은 (종종) 예상한 대로만은 실행되지 않습니다. 예를 들어 프로그램 설계를 잘못했다든지 코드를 입력할 때 실수를 했다던지 할 수 있습니다. 이런 경우 상황에 맞춰서 설계 단계로 돌아가거나 프로그램을 디버깅해야 합니다.
 
-## Second Version
+## 두 번째 프로그램
 
-The first version of our script works. However, we can make some refinements to it so that it can work better on a daily basis. This is called the *maintenance* phase of the software.
+첫 번째로 만든 프로그램은 일단 잘 동작합니다. 그러나, 프로그램을 매일매일 잘 쓰기 위해 좀 더 개선의 여지가 있습니다. 이 단계를 소프트웨어의 *유지보수(maintenance)* 단계라고 합니다.
 
-One of the refinements I felt was useful is a better file-naming mechanism - using the _time_ as the name of the file within a directory with the current _date_ as a directory within the main backup directory. The first advantage is that your backups are stored in a hierarchical manner and therefore it is much easier to manage. The second advantage is that the filenames are much shorter. The third advantage is that separate directories will help you check if you have made a backup for each day since the directory would be created only if you have made a backup for that day.
+제가 이 프로그램을 쓰다가 느낀 한가지 개선점은 파일에 이름을 짓는 부분에 대한 것인데, 주 백업 디렉토리에 _날짜로_ 된 하위 디렉토리를 만들고 _시간으로_ 된 압축 파일들을 그 안에 넣는 것입니다. 이렇게 하면 백업된 파일들이 계층적으로 저장되므로 좀 더 쉽게 관리할 수 있을 것입니다. 또한, 파일명도 좀 더 짧아집니다. 마지막으로 각각 디렉토리에 백업 파일이 나뉘어 저장되므로 어떤 날에 백업을 했는지 여부를 그 날짜에 해당하는 디렉토리가 있는지 여부만으로 쉽게 확인할 수 있을 것입니다.
 
-Save as `backup_ver2.py`:
+`backup_ver2.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Most of the program remains the same. The changes are that we check if there is a directory with the current day as its name inside the main backup directory using the `os.path.exists` function. If it doesn't exist, we create it using the `os.mkdir` function.
+많은 부분은 이전과 그대로입니다. 변경된 부분은 주 백업 디렉토리 안에 그 날짜에 해당하는 디렉토리가 있는지 여부를 `os.path.exists` 함수로 확인하는 부분입니다. 해당 디렉토리가 없으면, `os.mkdir` 함수를 통해 디렉토리를 새로 만듭니다.
 
-## Third Version
+## 세 번째 프로그램
 
-The second version works fine when I do many backups, but when there are lots of backups, I am finding it hard to differentiate what the backups were for! For example, I might have made some major changes to a program or presentation, then I want to associate what those changes are with the name of the zip archive. This can be easily achieved by attaching a user-supplied comment to the name of the zip archive.
+두 번째 프로그램도 잘 동작했지만, 백업을 많이 하고 싶을 때, 많은 백업 파일이 생성되므로 어떤 파일이 어떤 것의 백업인지 구분하기가 너무 어려웠습니다! 예를 들어, 어떤 문서나 프로그램에 큰 변화를 주었을 때 그 내용을 zip 파일의 이름에 추가로 달아 주면 좋을 것 같습니다. 이 문제는 zip 파일을 생성할 때 뒤에 사용자 정의 꼬리말을 달아 주는 기능을 추가하면 쉽게 해결될 것입니다.
 
-WARNING: The following program does not work, so do not be alarmed, please follow along because there's a lesson in here.
+WARNING: 아래 프로그램은 동작하지 않으니 놀라지 마시고 쭉 따라오시기 바랍니다. 이를 통해 뭔가를 배울 것입니다.
 
-Save as `backup_ver3.py`:
+`backup_ver3.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>
 
-**How This (does not) Work**
+**동작(하지 않는) 원리**
 
-*This program does not work!* Python says there is a syntax error which means that the script does not satisfy the structure that Python expects to see. When we observe the error given by Python, it also tells us the place where it detected the error as well. So we start *debugging* our program from that line.
+*이 프로그램은 동작하지 않습니다!* 실행시켜보면 구문 오류가 있다는 메시지가 출력되며, 이것은 위 스크립트가 파이썬의 문법 규칙을 만족하지 않는다는 것을 의미합니다. 파이썬이 출력해준 오류 메시지를 확인해 보면 어디에서 이 오류가 발생했는지를 알려 줍니다. 따라서 그 줄부터 *디버깅* 을 시작해 봅시다.
 
-On careful observation, we see that the single logical line has been split into two physical lines but we have not specified that these two physical lines belong together. Basically, Python has found the addition operator (`+`) without any operand in that logical line and hence it doesn't know how to continue. Remember that we can specify that the logical line continues in the next physical line by the use of a backslash at the end of the physical line. So, we make this correction to our program. This correction of the program when we find errors is called *bug fixing*.
+자세히 살펴보면, 한 개의 논리적 명령줄이 두개의 물리적 명령줄로 나뉘어 있지만 두 개의 물리적 명령줄이 사실 하나의 명령줄이라는 것을 파이썬에게 알려줄만한 뭔가가 누락되어 있습니다. 여기서 파이썬은 더하기 연산자 (`+`)를 발견했으나 그 논리적 명령줄에 피연산자가 없음을 발견하고는 어떻게 해야 할지 모르는 상황에 처하게 된 것입니다. 이 경우, 두 물리적 명령줄을 하나로 연결해 주기 위해서는 맨 뒤에 백슬래시를 추가해 주어야 한다고 배웠으므로 누락된 백슬래시를 추가해 줍니다. 프로그램에서 문제를 찾고 수정 하는 이러한 과정을 *버그 수정* 이라고 합니다.
 
 ## Fourth Version
 
-Save as `backup_ver4.py`:
+`backup_ver4.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-This program now works! Let us go through the actual enhancements that we had made in version 3. We take in the user's comments using the `input` function and then check if the user actually entered something by finding out the length of the input using the `len` function. If the user has just pressed `enter` without entering anything (maybe it was just a routine backup or no special changes were made), then we proceed as we have done before.
+이제 프로그램이 잘 동작합니다! 이제 세 번째 프로그램을 작성할 때 추가했던 사항들에 대해 살펴보도록 합시다. 먼저 `input` 함수를 통해 사용자의 꼬릿말을 입력받은 후, 사용자가 뭔가를 입력했는지 여부를 `len` 함수를 통해 확인합니다. 만약 사용자가 아무것도 입력하지 않고 `enter` 키를 입력한 경우 (아마도 특별한 꼬릿말이 필요 없는 일상적인 백업을 할 경우에 해당될 것입니다), 이전과 동일하게 처리합니다.
 
-However, if a comment was supplied, then this is attached to the name of the zip archive just before the `.zip` extension.  Notice that we are replacing spaces in the comment with underscores - this is because managing filenames without spaces is much easier.
+그러나 사용자가 꼬릿말을 입력한 경우에는, zip 파일명을 생성할 때 뒤에 이 꼬릿말을 붙여 주고 `.zip` 확장자를 붙여 줍니다. 여기서 사용자가 입력한 꼬릿말에 포함된 공백 문자를 모두 밑줄로 치환하였는데, 이것은 나중에 파일들을 관리할 때 공백 문자가 없는 편이 관리가 더 쉽기 때문입니다.
 
-## More Refinements
+## 더 많은 개선점
 
-The fourth version is a satisfactorily working script for most users, but there is always room for improvement. For example, you can include a _verbosity_ level for the zip command by specifying a `-v` option to make your program become more talkative or a `-q` option to make it _quiet_.
+아마 네 번째 프로그램은 많은 경우에 만족스럽게 사용될 수 있겠지만, 언제나 개선할 사항은 넘쳐납니다. 예를 들면, 사용자가 `-v` 옵션을 지정하면 zip 명령의 _상세함(verbosity)_ 단계를 지정하게 하여 프로그램이 실행될 때 처리되는 사항을 더 상세히 화면에 출력해주도록 할 수도 있고, `-q` 옵션을 통해 아무 출력 없이 _조용히(quiet)_ 프로그램이 실행되도록 할 수도 있습니다.
 
-Another possible enhancement would be to allow extra files and directories to be passed to the script at the command line. We can get these names from the `sys.argv` list and we can add them to our `source` list using the `extend` method provided by the `list` class.
+또 다른 가능한 개선사항은 추가로 백업할 파일들이나 디렉토리들을 명령줄로부터 넘겨받아 함께 백업하게 하는 것을 생각해 볼 수 있습니다. 이러한 추가 파일들의 이름은 `sys.argv` 리스트를 이용하면 넘겨받을 수 있을 것이고, 이것을 `list` 클래스의 `extend` 메소드를 이용하여 `source` 리스트 뒤에 추가해 줄 수 있을 것입니다.
 
-The most important refinement would be to not use the `os.system` way of creating archives and instead using the [zipfile](http://docs.python.org/3/library/zipfile.html) or [tarfile](http://docs.python.org/3/library/tarfile.html) built-in modules to create these archives. They are part of the standard library and available already for you to use without external dependencies on the zip program to be available on your computer.
+생각해볼 수 있는 가장 중요한 개선사항은 `os.system` 을 사용하지 않고 파이썬에서 제공되는 내장 모듈인 [zipfile](http://docs.python.org/3/library/zipfile.html) 이나 [tarfile](http://docs.python.org/3/library/tarfile.html) 을 이용하여 압축 파일을 생성하는 것입니다. 이들은 표준 라이브러리에 포함되어 있으며 zip 프로그램과 같은 추가 프로그램 등을 설치하지 않고서도 프로그램이 동작할 수 있도록 해 줄 수 있을 것입니다.
 
-However, I have been using the `os.system` way of creating a backup in the above examples purely for pedagogical purposes, so that the example is simple enough to be understood by everybody but real enough to be useful.
+이 예제에서는 순전히 교육적인 목적에서 `os.system` 을 이용하여 백업 파일을 생성하였는데, 이것은 누구나 알아볼 수 있을 만큼 간단한 프로그램을 구현할 수 있으면서도, 또 실제로 사용할만 한 프로그램을 제작할 수 있기도 하기에 사용한 것입니다.
 
-Can you try writing the fifth version that uses the [zipfile](http://docs.python.org/3/library/zipfile.html) module instead of the `os.system` call?
+자, 이제 `os.system` 을 호출하지 않고 [zipfile](http://docs.python.org/3/library/zipfile.html) 모듈을 사용하여 다섯번째 프로그램을 만들어보지 않겠습니까?
 
-## The Software Development Process
+## 소프트웨어 개발 단계
 
-We have now gone through the various *phases* in the process of writing a software. These phases can be summarised as follows:
+지금까지 소프트웨어를 개발하면서 여러 *단계* 들을 거쳐 왔습니다. 이 단계들은 다음과 같이 축약하여 설명할 수 있습니다:
 
-1. What (Analysis)
-2. How (Design)
-3. Do It (Implementation)
-4. Test (Testing and Debugging)
-5. Use (Operation or Deployment)
-6. Maintain (Refinement)
+1. 무엇을 만들 것인가? (분석 단계)
+2. 어떻게 만들 것인가? (설계 단계)
+3. 만들기 (구현 단계)
+4. 테스트 하기 (테스트와 디버깅 단계)
+5. 실제로 사용하기 (운영 또는 배포 단계)
+6. 유지 및 보수하기 (개선 단계)
 
-A recommended way of writing programs is the procedure we have followed in creating the backup script: Do the analysis and design. Start implementing with a simple version. Test and debug it. Use it to ensure that it works as expected. Now, add any features that you want and continue to repeat the Do It-Test-Use cycle as many times as required.
+앞으로 프로그램을 작성할 때 지금까지 여러분이 백업 스크립트를 만들면서 거쳐 왔던 과정을 그대로 따라 하기를 추천합니다. 문제를 분석하고 프로그램을 설계하세요. 구현은 가장 단순한 프로그램으로 시작하세요. 테스트하고 디버그하세요. 한번 사용해보고 제대로 동작하는지 확인해보세요. 이제, 원하는 기능을 추가하고, 만들어보고 테스트해보고 사용해보는 일련의 과정들을 반복하며 프로그램을 개선해 나가세요.
 
-Remember:
+기억하세요:
 
-> Software is grown, not built.
+> 소프트웨어는 성장하는 것이며, 만들어지는 것이 아니다.
 > -- [Bill de hÓra](http://97things.oreilly.com/wiki/index.php/Great_software_is_not_built,_it_is_grown)
 
-## Summary
+## 요약
 
-We have seen how to create our own Python programs/scripts and the various stages involved in writing such programs. You may find it useful to create your own program just like we did in this chapter so that you become comfortable with Python as well as problem-solving.
+지금까지 직접 파이썬 프로그램/스크립트를 만드는 법과 이러한 프로그램을 만들기 위해 거쳐야 하는 여러가지 단계들에 대해 배워 보았습니다. 이 챕터에서 배운 것들을 통해 프로그램을 작성하는 방법을 익혀두면 유용할 것이며, 또 실제 문제를 해결하는 데 파이썬을 사용하는 것에 좀 더 익숙해질 수 있을 것입니다.
 
-Next, we will discuss object-oriented programming.
+다음으로는, 객체 지향 프로그래밍에 대해 다루어 보겠습니다.

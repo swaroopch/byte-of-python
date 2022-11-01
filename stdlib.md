@@ -1,18 +1,18 @@
-# Standard Library {#stdlib}
+# 표준 라이브러리 {#stdlib}
 
-The Python Standard Library contains a huge number of useful modules and is part of every standard Python installation. It is important to become familiar with the Python Standard Library since many problems can be solved quickly if you are familiar with the range of things that these libraries can do.
+파이썬 표준 라이브러리는 파이썬을 설치할 때 항상 함께 설치되는 많은 수의 유용한 모듈들을 말합니다. 파이썬 표준 라이브러리에 익숙해지면 이를 이용해 해결할 수 있는 많은 문제들을 좀 더 빠르고 쉽게 해결할 수 있습니다.
 
-We will explore some of the commonly used modules in this library. You can find complete details for all of the modules in the Python Standard Library in the ['Library Reference' section](http://docs.python.org/3/library/) of the documentation that comes with your Python installation.
+지금부터 표준 라이브러리에 포함된 많은 모듈 중에서 자주 사용되는 몇가지 모듈에 대해 알아볼 것입니다. 파이썬 표준 라이브러리에 포함된 모든 모듈에 대한 자세한 설명은 파이썬과 함께 설치되는 설명서의 ['라이브러리 레퍼런스' 섹션](http://docs.python.org/3/library/) 에서 확인해 보실 수 있습니다.
 
-Let us explore a few useful modules.
+여기서는 유용한 몇 개의 모듈을 다뤄 보겠습니다.
 
-> CAUTION: If you find the topics in this chapter too advanced, you may skip this chapter. However, I highly recommend coming back to this chapter when you are more comfortable with programming using Python.
+> CAUTION: 이 챕터에서 다루는 내용은 조금 어려울 수 있습니다. 그런 경우 일단 이 챕터를 읽지 말고 넘기세요. 그렇지만 여러분이 파이썬에 좀 더 익숙해지게 되면 이 챕터로 다시 돌아오기를 강력히 권합니다.
 
-## `sys` module {#sys}
+## `sys` 모듈 {#sys}
 
-The `sys` module contains system-specific functionality. We have already seen that the `sys.argv` list contains the command-line arguments.
+`sys` 모듈에는 시스템의 기능을 다루는 여러 함수들이 들어 있습니다. 예를 들어 `sys.argv` 리스트에는 명령줄 인수들이 들어 있습니다.
 
-Suppose we want to check the version of the Python software being used, the `sys` module gives us that information.
+또 `sys` 모듈을 통해 현재 사용하고 있는 파이썬의 버전을 알아올 수 있습니다.
 
 <!-- The output should match pythonVersion variable in book.json -->
 ```python
@@ -23,45 +23,45 @@ sys.version_info(major=3, minor=6, micro=0, releaselevel='final', serial=0)
 True
 ```
 
-**How It Works**
+**동작 원리**
 
-The `sys` module has a `version_info` tuple that gives us the version information. The first entry is the major version. We can pull out this information to use it.
+`sys` 모듈에는 `version_info` 라고 하는 파이썬의 버전 정보가 담겨 있는 튜플이 들어 있습니다.첫 번째 항목은 주 버전을 의미합니다. 이제 이 정보를 읽어와 사용할 수 있습니다.
 
-## `logging` module {#logging}
+## `logging` 모듈 {#logging}
 
-What if you wanted to have some debugging messages or important messages to be stored somewhere so that you can check whether your program has been running as you would expect it? How do you "store somewhere" these messages? This can be achieved using the `logging` module.
+여러분이 디버깅을 할 때 중간에 변수들의 내용 등을 출력하고 싶거나 혹은 실행시 중요한 메시지를 어딘가에 저장해 두게 하여 여러분의 프로그램이 제대로 실행되고 있는 지 확인하고 싶을 때 어떻게 하면 좋을까요? 어떻게 이러한 메시지들을 "어딘가에 저장해" 둘 수 있을까요? 이를 위해 `logging` 모듈을 사용합니다.
 
-Save as `stdlib_logging.py`:
+`stdlib_logging.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/stdlib_logging.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
 
-The `cat` command is used in the command line to read the 'test.log' file.  If the `cat` command is not available, you can open the `test.log` file in a text editor instead.
+이 예제에서는 'test.log' 파일의 내용을 읽기 위해 `cat` 명령을 활용합니다. 여러분의 명령행 환경에서 `cat` 명령을 사용할 수 없을 경우, 아무 텍스트 에디터에서나 `test.log` 파일을 열어서 내용을 확인해 보실 수 있습니다.
 
-**How It Works**
+**동작 원리**
 
-We use three modules from the standard library - the `os` module for interacting with the operating system, the `platform` module for information about the platform i.e. the operating system and the `logging` module to *log* information.
+위 예제에서는 표준 라이브러리에 있는 세 가지 다른 모듈을 사용하였습니다. 그 중 하나는 시스템의 운영 체제와 상호 작용할 때 쓰이는 `os` 모듈이고, 또 하나는 플랫폼(운영 체제라던지)의 정보를 알아오는 데 사용되는 `platform` 모듈이며 마지막 하나는 정보를 *기록(log)* 하는 데 사용되는 `logging` 모듈입니다.
 
-First, we check which operating system we are using by checking the string returned by `platform.platform()` (for more information, see `import platform; help(platform)`). If it is Windows, we figure out the home drive, the home folder and the filename where we want to store the information. Putting these three parts together, we get the full location of the file. For other platforms, we need to know just the home folder of the user and we get the full location of the file.
+먼저, `platform.platform()` 이 반환해주는 문자열을 통해 현재 사용중인 운영 체제가 무엇인지 알아옵니다 (이 모듈에 대해 더 자세히 알아보려면 `import platform; help(platform)` 을 입력하세요). 이제 윈도우 플랫폼인 경우 홈 드라이브 및 홈 폴더를 알아내어 정보를 저장해 둘 파일 이름을 구성합니다. 다른 플랫폼의 경우, 현재 사용자의 홈 폴더만 알면 파일의 전체 경로를 구성해낼 수 있습니다.
 
-We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system.  Note: the `join()` method we use here that's part of the `os` module is different from the string method `join()` that we've used elsewhere in this book.
+다음으로 `os.path.join()` 함수를 이용하여 이 세 문자열을 하나의 경로 문자열로 합쳐 줍니다. 이 때 문자열을 단순히 합치지 않고 이러한 특별한 함수를 이용하여 합쳐 준 것은 합쳐진 최종 경로가 현재 사용중인 운영 체제의 형식에 맞는 형태로 생성되도록 해 두기 위함입니다. 참고로, 이 예제에서 활용한 `join()` 메소드는 `os` 모듈에 있는 것으로, 이 책의 다른 곳에 활용했던 문자열의 메소드인 `join()` 과는 다른 것입니다.
 
-We configure the `logging` module to write all the messages in a particular format to the file we have specified.
+이제 `logging` 모듈을 이용하여 필요한 기록 사항들을 지정해준 파일에 지정된 형식대로 기록합니다.
 
-Finally, we can put messages that are either meant for debugging, information, warning or even critical messages. Once the program has run, we can check this file and we will know what happened in the program, even though no information was displayed to the user running the program.
+마지막으로 각 메시지가 디버깅 정보인지, 단순한 정보인지, 경고 혹은 심각한 메시지인지 등에 따라 다르게 저장해 줍니다. 이 프로그램이 실행되어도 화면에는 아무것도 출력해 주지 않지만, 이 파일의 내용을 확인해 보면 프로그램이 실행되며 어떤 일들이 일어났는지 확인할 수 있습니다.
 
-## Module of the Week Series {#motw}
+## '금주의 모듈' 시리즈 {#motw}
 
-There is much more to be explored in the standard library such as [debugging](http://docs.python.org/3/library/pdb.html),
-[handling command line options](http://docs.python.org/3/library/argparse.html), [regular expressions](http://docs.python.org/3/library/re.html) and so on.
+파이썬 표준 라이브러리에는 다음과 같은 더 많은 모듈이 있습니다. [디버깅(debugging)](http://docs.python.org/3/library/pdb.html) 모듈,
+[명령행 옵션 관련](http://docs.python.org/3/library/argparse.html) 모듈, [정규 표현식](http://docs.python.org/3/library/re.html) 모듈 등등입니다.
 
-The best way to further explore the standard library is to read Doug Hellmann's excellent [Python Module of the Week](http://pymotw.com/2/contents.html) series (also available as a [book](http://amzn.com/0321767349)) and reading the [Python documentation](http://docs.python.org/3/).
+파이썬 표준 라이브러리에 대해 좀 더 알아볼 수 있는 최고의 방법은 Doug Hellmann이 쓴 [금주의 파이썬 모듈](http://pymotw.com/2/contents.html) 시리즈 ([책](http://amzn.com/0321767349)으로도 읽을 수 있습니다) 및 [파이썬 공식 문서](http://docs.python.org/3/) 를 읽는 것입니다.
 
-## Summary
+## 요약
 
-We have explored some of the functionality of many modules in the Python Standard Library. It is highly recommended to browse through the [Python Standard Library documentation](http://docs.python.org/3/library/) to get an idea of all the modules that are available.
+지금까지 파이썬 표준 라이브러리에 있는 몇가지 모듈의 기능에 대해 다뤄 보았습니다. 이에 만족하지 말고, [파이썬 표준 라이브러리 문서](http://docs.python.org/3/library/)를 읽고 사용 가능한 모든 모듈에 대한 정보를 알아보는 것을 추천해 드립니다.
 
-Next, we will cover various aspects of Python that will make our tour of Python more _complete_.
+다음으로는, 우리의 파이썬과 함께 하는 여정을 좀 더 _완전하게_ 해 줄 파이썬의 여러 장점에 대해 알아 보겠습니다.
