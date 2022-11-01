@@ -1,82 +1,82 @@
-# Input and Output {#io}
+# 입력과 출력 {#io}
 
-There will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the `input()` function and `print` function respectively.
+프로그램을 만들다 보면 간혹 프로그램이 사용자와 상호 작용을 해야 할 때가 있을 것입니다. 예를 들어, 사용자로부터 뭔가를 입력받고 처리 결과를 출력해 주는 것 같은 일이 필요할 때입니다. 파이썬에서는 이를 위해 각각 `input()` 함수와 `print` 문을 사용합니다.
 
-For output, we can also use the various methods of the `str` (string) class. For example, you can use the `rjust` method to get a string which is right justified to a specified width. See `help(str)` for more details.
+결과를 출력해주기 위해서는 `str` (문자열) 클래스가 제공하는 여러 메소드를 사용할 수도 있습니다. 예를 들면, rjust 메소드를 사용하여 출력될 문자열이 특정 폭의 문자열 안에서 오른쪽 정렬되도록 할 수 있습니다. `help(str)` 을 실행하여 이들에 대해 자세히 알아보시기 바랍니다.
 
-Another common type of input/output is dealing with files. The ability to create, read and write files is essential to many programs and we will explore this aspect in this chapter.
+또 다른 입/출력의 형식은 파일을 다루는 것입니다. 파일을 생성하고, 읽고, 쓰는 것은 많은 프로그램에서 중요한 부분을 차지하고 있으며 이 챕터에서는 이러한 기능에 대해 자세히 알아보게 될 것입니다.
 
-## Input from user
+## 사용자로부터 입력받기
 
-Save this program as `io_input.py`:
+`io_input.py` 로 저장하세요:
 
 <pre><code class="lang-python">{% include "./programs/io_input.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/io_input.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](./data_structures.md#sequence) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the _step_ by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
+문자열을 뒤집기 위해서는 `슬라이스`를 사용합니다. 앞서 보았듯이 열거형의 [슬라이스](./data_structures.md#sequence) 기능을 활용하여 `seq[a:b]` 와 같은 코드를 통해 위치 `a` 부터 위치 `b` 까지 문자열을 얻어올 수 있습니다. 슬라이스 숫자에 세 번째 인수를 넘겨 주어 슬라이스 스텝 을 지정해줄 수 있습니다. 스텝을 지정하지 않으면 기본값 `1` 이 지정되며, 이 경우 지정된 문자열을 차례로 슬라이스 하는 것을 의미합니다. 음의 스텝을 지정하면 열거형의 마지막부터 반대 방향으로 슬라이스가 진행되며, 예를 들어 `-1` 을 지정하면 뒤집혀진 문자열이 반환됩니다.
 
-The `input()` function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the `input()` function will then return that text the user has entered.
+`input()` 함수는 인수로 넘겨받은 문자열을 화면에 표시해 줍니다. 그리고 나서는 사용자가 사용자가 무언가를 입력하고 `Enter` 키를 누를 때까지 기다립니다. 사용자가 입력을 마치고 `Enter` 키를 누르면 `input()` 함수는 사용자가 입력한 내용을 문자열로 반환해 줍니다.
 
-We take that text and reverse it. If the original text and reversed text are equal, then the text is a [palindrome](http://en.wiktionary.org/wiki/palindrome).
+이제 이 문자열을 받아서 뒤집어 줍니다 (참고로 여기서 뒤집혀진 문자열이 뒤집혀지지 않았을 때의 문자열과 동일한 경우를 영어로 [palindrome](http://en.wiktionary.org/wiki/palindrome) 이라고 부릅니다).
 
-### Homework exercise
+### 연습 문제
 
-Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For example, "Rise to vote, sir." is also a palindrome but our current program doesn't say it is. Can you improve the above program to recognize this palindrome?
+어떤 문자열이 palindrome이라고 하는 것은 그 안에 포함된 문장 부호들과 공백 등을 제외한 문자들을 가지고서 판단해야 합니다. 예를 들어, "Rise to vote, sir." 은 palindrome의 한 예이지만 위 예제 프로그램은 이것은 palindrome이 아니라고 판단할 것입니다. 위 프로그램을 고쳐서 이러한 문자열들을 palindrome으로 인식할 수 있는 프로그램을 작성해 보시기 바랍니다.
 
-If you need a hint, the idea is that...[^1]
+힌트가 필요하시면 주석을 읽어 보세요... [^1]
 
-## Files
+## 파일 입/출력
 
-You can open and use files for reading or writing by creating an object of the `file` class and using its `read`, `readline` or `write` methods appropriately to read from or write to the file. The ability to read or write to the file depends on the mode you have specified for the file opening. Then finally, when you are finished with the file, you call the `close` method to tell Python that we are done using the file.
+입/출력을 위해 파일을 열고 사용하려면 `file` 클래스의 객체를 생성한 후 `read`, `readline`, `write` 와 같은 메소드들을 적절히 활용하면 됩니다. 파일을 열때 파일을 읽는 모드와 쓰는 모드를 따로 지정해 줄 수 있습니다. 마지막으로 파일을 읽거나 쓰는 일을 모두 마친 후에는, `close` 메소드를 호출하여 파이썬에게 파일 사용을 마쳤으니 이제 파일을 닫으라고 해 주어야 합니다.
 
-Example (save as `io_using_file.py`):
+예제 (`io_using_file.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/io_using_file.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/io_using_file.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Note that we can create a new file object simply by using the `open` method.  We open (or create it if it doesn't already exist) this file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
+먼저, 내장 함수 `open` 을 이용하여 파일을 열어 줍니다. 이 때 파일을 어떤 용도로 사용할 것인지도 함께 지정해 줍니다. 각 모드로는 읽기 모드 (`'r'`), 쓰기 모드 (`'w'`), 덧붙임 모드 (`'a'`) 등이 있습니다. 또한 우리가 다룰 파일을 일반적인 텍스트 모드 (`'t'`) 로 다룰 지 또는 바이너리 모드 (`'b'`) 로 다룰 지 여부도 함께 지정해 줄 수 있습니다. 이외에도 여러가지 다른 모드들이 있으며, help(open) 을 통해 그 목록을 확인해 볼 수 있습니다. 모드에 아무것도 지정하지 않으면, open() 은 기본적으로 파일을 텍스트('t'ext) 파일을 읽는 ('r'ead) 모드로 파일을 열어 줍니다.
 
-In our example, we first open/create the file in write text mode and use the `write` method of the file object to write  our string variable `poem` to the file and then we finally `close` the file.
+위 예제에서는 먼저 파일을 쓰기/텍스트 모드로 열고 파일 객체의 `write` 메소드를 사용하여 파일에 문자열 변수 `poem` 에 들어 있는 텍스트를 써준 후 `close` 로 파일을 닫아 줍니다.
 
-Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the `readline` method in a loop. This method returns a complete line including the newline character at the end of the line. When an _empty_ string is returned, it means that we have reached the end of the file and we 'break' out of the loop.
+다음으로는, 똑같은 파일을 이번에는 읽기 모드로 엽니다. 이 때 아무 모드도 지정하지 않았는데 이렇게 하면 기본값인 '읽기/텍스트 모드' 가 지정됩니다. 파일을 연 후에는 반복문을 이용하여 파일의 `readline` 메소드를 통해 파일의 내용을 한 줄씩 읽어옵니다. 이 메소드는 파일 내용을 읽다가 줄바꿈 문자를 만날 때까지 한 줄을 읽어서 그 모든 내용을 반환해 줍니다. 만약 _빈_ 문자열이 반환되었을 경우, 이것은 파일의 끝임을 의미하는 것이므로 'break' 문을 통해 반복문을 빠져 나옵니다.
 
-In the end, we finally `close` the file.
+마지막으로, `close` 문으로 파일을 닫습니다.
 
-We can see from our `readline` output that this program has indeed written to and read from our new `poem.txt` file.
+이제 `readline` 의 출력 결과를 통해 예제 프로그램이 `poem.txt` 파일에 올바른 내용을 쓰고 읽어들였는지를 다시 한번 확인해 보시기 바랍니다.
 
-## Pickle
+## 피클 (Pickle)
 
-Python provides a standard module called `pickle` which you can use to store _any_ plain Python object in a file and then get it back later. This is called storing the object *persistently*.
+파이썬은 `pickle` 이라고 불리우는 모듈을 기본으로 제공하는데, 이것은 _어떤_ 파이썬 객체이든지 파일로 저장해 두었다가 나중에 불러와서 사용할 수 있게 하는, 즉 객체를 *영구히* 저장해 두는 방법을 제공해 주는 모듈입니다.
 
-Example (save as `io_pickle.py`):
+예제 (`io_pickle.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/io_pickle.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/io_pickle.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-To store an object in a file, we have to first `open` the file in __w__rite __b__inary mode and then call the `dump` function of the `pickle` module. This process is called _pickling_.
+파일에 객체를 저장하기 위해서 먼저 open 문을 이용하여 __쓰기 (w)__ 및 __바이너리 (b)__ 모드로 파일을 열어 준 후 `pickle` 모듈의 `dump` 함수를 호출하여 줍니다. 이 과정을 _피클링 (pickling)_ 이라고 합니다.
 
-Next, we retrieve the object using the `load` function of the `pickle` module which returns the object. This process is called _unpickling_.
+다음으로 `pickle` 모듈의 `load` 함수를 이용하여 파일에 저장된 객체를 불러옵니다. 이 과정을 _언피클링(unpickling)_ 이라고 합니다.
 
-## Unicode
+## 유니코드
 
-So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  
+지금까지 우리가 문자열을 화면이나 파일에 쓰거나 읽을 때 영어 알파벳 문자들만을 주로 이용해 왔습니다. 여러분이 영어가 아닌 다른 언어로 된 문자를 읽고 쓰게 될 경우, 파이썬은 이러한 문자들을 유니코드로 표현하는데 (이에 대한 좀 더 자세한 정보는 이 섹션의 마지막 부분에 있는 여러 글들을 읽어 보세요), 파이썬 3은 기본적으로 문자열 변수들에 저장된 값들 (예를 들어 작은 따옴표, 큰 따옴표, 따옴표 세 개를 활용한 문자열들)을 모두 유니코드로 표현합니다. 이 아래부터는 파이썬 2에 해당하는 설명입니다.
 
-> NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
+> NOTE: 만약 여러분이 파이썬 2를 사용중이며 영어가 아닌 문자를 표현해야 할 경우 unicode 형식을 이용할 필요가 있으며, 이것은 문자 u 를 앞에 붙여 주어 지정해 줍니다. 예를 들어 `u"hello world"` 와 같이 합니다.
 
 ```python
 >>> "hello world"
@@ -89,28 +89,28 @@ So far, when we have been writing and using strings, or reading and writing to a
 <class 'str'>
 ```
 
-When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open` function.
+특히 데이터가 인터넷을 통해 전송될 때, 이러한 데이터는 컴퓨터가 쉽게 알아들을 수 있는 형식인 바이트 형식을 통해 전송됩니다. 이 때, 유니코드 (파이썬이 문자열을 저장하는 방식) 에서 바이트로 변환하는 것을 `인코딩` 이라고 합니다. 현재 많이 쓰이는 인코딩의 예는 `UTF-8` 입니다. `open` 함수에 간단히 키워드 인자를 하나 넘겨주는 것을 통해 UTF-8 로 파일을 읽고 쓸 수 있습니다:
 
 <pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We use `io.open` and then use the `encoding` argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.
+이 예제에서는 `io.open` 을 활용하며, 첫 번째 open 문에 `encoding` 인자를 넘겨 줌으로써 메시지를 인코딩하고, 두번째 open 문에서는 이를 디코딩합니다. 이 때 `encoding` 인자는 텍스트 모드로 파일을 열었을 때만 사용 가능하다는 점에 유의하세요.
 
-Whenever we write a program that uses Unicode literals (by putting a `u` before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  `# encoding=utf-8`  comment at the top of our program.  
+유니코드 리터럴 상수를 활용할 때에는 (즉, 문자열의 앞에 `u`를 달아주어야 할 때), 파이썬에게 이 파일이 UTF-8을 쓴다는 점을 알려 주어야 합니다. 이렇게 하려면, `# encoding=utf-8` 이라는 주석을 프로그램의 맨 윗줄에 달아 주면 됩니다.
 
-You should learn more about this topic by reading:
+다음 글들을 읽어 보시면 더 많은 것들을 배울 수 있을 것입니다:
 
 - ["The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"](http://www.joelonsoftware.com/articles/Unicode.html)
 - [Python Unicode Howto](http://docs.python.org/3/howto/unicode.html)
 - [Pragmatic Unicode talk by Nat Batchelder](http://nedbatchelder.com/text/unipain.html)
 
-## Summary
+## 요약
 
-We have discussed various types of input/output, about file handling, about the pickle module and about Unicode.
+지금까지 여러가지 종류의 입/출력 및 파일을 다루는 법, 그리고 pickle 모듈을 다루는 법과 유니코드에 대해 배워 보았습니다.
 
-Next, we will explore the concept of exceptions.
+다음으로는 예외 처리의 개념에 대해 배워봅시다.
 
 ---
 
-[^1]: Use a tuple (you can find a list of _all_ [punctuation marks here](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) to hold all the forbidden characters, then use the membership test to determine whether a character should be removed or not, i.e. forbidden = (`!`, `?`, `.`, ...).
+[^1]: 튜플을 사용하여 (필요한 _모든_ 문장 부호들은 [여기에 있습니다](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)). 여기에 모든 문장 부호들 및 공백들을 담아 두고, 멤버십 테스트를 통해 각 문자가 제거되어야 하는지 여부를 판단할 때 활용하시기 바랍니다. 즉, `forbidden = ('!', '?', '.', ...​)` 와 같은 튜플을 만들고 활용해 보세요.

@@ -1,183 +1,182 @@
-# Object Oriented Programming {#oop}
+# 객체 지향 프로그래밍 {#oop}
 
-In all the programs we wrote till now, we have designed our program around functions i.e. blocks of statements which manipulate data. This is called the _procedure-oriented_ way of programming. There is another way of organizing your program which is to combine data and functionality and wrap it inside something called an object. This is called the _object oriented_ programming paradigm. Most of the time you can use procedural programming, but when writing large programs or have a problem that is better suited to this method, you can use object oriented programming techniques.
+지금까지 프로그램을 작성할 때, 우리는 데이터를 처리하는 명령들의 블록, 즉 함수들의 조합으로 프로그램을 구성하였습니다. 이러한 설계 방식을 _절차 지향_ 프로그래밍 기법이라고 부릅니다. 이와 달리 데이터와 기능을 객체라고 불리우는 것으로 묶어서 프로그램을 구성하는 또 다른 기법이 있습니다. 이것을 _객체 지향_ 프로그래밍 기법이라고 부릅니다. 아마도 대부분의 시간 동안 여러분은 절차 지향 프로그래밍 기법을 통해 프로그램을 작성하게 되겠지만, 큰 프로그램을 작성할 때나 객체 지향 기법을 이용하는 것이 더 편리하게 활용될 수 있는 문제를 해결해야 할 경우 이러한 객체 지향 프로그래밍 기법을 활용할 수 있습니다.
 
-Classes and objects are the two main aspects of object oriented programming. A **class** creates a new _type_ where **objects** are **instances** of the class. An analogy is that you can have variables of type `int` which translates to saying that variables that store integers are variables which are instances (objects) of the `int` class.
+객체 지향 프로그래밍에서는 클래스와 객체라는 두 주인공이 있습니다. **클래스**는 어떠한 새로운 _형식_ 을 정의하는 것이며, **객체** 란 클래스의 실현체, 다른 말로 **인스턴스** 를 의미하는 것입니다. 이것을 다시 표현하면 여러분이 `int` 라는 형식의 변수를 만들 수 있다는 것으로, 이것은 곧 정수형을 저장하는 변수는 `int` 클래스의 인스턴스 (객체) 를 변수에 할당하는 것이라고도 말할 수 있습니다.
 
-> **Note for Static Language Programmers**
+> **정적 언어 프로그래머들을 위한 주석**
 > 
-> Note that even integers are treated as objects (of the `int` class). This is unlike C++ and Java (before version 1.5) where integers are primitive native types.
+> 파이썬에서는 정수형조차도 객체로 다루어집니다 (in`t 클래스의 객체입니다). C++이나 Java (버전 1.5 미만)처럼 정수형이 자체 기본 형식들 중 하나로 다루어지는 것과는 다릅니다.
 > 
-> See `help(int)` for more details on the class.
+> `help(int)` 를 입력하여 정수형 클래스에 대해 좀 더 자세히 알아보시기 바랍니다.
 > 
-> C# and Java 1.5 programmers will find this similar to the _boxing and unboxing_ concept.
+> C# 이나 Java 1.5 프로그래머들은 아마 이것이 _boxing_ 과 _unboxing_ 의 개념과 비슷하다는 점을 눈치채셨을 것입니다.
 
-Objects can store data using ordinary variables that _belong_ to the object. Variables that belong to an object or class are referred to as **fields**. Objects can also have functionality by using functions that _belong_ to a class. Such functions are called **methods** of the class. This terminology is important because it helps us to differentiate between functions and variables which are independent and those which belong to a class or object. Collectively, the fields and methods can be referred to as the **attributes** of that class.
+객체는 그 객체에 _내장된_ 일반적인 변수들을 사용하여 데이터를 저장할 수 있습니다. 이 때 객체 혹은 클래스에 소속된 변수들을 **필드(field)** 라고 부릅니다. 객체는 또한 내장된 함수를 이용하여 어떤 기능을 갖도록 할 수 있는데 이것을 클래스의 **메소드(method)** 라고 부릅니다. 이들을 기존의 변수 및 함수와 달리 명칭을 구별하여 부르는 것이 중요한데, 이는 일반적인 변수와 함수와 달리 이들은 클래스나 객체에 소속되어 있는 대상들을 의미하는 것이기 때문입니다. 또, 이러한 필드와 메소드들을 통틀어 클래스의 **속성(attribute)** 이라 부릅니다.
 
-Fields are of two types - they can belong to each instance/object of the class or they can belong to the class itself. They are called **instance variables** and **class variables** respectively.
+필드는 두 가지 종류가 있습니다. 하나는 클래스의 인스턴스/객체에 내장되어 있는 것이고, 또 하나는 클래스 자체에 내장되어 있는 것입니다. 각각을 **인스턴스 변수** 와 **클래스 변수** 라 부릅니다.
 
-A class is created using the `class` keyword. The fields and methods of the class are listed in an indented block.
+클래스는 `class` 키워드를 통해 생성됩니다. 클래스의 필드와 메소드는 그 아래 들여쓰기 된 블록에 차례로 정의됩니다.
 
-## The `self` {#self}
+## `self` 에 대하여 {#self}
 
-Class methods have only one specific difference from ordinary functions - they must have an extra first name that has to be added to the beginning of the parameter list, but you **do not** give a value for this parameter when you call the method, Python will provide it. This particular variable refers to the object _itself_, and by convention, it is given the name `self`.
+클래스 메소드는 일반적인 함수와 딱 한 가지 다른 점이 있는데, 그것은 메소드의 경우 매개 변수의 목록에 항상 추가로 한 개의 변수가 맨 앞에 추가되어야 한다는 점입니다. 또한 메소드를 호출할 때 이 변수에는 우리가 직접 값을 넘겨주지 **않으며**, 대신 파이썬이 자동으로 값을 할당합니다. 이 변수에는 현재 객체 자신의 참조가 할당되며, 일반적으로 이 변수는 `self` 라고 이름을 짓습니다.
 
-Although, you can give any name for this parameter, it is _strongly recommended_ that you use the name `self` - any other name is definitely frowned upon. There are many advantages to using a standard name - any reader of your program will immediately recognize it and even specialized IDEs (Integrated Development Environments) can help you if you use `self`.
+사실 이 변수의 이름은 마음대로 지을 수 있지만, `self` 라는 이름을 사용할 것을 강력히 권합니다. 이것은 일종의 약속이며, 다른 이름을 사용하는 것은 다른 프로그래머들에게 눈총을 받는 일이 될 수 있기 때문입니다. `self`라는 표준적인 이름을 사용하면 여러분의 프로그램을 읽는 사람들로부터 이것이 바로 객체 자신의 참조를 의미함을 쉽게 알아보게 할 수 있고, 파이썬에 특화된 몇몇 IDE (Integrated Development Environment) 의 경우 이 이름을 활용하여 프로그래머에게 도움을 줄 수 있는 등 여러가지 장점이 있습니다.
 
-> **Note for C++/Java/C# Programmers**
+> **C++/Java/C# 프로그래머를 위한 주석**
 > 
-> The `self` in Python is equivalent to the `this` pointer in C++ and the `this` reference in Java and C#.
+> 파이썬의 `self` 는 C++ 의 `this` 포인터와 같은 것이며, Java와 C# 의 `this` 참조와 같습니다.
 
-You must be wondering how Python gives the value for `self` and why you don't need to give a value for it. An example will make this clear. Say you have a class called `MyClass` and an instance of this class called `myobject`. When you call a method of this object as `myobject.method(arg1, arg2)`, this is automatically converted by Python into `MyClass.method(myobject, arg1, arg2)` - this is all the special `self` is about.
+아마 여러분은 파이썬이 `self` 에 어떻게 값을 할당하는 것인지 그리고 정말로 값을 직접 할당할 필요가 없는지가 궁금할 것입니다. 이해를 돕기 위해 예를 하나 들어 보겠습니다. 여러분이 `MyClass` 라는 클래스를 생성했고, 이 클래스의 객체를 `myobject` 라는 이름으로 생성했다고 해 봅시다. 이제 이 객체의 메소드를 호출할 때는 `myobject.method(arg1, arg2)` 와 같이 하며, 이것은 파이썬에 의해 자동적으로 `MyClass.method(myobject, arg1, arg2)` 의 형태로 바뀌게 됩니다. 이것이 `self` 가 동작하는 원리에 대한 모든 것입니다.
 
-This also means that if you have a method which takes no arguments, then you still have to have one argument - the `self`.
+따라서 이것은 아무런 인수도 넘겨받지 않는 메소드를 정의할 때에도, `self` 라는 하나의 인수는 항상 추가해 주어야 한다는 것을 의미합니다.
 
-## Classes {#classes}
+## 클래스 {#classes}
 
-The simplest class possible is shown in the following example (save as `oop_simplestclass.py`).
+가장 단순한 클래스의 예시가 아래 예제에 나타나 있습니다 (`oop_simplestclass.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/oop_simplestclass.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/oop_simplestclass.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-We create a new class using the `class` statement and the name of the class. This is followed by an indented block of statements which form the body of the class. In this case, we have an empty block which is indicated using the `pass` statement.
+먼저 `class` 문을 사용하여 새로운 클래스를 생성하였고 적당한 이름을 지어 주었습니다. 그 아래로는 들여쓰기 된 새로운 블록이 시작되며 이 블록은 클래스의 몸체를 구성합니다. 위 예제의 경우에는 `pass` 문으로 해당 블록이 빈 블록임을 나타내 주었습니다.
 
-Next, we create an object/instance of this class using the name of the class followed by a pair of parentheses. (We will learn [more about instantiation](#init) in the next section). For our verification, we confirm the type of the variable by simply printing it. It tells us that we have an instance of the `Person` class in the `__main__` module.
+다음으로, 이 클래스의 이름 뒤에 괄호를 열고 닫아 주어 클래스의 객체/인스턴스를 만들었습니다 (다음 섹션에서 [객체 초기화](#init) 에 대해 좀 더 자세히 배울 것입니다). 객체가 잘 생성되었는지 확인해 보기 위해, 정의한 변수명을 입력하여 결과를 확인해 봅니다. 그러면 이 객체는 `__main__` 모듈에 속한 `Person` 클래스의 인스턴스임을 알 수 있습니다.
 
-Notice that the address of the computer memory where your object is stored is also printed. The address will have a different value on your computer since Python can store the object wherever it finds space.
+또 객체가 메모리상에 저장된 컴퓨터 주소값이 함께 반환되는 것을 확인하시기 바랍니다. 컴퓨터마다 그 객체를 저장하기 위한 공간이 위치한 곳이 다를 것이므로 컴퓨터마다 이 값은 다르게 출력될 것입니다.
 
-## Methods
+## 메소드
 
-We have already discussed that classes/objects can have methods just like functions except that we have an extra `self` variable. We will now see an example (save as `oop_method.py`).
+앞서 클래스/객체는 메소드를 가질 수 있으며, 메소드는 추가된 self 변수를 제외하고는 함수와 똑같다는 것에 대해 이야기했습니다. 아래 예제를 통해 확인해 봅시다 (`oop_method.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/oop_method.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/oop_method.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Here we see the `self` in action. Notice that the `say_hi` method takes no parameters but still has the `self` in the function definition.
+위 예제는 `self` 가 어떻게 동작하는지 보여줍니다. 여기서 `say_hi` 메소드는 아무 매개 변수도 넘겨받지 않지만 함수 정의에 `self` 를 가지고 있음을 확인하시기 바랍니다.
 
-## The `__init__` method {#init}
+## `__init__` 메소드 {#init}
 
-There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
+파이썬의 클래스에는 여러가지 특별한 메소드 이름이 존재합니다. 우선 그 중 `__init__` 메소드의 중요성에 대해 알아보겠습니다.
 
-The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any *initialization* (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
+`__init__` 메소드는 클래스가 인스턴스화 될 때 호출됩니다. 따라서 이 메소드는 객체가 생성될 때 *초기화*가 필요한 경우, 즉, 객체에 초기값을 할당해 주어야 할 경우에 유용하게 사용됩니다 . 여기서 init의 앞과 뒤에 있는 밑줄은 두 번씩 입력해야 한다는 점에 유의하시기 바랍니다.
 
-Example (save as `oop_init.py`):
+예제 (`oop_init.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/oop_init.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/oop_init.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Here, we define the `__init__` method as taking a parameter `name` (along with the usual `self`). Here, we just create a new field also called `name`. Notice these are two different variables even though they are both called 'name'. There is no problem because the dotted notation `self.name` means that there is something called "name" that is part of the object called "self" and the other `name` is a local variable. Since we explicitly indicate which name we are referring to, there is no confusion.
+먼저 매개 변수 `name` 을 넘겨 받는 `__init__` 메소드를 정의합니다 (물론 `self`를 포함하여 정의합니다). 그리고, `name` 이라는 필드를 생성합니다. 이 때 두 개의 다른 변수의 이름으로 'name' 이라는 동일한 이름을 지정해 주었다는 점에 주목하시기 바랍니다. 이것이 문제가 되지 않는 이유는, 이 중 하나는 "self" 라 칭해지는 객체에 내장된 것으로 `self.name` 의 형태로 사용되며, 또 하나인 `name` 은 지역 변수를 의미하는 것으로 사용되기 때문입니다. 이렇게 프로그램 상에서 각각을 완전하게 구분할 수 있으므로 혼란이 일어나지 않습니다.
 
-When creating new instance `p`, of the class `Person`, we do so by using the class name, followed by the arguments in the parentheses: p = Person('Swaroop').
+`Person` 클래스로부터 새로운 인스턴스 `p` 를 생성하기 위해, 먼저 클래스의 이름을 적고 괄호 안에 인수를 적어 줍니다: p = Person('Swaroop').
 
-We do not explicitly call the `__init__` method.
-This is the special significance of this method.
+위 예제에서 중요한 것은,
+우리가 init 메소드를 직접 호출해 주지 않는다는 점입니다. 
 
-Now, we are able to use the `self.name` field in our methods which is demonstrated in the `say_hi` method.
+이제, `say_hi` 메소드에서처럼 객체 내부에서 `self.name` 필드를 사용할 수 있습니다.
 
-## Class And Object Variables {#class-obj-vars}
+## 클래스 변수와 객체 변수 {#class-obj-vars}
 
-We have already discussed the functionality part of classes and objects (i.e. methods), now let us learn about the data part. The data part, i.e. fields, are nothing but ordinary variables that are _bound_ to the **namespaces** of the classes and objects. This means that these names are valid within the context of these classes and objects only. That's why they are called _name spaces_.
+앞서 클래스와 객체의 기능적 부분, 즉 메소드에 대해 설명했습니다. 이제 객체의 데이터의 경우는 어떻게 해야 하는지 배워봅시다. 데이터, 즉 필드는 일반적인 변수와 다를 것이 없으나 딱 한 가지, 그 클래스 혹은 객체의 **네임스페이스** 에 _묶여_ 있다는 점이 다릅니다. 이것은 필드의 이름은 그 클래스 혹은 객체 내부에서만 의미가 있음을 의미합니다. 그래서 이것을 이름이 통용되는 공간이라고 하여 _네임스페이스_ 라고 부릅니다.
 
-There are two types of _fields_ - class variables and object variables which are classified depending on whether the class or the object _owns_ the variables respectively.
+_필드_ 에는 두 종류가 있는데, 클래스 변수와 객체 변수입니다. 각각은 그것을 _소유_하고 있는 대상이 클래스인지 객체인지에 따라 구분됩니다.
 
-**Class variables** are shared - they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object makes a change to a class variable, that change will be seen by all the other instances.
+**클래스 변수** 는 공유됩니다. 즉, 그 클래스로부터 생성된 모든 인스턴스들이 접근할 수 있습니다. 클래스 변수는 한 개만 존재하며 어떤 객체가 클래스 변수를 변경하면 모든 다른 인스턴스들에 변경 사항이 반영됩니다.
 
-**Object variables** are owned by each individual object/instance of the class. In this case, each object has its own copy of the field i.e. they are not shared and are not related in any way to the field by the same name in a different instance. An example will make this easy to understand (save as `oop_objvar.py`):
+**객체 변수** 는 클래스로부터 생성된 각각의 객체/인스턴스에 속해 있는 변수입니다. 이 경우에는, 각각의 객체별로 객체 변수를 하나씩 따로 가지고 있으며, 서로 공유되지 않고 각 인스턴스에 존재하는 같은 이름의 필드끼리 서로 어떤 방식으로든 간섭되지 않습니다. 아래 예제를 통해 좀 더 자세히 알아봅시다. (`oop_objvar.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/oop_objvar.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/oop_objvar.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-This is a long example but helps demonstrate the nature of class and object variables. Here, `population` belongs to the `Robot` class and hence is a class variable. The `name` variable belongs to the object (it is assigned using `self`) and hence is an object variable.
+예제가 좀 길지만, 클래스/객체 변수의 이해를 돕도록 구성되어 있습니다. 여기서 `population` 은 `Robot` 클래스에 속해 있는 클래스 변수입니다. 또, `name` 변수는 객체에 소속되어 있는 (즉 `self` 를 이용하여 접근할 수 있는) 객체 변수입니다.
 
-Thus, we refer to the `population` class variable as `Robot.population` and not as `self.population`. We refer to the object variable `name` using `self.name` notation in the methods of that object. Remember this simple difference between class and object variables. Also note that an object variable with the same name as a class variable will hide the class variable!
+따라서, `population` 클래스 변수는 `Robot.population` 과 같이 사용하며 `self.population` 과 같이 사용하지 않습니다. 반면 객체 변수 `name` 은 그 객체 안에서 `self.name` 과 같이 사용됩니다. 이러한 클래스 변수와 객체 변수의 차이점에 유의하시기 바랍니다. 또, 클래스 변수와 같은 이름을 가진 객체 변수는 클래스 변수를 감춘다는 점을 기억하세요!
 
-Instead of `Robot.population`, we could have also used `self.__class__.population` because every object refers to its class via the `self.__class__` attribute.
+`Ropot.population` 대신에 `self.__class__.population` 이라고도 사용할 수 있는데 이것은 모든 객체는 그 객체를 생성하는 데 사용되었던 클래스를 `self.__class__` 속성을 통해 참조하고 있기 때문입니다.
 
-The `how_many` is actually a method that belongs to the class and not to the object. This means we can define it as either a `classmethod` or a `staticmethod` depending on whether we need to know which class we are part of. Since we refer to a class variable, let's use `classmethod`.
+메소드 `how_many` 는 객체에 소속되어 있지 않고 클래스에 소속되어 있는 메소드입니다. 여기서 우리가 해당 클래스의 어떤 부분까지 알아야 할 지에 따라 메소드를 클래스 메소드 (`classmethod`) 로 정의할지 스태틱 메소드 (`staticmethod`) 로 정의할지 결정할 수 있습니다. 여기서는 클래스 변수를 사용할 것이므로, 클래스 메소드 를 사용합시다.
 
-We have marked the `how_many` method as a class method using a [decorator](./more.md#decorator).
+여기서는 `how_many` 메소드를 클래스 메소드로 만들어 주기 위해 [데코레이터](./more.md#decorator) 를 이용하였습니다.
 
-Decorators can be imagined to be a shortcut to calling a wrapper function (i.e. a function that "wraps" around another function so that it can do something before or after the inner function), so applying the `@classmethod` decorator is the same as calling:
+데코레이터는 어떤 일을 추가로 해 주는 더 큰 범위의 함수로 다른 함수를 감싸주는 것이라고 생각하면 됩니다. 즉, `@classmethod` 데코레이터는 아래처럼 호출하는 것과 같습니다:
 
 ```python
 how_many = classmethod(how_many)
 ```
 
-Observe that the `__init__` method is used to initialize the `Robot` instance with a name. In this method, we increase the `population` count by 1 since we have one more robot being added. Also observe that the values of `self.name` is specific to each object which indicates the nature of object variables.
+`__init__` 메소드는 `Robot` 의 인스턴스를 초기화시킬 때 사용됩니다. 이 메소드를 통해 로봇이 하나 추가될 때마다 로봇의 개수를 의미하는 변수 `population` 을 1 씩 증가시켜 줍니다. 또한 각 생성된 객체별로 객체 변수 `self.name` 의 값을 따로따로 지정해 주었습니다.
 
-Remember, that you must refer to the variables and methods of the same object using the `self` *only*. This is called an *attribute reference*.
+객체에 속해 있는 변수와 메소드에 접근하기 위해서는 *반드시* `self` 를 사용해야 한다는 점을 기억하시기 바랍니다. 이것을 다른 말로 *속성 참조(attribute reference)* 라 부릅니다.
 
-In this program, we also see the use of *docstrings* for classes as well as methods. We can access the class docstring at runtime using `Robot.__doc__` and the method docstring as `Robot.say_hi.__doc__`
+프로그램을 살펴보면 메소드에 정의된 것 처럼 클래스에도 *DocString* 이 정의되어 있는 것을 보실 수 있습니다. 마찬가지로 이 DocString도 `Robot.__doc__` 을 통해 접근할 수 있고, 또 메소드의 DocString 은 `Robot.say_hi.__doc__` 과 같이 접근할 수 있습니다.
 
-In the `die` method, we simply decrease the `Robot.population` count by 1.
+`die` 메소드가 실행되면, 간단히 `Robot.population` 을 하나 줄여 줍니다.
 
-All class members are public. One exception: If you use data members with names using the _double underscore prefix_ such as `__privatevar`, Python uses name-mangling to effectively make it a private variable.
+모든 클래스 멤버는 클래스 외부로 공개되어 있습니다. 한가지 예외가 있는데, 여러분이 밑줄 두 개로 시작하는 데이터 멤버를 정의하면, 즉 예를 들어 `__privatevar` 와 같이 하면, 파이썬이 이것을 클래스 외부로 드러나지 않도록 숨겨 줍니다.
 
-Thus, the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. Remember that this is only a convention and is not enforced by Python (except for the double underscore prefix).
+이것은 클래스나 객체에 속해 있는 어떤 변수에나 적용됩니다. 클래스와 객체에 정의된 모든 이름은 밑줄로 시작하지 않는 이상 외부로 공개하고 다른 클래스나 객체에서 불러와 사용할 수 있도록 하는 규칙을 따르는 것이 좋습니다. 그러나 이것은 파이썬에서 강제하는 것이 아니며 (밑줄 두 개로 시작하는 경우를 제외하고) 프로그래머들끼리의 약속입니다.
 
-> **Note for C++/Java/C# Programmers**
+> **C++/Java/C# 프로그래머를 위한 주석**
 > 
-> All class members (including the data members) are _public_ and all the methods are _virtual_ in Python.
+> 모든 클래스 멤버는 (데이터 멤버를 포함하여) _public_ 이며, 파이썬의 모든 메소드는 _virtual_ 입니다.
 
-## Inheritance
+## 상속
 
-One of the major benefits of object oriented programming is **reuse** of code and one of the ways this is achieved is through the **inheritance** mechanism. Inheritance can be best imagined as implementing a **type and subtype** relationship between classes.
+객체 지향 프로그래밍의 또 다른 큰 장점은 코드를 **재사용** 할 수 있다는 것이며, 이를 위한 한 가지 방법으로 **상속** 이 사용됩니다. 상속은 클래스 간의 형식과 세부 형식 을 구현하는 것이라고 생각해볼 수 있습니다.
 
-Suppose you want to write a program which has to keep track of the teachers and students in a college. They have some common characteristics such as name, age and address. They also have specific characteristics such as salary, courses and leaves for teachers and, marks and fees for students.
+어러분이 어떤 대학의 교수들과 학생들의 명부를 작성하는 프로그램을 작성한다고 해 봅시다. 이 때 교수와 학생 모두 공통적으로 이름, 나이, 주소 등의 성질을 가지고 있을 것이며, 교수에만 적용되는 성질로는 연봉, 과목, 휴가 등이 있을 것이고, 학생에만 적용되는 성질로는 성적, 등록금 등이 있을 것입니다.
 
-You can create two independent classes for each type and process them but adding a new common characteristic would mean adding to both of these independent classes. This quickly becomes unwieldy.
+따라서 여러분은 각각의 경우에 두 독립적인 클래스를 만들 수 있겠지만, 이 경우 각각의 공통적인 성질 또한 각각의 클래스에 두 번씩 반복해서 정의해 주어야 할 것입니다. 매우 불편합니다.
 
-A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class, i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
+더 나은 방법은 `SchoolMember` 라는 이름으로 공통 클래스를 생성한 뒤 교수와 학생 클래스를 이 클래스로부터 _상속_ 받아 생성하는 것입니다. 이 경우 상속받은 클래스들은 이를테면 상위 형식 (클래스) 의 세부 형식이 되는 것이고, 따라서 이 세부 형식에 각 상황에 맞는 세부적인 성질들을 추가해 줄 수 있는 것입니다.
 
-There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected, i.e. the object can be treated as an instance of the parent class.
+이러한 접근 방식에는 많은 장점이 있습니다. 그 중 한 장점은 우리가 `SchoolMember` 에 새로운 기능을 추가하거나 혹은 있던 기능을 수정하게 되면, 그 하위 클래스인 교수와 학생 클래스에도 이러한 변경 사항이 자동으로 추가된다는 점입니다. 예를 들어 교수와 학생들에게 새로 출입증을 발급해야 할 경우 SchoolMember 클래스에 이를 적용해 주기만 하면 되는 것이죠. 반대로 하위 클래스에 적용된 변경 사항은 다른 하위 클래스에 적용되지 않습니다. 또 다른 장점은 여러분이 예를 들어 대학에 소속된 사람들의 모든 숫자를 파악해야 한다고 할 경우 교수와 학생 객체를 `SchoolMember` 객체로써 참조하여 사용할 수 있다는 점입니다. 이것을 **다형성** 이라고 부르는데, 하위 형식이 부모 형식을 필요로 하는 어떤 상황에서건 이를 대신하여 사용될 수 있다는 것을 의미합니다. 즉, 자식 클래스의 객체를 부모 클래스의 인스턴스인 것처럼 다루어질 수 있습니다.
 
-Also observe that we reuse the code of the parent class and we do not need to repeat it in the different classes as we would have had to in case we had used independent classes.
+따라서 상속을 활용하면 부모 클래스의 코드를 재사용할 수 있고 서로 완전히 독립적인 클래스들을 정의했을 때처럼 각각 다른 클래스에 이를 또 반복해서 써 줄 필요가 없다는 것입니다.
 
-The `SchoolMember` class in this situation is known as the **base class** or the **superclass**. The `Teacher` and `Student` classes are called the **derived classes** or **subclasses**.
+이 상황에서의 `SchoolMember` 클래스를 **베이스 클래스** 혹은 **슈퍼클래스** 라고 부릅니다. 또 `Teacher` 와 `Student` 클래스는 **파생 클래스** 혹은 **서브클래스** 라고 부릅니다.
 
-We will now see this example as a program (save as `oop_subclass.py`):
+다음 프로그램을 예제로 살펴 보겠습니다(`oop_subclass.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/oop_subclass.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/oop_subclass.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition (for example, `class Teacher(SchoolMember)`).   Next, we observe that the `__init__` method of the base class is explicitly called using the  `self`  variable so that we can initialize the base class part of an instance in the subclass. This is very important to remember- Since we are defining a  `__init__`  method in `Teacher`  and  `Student`  subclasses, Python does not automatically call the constructor of the base class  `SchoolMember`, you have to explicitly call it yourself.
+상속을 사용하기 위해, 예제에서 정의된 여러 베이스 클래스들의 이름들이 클래스 정의의 클래스명 옆 튜플에 지정됩니다 (예: `class Teacher(SchoolMember)`). 다음으로, 베이스 클래스의 `__init__` 메소드가 `self` 변수를 이용하여 명시적으로 호출되어, 객체의 베이스 클래스에 정의된 초기화 명령이 실행됩니다. 이 예제에서 `Teacher` 와 `Student` 서브클래스 각각 `__init__` 메소드를 구현할 경우, 이런 식으로 베이스 클래스의 생성자를 명시적으로 호출해 주지 않으면 파이썬은 베이스 클래스 `SchoolMember` 의 생성자를 자동으로 호출해 주지 않는다는 점을 기억하시기 바랍니다.
 
-In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
+반면 서브클래스에서 `__init__` 메소드를 구현해 주지 않는 경우, 베이스 클래스의 생성자는 자동으로 호출되게 됩니다.
 
-While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
+여기서 `SchoolMember` 클래스의 `tell` 메소드를 사용할 때, `Teacher` 나 `Student` 의 인스턴스들을 `SchoolMember` 의 인스턴스로써 사용할 수 간주할 수 있고 `SchoolMember` 의 `tell` 메소드를 `Teacher.tell` 또는 `Student.tell` 과 같이 접근할 수 있습니다. 그러나, 이 대신 또 다른 `tell` 메소드를 각각의 서브클래스에 구현해 주어 (이 때 `SchoolMember` 의 `tell` 메소드를 활용하여 일부를 구현했습니다) 각 서브클래스에 맞는 형태로 좀 더 다듬어 줄 수 있습니다. 이렇게 한 뒤 `Teacher` 의 `tell` 메소드를 찾으면 파이썬은 서브클래스와 슈퍼클래스에서 `tell` 메소드를 찾게 됩니다. 이 때, 파이썬은 항상 서브클래스에서 먼저 해당 메소드를 찾으며, 만약에 그 메소드를 찾지 못할 경우 그 서브클래스의 베이스 클래스에서 해당 메소드를 찾게 되며, 이는 클래스를 정의할 때 지정한 베이스 클래스들의 튜플에 지정된 순서대로 해당 메소드를 찾아 나가는 것과 같습니다 (이 예제에서 각 서브클래스는 한 개의 베이스 클래스만을 가지지만, 서브클래스는 여러 개의 베이스 클래스를 상속받을 수도 있습니다).
 
-A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
+여기서 한 개 이상의 클래스를 상속받는 경우를 **다중상속** 이라고 부릅니다.
 
-The `end` parameter is used in the `print` function in the superclass's `tell()` method to print a line and allow the next print to continue on the same line. This is a trick to make `print` not print a `\n` (newline) symbol at the end of the printing.
+슈퍼 클래스의 `tell()` 메소드에서 print 문에 사용된 `end` 파라미터는 그 다음에 출력 될 내용을 새로운 줄에 출력하지 말고 그 줄에 이어서 출력하라는 것을 의미합니다. 이것은 `print` 가 `\n` (줄바꿈) 문자를 마지막에 입력하지 않게 하는 것과 같습니다.
 
+## 요약
 
-## Summary
+지금까지 클래스와 객체의 다양한 속성에 대해 알아 보았으며, 또 통용되는 용어들에 대해서도 알아 보았습니다. 또한 객체 지향 프로그래밍을 사용할 때의 장점과 주의해야 할 점에 대해서도 알아 보았 습니다. 파이썬은 고도의 객체 지향 언어로 이러한 개념을 잘 익혀 두면 여러분이 좋은 파이썬 프로그래머로서 꾸준히 성장할 수 있게 될 것입니다.
 
-We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
-
-Next, we will learn how to deal with input/output and how to access files in Python.
+다음으로, 파이썬에서의 입/출력을 다루는 법과 파일을 읽고 쓰는 법에 대해 배워 보겠습니다.

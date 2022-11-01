@@ -15,64 +15,64 @@ https://www.python.org/downloads/ 에 방문하셔서 최신 버전의 설치 �
 
 만약 앞서 `Add Python 3.5 PATH` 옵션을 체크하지 않고 지나쳤다면, `Add Python to environment variables` 을 누르세요. 이것은 `Add Python 3.5 to PATH` 를 체크하고 설치하는 것과 같은 효과가 있습니다.
 
-You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
+설치 중 `install Launcher for all users` 옵션은 선택해도 되고 안 해도 됩니다. 런처는 서로 다른 파이썬 버전들이 설치되어 있을 때 어떤 버전의 파이썬을 실행될지 선택해주는 역할을 하는 프로그램입니다.
 
-If your path was not set correctly (by checking the `Add Python 3.5 Path` or `Add Python to environment variables` options), then follow the steps in the next section (`DOS Prompt`) to fix it. Otherwise, go to the `Running Python prompt on Windows` section in this document.
+만약 `PATH` 환경변수가 제대로 설정되지 않았을 경우 (즉, 위에서 `Add Python 3.5 Path` 나 `Add Python to environment variables` 옵션을 선택해 주었을 때), 다음 섹션 `명령 프롬프트` 에 이를 올바르게 설정할 수 있는 방법이 설명되어 있습니다. 그런 뒤 `윈도우에서 파이썬 프롬프트 실행하기` 섹션을 읽어 보세요.
 
 NOTE: For people who already know programming, if you are familiar with Docker, check out [Python in Docker](https://hub.docker.com/_/python/) and [Docker on Windows](https://docs.docker.com/windows/).
 
-### DOS Prompt {#dos-prompt}
+### 명령 프롬프트 {#dos-prompt}
 
-If you want to be able to use Python from the Windows command line i.e. the DOS prompt, then you need to set the PATH variable appropriately.
+여러분이 파이썬을 윈도우의 명령 프롬프트 (DOS 프롬프트) 상에서 사용하고 싶으시다면, PATH 환경 변수를 알맞게 설정해 주어야 합니다.
 
-For Windows 2000, XP, 2003 , click on `Control Panel` -> `System` -> `Advanced` -> `Environment Variables`. Click on the variable named `PATH` in the _System Variables_ section, then select `Edit` and add `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate directory name.
+윈도우 2000, XP, 2003의 경우, `제어판` -> `시스템` -> `고급` -> `환경 변수` 로 들어가세요. 이제 _시스템 변수_ 목록에 있는 `PATH` 를 선택한 뒤, `편집` 버튼을 누르고 `;C:\Python35` (이 폴더가 실제로 존재하는지 다시 한번 확인하세요. 더 최신 버전의 파이썬을 설치한 경우 폴더 이름이 다를 수 있습니다) 이라는 문자열을 이미 있던 문자열의 맨 뒤에 추가하세요.
 
 <!-- The directory should match pythonVersion variable in book.json -->
-For older versions of Windows, open the file `C:\AUTOEXEC.BAT` and add the line `PATH=%PATH%;C:\Python35` and restart the system. For Windows NT, use the `AUTOEXEC.NT` file.
+그 이전 버전의 윈도우를 사용하시는 분들은, `C:\AUTOEXEC.BAT` 를 열고 맨 뒷줄에 `PATH=%PATH%;C:\Python35` 라고 마지막에 한 줄 추가한 뒤 시스템을 재시작하세요. 윈도우 NT의 경우, `AUTOEXEC.NT` 파일을 대신 편집하세요.
 
-For Windows Vista:
+윈도우 비스타:
 
-- Click Start and choose `Control Panel`
-- Click System, on the right you'll see "View basic information about your computer"
-- On the left is a list of tasks, the last of which is `Advanced system settings`. Click that.
-- The `Advanced` tab of the `System Properties` dialog box is shown. Click the `Environment Variables` button on the bottom right.
-- In the lower box titled `System Variables` scroll down to Path and click the `Edit` button.
-- Change your path as need be.
-- Restart your system. Vista didn't pick up the system path environment variable change until I restarted.
+- `시작` 메뉴를 클릭하고, `제어판` 을 클릭하세요.
+- `시스템`을 클릭하면, 오른쪽에 `"컴퓨터에 대한 기본 정보 보기"` 창이 보일 것입니다.
+- 왼쪽에는 작업 항목 아래 여러 메뉴들이 있는데, 이 중 `"고급 시스템 설정"` 항목이 보일 것입니다. 이것을 클릭하세요.
+- 그러면 `시스템 속성` 대화상자의 `고급` 탭이 보이게 됩니다. 오른쪽 아래에 있는 `환경 변수` 버튼을 클릭하세요.
+- 아래쪽의 `"시스템 변수"`라고 적혀 있는 목록에 있는 `PATH` 항목을 선택하고, `편집` 버튼을 클릭하세요.
+- 경로를 수정하세요.
+- 시스템을 재시작하세요. 윈도우 비스타는 컴퓨터가 재시작되기 전까지 새로 지정한 환경 변수가 적용되지 않습니다.
 
 For Windows 7 and 8:
 
-- Right click on Computer from your desktop and select `Properties` or click `Start` and choose `Control Panel` -> `System and Security` -> `System`. Click on `Advanced system settings` on the left and then click on the `Advanced` tab. At the bottom click on `Environment Variables` and under `System variables`, look for the `PATH` variable, select and then press `Edit`.
-- Go to the end of the line under Variable value and append `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate folder name.
-- If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python36` <!-- The directory should match pythonVersion variable in book.json -->
-- Click `OK` and you are done. No restart is required, however you may have to close and reopen the command line.
+- 바탕 화면에 있는 `컴퓨터`를 오른쪽 클릭하고 `속성`을 클릭하거나, 또는 `시작` 메뉴를 클릭하고 `제어판`을 선택한 뒤 `시스템 및 보안` 의 `시스템` 을 클릭하세요. 화면 왼쪽에 보이는 `고급 시스템 설정` 항목을 클릭한 뒤 `고급` 탭을 클릭하세요. 아래쪽에 보이는 `시스템 변수` 밑에 있는 여러 변수들 중 `PATH`라는 변수를 찾아 선택한 뒤, `편집` 버튼을 누르세요.
+- 이미 있던 문자열의 맨 끝에 `;C:\Python35` 를 추가하세요 (이 폴더가 실제로 존재하는지 다시 한번 확인하세요. 더 최신 버전의 파이썬을 설치한 경우 폴더 이름이 다를 수 있습니다).
+- 만약 원래 있던 문자열이 `%SystemRoot%\system32;`였다고 한다면, 변경된 문자열은 `%SystemRoot%\system32;C:\Python35` 이어야 합니다. <!-- The directory should match pythonVersion variable in book.json -->
+- `확인` 버튼을 누르면 시스템을 재시작하지 않아도 변경 사항이 곧바로 적용됩니다만, 현재 실행중인 명령 프롬프트는 종료후 다시 시작해주어야 합니다.
 
-For Windows 10:
+윈도우 10:
 
-Windows Start Menu > `Settings` > `About` > `System Info` (this is all the way over to the right) > `Advanced System Settings` > `Environment Variables` (this is towards the bottom) > (then highlight `Path` variable and click `Edit`) > `New` > (type in whatever your python location is.  For example, `C:\Python35\`)
+윈도우의 `시작` > `설정` > `시스템` > `정보` 에 들어가서, 오른쪽의 `고급 시스템 설정` 을 누릅니다. `시스템 속성` 대화상자의 아래쪽 `환경 변수` 를 누르고 > `Path` 를 선택한 뒤 `편집` 을 누른 뒤 > `새로 만들기` 버튼을 누르고 파이썬이 설치된 경로를 입력합니다. 예를 들어, `C:\Python35\` 라고 하면 됩니다.
 
 
-### Running Python prompt on Windows
+### 윈도우에서 파이썬 프롬프트 실행하기
 
-For Windows users, you can run the interpreter in the command line if you have [set the `PATH` variable appropriately](#dos-prompt).
+[PATH 환경변수가 제대로 설정되어 있다면](#dos-prompt), 파이썬 인터프리터를 명령 프롬프트 상에서도 실행하실 수 있습니다.
 
-To open the terminal in Windows, click the start button and click `Run`. In the dialog box, type `cmd` and press `[enter]` key.
+윈도우 환경에서 터미널 창을 열기 위해서는, `시작` 메뉴를 누르고 `실행` 버튼을 클릭하세요. 나타나는 대화상자에 `cmd` 를 입력하시고 `[enter]` 키를 입력하세요.
 
-Then, type `python` and ensure there are no errors.
+이제, `python`을 입력하고 파이썬 프롬프트가 잘 실행되는지 확인하세요.
 
-## Installation on Mac OS X
+## Mac OS X 에서의 설치
 
-For Mac OS X users, use [Homebrew](http://brew.sh): `brew install python3`.
+Mac OS X 사용자의 경우, [Homebrew](http://brew.sh)를 설치한 후 다음 명령을 통해 파이썬을 설치할 수 있습니다: `brew install python3`.
 
-To verify, open the terminal by pressing `[Command + Space]` keys (to open Spotlight search), type `Terminal` and press `[enter]` key. Now, run `python3` and ensure there are no errors.
+잘 설치되었는지 확인하시려면, 먼저 `[Command + Space]` 키를 입력하여 Spotlight 검색 창을 여세요. 그리고 `Terminal` 이라 입력하시고 `[enter]` 키를 누르세요. 이제, `python3` 을 입력하고 문제가 없는지 확인하세요.
 
-## Installation on GNU/Linux
+## GNU/Linux 에서의 설치
 
-For GNU/Linux users, use your distribution's package manager to install Python 3, e.g. on Debian & Ubuntu: `sudo apt-get update && sudo apt-get install python3`.
+GNU/Linux 사용자의 경우, 여러분이 사용 중인 리눅스 배포판에서 제공하는 패키지 매니저를 통해 파이썬을 설치할 수 있습니다. 예를 들어 데비안/우분투에서는 다음과 같이 합니다: `sudo apt-get update && sudo apt-get install python3`.
 
-To verify, open the terminal by opening the `Terminal` application or by pressing `Alt + F2` and entering `gnome-terminal`. If that doesn't work, please refer the documentation of your particular GNU/Linux distribution. Now, run `python3` and ensure there are no errors.
+잘 설치되었는지 확인하시려면, `터미널` 앱을 열거나 혹은 `Alt + F2` 키를 입력한 뒤 `gnome-terminal` 을 입력하여 터미널을 실행하세요. 만약 이 두 방법으로 터미널을 실행시킬 수 없으면, 여러분이 설치한 리눅스 배포판의 설명서를 참조하세요. 이제, `python3` 을 입력하고 문제가 없는지 확인하세요.
 
-You can see the version of Python on the screen by running:
+다음과 같이 입력하면 시스템에 설치된 파이썬의 버전을 확인할 수 있습니다.
 
 <!-- The output should match pythonVersion variable in book.json -->
 ```
@@ -80,12 +80,12 @@ $ python3 -V
 Python 3.6.0
 ```
 
-NOTE: `$` is the prompt of the shell. It will be different for you depending on the settings of the operating system on your computer, hence I will indicate the prompt by just the `$` symbol.
+NOTE: `$` 는 쉘의 프롬프트를 의미합니다. 이것은 여러분의 컴퓨터에 설치된 운영 체제의 설정에 따라 바뀔 수 있습니다만, 이 책에서는 `$` 로 통칭하도록 하겠습니다.
 
-CAUTION: Output may be different on your computer, depending on the version of Python software installed on your computer.
+CAUTION: 컴퓨터에 설치된 파이썬 버전에 따라 결과가 조금씩 다르게 나타날 수도 있습니다.
 
-## Summary
+## 요약
 
-From now on, we will assume that you have Python installed on your system.
+이제 여러분의 시스템에 파이썬이 올바르게 설치된 것으로 간주하도록 하겠습니다.
 
-Next, we will write our first Python program.
+다음으로는 우리의 첫번째 파이썬 프로그램을 작성해 봅시다.

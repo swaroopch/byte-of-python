@@ -1,189 +1,189 @@
-# Modules
+# 모듈
 
-You have seen how you can reuse code in your program by defining functions once. What if you wanted to reuse a number of functions in other programs that you write? As you might have guessed, the answer is modules.
+앞에서 함수를 통해 여러분의 프로그램 안에서 코드를 재사용하는 방법에 대해서 배워 보았습니다. 그러면 여러 함수들을 한꺼번에 불러들여 재사용하는 방법은 없을까요? 네, 이럴 때 모듈을 이용합니다.
 
-There are various methods of writing modules, but the simplest way is to create a file with a `.py` extension that contains functions and variables.
+모듈을 작성하는 데에는 여러가지 방법이 있습니다만, 가장 간단한 방법은 `.py` 확장자를 가진 파일을 하나 만들고 그 안에 함수들과 변수들을 정의해 두는 것입니다.
 
-Another method is to write the modules in the native language in which the Python interpreter itself was written. For example, you can write modules in the [C programming language](http://docs.python.org/3/extending/) and when compiled, they can be used from your Python code when using the standard Python interpreter.
+모듈을 작성하는 또 한 가지 방법은 여러분이 현재 사용중인 파이썬 인터프리터를 만드는데 사용되는 프로그래밍 언어로 모듈을 작성하는 것입니다. 예를 들어, 표준 파이썬 인터프리터를 사용 중인 경우 [C 언어](http://docs.python.org/3/extending/) 를 이용하여 모듈을 작성하고 컴파일하면 파이썬에서 이것을 불러와 사용할 수 있습니다.
 
-A module can be *imported* by another program to make use of its functionality. This is how we can use the Python standard library as well. First, we will see how to use the standard library modules.
+다른 프로그램에서 *import* 명령을 통해 모듈을 불러와 사용할 수 있습니다. 파이썬 표준 라이브러리 또한 동일한 방법을 통해 이용이 가능합니다. 일단, 표준 라이브러리를 불러와 사용하는 방법을 알아보도록 하겠습니다.
 
-Example (save as `module_using_sys.py`):
+예제 (`module_using_sys.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/module_using_sys.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/module_using_sys.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-First, we *import* the `sys` module using the `import` statement. Basically, this translates to us telling Python that we want to use this module. The `sys` module contains functionality related to the Python interpreter and its environment i.e. the **sys**tem.
+먼저, 표준 라이브러리 중 하나인 `sys` 모듈을 `import` 문을 통해 불러왔습니다. 이것은 단순히 파이썬에게 이 모듈을 앞으로 사용할 것이라고 알려주는 과정이라고 생각하시면 편합니다. 여기서 사용된 `sys` 모듈은 파이썬 인터프리터와 인터프리터가 실행중인 환경, 즉 시스템(**sys**tem)에 관련된 기능들이 담겨 있습니다.
 
-When Python executes the `import sys` statement, it looks for the `sys` module. In this case, it is one of the built-in modules, and hence Python knows where to find it.
+파이썬이 `import sys` 문을 실행하는 시점에서, 파이썬은 `sys` 모듈을 찾습니다. 이 경우에는 내장 모듈을 불러오는 것이므로, 파이썬이 이미 어디서 이것을 불러와야 하는지 알고 있습니다.
 
-If it was not a compiled module i.e. a module written in Python, then the Python interpreter will search for it in the directories listed in its `sys.path` variable. If the module is found, then the statements in the body of that module are run and the module is made *available* for you to use. Note that the initialization is done only the *first* time that we import a module.
+만약 그렇지 않은 경우, 예를 들어 파이썬으로 여러분이 직접 작성한 모듈인 경우, 파이썬 인터프리터는 `sys.path` 변수 에 정의된 디렉토리들에 해당 모듈이 있는지 검색합니다. 여기서 모듈을 찾는 데 성공하면, 그 모듈 내부에 적혀있는 명령들이 읽어들여지게 되고 모듈이 *사용가능*하게 됩니다. 이러한 로딩 과정은 *첫번째로* 모듈을 불러올 때만 이루어진다는 것을 기억하세요.
 
-The `argv` variable in the `sys` module is accessed using the dotted notation i.e. `sys.argv`. It clearly indicates that this name is part of the `sys` module. Another advantage of this approach is that the name does not clash with any `argv` variable used in your program.
+`sys` 모듈의 `argv` 변수를 불러올 때, 마침표를 이용하여 `sys.argv` 와 같이 접근합니다. 이와 같이 마침표를 이용함으로써 뒤에 온 이름이 `sys` 모듈에 존재한다는 것을 명시적으로 알려 주고, 또한 여러분의 프로그램에 사용될지 모를 `argv` 라는 이름을 가진 다른 변수와 충돌이 일어나지 않도록 합니다.
 
-The `sys.argv` variable is a *list* of strings (lists are explained in detail in a [later chapter](./data_structures.md#data-structures)). Specifically, the `sys.argv` contains the list of *command line arguments* i.e. the arguments passed to your program using the command line.
+`sys.argv` 변수는 문자열의 `리스트` 입니다 (리스트에 대해서는 [뒤 챕터](./data_structures.md#data-structures)에서 좀 더 자세히 다룰 것입니다). 좀 더 구체적으로 `sys.argv` 가 담고 있는 것은 *명령줄 인수*들의 리스트인데, 이것은 명령줄로부터 프로그램을 실행시킬 때 함께 넘어온 인수들을 담고 있는 것입니다.
 
-If you are using an IDE to write and run these programs, look for a way to specify command line arguments to the program in the menus.
+여러분이 프로그램을 작성하고 실행할 때 IDE(Integrated Development Environment, 통합 개발 환경)를 활용하는 경우, IDE 상에서 프로그램을 실행할 때 `명령줄 인수`를 지정하는 방법에 대해 알아보시기 바랍니다.
 
-Here, when we execute `python module_using_sys.py we are arguments`, we run the module `module_using_sys.py` with the `python` command and the other things that follow are arguments passed to the program. Python stores the command line arguments in the `sys.argv` variable for us to use.
+여기서 우리는 직접 `python module_using_sys.py we are arguments` 명령을 통해 프로그램을 실행하였습니다. 이것은 python 명령을 통해 `module_using_sys.py` 모듈을 실행시키고 함께 적어준 명령줄 인수들을 실행될 프로그램에 넘겨준 것과 같습니다. 이렇게 하면 프로그램이 실행될 때 파이썬은 `sys.argv` 변수에 이 인수들을 저장해 주어 프로그램에서 사용할 수 있도록 합니다.
 
-Remember, the name of the script running is always the first element in the `sys.argv` list. So, in this case we will have `'module_using_sys.py'` as `sys.argv[0]`, `'we'` as `sys.argv[1]`, `'are'` as `sys.argv[2]` and `'arguments'` as `sys.argv[3]`. Notice that Python starts counting from 0 and not 1.
+이 때, 여러분이 실행한 스크립트의 이름이 `sys.argv` 리스트의 첫번째 항목이 됨을 기억하세요. 즉, 이 경우 `'module_using_sys.py'` 가 `sys.argv[0]` 에 해당하며, `'we'` 는 `sys.argv[1]` 에, `'are'` 는 `sys.argv[2]` 에, `'arguments'` 는 `sys.argv[3]` 에 해당합니다. 파이선은 숫자를 0부터 센다는 점을 기억하세요 (1이 아닙니다!).
 
-The `sys.path` contains the list of directory names where modules are imported from. Observe that the first string in `sys.path` is empty - this empty string indicates that the current directory is also part of the `sys.path` which is same as the `PYTHONPATH` environment variable. This means that you can directly import modules located in the current directory. Otherwise, you will have to place your module in one of the directories listed in `sys.path`.
+`sys.path` 변수에는 모듈을 불러올 때 찾게 되는 디렉토리들의 리스트가 담겨 있습니다. `sys.path` 변수의 첫 번째 항목이 공백 문자열임을 확인하세요. 공백 문자열은 현재 디렉토리를 의미하는데, 따라서 이것은 현재 디렉토리 또한 `sys.path` 의 일부임을 의미하며, 이것은 `PYTHONPATH` 환경변수와 같은 값입니다. 즉, 여러분은 현재 디렉토리에 들어 있는 파이썬 모듈을 불러와 사용할 수 있는 것입니다. 그렇지 않은 경우, `sys.path` 에 지정된 디렉토리들 중 하나에 해당 모듈이 들어 있어야 합니다.
 
-Note that the current directory is the directory from which the program is launched. Run `import os; print(os.getcwd())` to find out the current directory of your program.
+이때 현재 디렉토리란 프로그램을 실행할 때 위치하고 있는 디렉토리를 말합니다. `import os; print os.getcwd()` 를 실행하여 여러분의 프로그램에서 현재 디렉토리가 어디인지 확인할 수 있습니다.
 
-## Byte-compiled .pyc files {#pyc}
+## 바이트 컴파일된 .pyc 파일 {#pyc}
 
-Importing a module is a relatively costly affair, so Python does some tricks to make it faster. One way is to create *byte-compiled* files with the extension `.pyc` which is an intermediate form that Python transforms the program into (remember the [introduction section](./about_python.md#interpreted) on how Python works?). This `.pyc` file is useful when you import the module the next time from a different program - it will be much faster since a portion of the processing required in importing a module is already done. Also, these byte-compiled files are platform-independent.
+모듈을 불러오는 것은 상대적으로 무거운 작업이기 때문에, 파이썬은 약간의 트릭을 써서 이 과정을 더 빠르게 수행할 수 있도록 합니다. 그것은 바로 `.pyc`의 확장자를 가지는 *바이트 컴파일*된, 일종의 중간 단계를 만들어 두는 것입니다 ([입문](./about_python.md#interpreted) 섹션에서 파이썬의 인터프리터 환경에 대해 설명했었던 것을 기억하시죠?). 이렇게 한번 만들어진 `.pyc` 파일은 다른 프로그램에서 그 모듈을 다시 필요로 할 때 사용되며, 이 경우 모듈을 읽어들이는 데 필요한 몇가지 선행 작업을 수행하지 않아도 되므로, 더 빠른 속도로 모듈을 불러올 수 있습니다. 이렇게 바이트 컴파일된 파일은 플랫폼에 구애받지 않습니다.
 
-NOTE: These `.pyc` files are usually created in the same directory as the corresponding `.py` files. If Python does not have permission to write to files in that directory, then the `.pyc` files will _not_ be created.
+NOTE: `.pyc` 파일은 `.py` 파일이 저장되어 있는 디렉토리에 새롭게 생성됩니다. 파이썬이 이 디렉토리에 쓰기 권한을 가지고 있지 못한 경우, `.pyc` 파일은 생성되지 _않을_ 것입니다.
 
-## The from..import statement {#from-import-statement}
+## from..import 문 {#from-import-statement}
 
-If you want to directly import the `argv` variable into your program (to avoid typing the `sys.` everytime for it), then you can use the `from sys import argv` statement.
+매번 `sys.` 를 입력하지 않고서도 `argv` 변수를 프로그램에서 곧바로 불러와서 사용할 수도 있습니다. 이런 경우, `from sys import argv` 와 같은 구문을 이용합니다.
 
-> WARNING: In general, *avoid* using the `from..import` statement, use the `import` statement instead. This is because your program will avoid name clashes and will be more readable.
+> WARNING: 그러나 식별자 이름들끼리의 충돌을 피하고 프로그램을 좀 더 읽기 쉽게 작성하기 위해서, 가능하면 `from..import` 를 피하고 `import` 문을 사용하기를 권합니다.
 
-Example:
+예제:
 
 ```python
 from math import sqrt
 print("Square root of 16 is", sqrt(16))
 ```
 
-## A module's `__name__` {#module-name}
+## 모듈의 `__name__` 속성 {#module-name}
 
-Every module has a name and statements in a module can find out the name of their module. This is handy for the particular purpose of figuring out whether the module is being run standalone or being imported. As mentioned previously, when a module is imported for the first time, the code it contains gets executed. We can use this to make the module behave in different ways depending on whether it is being used by itself or being imported from another module. This can be achieved using the `__name__` attribute of the module.
+파이썬에서 모든 모듈은 이름을 가지고 있으며, 모듈 내에 포함된 명령을 통해 그 모듈의 이름을 알아올 수 있습니다. 이것은 현재 모듈이 다른 프로그램에 의해서 불러들여져서 사용되고 있는지 아니면 인터프리터에서 곧바로 실행된 것인지를 구분하는데 편리하게 활용될 수 있습니다. 이전에 언급하였듯이 모듈 내부의 코드는 모듈이 첫번째로 불러들여졌을 때 한번 전체적으로 실행되게 됩니다. 이 점을 활용하면, 모듈이 외부로부터 불러들여졌을 때와 곧바로 실행되었을 때에 서로 각각 다르게 처리되도록 할 수 있습니다. 이를 위해 `__name__` 속성을 사용합니다.
 
-Example (save as `module_using_name.py`):
+예제 (`module_using_name.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/module_using_name.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/module_using_name.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Every Python module has its `__name__` defined. If this is `'__main__'`, that implies that the module is being run standalone by the user and we can take appropriate actions.
+모든 파이썬 모듈은 `__name__` 속성을 가지고 있습니다. 만약 그 이름이 `__’main'__`일 경우, 이것은 모듈이 직접 실행된 것임을 의미하며 따라서 이에 맞는 적절한 처리를 해 줄 수 있습니다.
 
-## Making Your Own Modules
+## 새로운 모듈 작성하기
 
-Creating your own modules is easy, you've been doing it all along!  This is because every Python program is also a module. You just have to make sure it has a `.py` extension. The following example should make it clear.
+모듈을 작성하는 것은 쉽습니다. 사실 이것은 여러분이 지금까지 해 왔던 것과 별 다를게 없습니다! 왜냐하면 모든 파이썬 프로그램은 곧 모듈이기 때문입니다. 즉 `.py` 확장자를 가진 이름으로 저장되기만 하면 됩니다. 아래 예제를 통해 이에 대해 좀 더 분명하게 알 수 있을 것입니다.
 
-Example (save as `mymodule.py`):
+예제 (`mymodule.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>
 
-The above was a sample *module*. As you can see, there is nothing particularly special about it compared to our usual Python program. We will next see how to use this module in our other Python programs.
+위 예제는 `모듈`의 예시입니다. 보이는 바와 같이, 지금까지 작성해왔던 파이썬 프로그램들에 비해 별다른 특별한 것이 없습니다. 다음으로는 다른 파이썬 프로그램으로부터 모듈을 불러와서 사용하는 방법을 알아보겠습니다.
 
-Remember that the module should be placed either in the same directory as the program from which we import it, or in one of the directories listed in `sys.path`.
+아래 예제를 실행시키기 전에, 위 예제 프로그램 파일이 아래 예제 프로그램과 같은 디렉토리에 있거나 혹은 `sys.path` 중 하나에 있어야 모듈을 제대로 불러올 수 있음을 기억하세요.
 
-Another module (save as `mymodule_demo.py`):
+또다른 모듈 (`mymodule_demo.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/mymodule_demo.py" %}</code></pre>
 
-Output:
+실행 결과:
 
 <pre><code>{% include "./programs/mymodule_demo.txt" %}</code></pre>
 
-**How It Works**
+**동작 원리**
 
-Notice that we use the same dotted notation to access members of the module. Python makes good reuse of the same notation to give the distinctive 'Pythonic' feel to it so that we don't have to keep learning new ways to do things.
+앞서 알아보았던 것과 동일하게 모듈의 구성 요소에 접근할 대에도 마침표를 활용합니다. 파이썬은 같은 일을 할 때 같은 표기법을 사용하며, 이는 직관적이고 '파이썬스러운' 느낌을 줍니다. 새로운 일을 하기 위해 새로운 것을 또 배울 필요가 없습니다.
 
-Here is a version utilising the `from..import` syntax (save as `mymodule_demo2.py`):
+아래는 `from..import` 구문을 사용하는 예제입니다 (`mymodule_demo2.py`로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/mymodule_demo2.py" %}</code></pre>
 
-The output of `mymodule_demo2.py` is same as the output of `mymodule_demo.py`.
+`mymodule_demo2.py` 를 실행한 결과는 `mymodule_demo.py` 를 실행한 결과와 같습니다.
 
-Notice that if there was already a `__version__` name declared in the module that imports mymodule, there would be a clash. This is also likely because it is common practice for each module to declare it's version number using this name. Hence, it is always recommended to prefer the `import` statement even though it might make your program a little longer.
+만약 mymodule을 불러올 때 `__version__` 이라는 이름이 이미 모듈에 선언되어 있었다면 충돌이 일어날 것입니다. 사실 많은 경우 모듈의 버전을 이 이름으로 주로 선언해 두기 때문에 실제로 자주 일어나는 일이기도 합니다. 따라서, 프로그램이 조금 길어지는 한이 있더라도 왠만하면 `import` 문을 이용하여 프로그램을 작성하기를 권합니다.
 
-You could also use:
+아래와 같이 사용할 수도 있습니다:
 
 ```python
 from mymodule import *
 ```
 
-This will import all public names such as `say_hi` but would not import `__version__` because it starts with double underscores.
+이것은 `say_hi` 와 같이 모듈에 포함된 모든 public으로 공개된 이름들을 불러옵니다. 그러나 밑줄 두 개로 시작하는 이름들, 예를 들어 `__version__` 과 같은 이름들은 불러오지 않습니다.
 
-> WARNING: Remember that you should avoid using import-star, i.e. `from mymodule import *`.
+> WARNING: 가능하면 `from mymodule import *` 처럼 사용하는 것을 피하시기 바랍니다.
 
 <!-- -->
 
-> **Zen of Python**
+> **Zen of Python (파이썬 정신)**
 > 
-> One of Python's guiding principles is that "Explicit is better than Implicit". Run `import this` in Python to learn more.
+> 파이썬의 여러 지향점 중 하나는 "명시적인 것이 암시적인 것 보다 낫다 (Explicit is better than Implicit)" 입니다. 파이썬에서 import this 를 실행하여 이러한 지향점들에 대해 알아보세요.
 
-## The `dir` function {#dir-function}
+## `dir` 내장함수 {#dir-function}
 
-The built-in `dir()` function returns the list of names defined by an object.
-If the object is a module, this list includes functions, classes and variables, defined inside that module.
+`dir()` 내장함수를 이용하여 객체에 정의되어 있는 식별자들의 목록을 불러올 수 있습니다.
+예를 들어, 모듈의 경우 함수와 클래스 및 변수들의 식별자 이름이 정의되어 있을 것입니다.
 
-This function can accept arguments.
-If the argument is the name of a module, the function returns the list of names from that specified module.
-If there is no argument, the function returns the list of names from the current module.
+이 함수는 인자를 받을 수 있습니다.
+만약 모듈 이름을 넘겨 주면, 모듈 안에 선언된 식별자 이름들의 목록을 반환해 줍니다.
+아무것도 넘겨주지 않는 경우, 현재 모듈에 선언된 식별자 이름들의 목록이 반환됩니다.
 
-Example:
+예제:
 
 ```python
 $ python
 >>> import sys
 
-# get names of attributes in sys module
+# sys 모듈 내에 선언된 속성들의 식별자 이름 목록
 >>> dir(sys)
 ['__displayhook__', '__doc__',
 'argv', 'builtin_module_names',
 'version', 'version_info']
-# only few entries shown here
+# 실제 목록은 너무 길어 여기에선 많은 것을 생략함
 
-# get names of attributes for current module
+# 현재 모듈에 선언된 속성들의 식별자 이름 목록
 >>> dir()
 ['__builtins__', '__doc__',
 '__name__', '__package__', 'sys']
 
-# create a new variable 'a'
+# 새로운 변수 'a' 생성
 >>> a = 5
 
 >>> dir()
 ['__builtins__', '__doc__', '__name__', '__package__', 'sys', 'a']
 
-# delete/remove a name
+# 식별자 이름 삭제
 >>> del a
 
 >>> dir()
 ['__builtins__', '__doc__', '__name__', '__package__', 'sys']
 ```
 
-**How It Works**
+**동작 원리**
 
-First, we see the usage of `dir` on the imported `sys` module. We can see the huge list of attributes that it contains.
+먼저 `dir` 함수를 통해 앞서 불러온 `sys` 모듈의 식별자 정보를 읽어옵니다. 그러면 내부에 포함된 긴 식별자 이름 목록이 나타나는 것을 확인할 수 있습니다.
 
-Next, we use the `dir` function without passing parameters to it. By default, it returns the list of attributes for the current module. Notice that the list of imported modules is also part of this list.
+다음으로, `dir` 함수를 아무 인수도 넘기지 않고 실행시킵니다. 그러면 기본값으로, 현재 모듈에 선언된 식별자 목록이 나타납니다. 이 때 앞서 불러온 모듈의 이름도 이 목록에 포함되어 있음을 확인하세요.
 
-In order to observe `dir` in action, we define a new variable `a` and assign it a value and then check `dir` and we observe that there is an additional value in the list of the same name. We remove the variable/attribute of the current module using the `del` statement and the change is reflected again in the output of the `dir` function.
+이제 `dir` 이 잘 작동하는지 확인하기 위해, 새로운 변수 `a` 를 선언하고 값을 할당해 준 뒤 `dir` 함수를 실행시켜 반환되는 목록에 새로 생성된 변수가 포함되어 있는지 확인합니다. `del` 문을 이용하여 현재 모듈에 선언된 변수 혹은 속성을 제거하면 `dir` 함수의 출력에 그 결과가 반영됨을 또한 알 수 있습니다.
 
-A note on `del`: This statement is used to *delete* a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
+`del` 문은 변수 혹은 이름을 *삭제(delete)*하는데 사용됩니다. 이 구문이 실행된 이후에는, 즉 위 예제의 경우 `del a` 를 실행한 이후에는, 더 이상 변수 `a` 에 접근할 수 없습니다. 마치 처음부터 이러한 변수가 존재하지 않았던 것처럼 말입니다.
 
-Note that the `dir()` function works on *any* object. For example, run `dir(str)` for the attributes of the `str` (string) class.
+`dir()` 함수는 *어떤* 객체에도 사용될 수 있습니다. 예를 들어, `dir(str)` 를 실행하면 `str` (문자열) 클래스의 속성에 대해서 알아볼 수 있습니다.
 
-There is also a [`vars()`](http://docs.python.org/3/library/functions.html#vars) function which can potentially give you the attributes and their values, but it will not work for all cases.
+파이썬에는 정의된 속성과 그 값을 읽어오는 데 사용될 수 있는 [`vars()`](http://docs.python.org/3/library/functions.html#vars) 함수 또한 존재합니다만, 이 함수는 언제나 모든 경우에서 동작하지는 않습니다.
 
-## Packages
+## 패키지
 
-By now, you must have started observing the hierarchy of organizing your programs. Variables usually go inside functions. Functions and global variables usually go inside modules. What if you wanted to organize modules? That's where packages come into the picture.
+지금까지 여러분은 파이썬 프로그램의 계층 구조에 대해 어느정도 파악이 되셨을 것입니다. 변수는 함수 내부에 존재하며, 함수와 전역 변수는 모듈 안에 존재합니다. 그렇다면 모듈은 어디에 포함되는 것일까요? 파이썬에서는 패키지라는 단위가 이에 해당됩니다.
 
-Packages are just folders of modules with a special `__init__.py` file that indicates to Python that this folder is special because it contains Python modules.
+패키지란 그냥 모듈이 들어 있는 폴더를 말하는 것입니다만, 파이썬에게 이 폴더는 파이썬 모듈을 담고 있다는 것을 알려 주는 역할을 하는 `__init__.py` 라는 특별한 파일을 한 개 포함하고 있습니다.
 
-Let's say you want to create a package called 'world' with subpackages 'asia', 'africa', etc. and these subpackages in turn contain modules like 'india', 'madagascar', etc.
+여러분이 'asia', 'africa’라는 하위 패키지를 포함하고 있는 'world' 라는 패키지를 만들고 싶다고 가정해 봅시다. 또한 각각의 하위 패키지는 'india', 'madagascar' 등등의 하위 패키지를 하나씩 더 갖고 있습니다.
 
-This is how you would structure the folders:
+이 경우, 아래와 같이 폴더 구조를 만들어 주면 됩니다:
 
 ```
 - <some folder present in the sys.path>/
@@ -201,12 +201,12 @@ This is how you would structure the folders:
                 - bar.py
 ```
 
-Packages are just a convenience to organize modules hierarchically. You will see many instances of this in the [standard library](./stdlib.md#stdlib).
+패키지는 계층적으로 모듈을 관리할 수 있게 편의상 구성하는 것입니다. [표준 라이브러리](./stdlib.md#stdlib)에서 이러한 계층 구조를 많이 확인하실 수 있을 것입니다.
 
-## Summary
+## 요약
 
-Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.
+함수가 재사용 가능한 프로그램의 한 부분인 것과 같이 모듈은 재사용 가능한 프로그램을 말하며, 패키지는 모듈을 구성하는 계층 구조를 말합니다. 파이썬과 함께 설치되는 표준 라이브러리는 이러한 패키지와 모듈로 이루어진 좋은 예제입니다.
 
-We have seen how to use these modules and create our own modules.
+지금까지 모듈을 사용하고 작성하는 방법에 대해 알아보았습니다.
 
-Next, we will learn about some interesting concepts called data structures.
+다음으로, 자료 구조의 개념에 대해 알아보도록 합시다.

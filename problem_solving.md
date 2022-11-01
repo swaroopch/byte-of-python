@@ -1,8 +1,8 @@
-# Problem Solving
+# 실제 문제 해결
 
-We have explored various parts of the Python language and now we will take a look at how all these parts fit together, by designing and writing a program which _does_ something useful. The idea is to learn how to write a Python script on your own.
+지금까지 파이썬이라는 언어의 여러 가지 구성 요소에 대해 배워 보았습니다. 이제는 지금까지 배운 것들을 토대로, 뭔가 _유용한_ 것을 하는 프로그램을 만들어 보도록 합시다. 이 챕터의 목표는 여러분이 직접 파이썬 스크립트를 만들고 사용하는 법을 배우는 것입니다.
 
-## The Problem
+## 문제
 
 The problem we want to solve is:
 
