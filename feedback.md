@@ -1,3 +1,3 @@
-# Feedback
+# 피드백
 
-The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author]({{ book.contactUrl }}) or the respective [translators](./translations.md#translations) with your comments and suggestions.
+이 책은 책의 좋지 않은 부분, 이해하기 어려운 부분, 또는 잘못된 부분들을 지적하는 독자들의 도움을 필요로 합니다. [저자]({{ book.contactUrl }}) 또는 [역자](./translations.md#translations) 에게 여러분의 의견과 지적 사항들을 보내 주시기 바랍니다.
