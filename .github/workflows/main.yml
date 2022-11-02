@@ -32,6 +32,7 @@ jobs:
         run: |
           npm install honkit --save-dev
           npx honkit build . public --log=debug
+          rm -fr public/english
       # https://github.com/crazy-max/ghaction-github-pages
       - name: Push to GitHub Pages
         if: success()
