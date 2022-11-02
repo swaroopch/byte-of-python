@@ -1,0 +1,43 @@
+# https://help.github.com/en/actions/automating-your-workflow-with-github-actions
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+
+      - name: Install Calibre
+        run: sudo apt install calibre  # for `ebook-convert` command
+
+      # https://github.com/actions/setup-node
+      - name: Install Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # https://github.com/honkit/honkit
+      - name: Run Honkit
+        run: |
+          npm install honkit --save-dev
+          npx honkit build . public --log=debug
+      # https://github.com/crazy-max/ghaction-github-pages
+      - name: Push to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: public
+          fqdn: python.jeongbinpark.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
