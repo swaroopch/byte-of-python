@@ -15,7 +15,7 @@ jobs:
     steps:
 
       - name: Install Calibre
-        run: sudo apt install calibre  # for `ebook-convert` command
+        run: sudo apt update && sudo apt install calibre  # for `ebook-convert` command
 
       # https://github.com/actions/setup-node
       - name: Install Node.js
