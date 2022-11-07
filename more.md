@@ -73,7 +73,7 @@ Yes
 
 `lambda` 문은 새 함수 객체를 만들 때 사용됩니다. 기본적으로 `lambda` 문은 한 줄짜리 수식으로, 파라미터를 받는 부분과 람다 함수 본체로 구성되어 있습니다. 이렇게 만들어진 함수를 호출하면, 지정된 수식의 계산 결과가 함수의 결과값으로 반환됩니다.
 
-Example (save as `more_lambda.py`):
+예제 (`more_lambda.py` 로 저장하세요):
 
 <pre><code class="lang-python">{% include "./programs/more_lambda.py" %}</code></pre>
 
