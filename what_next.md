@@ -30,7 +30,7 @@
 프로그래밍 언어를 배우는 가장 좋은 방법은 코드를 직접 많이 써보고 또 많이 읽는 것입니다:
 
 - [Python Cookbook](http://code.activestate.com/recipes/langs/python/) 은 파이썬을 이용하여 어떤 문제를 해결할 때 유용한 해결 방법과 팁을 정리해 놓은 굉장히 좋은 사이트입니다. 파이썬 사용자라면 반드시 한번쯤 읽어 볼 필요가 있습니다.
-- [Python Module of the Week](http://pymotw.com/2/contents.html) 또한 한번쯤 읽어 봐야 할 매우 잘 쓰여진 [준 라이브러리](./stdlib.md#stdlib) 가이드입니다.
+- [Python Module of the Week](http://pymotw.com/2/contents.html) 또한 한 번쯤 읽어 봐야 할 매우 잘 쓰인 [표준 라이브러리](./stdlib.md#stdlib) 가이드입니다.
 
 ## 참고 문서
 
