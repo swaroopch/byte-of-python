@@ -125,7 +125,7 @@
 - [PyPy](http://codespeak.net/pypy/dist/pypy/doc/home.html)
     - PyPy는 파이썬으로 작성된 파이썬 구현입니다! 이것은 C, Java, C# 등과 같은 정적인 언어를 배제한 동적 언어로 구현된 인터프리터가 어디까지 빨라질 수 있으며 또 얼마나 쉽게 구현할 수 있는지 확인해보려는 연구 프로젝트입니다.
 
-이외에도 [CLPython](http://common-lisp.net/project/clpython/) 이라는 Common Lisp 으로 작성된 파이썬 구현이 있습니다. 또 자바 스크립트 인터프리터 상에서 동작하는 [Brython](http://brython.info/) 이 있는데, 이를 이용하면 자바 스크립트 대신 파이썬을 이용하여 웹 브라우저 상에서 동작하는 Ajax 프로그램을 제작할 수도 있습니다.
+이외에도 [CLPython](http://common-lisp.net/project/clpython/) 이라는 Common Lisp으로 작성된 파이썬 구현이 있습니다. 또 자바 스크립트 인터프리터 상에서 동작하는 [Brython](http://brython.info/) 이 있는데, 이를 이용하면 자바 스크립트 대신 파이썬을 이용하여 웹 브라우저 상에서 동작하는 Ajax 프로그램을 제작할 수도 있습니다.
 
 이러한 각각의 파이썬 구현은 각 분야에서 유용하게 사용됩니다.
 
