@@ -187,12 +187,6 @@ Artur Weber (arturweberguimaraes@gmail.com) has completed a translation of this 
 >
 > I found the materials from your site useful for some of my students who are writing papers based on programming on Python. Actually, that is why I made a decision to perform a Portuguese translation to let my students who don't know English read exciting articles in their mother tongue ( in Portuguese).
 
-## Romanian
-
-Paul-Sebastian Manole (brokenthorn@gmail.com) has volunteered to translate this book to Romanian.
-
-> _Paul-Sebastian Manole_ - I'm a second year Computer Science student at Spiru Haret University, here in Romania. I'm more of a self-taught programmer and decided to learn a new language, Python. The web told me there was no better way to do so but read ''A Byte of Python''. That's how popular this book is (congratulations to the author for writing such an easy to read book). I started liking Python so I decided to help translate the latest version of Swaroop's book in Romanian. Although I could be the one with the first initiative, I'm just one volunteer so if you can help, please join me.
-
 ## Russian
 
 Vladimir Smolyar (v_2e@ukr.net) has completed a Russian translation at <http://wombat.org.ua/AByteOfPython/>.
