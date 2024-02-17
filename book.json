@@ -1,8 +1,8 @@
 {
     "variables": {
-        "authorUrl": "https://swaroopch.com/about",
-        "buyBookUrl": "https://swaroopch.com/buybook",
-        "contactUrl": "https://swaroopch.com/contact",
+        "authorUrl": "https://swaroopch.com/notes/about",
+        "buyBookUrl": "https://swaroopch.com/notes/buybook",
+        "contactUrl": "https://swaroopch.com/notes/about",
         "downloadUrl": "https://github.com/swaroopch/byte-of-python/releases/latest",
         "officialUrl": "https://python.swaroopch.com",
         "pythonVersion": "3.6.0",
