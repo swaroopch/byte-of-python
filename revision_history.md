@@ -42,7 +42,7 @@ The book needs the help of its readers such as yourselves to point out any parts
     - 04 Sep 2008 and still in progress
     - Revival after a gap of 3.5 years!
     - Rewriting for Python 3.0
-    - Rewrite using http://www.mediawiki.org[MediaWiki] (again)
+    - Rewrite using [MediaWiki](http://www.mediawiki.org) (again)
 
 - 1.20
     - 13 Jan 2005
