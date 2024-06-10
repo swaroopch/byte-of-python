@@ -3,10 +3,10 @@ name: CI
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
-    types: [opened, reopened]
+    # branches:
+    #   - master
+  # pull_request:
+  #   types: [opened, reopened]
 
 jobs:
   build:
