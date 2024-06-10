@@ -21,9 +21,9 @@ jobs:
 
       # https://github.com/actions/setup-node
       - name: Install Node.js
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
 
       # https://github.com/actions/checkout
       - name: Checkout
