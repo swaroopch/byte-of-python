@@ -11,7 +11,8 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-latest
 
     steps:
 
