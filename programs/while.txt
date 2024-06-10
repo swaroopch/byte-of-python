@@ -1,0 +1,9 @@
+$ python while.py
+Enter an integer : 50
+No, it is a little lower than that.
+Enter an integer : 22
+No, it is a little higher than that.
+Enter an integer : 23
+Congratulations, you guessed it.
+The while loop is over.
+Done

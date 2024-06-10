@@ -1,0 +1,5 @@
+$ python ds_str_methods.py
+Yes, the string starts with "Swa"
+Yes, it contains the string "a"
+Yes, it contains the string "war"
+Brazil_*_Russia_*_India_*_China

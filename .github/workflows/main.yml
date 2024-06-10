@@ -1,0 +1,91 @@
+# https://help.github.com/en/actions/automating-your-workflow-with-github-actions
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Install Calibre
+        run: |
+          sudo apt update
+          sudo apt install calibre  # for `ebook-convert` command
+
+      # https://github.com/actions/setup-node
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # https://github.com/honkit/honkit
+      - name: Run Honkit
+        run: |
+          npm install honkit --save-dev
+          npx honkit build . public --log=debug
+          npx honkit pdf . byte-of-python.pdf
+          npx honkit epub . byte-of-python.epub
+
+      # https://github.com/crazy-max/ghaction-github-pages
+      - name: Push to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: public
+          fqdn: python.swaroopch.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # https://github.com/actions/create-release
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.sha }}
+          release_name: Release v${{ github.sha }}
+          draft: false
+          prerelease: false
+
+      # https://github.com/actions/upload-release-asset
+      - name: Upload Release PDF
+        id: upload-release-pdf
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include
+          # a `upload_url`. See this blog post for more info:
+          # https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./byte-of-python.pdf
+          asset_name: byte-of-python.pdf
+          asset_content_type: application/pdf
+
+      # https://github.com/actions/upload-release-asset
+      - name: Upload Release EPUB
+        id: upload-release-epub
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include
+          # a `upload_url`. See this blog post for more info:
+          # https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./byte-of-python.epub
+          asset_name: byte-of-python.epub
+          asset_content_type: application/epub+zip

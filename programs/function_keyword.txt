@@ -1,0 +1,4 @@
+$ python function_keyword.py
+a is 3 and b is 7 and c is 10
+a is 25 and b is 5 and c is 24
+a is 100 and b is 5 and c is 50

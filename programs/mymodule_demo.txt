@@ -1,0 +1,3 @@
+$ python mymodule_demo.py
+Hi, this is mymodule speaking.
+Version 0.1

@@ -1,0 +1,16 @@
+$ python ds_seq.py
+Item 0 is apple
+Item 1 is mango
+Item 2 is carrot
+Item 3 is banana
+Item -1 is banana
+Item -2 is carrot
+Character 0 is s
+Item 1 to 3 is ['mango', 'carrot']
+Item 2 to end is ['carrot', 'banana']
+Item 1 to -1 is ['mango', 'carrot']
+Item start to end is ['apple', 'mango', 'carrot', 'banana']
+characters 1 to 3 is wa
+characters 2 to end is aroop
+characters 1 to -1 is waroo
+characters start to end is swaroop

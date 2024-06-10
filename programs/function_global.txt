@@ -1,0 +1,4 @@
+$ python function_global.py
+x is 50
+Changed global x to 2
+Value of x is 2
