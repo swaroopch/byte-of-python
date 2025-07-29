@@ -195,6 +195,8 @@ Vladimir Smolyar (v_2e@ukr.net) has completed a Russian translation at <http://w
 
 Averkiev Andrey (averkiyev@ukr.net) has volunteered to translate the book to Russian, and perhaps Ukranian (time permitting).
 
+Daria JENS (jensdarya@gmail.com) has made a translation into Ukrainian language: <https://spielend-programmieren.at/byte_of_python_ukraine/>
+
 ## Serbian
 
 "BugSpice" (amortizerka@gmail.com) has completed a Serbian translation:
