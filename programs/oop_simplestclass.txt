@@ -1,0 +1,2 @@
+$ python oop_simplestclass.py
+&lt;__main__.Person instance at 0x10171f518&gt;

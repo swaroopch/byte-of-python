@@ -1,0 +1,746 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Input and Output · A Byte of Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exceptions.html" />
+    
+    
+    <link rel="prev" href="oop.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Dedication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    About Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    First Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Operators and Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Problem Solving
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Object Oriented Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Standard Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    More
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    What Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Appendix: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Appendix: About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Appendix: Revision History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Appendix: Translations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Appendix: Translation How-to
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Input and Output</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="io">Input and Output </h1>
+<p>There will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the <code>input()</code> function and <code>print</code> function respectively.</p>
+<p>For output, we can also use the various methods of the <code>str</code> (string) class. For example, you can use the <code>rjust</code> method to get a string which is right justified to a specified width. See <code>help(str)</code> for more details.</p>
+<p>Another common type of input/output is dealing with files. The ability to create, read and write files is essential to many programs and we will explore this aspect in this chapter.</p>
+<h2 id="input-from-user">Input from user</h2>
+<p>Save this program as <code>io_input.py</code>:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">reverse</span>(<span class="hljs-params">text</span>):
+    <span class="hljs-keyword">return</span> text[::-<span class="hljs-number">1</span>]
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">is_palindrome</span>(<span class="hljs-params">text</span>):
+    <span class="hljs-keyword">return</span> text == reverse(text)
+
+
+something = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter text: "</span>)
+<span class="hljs-keyword">if</span> is_palindrome(something):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Yes, it is a palindrome"</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"No, it is not a palindrome"</span>)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python3 io_input.py
+Enter text: sir
+No, it is not a palindrome
+
+$ python3 io_input.py
+Enter text: madam
+Yes, it is a palindrome
+
+$ python3 io_input.py
+Enter text: racecar
+Yes, it is a palindrome
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>We use the slicing feature to reverse the text. We've already seen how we can make <a href="data_structures.html#sequence">slices from sequences</a> using the <code>seq[a:b]</code> code starting from position <code>a</code> to position <code>b</code>. We can also provide a third argument that determines the <em>step</em> by which the slicing is done. The default step is <code>1</code> because of which it returns a continuous part of the text. Giving a negative step, i.e., <code>-1</code> will return the text in reverse.</p>
+<p>The <code>input()</code> function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the <code>input()</code> function will then return that text the user has entered.</p>
+<p>We take that text and reverse it. If the original text and reversed text are equal, then the text is a <a href="http://en.wiktionary.org/wiki/palindrome" target="_blank">palindrome</a>.</p>
+<h3 id="homework-exercise">Homework exercise</h3>
+<p>Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For example, "Rise to vote, sir." is also a palindrome but our current program doesn't say it is. Can you improve the above program to recognize this palindrome?</p>
+<p>If you need a hint, the idea is that...<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<h2 id="files">Files</h2>
+<p>You can open and use files for reading or writing by creating an object of the <code>file</code> class and using its <code>read</code>, <code>readline</code> or <code>write</code> methods appropriately to read from or write to the file. The ability to read or write to the file depends on the mode you have specified for the file opening. Then finally, when you are finished with the file, you call the <code>close</code> method to tell Python that we are done using the file.</p>
+<p>Example (save as <code>io_using_file.py</code>):</p>
+<pre><code class="lang-python">poem = <span class="hljs-string">'''\
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+'''</span>
+
+<span class="hljs-comment"># Open for 'w'riting</span>
+f = <span class="hljs-built_in">open</span>(<span class="hljs-string">'poem.txt'</span>, <span class="hljs-string">'w'</span>)
+<span class="hljs-comment"># Write text to file</span>
+f.write(poem)
+<span class="hljs-comment"># Close the file</span>
+f.close()
+
+<span class="hljs-comment"># If no mode is specified,</span>
+<span class="hljs-comment"># 'r'ead mode is assumed by default</span>
+f = <span class="hljs-built_in">open</span>(<span class="hljs-string">'poem.txt'</span>)
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    line = f.readline()
+    <span class="hljs-comment"># Zero length indicates EOF</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(line) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-comment"># The `line` already has a newline</span>
+    <span class="hljs-comment"># at the end of each line</span>
+    <span class="hljs-comment"># since it is reading from a file.</span>
+    <span class="hljs-built_in">print</span>(line, end=<span class="hljs-string">''</span>)
+<span class="hljs-comment"># close the file</span>
+f.close()
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python3 io_using_file.py
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>Note that we can create a new file object simply by using the <code>open</code> method.  We open (or create it if it doesn't already exist) this file by using the built-in <code>open</code> function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (<code>'r'</code>), write mode (<code>'w'</code>) or append mode (<code>'a'</code>). We can also specify whether we are reading, writing, or appending in text mode (<code>'t'</code>) or binary mode (<code>'b'</code>). There are actually many more modes available and <code>help(open)</code> will give you more details about them. By default, <code>open()</code> considers the file to be a 't'ext file and opens it in 'r'ead mode.</p>
+<p>In our example, we first open/create the file in write text mode and use the <code>write</code> method of the file object to write  our string variable <code>poem</code> to the file and then we finally <code>close</code> the file.</p>
+<p>Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the <code>readline</code> method in a loop. This method returns a complete line including the newline character at the end of the line. When an <em>empty</em> string is returned, it means that we have reached the end of the file and we 'break' out of the loop.</p>
+<p>In the end, we finally <code>close</code> the file.</p>
+<p>We can see from our <code>readline</code> output that this program has indeed written to and read from our new <code>poem.txt</code> file.</p>
+<h2 id="pickle">Pickle</h2>
+<p>Python provides a standard module called <code>pickle</code> which you can use to store <em>any</em> plain Python object in a file and then get it back later. This is called storing the object <em>persistently</em>.</p>
+<p>Example (save as <code>io_pickle.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pickle
+
+<span class="hljs-comment"># The name of the file where we will store the object</span>
+shoplistfile = <span class="hljs-string">'shoplist.data'</span>
+<span class="hljs-comment"># The list of things to buy</span>
+shoplist = [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>]
+
+<span class="hljs-comment"># Write to the file</span>
+f = <span class="hljs-built_in">open</span>(shoplistfile, <span class="hljs-string">'wb'</span>)
+<span class="hljs-comment"># Dump the object to a file</span>
+pickle.dump(shoplist, f)
+f.close()
+
+<span class="hljs-comment"># Destroy the shoplist variable</span>
+<span class="hljs-keyword">del</span> shoplist
+
+<span class="hljs-comment"># Read back from the storage</span>
+f = <span class="hljs-built_in">open</span>(shoplistfile, <span class="hljs-string">'rb'</span>)
+<span class="hljs-comment"># Load the object from the file</span>
+storedlist = pickle.load(f)
+<span class="hljs-built_in">print</span>(storedlist)
+f.close()
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python io_pickle.py
+['apple', 'mango', 'carrot']
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>To store an object in a file, we have to first <code>open</code> the file in <strong>w</strong>rite <strong>b</strong>inary mode and then call the <code>dump</code> function of the <code>pickle</code> module. This process is called <em>pickling</em>.</p>
+<p>Next, we retrieve the object using the <code>load</code> function of the <code>pickle</code> module which returns the object. This process is called <em>unpickling</em>.</p>
+<h2 id="unicode">Unicode</h2>
+<p>So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  </p>
+<blockquote>
+<p>NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the <code>unicode</code> type, and it all starts with the character <code>u</code>, e.g. <code>u"hello world"</code></p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">"hello world"</span>
+<span class="hljs-string">'hello world'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">type</span>(<span class="hljs-string">"hello world"</span>)
+&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">'str'</span>&gt;
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">u"hello world"</span>
+<span class="hljs-string">'hello world'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">type</span>(<span class="hljs-string">u"hello world"</span>)
+&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">'str'</span>&gt;
+</code></pre>
+<p>When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our <code>open</code> function.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># encoding=utf-8</span>
+<span class="hljs-keyword">import</span> io
+
+f = io.<span class="hljs-built_in">open</span>(<span class="hljs-string">"abc.txt"</span>, <span class="hljs-string">"wt"</span>, encoding=<span class="hljs-string">"utf-8"</span>)
+f.write(<span class="hljs-string">u"Imagine non-English language here"</span>)
+f.close()
+
+text = io.<span class="hljs-built_in">open</span>(<span class="hljs-string">"abc.txt"</span>, encoding=<span class="hljs-string">"utf-8"</span>).read()
+<span class="hljs-built_in">print</span>(text)
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>We use <code>io.open</code> and then use the <code>encoding</code> argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.</p>
+<p>Whenever we write a program that uses Unicode literals (by putting a <code>u</code> before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  <code># encoding=utf-8</code>  comment at the top of our program.  </p>
+<p>You should learn more about this topic by reading:</p>
+<ul>
+<li><a href="http://www.joelonsoftware.com/articles/Unicode.html" target="_blank">"The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"</a></li>
+<li><a href="http://docs.python.org/3/howto/unicode.html" target="_blank">Python Unicode Howto</a></li>
+<li><a href="http://nedbatchelder.com/text/unipain.html" target="_blank">Pragmatic Unicode talk by Nat Batchelder</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>We have discussed various types of input/output, about file handling, about the pickle module and about Unicode.</p>
+<p>Next, we will explore the concept of exceptions.</p>
+<hr></hr>
+<blockquote id="fn_1">
+<sup>1</sup>. Use a tuple (you can find a list of <em>all</em> <a href="http://grammar.ccc.commnet.edu/grammar/marks/marks.htm" target="_blank">punctuation marks here</a>) to hold all the forbidden characters, then use the membership test to determine whether a character should be removed or not, i.e. forbidden = (<code>!</code>, <code>?</code>, <code>.</code>, ...).<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="oop.html" class="navigation navigation-prev " aria-label="Previous page: Object Oriented Programming">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exceptions.html" class="navigation navigation-next " aria-label="Next page: Exceptions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Input and Output","level":"1.15","depth":1,"next":{"title":"Exceptions","level":"1.16","depth":1,"path":"exceptions.md","ref":"exceptions.md","articles":[]},"previous":{"title":"Object Oriented Programming","level":"1.14","depth":1,"path":"oop.md","ref":"oop.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"authorUrl":"https://swaroopch.com/about/","buyBookUrl":"https://swaroopch.com/buybook/","contactUrl":"https://swaroopch.com/contact/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","officialUrl":"https://python.swaroopch.com","pythonVersion":"3.6.0","sourceUrl":"https://github.com/swaroopch/byte-of-python","vimBookUrl":"https://vim.swaroopch.com/"},"title":"A Byte of Python","gitbook":"*"},"file":{"path":"io.md","mtime":"2025-08-17T16:14:54.594Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-17T16:15:06.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

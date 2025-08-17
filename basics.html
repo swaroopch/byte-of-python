@@ -1,0 +1,855 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Basics · A Byte of Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="op_exp.html" />
+    
+    
+    <link rel="prev" href="first_steps.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Dedication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    About Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    First Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Operators and Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Problem Solving
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Object Oriented Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Standard Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    More
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    What Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Appendix: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Appendix: About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Appendix: Revision History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Appendix: Translations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Appendix: Translation How-to
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="basics">Basics</h1>
+<p>Just printing <code>hello world</code> is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we'll learn some other concepts as well in this chapter.</p>
+<h2 id="comments">Comments</h2>
+<p><em>Comments</em> are any text to the right of the <code>#</code> symbol and is mainly useful as notes for the reader of the program.</p>
+<p>For example:</p>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">'hello world'</span>) <span class="hljs-comment"># Note that print is a function</span>
+</code></pre>
+<p>or:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Note that print is a function</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'hello world'</span>)
+</code></pre>
+<p>Use as many useful comments as you can in your program to:</p>
+<ul>
+<li>explain assumptions</li>
+<li>explain important decisions</li>
+<li>explain important details</li>
+<li>explain problems you're trying to solve</li>
+<li>explain problems you're trying to overcome in your program, etc.</li>
+</ul>
+<p><a href="http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html" target="_blank"><em>Code tells you how, comments should tell you why</em></a>.</p>
+<p>This is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!</p>
+<h2 id="literal-constants">Literal Constants</h2>
+<p>An example of a literal constant is a number like <code>5</code>, <code>1.23</code>, or a string like <code>'This is a string'</code> or <code>"It's a string!"</code>.</p>
+<p>It is called a literal because it is <em>literal</em> - you use its value literally. The number <code>2</code> always represents itself and nothing else - it is a <em>constant</em> because its value cannot be changed. Hence, all these are referred to as literal constants.</p>
+<h2 id="numbers">Numbers</h2>
+<p>Numbers are mainly of two types - integers and floats.</p>
+<p>An example of an integer is <code>2</code> which is just a whole number.</p>
+<p>Examples of floating point numbers (or <em>floats</em> for short) are <code>3.23</code> and <code>52.3E-4</code>. The <code>E</code> notation indicates powers of 10. In this case, <code>52.3E-4</code> means <code>52.3 * 10^-4</code>.</p>
+<blockquote>
+<p><strong>Note for Experienced Programmers</strong></p>
+<p>There is no separate <code>long</code> type. The <code>int</code> type can be an integer of any size.</p>
+</blockquote>
+<h2 id="strings">Strings</h2>
+<p>A string is a <em>sequence</em> of <em>characters</em>. Strings are basically just a bunch of words.</p>
+<p>You will be using strings in almost every Python program that you write, so pay attention to the following part.</p>
+<h3 id="single-quote">Single Quote</h3>
+<p>You can specify strings using single quotes such as <code>'Quote me on this'</code>.</p>
+<p>All white space i.e. spaces and tabs, within the quotes, are preserved as-is.</p>
+<h3 id="double-quotes">Double Quotes</h3>
+<p>Strings in double quotes work exactly the same way as strings in single quotes. An example is <code>"What's your name?"</code>.</p>
+<h3 id="triple-quotes">Triple Quotes </h3>
+<p>You can specify multi-line strings using triple quotes - (<code>"""</code> or <code>'''</code>). You can use single quotes and double quotes freely within the triple quotes. An example is:</p>
+<pre><code class="lang-python"><span class="hljs-string">'''This is a multi-line string. This is the first line.
+This is the second line.
+"What's your name?," I asked.
+He said "Bond, James Bond."
+'''</span>
+</code></pre>
+<h3 id="strings-are-immutable">Strings Are Immutable</h3>
+<p>This means that once you have created a string, you cannot change it. Although this might seem like
+a bad thing, it really isn't. We will see why this is not a limitation in the various programs that
+we see later on.</p>
+<blockquote>
+<p><strong>Note for C/C++ Programmers</strong></p>
+<p>There is no separate <code>char</code> data type in Python. There is no real need for it and I am sure you won't miss it.</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>Note for Perl/PHP Programmers</strong></p>
+<p>Remember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.</p>
+</blockquote>
+<h3 id="the-format-method">The format method</h3>
+<p>Sometimes we may want to construct strings from other information. This is where the <code>format()</code> method is useful.</p>
+<p>Save the following lines as a file <code>str_format.py</code>:</p>
+<pre><code class="lang-python">age = <span class="hljs-number">20</span>
+name = <span class="hljs-string">'Swaroop'</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'{0} was {1} years old when he wrote this book'</span>.<span class="hljs-built_in">format</span>(name, age))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Why is {0} playing with that python?'</span>.<span class="hljs-built_in">format</span>(name))
+</code></pre>
+<p>Output:</p>
+<pre><code>$ python str_format.py
+Swaroop was 20 years old when he wrote this book
+Why is Swaroop playing with that python?
+</code></pre><p><strong>How It Works</strong></p>
+<p>A string can use certain specifications and subsequently, the <code>format</code> method can be called to substitute those specifications with corresponding arguments to the <code>format</code> method.</p>
+<p>Observe the first usage where we use <code>{0}</code> and this corresponds to the variable <code>name</code> which is the first argument to the format method. Similarly, the second specification is <code>{1}</code> corresponding to <code>age</code> which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.</p>
+<p>Notice that we could have achieved the same using string concatenation:</p>
+<pre><code class="lang-python">name + <span class="hljs-string">' is '</span> + <span class="hljs-built_in">str</span>(age) + <span class="hljs-string">' years old'</span>
+</code></pre>
+<p>but that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the <code>format</code> method instead of the explicit conversion to strings needed in this case. Third, when using the <code>format</code> method, we can change the message without having to deal with the variables used and vice-versa.</p>
+<p>Also note that the numbers are optional, so you could have also written as:</p>
+<pre><code class="lang-python">age = <span class="hljs-number">20</span>
+name = <span class="hljs-string">'Swaroop'</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'{} was {} years old when he wrote this book'</span>.<span class="hljs-built_in">format</span>(name, age))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Why is {} playing with that python?'</span>.<span class="hljs-built_in">format</span>(name))
+</code></pre>
+<p>which will give the same exact output as the previous program.</p>
+<p>We can also name the parameters:</p>
+<pre><code class="lang-python">age = <span class="hljs-number">20</span>
+name = <span class="hljs-string">'Swaroop'</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'{name} was {age} years old when he wrote this book'</span>.<span class="hljs-built_in">format</span>(name=name, age=age))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Why is {name} playing with that python?'</span>.<span class="hljs-built_in">format</span>(name=name))
+</code></pre>
+<p>which will give the same exact output as the previous program.</p>
+<p>Python 3.6 introduced a shorter way to do named parameters, called "f-strings":</p>
+<pre><code class="lang-python">age = <span class="hljs-number">20</span>
+name = <span class="hljs-string">'Swaroop'</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f'<span class="hljs-subst">{name}</span> was <span class="hljs-subst">{age}</span> years old when he wrote this book'</span>)  <span class="hljs-comment"># notice the 'f' before the string</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f'Why is <span class="hljs-subst">{name}</span> playing with that python?'</span>)  <span class="hljs-comment"># notice the 'f' before the string</span>
+</code></pre>
+<p>which will give the same exact output as the previous program.</p>
+<p>What Python does in the <code>format</code> method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># decimal (.) precision of 3 for float '0.333'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'{0:.3f}'</span>.<span class="hljs-built_in">format</span>(<span class="hljs-number">1.0</span>/<span class="hljs-number">3</span>))
+<span class="hljs-comment"># fill with underscores (_) with the text centered</span>
+<span class="hljs-comment"># (^) to 11 width '___hello___'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'{0:_^11}'</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">'hello'</span>))
+<span class="hljs-comment"># keyword-based 'Swaroop wrote A Byte of Python'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'{name} wrote {book}'</span>.<span class="hljs-built_in">format</span>(name=<span class="hljs-string">'Swaroop'</span>, book=<span class="hljs-string">'A Byte of Python'</span>))
+</code></pre>
+<p>Output:</p>
+<pre><code>0.333
+___hello___
+Swaroop wrote A Byte of Python
+</code></pre><p>Since we are discussing formatting, note that <code>print</code> always ends with an invisible "new line" character (<code>\n</code>) so that repeated calls to <code>print</code> will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should <code>end</code> with a blank:</p>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">'a'</span>, end=<span class="hljs-string">''</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'b'</span>, end=<span class="hljs-string">''</span>)
+</code></pre>
+<p>Output is:</p>
+<pre><code>ab
+</code></pre><p>Or you can <code>end</code> with a space:</p>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">'a'</span>, end=<span class="hljs-string">' '</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'b'</span>, end=<span class="hljs-string">' '</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'c'</span>)
+</code></pre>
+<p>Output is:</p>
+<pre><code>a b c
+</code></pre><h3 id="escape-sequences">Escape Sequences</h3>
+<p>Suppose, you want to have a string which contains a single quote (<code>'</code>), how will you specify this string? For example, the string is <code>"What's your name?"</code>. You cannot specify <code>'What's your name?'</code> because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an <em>escape sequence</em>. You specify the single quote as <code>\'</code> : notice the backslash. Now, you can specify the string as <code>'What\'s your name?'</code>.</p>
+<p>Another way of specifying this specific string would be <code>"What's your name?"</code> i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence <code>\\</code>.</p>
+<p>What if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown <a href="#triple-quotes">previously</a> or you can use an escape sequence for the newline character - <code>\n</code> to indicate the start of a new line. An example is:</p>
+<pre><code class="lang-python"><span class="hljs-string">'This is the first line\nThis is the second line'</span>
+</code></pre>
+<p>Another useful escape sequence to know is the tab: <code>\t</code>. There are many more escape sequences but I have mentioned only the most useful ones here.</p>
+<p>One thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:</p>
+<pre><code class="lang-python"><span class="hljs-string">"This is the first sentence. \
+This is the second sentence."</span>
+</code></pre>
+<p>is equivalent to</p>
+<pre><code class="lang-python"><span class="hljs-string">"This is the first sentence. This is the second sentence."</span>
+</code></pre>
+<h3 id="raw-string">Raw String</h3>
+<p>If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a <em>raw</em> string by prefixing <code>r</code> or <code>R</code> to the string. An example is:</p>
+<pre><code class="lang-python"><span class="hljs-string">r"Newlines are indicated by \n"</span>
+</code></pre>
+<blockquote>
+<p><strong>Note for Regular Expression Users</strong></p>
+<p>Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as <code>'\\1'</code> or <code>r'\1'</code>.</p>
+</blockquote>
+<h2 id="variable">Variable</h2>
+<p>Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where <em>variables</em> come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer's memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.</p>
+<h2 id="identifier-naming">Identifier Naming</h2>
+<p>Variables are examples of identifiers. <em>Identifiers</em> are names given to identify <em>something</em>. There are some rules you have to follow for naming identifiers:</p>
+<ul>
+<li>The first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (<code>_</code>).</li>
+<li>The rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (<code>_</code>) or digits (0-9).</li>
+<li>Identifier names are case-sensitive. For example, <code>myname</code> and <code>myName</code> are <em>not</em> the same. Note the lowercase <code>n</code> in the former and the uppercase <code>N</code> in the latter.</li>
+<li>Examples of <em>valid</em> identifier names are <code>i</code>, <code>name_2_3</code>. Examples of <em>invalid</em> identifier names are <code>2things</code>, <code>this is spaced out</code>, <code>my-name</code> and <code>&gt;a1b2_c3</code>.</li>
+</ul>
+<h2 id="data-types">Data Types</h2>
+<p>Variables can hold values of different types called <em>data types</em>. The basic types are numbers and strings, which we have already discussed. In later chapters, we will see how to create our own types using <a href="oop.html#classes">classes</a>.</p>
+<h2 id="object">Object</h2>
+<p>Remember, Python refers to anything used in a program as an <em>object</em>.  This is meant in the generic sense. Instead of saying "the <em>something</em>"', we say "the <em>object</em>".</p>
+<blockquote>
+<p><strong>Note for Object Oriented Programming users</strong>:</p>
+<p>Python is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.</p>
+</blockquote>
+<p>We will now see how to use variables along with literal constants. Save the following example and run the program.</p>
+<h2 id="how-to-write-python-programs">How to write Python programs</h2>
+<p>Henceforth, the standard procedure to save and run a Python program is as follows:</p>
+<h3 id="for-pycharm">For PyCharm</h3>
+<ol>
+<li>Open <a href="first_steps.html#pycharm">PyCharm</a>.</li>
+<li>Create new file with the filename mentioned.</li>
+<li>Type the program code given in the example.</li>
+<li>Right-click and run the current file.</li>
+</ol>
+<p>NOTE: Whenever you have to provide <a href="modules.html#modules">command line arguments</a>, click on <code>Run</code> -&gt; <code>Edit Configurations</code> and type the arguments in the <code>Script parameters:</code> section and click the <code>OK</code> button:</p>
+<p><img src="img/pycharm_command_line_arguments.png" alt="PyCharm command line arguments"></img></p>
+<h3 id="for-other-editors">For other editors</h3>
+<ol>
+<li>Open your editor of choice.</li>
+<li>Type the program code given in the example.</li>
+<li>Save it as a file with the filename mentioned.</li>
+<li>Run the interpreter with the command <code>python program.py</code> to run the program.</li>
+</ol>
+<h3 id="example-using-variables-and-literal-constants">Example: Using Variables And Literal Constants</h3>
+<p>Type and run the following program:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Filename : var.py</span>
+i = <span class="hljs-number">5</span>
+<span class="hljs-built_in">print</span>(i)
+i = i + <span class="hljs-number">1</span>
+<span class="hljs-built_in">print</span>(i)
+
+s = <span class="hljs-string">'''This is a multi-line string.
+This is the second line.'''</span>
+<span class="hljs-built_in">print</span>(s)
+</code></pre>
+<p>Output:</p>
+<pre><code>5
+6
+This is a multi-line string.
+This is the second line.
+</code></pre><p><strong>How It Works</strong></p>
+<p>Here's how this program works. First, we assign the literal constant value <code>5</code> to the variable <code>i</code> using the assignment operator (<code>=</code>). This line is called a statement because it states that something should be done and in this case, we connect the variable name <code>i</code> to the value <code>5</code>. Next, we print the value of <code>i</code> using the <code>print</code> statement which, unsurprisingly, just prints the value of the variable to the screen.</p>
+<p>Then we add <code>1</code> to the value stored in <code>i</code> and store it back. We then print it and expectedly, we get the value <code>6</code>.</p>
+<p>Similarly, we assign the literal string to the variable <code>s</code> and then print it.</p>
+<blockquote>
+<p><strong>Note for static language programmers</strong></p>
+<p>Variables are used by just assigning them a value. No declaration or data type definition is needed/used.</p>
+</blockquote>
+<h2 id="logical-and-physical-line">Logical And Physical Line</h2>
+<p>A physical line is what you <em>see</em> when you write the program. A logical line is what <em>Python sees</em> as a single statement. Python implicitly assumes that each <em>physical line</em> corresponds to a <em>logical line</em>.</p>
+<p>An example of a logical line is a statement like <code>print('hello world')</code> - if this was on a line by itself (as you see it in an editor), then this also corresponds to a physical line.</p>
+<p>Implicitly, Python encourages the use of a single statement per line which makes code more readable.</p>
+<p>If you want to specify more than one logical line on a single physical line, then you have to explicitly specify this using a semicolon (<code>;</code>) which indicates the end of a logical line/statement. For example:</p>
+<pre><code class="lang-python">i = <span class="hljs-number">5</span>
+<span class="hljs-built_in">print</span>(i)
+</code></pre>
+<p>is effectively same as</p>
+<pre><code class="lang-python">i = <span class="hljs-number">5</span>;
+<span class="hljs-built_in">print</span>(i);
+</code></pre>
+<p>which is also same as</p>
+<pre><code class="lang-python">i = <span class="hljs-number">5</span>; <span class="hljs-built_in">print</span>(i);
+</code></pre>
+<p>and same as</p>
+<pre><code class="lang-python">i = <span class="hljs-number">5</span>; <span class="hljs-built_in">print</span>(i)
+</code></pre>
+<p>However, I <em>strongly recommend</em> that you stick to <em>writing a maximum of a single logical line on each single physical line</em>. The idea is that you should never use the semicolon. In fact, I have <em>never</em> used or even seen a semicolon in a Python program.</p>
+<p>There is one kind of situation where this concept is really useful: if you have a long line of code, you can break it into multiple physical lines by using the backslash. This is referred to as <em>explicit line joining</em>:</p>
+<pre><code class="lang-python">s = <span class="hljs-string">'This is a string. \
+This continues the string.'</span>
+<span class="hljs-built_in">print</span>(s)
+</code></pre>
+<p>Output:</p>
+<pre><code>This is a string. This continues the string.
+</code></pre><p>Similarly,</p>
+<pre><code class="lang-python">i = \
+<span class="hljs-number">5</span>
+</code></pre>
+<p>is the same as</p>
+<pre><code class="lang-python">i = <span class="hljs-number">5</span>
+</code></pre>
+<p>Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called <em>implicit line joining</em>. You can see this in action when we write programs using <a href="data_structures.html#lists">list</a> in later chapters.</p>
+<h2 id="indentation">Indentation</h2>
+<p>Whitespace is important in Python. Actually, <em>whitespace at the beginning of the line is important</em>. This is called <em>indentation</em>. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.</p>
+<p>This means that statements which go together <em>must</em> have the same indentation. Each such set of statements is called a <em>block</em>. We will see examples of how blocks are important in later chapters.</p>
+<p>One thing you should remember is that wrong indentation can give rise to errors. For example:</p>
+<pre><code class="lang-python">i = <span class="hljs-number">5</span>
+<span class="hljs-comment"># Error below! Notice a single space at the start of the line</span>
+ <span class="hljs-built_in">print</span>(<span class="hljs-string">'Value is'</span>, i)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'I repeat, the value is'</span>, i)
+</code></pre>
+<p>When you run this, you get the following error:</p>
+<pre><code>  File "whitespace.py", line 3
+    print('Value is', i)
+    ^
+IndentationError: unexpected indent
+</code></pre><p>Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that <em>you cannot arbitrarily start new blocks of statements</em> (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the <a href="control_flow.html#control_flow">control flow</a>.</p>
+<blockquote>
+<p><strong>How to indent</strong></p>
+<p>Use four spaces for indentation. This is the official Python language recommendation. Good editors will automatically do this for you. Make sure you use a consistent number of spaces for indentation, otherwise your program will not run or will have unexpected behavior.</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>Note to static language programmers</strong></p>
+<p>Python will always use indentation for blocks and will never use braces. Run <code>from __future__ import braces</code> to learn more.</p>
+</blockquote>
+<h2 id="summary">Summary</h2>
+<p>Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as control flow statements. Be sure to become comfortable with what you have read in this chapter.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="first_steps.html" class="navigation navigation-prev " aria-label="Previous page: First Steps">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="op_exp.html" class="navigation navigation-next " aria-label="Next page: Operators and Expressions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basics","level":"1.7","depth":1,"next":{"title":"Operators and Expressions","level":"1.8","depth":1,"path":"op_exp.md","ref":"op_exp.md","articles":[]},"previous":{"title":"First Steps","level":"1.6","depth":1,"path":"first_steps.md","ref":"first_steps.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"authorUrl":"https://swaroopch.com/about/","buyBookUrl":"https://swaroopch.com/buybook/","contactUrl":"https://swaroopch.com/contact/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","officialUrl":"https://python.swaroopch.com","pythonVersion":"3.6.0","sourceUrl":"https://github.com/swaroopch/byte-of-python","vimBookUrl":"https://vim.swaroopch.com/"},"title":"A Byte of Python","gitbook":"*"},"file":{"path":"basics.md","mtime":"2025-08-17T16:14:54.579Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-17T16:15:06.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

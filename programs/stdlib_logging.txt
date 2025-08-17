@@ -1,0 +1,7 @@
+$ python stdlib_logging.py
+Logging to /Users/swa/test.log
+
+$ cat /Users/swa/test.log
+2014-03-29 09:27:36,660 : DEBUG : Start of the program
+2014-03-29 09:27:36,660 : INFO : Doing something
+2014-03-29 09:27:36,660 : WARNING : Dying now

@@ -1,0 +1,765 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Modules · A Byte of Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="data_structures.html" />
+    
+    
+    <link rel="prev" href="functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Dedication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    About Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    First Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Operators and Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Problem Solving
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Object Oriented Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Standard Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    More
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    What Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Appendix: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Appendix: About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Appendix: Revision History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Appendix: Translations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Appendix: Translation How-to
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Modules</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="modules">Modules</h1>
+<p>You have seen how you can reuse code in your program by defining functions once. What if you wanted to reuse a number of functions in other programs that you write? As you might have guessed, the answer is modules.</p>
+<p>There are various methods of writing modules, but the simplest way is to create a file with a <code>.py</code> extension that contains functions and variables.</p>
+<p>Another method is to write the modules in the native language in which the Python interpreter itself was written. For example, you can write modules in the <a href="http://docs.python.org/3/extending/" target="_blank">C programming language</a> and when compiled, they can be used from your Python code when using the standard Python interpreter.</p>
+<p>A module can be <em>imported</em> by another program to make use of its functionality. This is how we can use the Python standard library as well. First, we will see how to use the standard library modules.</p>
+<p>Example (save as <code>module_using_sys.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'The command line arguments are:'</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> sys.argv:
+    <span class="hljs-built_in">print</span>(i)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'\n\nThe PYTHONPATH is'</span>, sys.path, <span class="hljs-string">'\n'</span>)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python module_using_sys.py we are arguments    # each arg is separated by white space
+The command line arguments are:
+module_using_sys.py
+we
+are
+arguments
+
+
+The PYTHONPATH is ['/tmp/py',
+# many entries here, not shown here
+'/Library/Python/2.7/site-packages',
+'/usr/local/lib/python2.7/site-packages']
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>First, we <em>import</em> the <code>sys</code> module using the <code>import</code> statement. Basically, this translates to us telling Python that we want to use this module. The <code>sys</code> module contains functionality related to the Python interpreter and its environment i.e. the <strong>sys</strong>tem.</p>
+<p>When Python executes the <code>import sys</code> statement, it looks for the <code>sys</code> module. In this case, it is one of the built-in modules, and hence Python knows where to find it.</p>
+<p>If it was not a compiled module i.e. a module written in Python, then the Python interpreter will search for it in the directories listed in its <code>sys.path</code> variable. If the module is found, then the statements in the body of that module are run and the module is made <em>available</em> for you to use. Note that the initialization is done only the <em>first</em> time that we import a module.</p>
+<p>The <code>argv</code> variable in the <code>sys</code> module is accessed using the dotted notation i.e. <code>sys.argv</code>. It clearly indicates that this name is part of the <code>sys</code> module. Another advantage of this approach is that the name does not clash with any <code>argv</code> variable used in your program.</p>
+<p>The <code>sys.argv</code> variable is a <em>list</em> of strings (lists are explained in detail in a <a href="data_structures.html#data-structures">later chapter</a>). Specifically, the <code>sys.argv</code> contains the list of <em>command line arguments</em> i.e. the arguments passed to your program using the command line.</p>
+<p>If you are using an IDE to write and run these programs, look for a way to specify command line arguments to the program in the menus.</p>
+<p>Here, when we execute <code>python module_using_sys.py we are arguments</code>, we run the module <code>module_using_sys.py</code> with the <code>python</code> command and the other things that follow are arguments passed to the program. Python stores the command line arguments in the <code>sys.argv</code> variable for us to use.</p>
+<p>Remember, the name of the script running is always the first element in the <code>sys.argv</code> list. So, in this case we will have <code>'module_using_sys.py'</code> as <code>sys.argv[0]</code>, <code>'we'</code> as <code>sys.argv[1]</code>, <code>'are'</code> as <code>sys.argv[2]</code> and <code>'arguments'</code> as <code>sys.argv[3]</code>. Notice that Python starts counting from 0 and not 1.</p>
+<p>The <code>sys.path</code> contains the list of directory names where modules are imported from. Observe that the first string in <code>sys.path</code> is empty - this empty string indicates that the current directory is also part of the <code>sys.path</code> which is same as the <code>PYTHONPATH</code> environment variable. This means that you can directly import modules located in the current directory. Otherwise, you will have to place your module in one of the directories listed in <code>sys.path</code>.</p>
+<p>Note that the current directory is the directory from which the program is launched. Run <code>import os; print(os.getcwd())</code> to find out the current directory of your program.</p>
+<h2 id="pyc">Byte-compiled .pyc files </h2>
+<p>Importing a module is a relatively costly affair, so Python does some tricks to make it faster. One way is to create <em>byte-compiled</em> files with the extension <code>.pyc</code> which is an intermediate form that Python transforms the program into (remember the <a href="about_python.html#interpreted">introduction section</a> on how Python works?). This <code>.pyc</code> file is useful when you import the module the next time from a different program - it will be much faster since a portion of the processing required in importing a module is already done. Also, these byte-compiled files are platform-independent.</p>
+<p>NOTE: These <code>.pyc</code> files are usually created in the same directory as the corresponding <code>.py</code> files. If Python does not have permission to write to files in that directory, then the <code>.pyc</code> files will <em>not</em> be created.</p>
+<h2 id="from-import-statement">The from..import statement </h2>
+<p>If you want to directly import the <code>argv</code> variable into your program (to avoid typing the <code>sys.</code> everytime for it), then you can use the <code>from sys import argv</code> statement.</p>
+<blockquote>
+<p>WARNING: In general, <em>avoid</em> using the <code>from..import</code> statement, use the <code>import</code> statement instead. This is because your program will avoid name clashes and will be more readable.</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> sqrt
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Square root of 16 is"</span>, sqrt(<span class="hljs-number">16</span>))
+</code></pre>
+<h2 id="module-name">A module's <code>__name__</code> </h2>
+<p>Every module has a name and statements in a module can find out the name of their module. This is handy for the particular purpose of figuring out whether the module is being run standalone or being imported. As mentioned previously, when a module is imported for the first time, the code it contains gets executed. We can use this to make the module behave in different ways depending on whether it is being used by itself or being imported from another module. This can be achieved using the <code>__name__</code> attribute of the module.</p>
+<p>Example (save as <code>module_using_name.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'This program is being run by itself'</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'I am being imported from another module'</span>)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python module_using_name.py
+This program is being run by itself
+
+$ python
+&gt;&gt;&gt; import module_using_name
+I am being imported from another module
+&gt;&gt;&gt;
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>Every Python module has its <code>__name__</code> defined. If this is <code>'__main__'</code>, that implies that the module is being run standalone by the user and we can take appropriate actions.</p>
+<h2 id="making-your-own-modules">Making Your Own Modules</h2>
+<p>Creating your own modules is easy, you've been doing it all along!  This is because every Python program is also a module. You just have to make sure it has a <code>.py</code> extension. The following example should make it clear.</p>
+<p>Example (save as <code>mymodule.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hi</span>():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hi, this is mymodule speaking.'</span>)
+
+__version__ = <span class="hljs-string">'0.1'</span>
+</code></pre>
+
+<p>The above was a sample <em>module</em>. As you can see, there is nothing particularly special about it compared to our usual Python program. We will next see how to use this module in our other Python programs.</p>
+<p>Remember that the module should be placed either in the same directory as the program from which we import it, or in one of the directories listed in <code>sys.path</code>.</p>
+<p>Another module (save as <code>mymodule_demo.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> mymodule
+
+mymodule.say_hi()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Version'</span>, mymodule.__version__)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python mymodule_demo.py
+Hi, this is mymodule speaking.
+Version 0.1
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>Notice that we use the same dotted notation to access members of the module. Python makes good reuse of the same notation to give the distinctive 'Pythonic' feel to it so that we don't have to keep learning new ways to do things.</p>
+<p>Here is a version utilising the <code>from..import</code> syntax (save as <code>mymodule_demo2.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> mymodule <span class="hljs-keyword">import</span> say_hi, __version__
+
+say_hi()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Version'</span>, __version__)
+</code></pre>
+
+<p>The output of <code>mymodule_demo2.py</code> is same as the output of <code>mymodule_demo.py</code>.</p>
+<p>Notice that if there was already a <code>__version__</code> name declared in the module that imports mymodule, there would be a clash. This is also likely because it is common practice for each module to declare it's version number using this name. Hence, it is always recommended to prefer the <code>import</code> statement even though it might make your program a little longer.</p>
+<p>You could also use:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> mymodule <span class="hljs-keyword">import</span> *
+</code></pre>
+<p>This will import all public names such as <code>say_hi</code> but would not import <code>__version__</code> because it starts with double underscores.</p>
+<blockquote>
+<p>WARNING: Remember that you should avoid using import-star, i.e. <code>from mymodule import *</code>.</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>Zen of Python</strong></p>
+<p>One of Python's guiding principles is that "Explicit is better than Implicit". Run <code>import this</code> in Python to learn more.</p>
+</blockquote>
+<h2 id="dir-function">The <code>dir</code> function </h2>
+<p>The built-in <code>dir()</code> function returns the list of names defined by an object.
+If the object is a module, this list includes functions, classes and variables, defined inside that module.</p>
+<p>This function can accept arguments.
+If the argument is the name of a module, the function returns the list of names from that specified module.
+If there is no argument, the function returns the list of names from the current module.</p>
+<p>Example:</p>
+<pre><code class="lang-python">$ python
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-comment"># get names of attributes in sys module</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dir</span>(sys)
+[<span class="hljs-string">'__displayhook__'</span>, <span class="hljs-string">'__doc__'</span>,
+<span class="hljs-string">'argv'</span>, <span class="hljs-string">'builtin_module_names'</span>,
+<span class="hljs-string">'version'</span>, <span class="hljs-string">'version_info'</span>]
+<span class="hljs-comment"># only few entries shown here</span>
+
+<span class="hljs-comment"># get names of attributes for current module</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dir</span>()
+[<span class="hljs-string">'__builtins__'</span>, <span class="hljs-string">'__doc__'</span>,
+<span class="hljs-string">'__name__'</span>, <span class="hljs-string">'__package__'</span>, <span class="hljs-string">'sys'</span>]
+
+<span class="hljs-comment"># create a new variable 'a'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-number">5</span>
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dir</span>()
+[<span class="hljs-string">'__builtins__'</span>, <span class="hljs-string">'__doc__'</span>, <span class="hljs-string">'__name__'</span>, <span class="hljs-string">'__package__'</span>, <span class="hljs-string">'sys'</span>, <span class="hljs-string">'a'</span>]
+
+<span class="hljs-comment"># delete/remove a name</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">del</span> a
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dir</span>()
+[<span class="hljs-string">'__builtins__'</span>, <span class="hljs-string">'__doc__'</span>, <span class="hljs-string">'__name__'</span>, <span class="hljs-string">'__package__'</span>, <span class="hljs-string">'sys'</span>]
+</code></pre>
+<p><strong>How It Works</strong></p>
+<p>First, we see the usage of <code>dir</code> on the imported <code>sys</code> module. We can see the huge list of attributes that it contains.</p>
+<p>Next, we use the <code>dir</code> function without passing parameters to it. By default, it returns the list of attributes for the current module. Notice that the list of imported modules is also part of this list.</p>
+<p>In order to observe <code>dir</code> in action, we define a new variable <code>a</code> and assign it a value and then check <code>dir</code> and we observe that there is an additional value in the list of the same name. We remove the variable/attribute of the current module using the <code>del</code> statement and the change is reflected again in the output of the <code>dir</code> function.</p>
+<p>A note on <code>del</code>: This statement is used to <em>delete</em> a variable/name and after the statement has run, in this case <code>del a</code>, you can no longer access the variable <code>a</code> - it is as if it never existed before at all.</p>
+<p>Note that the <code>dir()</code> function works on <em>any</em> object. For example, run <code>dir(str)</code> for the attributes of the <code>str</code> (string) class.</p>
+<p>There is also a <a href="http://docs.python.org/3/library/functions.html#vars" target="_blank"><code>vars()</code></a> function which can potentially give you the attributes and their values, but it will not work for all cases.</p>
+<h2 id="packages">Packages</h2>
+<p>By now, you must have started observing the hierarchy of organizing your programs. Variables usually go inside functions. Functions and global variables usually go inside modules. What if you wanted to organize modules? That's where packages come into the picture.</p>
+<p>Packages are just folders of modules with a special <code>__init__.py</code> file that indicates to Python that this folder is special because it contains Python modules.</p>
+<p>Let's say you want to create a package called 'world' with subpackages 'asia', 'africa', etc. and these subpackages in turn contain modules like 'india', 'madagascar', etc.</p>
+<p>This is how you would structure the folders:</p>
+<pre><code>- &lt;some folder present in the sys.path&gt;/
+    - world/
+        - __init__.py
+        - asia/
+            - __init__.py
+            - india/
+                - __init__.py
+                - foo.py
+        - africa/
+            - __init__.py
+            - madagascar/
+                - __init__.py
+                - bar.py
+</code></pre><p>Packages are just a convenience to organize modules hierarchically. You will see many instances of this in the <a href="stdlib.html#stdlib">standard library</a>.</p>
+<h2 id="summary">Summary</h2>
+<p>Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.</p>
+<p>We have seen how to use these modules and create our own modules.</p>
+<p>Next, we will learn about some interesting concepts called data structures.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="functions.html" class="navigation navigation-prev " aria-label="Previous page: Functions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="data_structures.html" class="navigation navigation-next " aria-label="Next page: Data Structures">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Modules","level":"1.11","depth":1,"next":{"title":"Data Structures","level":"1.12","depth":1,"path":"data_structures.md","ref":"data_structures.md","articles":[]},"previous":{"title":"Functions","level":"1.10","depth":1,"path":"functions.md","ref":"functions.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"authorUrl":"https://swaroopch.com/about/","buyBookUrl":"https://swaroopch.com/buybook/","contactUrl":"https://swaroopch.com/contact/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","officialUrl":"https://python.swaroopch.com","pythonVersion":"3.6.0","sourceUrl":"https://github.com/swaroopch/byte-of-python","vimBookUrl":"https://vim.swaroopch.com/"},"title":"A Byte of Python","gitbook":"*"},"file":{"path":"modules.md","mtime":"2025-08-17T16:14:54.594Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-17T16:15:06.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

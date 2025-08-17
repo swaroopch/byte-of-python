@@ -1,0 +1,846 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Functions · A Byte of Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="modules.html" />
+    
+    
+    <link rel="prev" href="control_flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Dedication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    About Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    First Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Operators and Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Problem Solving
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Object Oriented Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Standard Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    More
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    What Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Appendix: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Appendix: About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Appendix: Revision History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Appendix: Translations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Appendix: Translation How-to
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="functions">Functions</h1>
+<p>Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. This is known as <em>calling</em> the function. We have already used many built-in functions such as <code>len</code> and <code>range</code>.</p>
+<p>The function concept is probably <em>the</em> most important building block of any non-trivial software (in any programming language), so we will explore various aspects of functions in this chapter.</p>
+<p>Functions are defined using the <code>def</code> keyword. After this keyword comes an <em>identifier</em> name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. An example will show that this is actually very simple:</p>
+<p>Example (save as <code>function1.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hello</span>():
+    <span class="hljs-comment"># block belonging to the function</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'hello world'</span>)
+<span class="hljs-comment"># End of function</span>
+
+say_hello()  <span class="hljs-comment"># call the function</span>
+say_hello()  <span class="hljs-comment"># call the function again</span>
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function1.py
+hello world
+hello world
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>We define a function called <code>say_hello</code> using the syntax as explained above. This function takes no parameters and hence there are no variables declared in the parentheses. Parameters to functions are just input to the function so that we can pass in different values to it and get back corresponding results.</p>
+<p>Notice that we can call the same function twice which means we do not have to write the same code again.</p>
+<h2 id="function-parameters">Function Parameters</h2>
+<p>A function can take parameters, which are values you supply to the function so that the function
+can <em>do</em> something utilising those values. These parameters are just like variables except that the
+values of these variables are defined when we call the function and are already assigned values
+when the function runs.</p>
+<p>Parameters are specified within the pair of parentheses in the function definition, separated by
+commas. When we call the function, we supply the values in the same way.  Note the terminology
+used - the names given in the function definition are called <em>parameters</em> whereas the values you
+supply in the function call are called <em>arguments</em>.</p>
+<p>Example (save as <code>function_param.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_max</span>(<span class="hljs-params">a, b</span>):
+    <span class="hljs-keyword">if</span> a &gt; b:
+        <span class="hljs-built_in">print</span>(a, <span class="hljs-string">'is maximum'</span>)
+    <span class="hljs-keyword">elif</span> a == b:
+        <span class="hljs-built_in">print</span>(a, <span class="hljs-string">'is equal to'</span>, b)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-built_in">print</span>(b, <span class="hljs-string">'is maximum'</span>)
+
+<span class="hljs-comment"># directly pass literal values</span>
+print_max(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+
+x = <span class="hljs-number">5</span>
+y = <span class="hljs-number">7</span>
+
+<span class="hljs-comment"># pass variables as arguments</span>
+print_max(x, y)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_param.py
+4 is maximum
+7 is maximum
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>Here, we define a function called <code>print_max</code> that uses two parameters called <code>a</code> and <code>b</code>.  We find out the greater number using a simple <code>if..else</code> statement and then print the bigger number.</p>
+<p>The first time we call the function <code>print_max</code>, we directly supply the numbers as arguments. In the second case, we call the function with variables as arguments. <code>print_max(x, y)</code> causes the value of argument <code>x</code> to be assigned to parameter <code>a</code> and the value of argument <code>y</code> to be assigned to parameter <code>b</code>. The <code>print_max</code> function works the same way in both cases.</p>
+<h2 id="local-variables">Local Variables</h2>
+<p>When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are <em>local</em> to the function. This is called the <em>scope</em> of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.</p>
+<p>Example (save as <code>function_local.py</code>):</p>
+<pre><code class="lang-python">x = <span class="hljs-number">50</span>
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>(<span class="hljs-params">x</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'x is'</span>, x)
+    x = <span class="hljs-number">2</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Changed local x to'</span>, x)
+
+
+func(x)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'x is still'</span>, x)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_local.py
+x is 50
+Changed local x to 2
+x is still 50
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>The first time that we print the <em>value</em> of the name <em>x</em> with the first line in the function's body, Python uses the value of the parameter declared in the main block, above the function definition.</p>
+<p>Next, we assign the value <code>2</code> to <code>x</code>. The name <code>x</code> is local to our function.  So, when we change the value of <code>x</code> in the function, the <code>x</code> defined in the main block remains unaffected.</p>
+<p>With the last <code>print</code> statement, we display the value of <code>x</code> as defined in the main block, thereby confirming that it is actually unaffected by the local assignment within the previously called function.</p>
+<h2 id="global-statement">The <code>global</code> statement </h2>
+<p>If you want to assign a value to a name defined at the top level of the program (i.e. not inside any kind of scope such as functions or classes), then you have to tell Python that the name is not local, but it is <em>global</em>. We do this using the <code>global</code> statement. It is impossible to assign a value to a variable defined outside a function without the <code>global</code> statement.</p>
+<p>You can use the values of such variables defined outside the function (assuming there is no variable with the same name within the function). However, this is not encouraged and should be avoided since it becomes unclear to the reader of the program as to where that variable's definition is. Using the <code>global</code> statement makes it amply clear that the variable is defined in an outermost block.</p>
+<p>Example (save as <code>function_global.py</code>):</p>
+<pre><code class="lang-python">x = <span class="hljs-number">50</span>
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>():
+    <span class="hljs-keyword">global</span> x
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'x is'</span>, x)
+    x = <span class="hljs-number">2</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Changed global x to'</span>, x)
+
+
+func()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Value of x is'</span>, x)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_global.py
+x is 50
+Changed global x to 2
+Value of x is 2
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>The <code>global</code> statement is used to declare that <code>x</code> is a global variable - hence, when we assign a value to <code>x</code> inside the function, that change is reflected when we use the value of <code>x</code> in the main block.</p>
+<p>You can specify more than one global variable using the same <code>global</code> statement e.g. <code>global x, y, z</code>.</p>
+<h2 id="default-arguments">Default Argument Values </h2>
+<p>For some functions, you may want to make some parameters <em>optional</em> and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator (<code>=</code>) followed by the default value.</p>
+<p>Note that the default argument value should be a constant. More precisely, the default argument value should be immutable - this is explained in detail in later chapters. For now, just remember this.</p>
+<p>Example (save as <code>function_default.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say</span>(<span class="hljs-params">message, times=<span class="hljs-number">1</span></span>):
+    <span class="hljs-built_in">print</span>(message * times)
+
+say(<span class="hljs-string">'Hello'</span>)
+say(<span class="hljs-string">'World'</span>, <span class="hljs-number">5</span>)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_default.py
+Hello
+WorldWorldWorldWorldWorld
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>The function named <code>say</code> is used to print a string as many times as specified. If we don't supply a value, then by default, the string is printed just once. We achieve this by specifying a default argument value of <code>1</code> to the parameter <code>times</code>.</p>
+<p>In the first usage of <code>say</code>, we supply only the string and it prints the string once. In the second usage of <code>say</code>, we supply both the string and an argument <code>5</code> stating that we want to <em>say</em> the string message 5 times.</p>
+<blockquote>
+<p><em>CAUTION</em></p>
+<p>Only those parameters which are at the end of the parameter list can be given default argument
+values i.e. you cannot have a parameter with a default argument value preceding a parameter without
+a default argument value in the function's parameter list.</p>
+<p>This is because the values are assigned to the parameters by position. For example,<code>def func(a,
+b=5)</code> is valid, but <code>def func(a=5, b)</code> is <em>not valid</em>.</p>
+</blockquote>
+<h2 id="keyword-arguments">Keyword Arguments</h2>
+<p>If you have some functions with many parameters and you want to specify only some of them, then you can give values for such parameters by naming them - this is called <em>keyword arguments</em> - we use the name (keyword) instead of the position (which we have been using all along) to specify the arguments to the function.</p>
+<p>There are two advantages - one, using the function is easier since we do not need to worry about the order of the arguments. Two, we can give values to only those parameters to which we want to, provided that the other parameters have default argument values.</p>
+<p>Example (save as <code>function_keyword.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>(<span class="hljs-params">a, b=<span class="hljs-number">5</span>, c=<span class="hljs-number">10</span></span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'a is'</span>, a, <span class="hljs-string">'and b is'</span>, b, <span class="hljs-string">'and c is'</span>, c)
+
+func(<span class="hljs-number">3</span>, <span class="hljs-number">7</span>)
+func(<span class="hljs-number">25</span>, c=<span class="hljs-number">24</span>)
+func(c=<span class="hljs-number">50</span>, a=<span class="hljs-number">100</span>)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_keyword.py
+a is 3 and b is 7 and c is 10
+a is 25 and b is 5 and c is 24
+a is 100 and b is 5 and c is 50
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>The function named <code>func</code> has one parameter without a default argument value, followed by two parameters with default argument values.</p>
+<p>In the first usage, <code>func(3, 7)</code>, the parameter <code>a</code> gets the value <code>3</code>, the parameter <code>b</code> gets the value <code>7</code> and <code>c</code> gets the default value of <code>10</code>.</p>
+<p>In the second usage <code>func(25, c=24)</code>, the variable <code>a</code> gets the value of 25 due to the position of the argument. Then, the parameter <code>c</code> gets the value of <code>24</code> due to naming i.e. keyword arguments. The variable <code>b</code> gets the default value of <code>5</code>.</p>
+<p>In the third usage <code>func(c=50, a=100)</code>, we use keyword arguments for all specified values. Notice that we are specifying the value for parameter <code>c</code> before that for <code>a</code> even though <code>a</code> is defined before <code>c</code> in the function definition.</p>
+<h2 id="varargs-parameters">VarArgs parameters</h2>
+<p>Sometimes you might want to define a function that can take <em>any</em> number of parameters, i.e. <strong>var</strong>iable number of <strong>arg</strong>uments, this can be achieved by using the stars (save as <code>function_varargs.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">total</span>(<span class="hljs-params">a=<span class="hljs-number">5</span>, *numbers, **phonebook</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'a'</span>, a)
+
+    <span class="hljs-comment">#iterate through all the items in tuple</span>
+    <span class="hljs-keyword">for</span> single_item <span class="hljs-keyword">in</span> numbers:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'single_item'</span>, single_item)
+
+    <span class="hljs-comment">#iterate through all the items in dictionary    </span>
+    <span class="hljs-keyword">for</span> first_part, second_part <span class="hljs-keyword">in</span> phonebook.items():
+        <span class="hljs-built_in">print</span>(first_part,second_part)
+
+total(<span class="hljs-number">10</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,Jack=<span class="hljs-number">1123</span>,John=<span class="hljs-number">2231</span>,Inge=<span class="hljs-number">1560</span>)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_varargs.py
+a 10
+single_item 1
+single_item 2
+single_item 3
+Inge 1560
+John 2231
+Jack 1123
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>When we declare a starred parameter such as <code>*param</code>, then all the positional arguments from that point till the end are collected as a tuple called 'param'.</p>
+<p>Similarly, when we declare a double-starred parameter such as <code>**param</code>, then all the keyword arguments from that point till the end are collected as a dictionary called 'param'.</p>
+<p>We will explore tuples and dictionaries in a <a href="data_structures.html#data-structures">later chapter</a>.</p>
+<h2 id="return-statement">The <code>return</code> statement </h2>
+<p>The <code>return</code> statement is used to <em>return</em> from a function i.e. break out of the function. We can optionally <em>return a value</em> from the function as well.</p>
+<p>Example (save as <code>function_return.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">maximum</span>(<span class="hljs-params">x, y</span>):
+    <span class="hljs-keyword">if</span> x &gt; y:
+        <span class="hljs-keyword">return</span> x
+    <span class="hljs-keyword">elif</span> x == y:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">'The numbers are equal'</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> y
+
+<span class="hljs-built_in">print</span>(maximum(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_return.py
+3
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>The <code>maximum</code> function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple <code>if..else</code> statement to find the greater value and then <em>returns</em> that value.</p>
+<p>Note that a <code>return</code> statement without a value is equivalent to <code>return None</code>. <code>None</code> is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of <code>None</code>.</p>
+<p>Every function implicitly contains a <code>return None</code> statement at the end unless you have written your own <code>return</code> statement. You can see this by running <code>print(some_function())</code> where the function <code>some_function</code> does not use the <code>return</code> statement such as:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">some_function</span>():
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<p>The <code>pass</code> statement is used in Python to indicate an empty block of statements.</p>
+<blockquote>
+<p>TIP: There is a built-in function called <code>max</code> that already implements the 'find maximum' functionality, so use this built-in function whenever possible.</p>
+</blockquote>
+<h2 id="docstrings">DocStrings</h2>
+<p>Python has a nifty feature called <em>documentation strings</em>, usually referred to by its shorter name <em>docstrings</em>. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!</p>
+<p>Example (save as <code>function_docstring.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_max</span>(<span class="hljs-params">x, y</span>):
+    <span class="hljs-string">'''Prints the maximum of two numbers.
+
+    The two values must be integers.'''</span>
+    <span class="hljs-comment"># convert to integers, if possible</span>
+    x = <span class="hljs-built_in">int</span>(x)
+    y = <span class="hljs-built_in">int</span>(y)
+
+    <span class="hljs-keyword">if</span> x &gt; y:
+        <span class="hljs-built_in">print</span>(x, <span class="hljs-string">'is maximum'</span>)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-built_in">print</span>(y, <span class="hljs-string">'is maximum'</span>)
+
+print_max(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
+<span class="hljs-built_in">print</span>(print_max.__doc__)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>$ python function_docstring.py
+5 is maximum
+Prints the maximum of two numbers.
+
+    The two values must be integers.
+</code></pre>
+
+<p><strong>How It Works</strong></p>
+<p>A string on the first logical line of a function is the <em>docstring</em> for that function. Note that DocStrings also apply to <a href="modules.html#modules">modules</a> and <a href="oop.html#oop">classes</a> which we will learn about in the respective chapters.</p>
+<p>The convention followed for a docstring is a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank followed by any detailed explanation starting from the third line. You are <em>strongly advised</em> to follow this convention for all your docstrings for all your non-trivial functions.</p>
+<p>We can access the docstring of the <code>print_max</code> function using the <code>__doc__</code> (notice the <em>double underscores</em>) attribute (name belonging to) of the function. Just remember that Python treats <em>everything</em> as an object and this includes functions. We'll learn more about objects in the chapter on <a href="oop.html#oop">classes</a>.</p>
+<p>If you have used <code>help()</code> in Python, then you have already seen the usage of docstrings! What it does is just fetch the <code>__doc__</code> attribute of that function and displays it in a neat manner for you. You can try it out on the function above - just include <code>help(print_max)</code> in your program. Remember to press the <code>q</code> key to exit <code>help</code>.</p>
+<p>Automated tools can retrieve the documentation from your program in this manner. Therefore, I <em>strongly recommend</em> that you use docstrings for any non-trivial function that you write. The <code>pydoc</code> command that comes with your Python distribution works similarly to <code>help()</code> using docstrings.</p>
+<h2 id="summary">Summary</h2>
+<p>We have seen so many aspects of functions but note that we still haven't covered all aspects of them. However, we have already covered most of what you'll use regarding Python functions on an everyday basis.</p>
+<p>Next, we will see how to use as well as create Python modules.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="control_flow.html" class="navigation navigation-prev " aria-label="Previous page: Control flow">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="modules.html" class="navigation navigation-next " aria-label="Next page: Modules">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Functions","level":"1.10","depth":1,"next":{"title":"Modules","level":"1.11","depth":1,"path":"modules.md","ref":"modules.md","articles":[]},"previous":{"title":"Control flow","level":"1.9","depth":1,"path":"control_flow.md","ref":"control_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"authorUrl":"https://swaroopch.com/about/","buyBookUrl":"https://swaroopch.com/buybook/","contactUrl":"https://swaroopch.com/contact/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","officialUrl":"https://python.swaroopch.com","pythonVersion":"3.6.0","sourceUrl":"https://github.com/swaroopch/byte-of-python","vimBookUrl":"https://vim.swaroopch.com/"},"title":"A Byte of Python","gitbook":"*"},"file":{"path":"functions.md","mtime":"2025-08-17T16:14:54.580Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-17T16:15:06.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

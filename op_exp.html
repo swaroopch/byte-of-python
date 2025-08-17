@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Operators and Expressions · A Byte of Python</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="control_flow.html" />
+    
+    
+    <link rel="prev" href="basics.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Dedication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    About Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    First Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Operators and Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Problem Solving
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Object Oriented Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Standard Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    More
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    What Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Appendix: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Appendix: About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Appendix: Revision History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Appendix: Translations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Appendix: Translation How-to
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Operators and Expressions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="op-exp">Operators and Expressions </h1>
+<p>Most statements (logical lines) that you write will contain <em>expressions</em>. A simple example of an expression is <code>2 + 3</code>. An expression can be broken down into operators and operands.</p>
+<p><em>Operators</em> are functionality that do something and can be represented by symbols such as <code>+</code> or by special keywords. Operators require some data to operate on and such data is called <em>operands</em>. In this case, <code>2</code> and <code>3</code> are the operands.</p>
+<h2 id="operators">Operators</h2>
+<p>We will briefly take a look at the operators and their usage.</p>
+<p>Note that you can evaluate the expressions given in the examples using the interpreter interactively. For example, to test the expression <code>2 + 3</code>, use the interactive Python interpreter prompt:</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span>
+<span class="hljs-number">5</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> * <span class="hljs-number">5</span>
+<span class="hljs-number">15</span>
+&gt;&gt;&gt;
+</code></pre>
+<p>Here is a quick overview of the available operators:</p>
+<ul>
+<li><p><code>+</code> (plus)</p>
+<ul>
+<li>Adds two objects</li>
+<li><code>3 + 5</code> gives <code>8</code>. <code>'a' + 'b'</code> gives <code>'ab'</code>.</li>
+</ul>
+</li>
+<li><p><code>-</code> (minus)</p>
+<ul>
+<li>Gives the subtraction of one number from the other; if the first operand is absent it is assumed to be zero.</li>
+<li><code>-5.2</code> gives a negative number and <code>50 - 24</code> gives <code>26</code>.</li>
+</ul>
+</li>
+<li><p><code>*</code> (multiply)</p>
+<ul>
+<li>Gives the multiplication of the two numbers or returns the string repeated that many times.</li>
+<li><code>2 * 3</code> gives <code>6</code>. <code>'la' * 3</code> gives <code>'lalala'</code>.</li>
+</ul>
+</li>
+<li><p><code>**</code> (power)</p>
+<ul>
+<li>Returns x to the power of y</li>
+<li><code>3 ** 4</code> gives <code>81</code> (i.e. <code>3 * 3 * 3 * 3</code>)</li>
+</ul>
+</li>
+<li><p><code>/</code> (divide)</p>
+<ul>
+<li>Divide x by y</li>
+<li><code>13 / 3</code> gives <code>4.333333333333333</code></li>
+</ul>
+</li>
+<li><p><code>//</code> (divide and floor)</p>
+<ul>
+<li>Divide x by y and round the answer <em>down</em> to the nearest integer value. Note that if one of the values is a float, you'll get back a float.</li>
+<li><code>13 // 3</code> gives <code>4</code></li>
+<li><code>-13 // 3</code> gives <code>-5</code></li>
+<li><code>9//1.81</code> gives <code>4.0</code></li>
+</ul>
+</li>
+<li><p><code>%</code> (modulo)</p>
+<ul>
+<li>Returns the remainder of the division</li>
+<li><code>13 % 3</code> gives <code>1</code>. <code>-25.5 % 2.25</code> gives <code>1.5</code>.</li>
+</ul>
+</li>
+<li><p><code>&lt;&lt;</code> (left shift)</p>
+<ul>
+<li>Shifts the bits of the number to the left by the number of bits specified. (Each number is represented in memory by bits or binary digits i.e. 0 and 1)</li>
+<li><code>2 &lt;&lt; 2</code> gives <code>8</code>. <code>2</code> is represented by <code>10</code> in bits.</li>
+<li>Left shifting by 2 bits gives <code>1000</code> which represents the decimal <code>8</code>.</li>
+</ul>
+</li>
+<li><p><code>&gt;&gt;</code> (right shift)</p>
+<ul>
+<li>Shifts the bits of the number to the right by the number of bits specified.</li>
+<li><code>11 &gt;&gt; 1</code> gives <code>5</code>.</li>
+<li><code>11</code> is represented in bits by <code>1011</code> which when right shifted by 1 bit gives <code>101</code>which is the decimal <code>5</code>.</li>
+</ul>
+</li>
+<li><p><code>&amp;</code> (bit-wise AND)</p>
+<ul>
+<li>Bit-wise AND of the numbers: if both bits are <code>1</code>, the result is <code>1</code>. Otherwise, it's <code>0</code>.</li>
+<li><code>5 &amp; 3</code> gives <code>1</code> (<code>0101 &amp; 0011</code> gives <code>0001</code>)</li>
+</ul>
+</li>
+<li><p><code>|</code> (bit-wise OR)</p>
+<ul>
+<li>Bitwise OR of the numbers: if both bits are <code>0</code>, the result is <code>0</code>. Otherwise, it's <code>1</code>. </li>
+<li><code>5 | 3</code> gives <code>7</code> (<code>0101 | 0011</code> gives <code>0111</code>)</li>
+</ul>
+</li>
+<li><p><code>^</code> (bit-wise XOR) </p>
+<ul>
+<li>Bitwise XOR of the numbers: if both bits (<code>1 or 0</code>) are the same, the result is <code>0</code>. Otherwise, it's <code>1</code>.</li>
+<li><code>5 ^ 3</code> gives <code>6</code> (<code>O101 ^ 0011</code> gives <code>0110</code>)</li>
+</ul>
+</li>
+<li><p><code>~</code> (bit-wise invert)</p>
+<ul>
+<li>The bit-wise inversion of x is -(x+1)</li>
+<li><code>~5</code> gives <code>-6</code>. More details at <a href="http://stackoverflow.com/a/11810203" target="_blank">http://stackoverflow.com/a/11810203</a></li>
+</ul>
+</li>
+<li><p><code>&lt;</code> (less than)</p>
+<ul>
+<li>Returns whether x is less than y. All comparison operators return <code>True</code> or <code>False</code>. Note the capitalization of these names.</li>
+<li><code>5 &lt; 3</code> gives <code>False</code> and <code>3 &lt; 5</code> gives <code>True</code>.</li>
+<li>Comparisons can be chained arbitrarily: <code>3 &lt; 5 &lt; 7</code> gives <code>True</code>.</li>
+</ul>
+</li>
+<li><p><code>&gt;</code> (greater than)</p>
+<ul>
+<li>Returns whether x is greater than y</li>
+<li><code>5 &gt; 3</code> returns <code>True</code>. If both operands are numbers, they are first converted to a common type. Otherwise, it always returns <code>False</code>.</li>
+</ul>
+</li>
+<li><p><code>&lt;=</code> (less than or equal to)</p>
+<ul>
+<li>Returns whether x is less than or equal to y</li>
+<li><code>x = 3; y = 6; x &lt;= y</code> returns <code>True</code></li>
+</ul>
+</li>
+<li><p><code>&gt;=</code> (greater than or equal to)</p>
+<ul>
+<li>Returns whether x is greater than or equal to y</li>
+<li><code>x = 4; y = 3; x &gt;= 3</code> returns <code>True</code></li>
+</ul>
+</li>
+<li><p><code>==</code> (equal to)</p>
+<ul>
+<li>Compares if the objects are equal</li>
+<li><code>x = 2; y = 2; x == y</code> returns <code>True</code></li>
+<li><code>x = 'str'; y = 'stR'; x == y</code> returns <code>False</code></li>
+<li><code>x = 'str'; y = 'str'; x == y</code> returns <code>True</code></li>
+</ul>
+</li>
+<li><p><code>!=</code> (not equal to)</p>
+<ul>
+<li>Compares if the objects are not equal</li>
+<li><code>x = 2; y = 3; x != y</code> returns <code>True</code></li>
+</ul>
+</li>
+<li><p><code>not</code> (boolean NOT)</p>
+<ul>
+<li>If x is <code>True</code>, it returns <code>False</code>. If x is <code>False</code>, it returns <code>True</code>.</li>
+<li><code>x = True; not x</code> returns <code>False</code>.</li>
+</ul>
+</li>
+<li><p><code>and</code> (boolean AND)</p>
+<ul>
+<li><code>x and y</code> returns <code>False</code> if x is <code>False</code>, else it returns evaluation of y</li>
+<li><code>x = False; y = True; x and y</code> returns <code>False</code> since x is False. In this case, Python will not evaluate y since it knows that the left hand side of the 'and' expression is <code>False</code> which implies that the whole expression will be <code>False</code> irrespective of the other values. This is called short-circuit evaluation.</li>
+</ul>
+</li>
+<li><p><code>or</code> (boolean OR)</p>
+<ul>
+<li>If x is <code>True</code>, it returns True, else it returns evaluation of y</li>
+<li><code>x = True; y = False; x or y</code> returns <code>True</code>. Short-circuit evaluation applies here as well.</li>
+</ul>
+</li>
+</ul>
+<h2 id="shortcut-for-math-operation-and-assignment">Shortcut for math operation and assignment</h2>
+<p>It is common to run a math operation on a variable and then assign the result of the operation back to the variable, hence there is a shortcut for such expressions:</p>
+<pre><code class="lang-python">a = <span class="hljs-number">2</span>
+a = a * <span class="hljs-number">3</span>
+</code></pre>
+<p>can be written as:</p>
+<pre><code class="lang-python">a = <span class="hljs-number">2</span>
+a *= <span class="hljs-number">3</span>
+</code></pre>
+<p>Notice that <code>var = var operation expression</code> becomes <code>var operation= expression</code>.</p>
+<h2 id="evaluation-order">Evaluation Order</h2>
+<p>If you had an expression such as <code>2 + 3 * 4</code>, is the addition done first or the multiplication? Our high school maths tells us that the multiplication should be done first. This means that the multiplication operator has higher precedence than the addition operator.</p>
+<p>The following table gives the precedence table for Python, from the lowest precedence (least binding) to the highest precedence (most binding). This means that in a given expression, Python will first evaluate the operators and expressions lower in the table before the ones listed higher in the table.</p>
+<p>The following table, taken from the <a href="http://docs.python.org/3/reference/expressions.html#operator-precedence" target="_blank">Python reference manual</a>, is provided for the sake of completeness. It is far better to use parentheses to group operators and operands appropriately in order to explicitly specify the precedence. This makes the program more readable. See <a href="#changing-order-of-evaluation">Changing the Order of Evaluation</a> below for details.</p>
+<ul>
+<li><code>lambda</code> : Lambda Expression</li>
+<li><code>if - else</code> : Conditional expression</li>
+<li><code>or</code> : Boolean OR</li>
+<li><code>and</code> : Boolean AND</li>
+<li><code>not x</code> : Boolean NOT</li>
+<li><code>in, not in, is, is not, &lt;, &lt;=, &gt;, &gt;=, !=, ==</code> : Comparisons, including membership tests and identity tests</li>
+<li><code>|</code> : Bitwise OR</li>
+<li><code>^</code> : Bitwise XOR</li>
+<li><code>&amp;</code> : Bitwise AND</li>
+<li><code>&lt;&lt;, &gt;&gt;</code> : Shifts</li>
+<li><code>+, -</code> : Addition and subtraction</li>
+<li><code>*, /, //, %</code> : Multiplication, Division, Floor Division and Remainder</li>
+<li><code>+x, -x, ~x</code> : Positive, Negative, bitwise NOT</li>
+<li><code>**</code> : Exponentiation</li>
+<li><code>x[index], x[index:index], x(arguments...), x.attribute</code> : Subscription, slicing, call, attribute reference</li>
+<li><code>(expressions...), [expressions...], {key: value...}, {expressions...}</code> : Binding or tuple display, list display, dictionary display, set display</li>
+</ul>
+<p>The operators which we have not already come across will be explained in later chapters.</p>
+<p>Operators with the <em>same precedence</em> are listed in the same row in the above table. For example, <code>+</code> and <code>-</code> have the same precedence.</p>
+<h2 id="changing-order-of-evaluation">Changing the Order Of Evaluation </h2>
+<p>To make the expressions more readable, we can use parentheses. For example, <code>2 + (3 * 4)</code> is definitely easier to understand than <code>2 + 3 * 4</code> which requires knowledge of the operator precedences. As with everything else, the parentheses should be used reasonably (do not overdo it) and should not be redundant, as in <code>(2 + (3 * 4))</code>.</p>
+<p>There is an additional advantage to using parentheses - it helps us to change the order of evaluation. For example, if you want addition to be evaluated before multiplication in an expression, then you can write something like <code>(2 + 3) * 4</code>.</p>
+<h2 id="associativity">Associativity</h2>
+<p>Operators are usually associated from left to right. This means that operators with the same precedence are evaluated in a left to right manner. For example, <code>2 + 3 + 4</code> is evaluated as <code>(2 + 3) + 4</code>.</p>
+<h2 id="expressions">Expressions</h2>
+<p>Example (save as <code>expression.py</code>):</p>
+<pre><code class="lang-python">length = <span class="hljs-number">5</span>
+breadth = <span class="hljs-number">2</span>
+
+area = length * breadth
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Area is'</span>, area)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Perimeter is'</span>, <span class="hljs-number">2</span> * (length + breadth))
+</code></pre>
+<p>Output:</p>
+<pre><code>$ python expression.py
+Area is 10
+Perimeter is 14
+</code></pre><p><strong>How It Works</strong></p>
+<p>The length and breadth of the rectangle are stored in variables by the same name. We use these to calculate the area and perimeter of the rectangle with the help of expressions. We store the result of the expression <code>length * breadth</code> in the variable <code>area</code> and then print it using the <code>print</code> function. In the second case, we directly use the value of the expression <code>2 * (length + breadth)</code> in the print function.</p>
+<p>Also, notice how Python <em>pretty-prints</em> the output. Even though we have not specified a space between <code>'Area is'</code> and the variable <code>area</code>, Python puts it for us so that we get a clean nice output and the program is much more readable this way (since we don't need to worry about spacing in the strings we use for output). This is an example of how Python makes life easy for the programmer.</p>
+<h2 id="summary">Summary</h2>
+<p>We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using statements.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basics.html" class="navigation navigation-prev " aria-label="Previous page: Basics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="control_flow.html" class="navigation navigation-next " aria-label="Next page: Control flow">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Operators and Expressions","level":"1.8","depth":1,"next":{"title":"Control flow","level":"1.9","depth":1,"path":"control_flow.md","ref":"control_flow.md","articles":[]},"previous":{"title":"Basics","level":"1.7","depth":1,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"authorUrl":"https://swaroopch.com/about/","buyBookUrl":"https://swaroopch.com/buybook/","contactUrl":"https://swaroopch.com/contact/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","officialUrl":"https://python.swaroopch.com","pythonVersion":"3.6.0","sourceUrl":"https://github.com/swaroopch/byte-of-python","vimBookUrl":"https://vim.swaroopch.com/"},"title":"A Byte of Python","gitbook":"*"},"file":{"path":"op_exp.md","mtime":"2025-08-17T16:14:54.594Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-17T16:15:06.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
