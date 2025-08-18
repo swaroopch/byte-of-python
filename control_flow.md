@@ -4,7 +4,7 @@ In the programs we have seen till now, there has always been a series of stateme
 
 As you might have guessed, this is achieved using control flow statements. There are three control flow statements in Python - `if`, `for` and `while`.
 
-## The `if` statement
+## The `if` Statement
 
 The `if` statement is used to check a condition: *if* the condition is true, we run a block of statements (called the _if-block_), *else* we process another block of statements (called the _else-block_). The *else* clause is optional.
 
@@ -21,7 +21,7 @@ Output:
 
 In this program, we take guesses from the user and check if it is the number that we have. We set the variable `number` to any integer we want, say `23`. Then, we take the user's guess using the `input()` function. Functions are just reusable pieces of programs. We'll read more about them in the [next chapter](./functions.md#functions).
 
-We supply a string to the built-in `input` function which prints it to the screen and waits for input from the user. Once we enter something and press kbd:[enter] key, the `input()` function returns what we entered, as a string. We then convert this string to an integer using `int` and then store it in the variable `guess`. Actually, the `int` is a class but all you need to know right now is that you can use it to convert a string to an integer (assuming the string contains a valid integer in the text).
+We supply a string to the built-in `input` function which prints it to the screen and waits for input from the user. Once we enter something and press `[enter]` key, the `input()` function returns what we entered, as a string. We then convert this string to an integer using `int` and then store it in the variable `guess`. Actually, the `int` is a class but all you need to know right now is that you can use it to convert a string to an integer (assuming the string contains a valid integer in the text).
 
 Next, we compare the guess of the user with the number we have chosen. If they are equal, we print a success message. Notice that we use indentation levels to tell Python which statements belong to which block. This is why indentation is so important in Python. I hope you are sticking to the "consistent indentation" rule. Are you?
 
@@ -48,7 +48,7 @@ Even though this is a very simple program, I have been pointing out a lot of thi
 > 
 > There is no `switch` statement in Python. You can use an `if..elif..else` statement to do the same thing (and in some cases, use a [dictionary](./data_structures.md#dictionary) to do it quickly)
 
-## The while Statement
+## The `while` Statement
 
 The `while` statement allows you to repeatedly execute a block of statements as long as a condition is true. A `while` statement is an example of what is called a *looping* statement. A `while` statement can have an optional `else` clause.
 
@@ -74,7 +74,7 @@ The `True` and `False` are called Boolean types and you can consider them to be 
 > 
 > Remember that you can have an `else` clause for the `while` loop.
 
-## The `for` loop
+## The `for` Loop
 
 The `for..in` statement is another looping statement which *iterates* over a sequence of objects i.e. go through each item in a sequence. We will see more about [sequences](./data_structures.md#sequence) in detail in later chapters. What you need to know right now is that a sequence is just an ordered collection of items.
 
@@ -106,7 +106,7 @@ Remember that the `for..in` loop works for any sequence. Here, we have a list of
 > 
 > In C/C++, if you want to write `for (int i = 0; i < 5; i++)`, then in Python you write just `for i in range(0,5)`. As you can see, the `for` loop is simpler, more expressive and less error prone in Python.
 
-## The break Statement {#break-statement}
+## The `break` Statement {#break-statement}
 
 The `break` statement is used to *break* out of a loop statement i.e. stop the execution of a looping statement, even if the loop condition has not become `False` or the sequence of items has not been completely iterated over.
 
