@@ -1,3 +1,6 @@
+[the official website]:https://python.swaroopch.com/
+[]
+
 # A Byte of Python
 
 "A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.
@@ -271,22 +274,22 @@ This means:
 Please note:
 
 - Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are *not* from the original author of this book.
-- Attribution *must* be shown in the introductory description and front page of the document by linking back to {{ book.officialUrl }} and clearly indicating that the original text can be fetched from this location.
+- Attribution *must* be shown in the introductory description and front page of the document by linking back to [the official website] and clearly indicating that the original text can be fetched from this location.
 - All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
 
 ## Read Now
 
-You can read it online at {{ book.officialUrl }}
+You can read it online at [the official website]
 
 ## Buy The Book
 
-A printed hardcopy of the book can be purchased at {{ book.buyBookUrl }} for your offline reading pleasure, and to support the continued development and improvement of this book.
+A printed hardcopy of the book can be purchased at [Amazon](https://www.amazon.com/Byte-Python-Swaroop-C-H-ebook/dp/B00FJ7S2JU) for your offline reading pleasure, and to support the continued development and improvement of this book.
 
 ## Download
 
-Visit {{ book.downloadUrl }} to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers).
+Visit [https://open.umn.edu/opentextbooks/textbooks/581](https://open.umn.edu/opentextbooks/textbooks/581) to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers).
 
-Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.)
+Visit [Github](https://github.com/swaroopch/byte-of-python) for the raw content (for suggesting corrections, changes, translating, etc.)
 
 ## Read the book in your native language
 
