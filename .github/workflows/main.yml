@@ -23,19 +23,19 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22.7.0'
 
       # https://github.com/actions/checkout
       - name: Checkout
         uses: actions/checkout@v2
 
       # https://github.com/honkit/honkit
-      - name: Run Honkit
+      - name: Run HonKit
         run: |
-          npm install honkit --save-dev
-          npx honkit build . public --log=debug
-          npx honkit pdf . byte-of-python.pdf
-          npx honkit epub . byte-of-python.epub
+          make setup
+          make build
+          make pdf
+          make epub
 
       # https://github.com/crazy-max/ghaction-github-pages
       - name: Push to GitHub Pages

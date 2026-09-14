@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+readonly REPOSITORY="https://github.com/swaroopch/honkit.git"
+readonly REVISION="942bf835a34801ec478bb35bdd043b64d862fe6a"
+readonly PNPM_VERSION="9.12.0"
+readonly ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+readonly CHECKOUT="$ROOT/.honkit"
+readonly MARKER="$CHECKOUT/.byte-of-python-revision"
+
+if [[ ! -d "$CHECKOUT/.git" ]]; then
+    echo "Cloning the pinned HonKit fork..." >&2
+    git clone --filter=blob:none --no-checkout "$REPOSITORY" "$CHECKOUT"
+fi
+
+if [[ ! -f "$MARKER" ]] || [[ "$(cat "$MARKER")" != "$REVISION" ]]; then
+    echo "Building HonKit revision $REVISION..." >&2
+    git -C "$CHECKOUT" fetch --depth=1 origin "$REVISION"
+    git -C "$CHECKOUT" checkout --detach FETCH_HEAD
+    npx --yes "pnpm@$PNPM_VERSION" --dir "$CHECKOUT" install --frozen-lockfile
+    npx --yes "pnpm@$PNPM_VERSION" --dir "$CHECKOUT" run build
+    printf '%s\n' "$REVISION" > "$MARKER"
+fi
+
+exec node "$CHECKOUT/packages/honkit/bin/honkit.js" "$@"

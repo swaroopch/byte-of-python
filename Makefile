@@ -1,15 +1,16 @@
-# https://github.com/honkit/honkit
+HONKIT := ./scripts/honkit
+
 setup:
-	npm install honkit --save-dev
+	$(HONKIT) --version
 
 build:
-	npx honkit build . public --log=debug
+	$(HONKIT) build . public --log=debug
 
 pdf:
-	npx honkit pdf . byte-of-python.pdf
+	$(HONKIT) pdf . byte-of-python.pdf
 
 epub:
-	npx honkit epub . byte-of-python.epub
+	$(HONKIT) epub . byte-of-python.epub
 
 serve:
-	npx honkit serve
+	$(HONKIT) serve
