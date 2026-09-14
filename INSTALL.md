@@ -1,21 +1,23 @@
 ```
-# install node.js
-# see https://nodejs.dev/learn/how-to-install-nodejs
-
-# install honkit
-npm install honkit --save-dev
+# Bootstrap the pinned HonKit fork used by this book.
+# The first run clones and builds it in .honkit/.
+make setup
 
 # show website running locally
-npx honkit serve
+make serve
 
 # generate website files
-npx honkit build . public --log=debug
+make build
 
-# generate pdf
-npx honkit pdf . byte-of-python.pdf
+# generate PDF (with physical page numbers in the table of contents)
+make pdf
 
-# generate epub
-npx honkit epub . byte-of-python.epub
+# generate EPUB
+make epub
 ```
+
+The wrapper in `scripts/honkit` pins the HonKit fork commit that implements
+physical PDF table-of-contents page numbers. Once that change is released by
+HonKit, the wrapper can be replaced with the corresponding published package.
 
 See https://github.com/honkit/honkit and https://honkit.netlify.app/

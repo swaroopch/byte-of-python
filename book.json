@@ -1,5 +1,8 @@
 {
     "title": "A Byte of Python",
+    "pdf": {
+        "tocPageNumbers": true
+    },
     "variables": {
         "authorUrl": "https://swaroopch.com/about/",
         "buyBookUrl": "https://swaroopch.com/buybook/",
