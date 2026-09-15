@@ -37,6 +37,14 @@ Moises Gomez (moisesgomezgiron@gmail.com) has volunteered to translate the book 
 >
 > I my country there are two official languages. I selected the Catalan language assuming that others will translate it to the more widespread Spanish.
 
+## Simplified Chinese
+
+Jeffrey He (jeffreyheping) has completed a Simplified Chinese translation of the book.
+
+Read online at https://jeffreyheping.github.io/byte-of-python/
+
+Source repository: https://github.com/jeffreyheping/byte-of-python
+
 ### Earlier Chinese translation
 
 In 2005, Shen Jieyuan translated this book with version 1.20 to Chinese and published it to the Internet. This is the first Chinese edition. In BoP official site, he was called Juan Shen, with Email adderss orion_val@163.com。This edition has been disseminated on the network widely, and the links provided by BoP official site are not available anymore, so that its original source is unable to find. Therefore in here can’t provide a certain address. But you can try to search keywords like “简明Python教程 沈洁元” to find a copy.
