@@ -139,9 +139,13 @@ Epsimatt has started a new Korean translation:
 - Read online at https://epsimatt.gitbook.io/byte-of-python/
 - Follow progress at https://github.com/epsimatt/byte-of-python/issues/16
 
-### Older
+### Jeongbin Park (2022)
 
-Jeongbin Park (pjb7687@gmail.com) has translated the book to Korean - <https://github.com/pjb7687/byte_of_python>
+Jeongbin Park updated his Korean translation for Python 3 in November 2022.
+
+- Source repository: https://github.com/chaek-union/a_byte_of_python-korean_translation
+
+In his introduction to the earlier translation, Jeongbin wrote:
 
 > I am Jeongbin Park, currently working as a Biophysics & Bioinformatics researcher in Korea.
 >
