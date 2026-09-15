@@ -77,6 +77,10 @@ It can be found at https://rgilliotte.gitbook.io/byte-of-python/
 
 ## German
 
+### Python 3
+[Horst JENS](https://spielend-programmieren.at) (horst.jens@spielend-programmieren.at) finished 2026 a translation into German language: <https://spielend-programmieren.at/byte_of_python_deutsch/index.html> 
+
+### Python 2 (outdated)
 Lutz Horn (lutz.horn@gmx.de), Bernd Hengelein (bernd.hengelein@gmail.com) and Christoph Zwerschke (cito@online.de) have volunteered to translate the book to German.
 
 Translation can be found at http://cito.github.io/byte_of_python/
