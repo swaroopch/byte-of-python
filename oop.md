@@ -82,7 +82,7 @@ Output:
 
 Here, we define the `__init__` method as taking a parameter `name` (along with the usual `self`). Here, we just create a new field also called `name`. Notice these are two different variables even though they are both called 'name'. There is no problem because the dotted notation `self.name` means that there is something called "name" that is part of the object called "self" and the other `name` is a local variable. Since we explicitly indicate which name we are referring to, there is no confusion.
 
-When creating new instance `p`, of the class `Person`, we do so by using the class name, followed by the arguments in the parentheses: p = Person('Swaroop').
+When creating new instance `p`, of the class `Person`, we do so by using the class name, followed by the arguments in the parentheses: `p = Person('Swaroop')`.
 
 We do not explicitly call the `__init__` method.
 This is the special significance of this method.
@@ -169,7 +169,7 @@ To use inheritance, we specify the base class names in a tuple following the cla
 
 In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
 
-While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
+While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it does not find anything, it starts looking at the methods in the base classes of the subclass, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
 
 A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
 
