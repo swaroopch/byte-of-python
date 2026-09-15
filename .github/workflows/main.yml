@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+  pull_request:
 
 permissions:
   contents: write
@@ -35,8 +36,19 @@ jobs:
           make pdf
           make epub
 
+      - name: Upload PR build artifacts
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v6
+        with:
+          name: byte-of-python-pr-${{ github.event.number }}
+          path: |
+            byte-of-python.pdf
+            byte-of-python.epub
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Push to GitHub Pages
-        if: success()
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
@@ -46,6 +58,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create GitHub Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
