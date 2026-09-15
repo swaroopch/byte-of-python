@@ -1,0 +1,2 @@
+$ python more_list_comprehension.py
+[6, 8]

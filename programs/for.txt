@@ -1,0 +1,6 @@
+$ python for.py
+1
+2
+3
+4
+The for loop is over

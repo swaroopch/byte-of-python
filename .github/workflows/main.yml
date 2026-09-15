@@ -1,0 +1,70 @@
+# https://docs.github.com/actions
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Calibre
+        run: |
+          sudo apt update
+          sudo apt install calibre  # for `ebook-convert` command
+
+      - name: Install Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22.7.0'
+          package-manager-cache: false
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Run HonKit
+        run: |
+          make setup
+          make build
+          make pdf
+          make epub
+
+      - name: Upload PR build artifacts
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v6
+        with:
+          name: byte-of-python-pr-${{ github.event.number }}
+          path: |
+            byte-of-python.pdf
+            byte-of-python.epub
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Push to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: public
+          fqdn: python.swaroopch.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="v${GITHUB_SHA}"
+          gh release create "$tag" \
+            byte-of-python.pdf \
+            byte-of-python.epub \
+            --title "Release $tag" \
+            --notes "Automated release for ${GITHUB_SHA}."

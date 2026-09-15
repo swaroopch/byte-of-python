@@ -1,0 +1,8 @@
+$ python oop_subclass.py
+(Initialized SchoolMember: Mrs. Shrividya)
+(Initialized Teacher: Mrs. Shrividya)
+(Initialized SchoolMember: Swaroop)
+(Initialized Student: Swaroop)
+
+Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
+Name:"Swaroop" Age:"25" Marks: "75"

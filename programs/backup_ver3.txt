@@ -1,0 +1,5 @@
+$ python backup_ver3.py
+  File "backup_ver3.py", line 39
+    target = today + os.sep + now + '_' +
+                                        ^
+SyntaxError: invalid syntax

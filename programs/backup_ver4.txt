@@ -1,0 +1,10 @@
+$ python backup_ver4.py
+Enter a comment --> added new examples
+Zip command is:
+zip -r /Users/swa/backup/20140329/074122_added_new_examples.zip /Users/swa/notes
+Running:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Successful backup to /Users/swa/backup/20140329/074122_added_new_examples.zip
