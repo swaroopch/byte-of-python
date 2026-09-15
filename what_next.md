@@ -12,7 +12,7 @@ Once you are able to do this, you can claim to be a Python programmer. Now, imme
 
 If you found that program easy, here's another one:
 
-> Implement the [replace command](http://unixhelp.ed.ac.uk/CGI/man-cgi?replace). This command will replace one string with another in the list of files provided.
+> Implement your own `replace` command. This command will replace one string with another in the list of files provided.
 
 The replace command can be as simple or as sophisticated as you wish, from simple string substitution to looking for patterns (regular expressions).
 
