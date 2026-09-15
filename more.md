@@ -155,8 +155,7 @@ Output:
 
 See:
 
-- [Video : Python Decorators Made Easy](https://youtu.be/MYAEv3JoenI) 
-- http://www.ibm.com/developerworks/linux/library/l-cpdecor.html
+- [Video : Python Decorators Made Easy](https://youtu.be/MYAEv3JoenI)
 - http://toumorokoshi.github.io/dry-principles-through-python-decorators.html
 
 ## Differences between Python 2 and Python 3 {#two-vs-three}
