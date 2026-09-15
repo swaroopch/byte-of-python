@@ -98,7 +98,7 @@ Notice that a variable assigned a value of 0 or `None` or a variable which is an
 
 Also note that we use `sys.stdout.flush()` after `print` so that it prints to the screen immediately.
 
-## The with statement {#with}
+## The `with` Statement {#with}
 
 Acquiring a resource in the `try` block and subsequently releasing the resource in the `finally` block is a common pattern. Hence, there is also a `with` statement that enables this to be done in a clean manner:
 
