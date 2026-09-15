@@ -162,10 +162,10 @@ See:
 
 See:
 
-- ["Six" library](http://pythonhosted.org/six/)
+- ["Six" library](https://six.readthedocs.io/)
 - [Porting to Python 3 Redux by Armin](http://lucumr.pocoo.org/2013/5/21/porting-to-python-3-redux/)
 - [Python 3 experience by PyDanny](http://pydanny.com/experiences-with-django-python3.html)
-- [Official Django Guide to Porting to Python 3](https://docs.djangoproject.com/en/dev/topics/python3/)
+- [Official Django Guide to Porting to Python 3 (historical Django 1.11 documentation)](https://docs.djangoproject.com/en/1.11/topics/python3/)
 - [Discussion on What are the advantages to python 3.x?](http://www.reddit.com/r/Python/comments/22ovb3/what_are_the_advantages_to_python_3x/)
 
 ## Summary
