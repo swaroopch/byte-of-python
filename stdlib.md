@@ -58,7 +58,7 @@ Finally, we can put messages that are either meant for debugging, information, w
 There is much more to be explored in the standard library such as [debugging](http://docs.python.org/3/library/pdb.html),
 [handling command line options](http://docs.python.org/3/library/argparse.html), [regular expressions](http://docs.python.org/3/library/re.html) and so on.
 
-The best way to further explore the standard library is to read Doug Hellmann's excellent [Python Module of the Week](http://pymotw.com/2/contents.html) series (also available as a [book](http://amzn.com/0321767349)) and reading the [Python documentation](http://docs.python.org/3/).
+The best way to further explore the standard library is to read Doug Hellmann's excellent [Python Module of the Week](https://pymotw.com/3/) series (also available as a [book](https://doughellmann.com/books/the-python-3-standard-library-by-example/)) and reading the [Python documentation](http://docs.python.org/3/).
 
 ## Summary
 
