@@ -148,7 +148,7 @@ A recommended way of writing programs is the procedure we have followed in creat
 Remember:
 
 > Software is grown, not built.
-> -- [Bill de hÓra](http://97things.oreilly.com/wiki/index.php/Great_software_is_not_built,_it_is_grown)
+> -- [Bill de hÓra](https://www.oreilly.com/library/view/97-things-every/9780596800611/ch97.html)
 
 ## Summary
 
