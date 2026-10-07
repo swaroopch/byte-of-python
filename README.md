@@ -4,7 +4,7 @@
 
 ## For Python version 3
 
-This book will teach you to use Python version 3. There will also be guidance for you to adapt to the older and more common Python version 2 in the book.
+This book teaches Python 3. Use Python 3 to follow the examples. References to Python 2 are included only for historical context and for understanding legacy code.
 
 ## Who reads A Byte of Python? {#who-reads-bop}
 
