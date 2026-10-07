@@ -1,0 +1,15 @@
+$ python if.py
+Enter an integer : 50
+No, it is a little lower than that
+Done
+
+$ python if.py
+Enter an integer : 22
+No, it is a little higher than that
+Done
+
+$ python if.py
+Enter an integer : 23
+Congratulations, you guessed it.
+(but you do not win any prizes!)
+Done

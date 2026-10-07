@@ -1,0 +1,10 @@
+$ python backup_ver2.py
+Successfully created directory /Users/swa/backup/20140329
+Zip command is:
+zip -r /Users/swa/backup/20140329/073201.zip /Users/swa/notes
+Running:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Successful backup to /Users/swa/backup/20140329/073201.zip

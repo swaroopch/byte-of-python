@@ -1,0 +1,11 @@
+$ python3 io_input.py
+Enter text: sir
+No, it is not a palindrome
+
+$ python3 io_input.py
+Enter text: madam
+Yes, it is a palindrome
+
+$ python3 io_input.py
+Enter text: racecar
+Yes, it is a palindrome

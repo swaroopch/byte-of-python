@@ -1,0 +1,3 @@
+$ python function_default.py
+Hello
+WorldWorldWorldWorldWorld

@@ -1,0 +1,11 @@
+$ python break.py
+Enter something : Programming is fun
+Length of the string is 18
+Enter something : When the work is done
+Length of the string is 21
+Enter something : if you wanna make your work also fun:
+Length of the string is 37
+Enter something : use Python!
+Length of the string is 11
+Enter something : quit
+Done
