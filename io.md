@@ -76,7 +76,7 @@ Next, we retrieve the object using the `load` function of the `pickle` module wh
 
 So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  
 
-> NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
+> Historical note: Python 2 used a separate `unicode` type for Unicode text, with literals such as `u"hello world"`. In Python 3, ordinary strings already store Unicode text; the `u` prefix is optional.
 
 ```python
 >>> "hello world"
